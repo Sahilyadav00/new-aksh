@@ -136,7 +136,7 @@ export default function Footer() {
 
       <div className="max-w-384 mx-auto px-3 sm:px-6 md:px-8 relative z-10">
         {/* Footer Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_2fr] gap-12 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-12 lg:gap-8 items-start">
           {/* Column 1: Logo & Branding */}
           <div className="flex flex-col">
             <Link href="/" className="inline-block mb-6">
@@ -186,148 +186,151 @@ export default function Footer() {
               />
             </div>
           </div>
-
-          {/* Column 2: Quick Links */}
-          <div className="lg:pl-8 max-w-50">
-            <div className="relative mb-6 pb-2 inline-block">
-              <h3 className="text-lg font-bold text-slate-900">Quick Links</h3>
-              <div className="absolute bottom-0 left-0 w-8 h-[2px] bg-slate-400/80" />
-            </div>
-            <ul className="flex flex-col gap-3.5">
-              {[
-                { label: "Home", href: "/" },
-                { label: "About Us", href: "/about" },
-                { label: "Services", href: "/services" },
-                { label: "Portfolio", href: "/portfolio" },
-                { label: "Blog", href: "/blog" },
-                { label: "FAQ", href: "/faq" },
-                { label: "Contact", href: "/contact" },
-              ].map(({ label, href }) => (
-                <li key={label} className="overflow-hidden">
-                  <Link
-                    href={href}
-                    className="text-[15px] text-black hover:text-primary font-medium hover:translate-x-1 transition-all duration-200 inline-block"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3: Our Services */}
-          <div className="lg:pl-4">
-            <div className="relative mb-6 pb-2 inline-block">
-              <h3 className="text-lg font-bold text-slate-900">Our Services</h3>
-              <div className="absolute bottom-0 left-0 w-8 h-[2px] bg-slate-400/80" />
-            </div>
-            <ul className="flex flex-col gap-3">
-              {[
-                { label: "SEO Strategies", href: "/services/seo-strategies" },
-                { label: "Digital Marketing", href: "/services/digital-marketing" },
-                { label: "Social Media", href: "/services/social-media" },
-                { label: "Web Development", href: "/services/web-development" },
-                { label: "App Development", href: "/services/app-development" },
-                { label: "Performance Marketing", href: "/services/performance-marketing" },
-              ].map(({ label, href }) => (
-                <li key={label} className="overflow-hidden">
-                  <Link
-                    href={href}
-                    className="text-[15px] text-black hover:text-primary font-medium hover:translate-x-1 transition-all duration-200 inline-block"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2 col-span-2">
-                <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">SEO Company in</p>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    { label: "Jaipur", href: "/seo-services/jaipur" },
-                    { label: "Delhi", href: "/seo-services/delhi" },
-                    { label: "Mumbai", href: "/seo-services/mumbai" },
-                    { label: "Bangalore", href: "/seo-services/bangalore" },
-                    { label: "Pune", href: "/seo-services/pune" },
-                    { label: "Indore", href: "/seo-services/indore" },
-                  ].map(({ label, href }) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[auto_auto_auto] gap-x-8 lg:pl-10">
+            {/* Column 2: Quick Links */}
+            <div className=" max-w-50">
+              <div className="relative mb-6 pb-2 inline-block">
+                <h3 className="text-lg font-bold text-slate-900">Quick Links</h3>
+                <div className="absolute bottom-0 left-0 w-8 h-[2px] bg-slate-400/80" />
+              </div>
+              <ul className="flex flex-col gap-3.5">
+                {[
+                  { label: "Home", href: "/" },
+                  { label: "About Us", href: "/about" },
+                  { label: "Services", href: "/services" },
+                  { label: "Portfolio", href: "/portfolio" },
+                  { label: "Blog", href: "/blog" },
+                  { label: "FAQ", href: "/faq" },
+                  { label: "Contact", href: "/contact" },
+                ].map(({ label, href }) => (
+                  <li key={label} className="overflow-hidden">
                     <Link
-                      key={label}
                       href={href}
-                      className="text-[14px] text-slate-600 hover:text-primary font-medium  transition-all duration-200 inline-block"
+                      className="text-[15px] text-black hover:text-primary font-medium hover:translate-x-1 transition-all duration-200 inline-block"
                     >
                       {label}
                     </Link>
-                  ))}
-                </div>
-              </li>
-            </ul>
-          </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Column 4: Contact / Address Card */}
-          <div>
-            <div className="bg-white rounded-[2rem] p-7 sm:p-8 shadow-[0_24px_50px_-15px_rgba(0,0,0,0.04)] border border-slate-100/90 flex flex-col gap-6 w-full lg:max-w-sm ml-auto">
-              <div>
-                <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
-                  Address
-                </span>
-                <h4 className="text-[22px] font-bold text-slate-900 leading-tight mb-2">
-                  Ready To Get Started?
-                </h4>
-                <p className="text-[14px] text-black leading-relaxed">
-                  It is a long established fact that a reader will be distracted
-                  layout.
-                </p>
+            {/* Column 3: Our Services */}
+            <div className="lg:pl-4">
+              <div className="relative mb-6 pb-2 inline-block">
+                <h3 className="text-lg font-bold text-slate-900">Our Services</h3>
+                <div className="absolute bottom-0 left-0 w-8 h-[2px] bg-slate-400/80" />
               </div>
-
-              <div className="flex flex-col gap-4 pt-4 border-t border-slate-100">
-                {/* Email Info */}
-                <div className="flex gap-3.5 items-center">
-                  <div className="p-2.5 bg-slate-50 rounded-xl text-slate-600 border border-slate-100 shrink-0">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <a
-                      href="mailto:connect@akshdigital.com"
-                      className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors truncate"
+              <ul className="flex flex-col gap-3">
+                {[
+                  { label: "SEO Strategies", href: "/services/seo-strategies" },
+                  { label: "Digital Marketing", href: "/services/digital-marketing" },
+                  { label: "Social Media", href: "/services/social-media" },
+                  { label: "Web Development", href: "/services/web-development" },
+                  { label: "App Development", href: "/services/app-development" },
+                  { label: "Performance Marketing", href: "/services/performance-marketing" },
+                ].map(({ label, href }) => (
+                  <li key={label} className="overflow-hidden">
+                    <Link
+                      href={href}
+                      className="text-[15px] text-black hover:text-primary font-medium hover:translate-x-1 transition-all duration-200 inline-block"
                     >
-                      connect@akshdigital.com
-                    </a>
-                    {/* <a
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+
+              </ul>
+            </div>
+
+            {/* Column 4: Contact / Address Card */}
+            <div>
+              <div className="bg-white rounded-[2rem] p-7 sm:p-8 shadow-[0_24px_50px_-15px_rgba(0,0,0,0.04)] border border-slate-100/90 flex flex-col gap-6 w-full lg:max-w-sm ml-auto">
+                <div>
+                  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+                    Address
+                  </span>
+                  <h4 className="text-[22px] font-bold text-slate-900 leading-tight mb-2">
+                    Ready To Get Started?
+                  </h4>
+                  <p className="text-[14px] text-black leading-relaxed">
+                    It is a long established fact that a reader will be distracted
+                    layout.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4 pt-4 border-t border-slate-100">
+                  {/* Email Info */}
+                  <div className="flex gap-3.5 items-center">
+                    <div className="p-2.5 bg-slate-50 rounded-xl text-slate-600 border border-slate-100 shrink-0">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <a
+                        href="mailto:connect@akshdigital.com"
+                        className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors truncate"
+                      >
+                        connect@akshdigital.com
+                      </a>
+                      {/* <a
                       href="mailto:info@Niotech.com"
                       className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors truncate"
                     >
                       info@Niotech.com
                     </a> */}
+                    </div>
                   </div>
-                </div>
 
-                {/* Phone Info */}
-                <div className="flex gap-3.5 items-center">
-                  <div className="p-2.5 bg-slate-50 rounded-xl text-slate-600 border border-slate-100 shrink-0">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <a
-                      href="tel:+88012365478900"
-                      className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors"
-                    >
-                      +880 123 654 789 00
-                    </a>
+                  {/* Phone Info */}
+                  <div className="flex gap-3.5 items-center">
+                    <div className="p-2.5 bg-slate-50 rounded-xl text-slate-600 border border-slate-100 shrink-0">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <a
+                        href="tel:+88012365478900"
+                        className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors"
+                      >
+                        +880 123 654 789 00
+                      </a>
 
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
+            <div className="pt-2 col-span-3 mt-5">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">SEO Company in</p>
+              <div className="flex flex-wrap gap-2">
+                We deliver to : pan india across
+                {[
+                  { label: "Jaipur", href: "/seo-services/jaipur" },
+                  { label: "Delhi", href: "/seo-services/delhi" },
+                  { label: "Mumbai", href: "/seo-services/mumbai" },
+                  { label: "Bangalore", href: "/seo-services/bangalore" },
+                  { label: "Pune", href: "/seo-services/pune" },
+                  { label: "Indore", href: "/seo-services/indore" },
+                ].map(({ label, href }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="text-[14px] text-slate-600 hover:text-primary font-medium  transition-all duration-200 inline-block"
+                  >
+                    <span>{label}</span>,
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
+
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-slate-200/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-5 pt-8 border-t border-slate-200/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[14px] text-slate-600 font-medium">
             Copyright © 2026 Aksh Digital – Digital Marketing Agency in Jaipur. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 lg:mr-20">
             <a
               href="#"
               className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"

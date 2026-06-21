@@ -119,7 +119,7 @@ export default function Header() {
         {/* Right side actions (Desktop) */}
         <div className="hidden md:flex items-center gap-5 lg:gap-6">
           {/* Search Icon */}
-          <button
+          {/* <button
             className="p-2 hover:bg-slate-50 rounded-full transition-colors duration-200 group"
             aria-label="Search"
           >
@@ -127,7 +127,7 @@ export default function Header() {
               className="w-5 h-5 text-slate-700 group-hover:text-primary transition-colors duration-200"
               strokeWidth={2.2}
             />
-          </button>
+          </button> */}
 
           {/* Gradient CTA Button */}
           <Link
