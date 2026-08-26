@@ -53,6 +53,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-T2DPVZG6X8');
           `}
         </Script>
+        
 
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
