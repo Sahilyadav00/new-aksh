@@ -5,21 +5,24 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Aksh Digital built a custom SEO strategy for our e-commerce brand that increased our organic traffic by 410% in just 8 months. Their team in Jaipur is responsive, transparent, and incredibly knowledgeable.",
-    name: "Rahul Sharma",
-    role: "Founder, Jaipur Fashion House",
+    tag: "SEO & E-Commerce",
+    text: "Aksh Digital scaled our organic search traffic by 410% within 8 months. Their Jaipur and international SEO strategies delivered quality inbound leads consistently.",
+    name: "Founder",
+    role: "Fashion & Lifestyle Brand",
     rating: 5,
   },
   {
-    text: "The web and mobile application developed by Aksh Digital completely transformed our customer experience. It is lightning-fast, beautifully designed, and has doubled our trial signups.",
-    name: "Priya Verma",
-    role: "CEO, PropFind Realty",
+    tag: "Web & Mobile Development",
+    text: "The web platform built by Aksh Digital cut our load times in half and doubled our trial conversions. Flawless communication across time zones.",
+    name: "CEO",
+    role: "PropTech Platform",
     rating: 5,
   },
   {
-    text: "We outsourced our Meta and Google Ads to their performance marketing team, and our ROAS jumped to 4.3x in the first 60 days. They are the best performance marketing agency we've worked with.",
-    name: "Anjali Kapoor",
-    role: "Marketing Director, GlowUp Skincare",
+    tag: "Performance Marketing",
+    text: "Our blended ROAS hit 4.3x within 60 days of handing over our Google and Meta ad accounts. They are easily our highest-ROI growth partner.",
+    name: "Growth Lead",
+    role: "D2C Consumer Brand",
     rating: 5,
   },
 ];
@@ -35,12 +38,12 @@ export default function HomeTestimonials() {
           <div className="flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-slate-200 sm:w-12" aria-hidden />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#d25c41] sm:text-sm">
-              Testimonials
+              Client Results & Testimonials
             </span>
             <span className="h-px w-8 bg-slate-200 sm:w-12" aria-hidden />
           </div>
           <h2 className="mt-5 text-[28px] font-semibold leading-tight text-[#14183e] sm:text-[34px] md:text-[40px]">
-            Trusted By Growing Brands
+            Delivering Measurable Impact for Ambitious Brands
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm sm:text-base text-slate-600 leading-relaxed">
             Discover how we help businesses across India drive real growth, increase visibility, and scale revenue.
@@ -49,16 +52,16 @@ export default function HomeTestimonials() {
 
         {/* Testimonial Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map(({ text, name, role, rating }, i) => (
+          {testimonials.map(({ tag, text, name, role, rating }, i) => (
             <div
               key={i}
               className="relative group rounded-2xl border border-slate-200/60 bg-white p-6 sm:p-8 hover:shadow-xl hover:border-[#d25c41]/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {/* Quote Icon */}
+                {/* Category Tag & Rating */}
                 <div className="flex justify-between items-center mb-5">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 group-hover:bg-[#d25c41]/10 transition-colors duration-300">
-                    <Quote className="h-5 w-5 text-[#d25c41] transform -scale-x-100" />
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#d25c41]/10 text-[#d25c41]">
+                    {tag}
                   </span>
                   {/* Rating */}
                   <div className="flex gap-0.5">
