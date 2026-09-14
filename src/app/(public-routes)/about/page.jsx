@@ -24,6 +24,9 @@ export const metadata = {
   title: 'About Aksh Digital | Digital Marketing & Web Development Agency India',
   description:
     'Aksh Digital is a full-service digital marketing and web development agency in Jaipur. We help businesses across India, USA, and UK scale with SEO, performance ads, and modern web builds.',
+  alternates: {
+    canonical: 'https://www.akshdigital.in/about/',
+  },
 };
 
 const corePillars = [
@@ -116,14 +119,14 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/contact"
+                  href="/contact/"
                   className="group inline-flex items-center gap-2 bg-linear-to-r from-primary to-secondary text-white px-7 py-3.5 rounded-full font-bold text-sm hover:shadow-[0_8px_25px_-5px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300"
                 >
                   <span>Get a Free Audit</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
                 </Link>
                 <Link
-                  href="/services"
+                  href="/services/"
                   className="inline-flex items-center gap-2 border border-slate-300 text-slate-700 px-7 py-3.5 rounded-full font-bold text-sm hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-300"
                 >
                   <span>Our Services</span>
@@ -408,7 +411,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="group inline-flex items-center gap-2 bg-linear-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-bold text-base hover:shadow-[0_8px_30px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto justify-center"
             >
               <span>Claim Your Free Website &amp; Growth Audit</span>

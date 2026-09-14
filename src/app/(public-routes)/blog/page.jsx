@@ -15,6 +15,9 @@ export const metadata = {
   title: "Blog | Digital Marketing & SEO Insights — Aksh Digital",
   description:
     "Stay ahead with expert articles on SEO, digital marketing, social media, web development, and performance marketing from the Aksh Digital team.",
+  alternates: {
+    canonical: "https://www.akshdigital.in/blog/",
+  },
 };
 
 const categories = [
@@ -98,7 +101,7 @@ export default async function BlogPage() {
         <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#fafaf9]">
           <div className="mx-auto max-w-6xl">
             <p className="text-xs font-bold uppercase tracking-widest text-[#d25c41] mb-6">Featured Article</p>
-            <Link href={`/blog/${featuredPost.slug}`} className="group grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300">
+            <Link href={`/blog/${featuredPost.slug}/`} className="group grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative h-64 lg:h-auto min-h-[280px] overflow-hidden">
                 <Image
                   src={featuredPost.image}
@@ -140,7 +143,7 @@ export default async function BlogPage() {
             {regularPosts.map((post) => (
               <Link
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={`/blog/${post.slug}/`}
                 className="group flex flex-col rounded-2xl border border-slate-100 bg-white overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
               >
                 <div className="relative h-48 sm:h-52 overflow-hidden">

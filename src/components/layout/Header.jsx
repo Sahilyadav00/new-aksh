@@ -7,17 +7,20 @@ import { ChevronDown, Search, ArrowRight, Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedItem, setExpandedItem] = useState(null);
   const headerRef = useRef(null);
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (headerRef.current && !headerRef.current.contains(event.target)) {
         setMobileMenuOpen(false);
+        setExpandedItem(null);
       }
     }
     function handleKeyDown(event) {
       if (event.key === "Escape") {
         setMobileMenuOpen(false);
+        setExpandedItem(null);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -30,32 +33,38 @@ export default function Header() {
 
   const menuItems = [
     { name: "Home", href: "/", hasDropdown: false },
-    { name: "About us", href: "/about", hasDropdown: false },
+    { name: "About us", href: "/about/", hasDropdown: false },
     {
       name: "Services",
-      href: "/services",
+      href: "/services/",
       hasDropdown: true,
       dropdownItems: [
-        { name: "SEO Strategies", href: "/services/seo-strategies" },
-        { name: "Digital Marketing", href: "/services/digital-marketing" },
-        { name: "Social Media", href: "/services/social-media" },
-        { name: "Graphic Design", href: "/services/graphic-design" },
-        { name: "Web Development", href: "/services/web-development" },
-        { name: "App Development", href: "/services/app-development" },
-        { name: "Performance Marketing", href: "/services/performance-marketing" },
-        { name: "── SEO by City ──", href: "/services/seo-strategies", isLabel: true },
-        { name: "SEO in Jaipur", href: "/seo-services/jaipur" },
-        { name: "SEO in Delhi", href: "/seo-services/delhi" },
-        { name: "SEO in Mumbai", href: "/seo-services/mumbai" },
-        { name: "SEO in Bangalore", href: "/seo-services/bangalore" },
-        { name: "SEO in Pune", href: "/seo-services/pune" },
-        { name: "SEO in Indore", href: "/seo-services/indore" },
+        { name: "SEO Services", href: "/services/seo/" },
+        { name: "Performance Marketing", href: "/services/performance-marketing/" },
+        { name: "Digital Marketing", href: "/services/digital-marketing/" },
+        { name: "Social Media Marketing", href: "/services/social-media-marketing/" },
+        { name: "Graphic Design", href: "/services/graphic-design/" },
+        { name: "Web Development", href: "/services/web-development/" },
+        { name: "App Development", href: "/services/app-development/" },
+        // { name: "── SEO by City ──", href: "/services/seo/", isLabel: true },
+        // { name: "SEO in Jaipur", href: "/seo-services/jaipur/" },
+        // { name: "SEO in Delhi", href: "/seo-services/delhi/" },
+        // { name: "SEO in Mumbai", href: "/seo-services/mumbai/" },
+        // { name: "SEO in Bangalore", href: "/seo-services/bangalore/" },
+        // { name: "SEO in Pune", href: "/seo-services/pune/" },
+        // { name: "SEO in Indore", href: "/seo-services/indore/" },
+        // { name: "SEO in Chandigarh", href: "/seo-services/chandigarh/" },
+        // { name: "SEO in Kolkata", href: "/seo-services/kolkata/" },
+        // { name: "SEO in Hyderabad", href: "/seo-services/hyderabad/" },
+        // { name: "SEO in Chennai", href: "/seo-services/chennai/" },
+        // { name: "SEO in Lucknow", href: "/seo-services/lucknow/" },
+        // { name: "SEO in Bhiwadi & Alwar", href: "/seo-services/bhiwadi-alwar/" },
       ],
     },
-    { name: "Portfolio", href: "/portfolio", hasDropdown: false },
-    { name: "Blog", href: "/blog", hasDropdown: false },
-    // { name: "FAQ", href: "/faq", hasDropdown: false },
-    // { name: "Contact", href: "/contact", hasDropdown: false },
+    { name: "Portfolio", href: "/portfolio/", hasDropdown: false },
+    { name: "Blog", href: "/blog/", hasDropdown: false },
+    // { name: "FAQ", href: "/faq/", hasDropdown: false },
+    // { name: "Contact", href: "/contact/", hasDropdown: false },
   ];
 
   return (
@@ -131,7 +140,7 @@ export default function Header() {
 
           {/* Gradient CTA Button */}
           <Link
-            href="/contact"
+            href="/contact/"
             className="group flex items-center bg-linear-to-r from-primary to-secondary text-white px-7 py-3 rounded-full font-semibold text-[15px] hover:shadow-[0_4px_18px_-4px_rgba(210,92,65,0.35)]  transition-all duration-300"
           >
             Get Started
@@ -143,79 +152,137 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center gap-3">
+        <div className="flex md:hidden items-center gap-2">
           <button
-            className="p-2 hover:bg-slate-50 rounded-full transition-colors duration-200"
-            aria-label="Search"
-          >
-            <Search className="w-5 h-5 text-slate-700" strokeWidth={2.2} />
-          </button>
-
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-slate-700 hover:bg-slate-50 rounded-full transition-colors duration-200"
+            onClick={() => {
+              setMobileMenuOpen(!mobileMenuOpen);
+              if (mobileMenuOpen) setExpandedItem(null);
+            }}
+            className="p-2 text-slate-700 hover:text-primary hover:bg-slate-50 rounded-xl transition-colors duration-200"
             aria-label="Toggle Menu"
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6" strokeWidth={1.8} />
+              <X className="w-6 h-6" strokeWidth={2} />
             ) : (
-              <Menu className="w-6 h-6" strokeWidth={1.8} />
+              <Menu className="w-6 h-6" strokeWidth={2} />
             )}
           </button>
         </div>
       </div>
 
+      {/* Mobile Backdrop Overlay */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-slate-900/30 backdrop-blur-xs z-40 md:hidden transition-opacity duration-300"
+          onClick={() => {
+            setMobileMenuOpen(false);
+            setExpandedItem(null);
+          }}
+          aria-hidden="true"
+        />
+      )}
+
       {/* Mobile Drawer */}
       <div
-        className={`md:hidden absolute left-0 right-0 top-16.5 overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? "max-h-112.5 opacity-100 mt-2" : "max-h-0 opacity-0 pointer-events-none"}`}
+        className={`md:hidden absolute left-0 right-0 top-full px-3 sm:px-6 pt-2 pb-4 z-50 transition-all duration-300 ease-in-out ${
+          mobileMenuOpen
+            ? "opacity-100 translate-y-0 visible"
+            : "opacity-0 -translate-y-2 invisible pointer-events-none"
+        }`}
       >
-        <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-5 flex flex-col gap-4">
-          <nav className="flex flex-col gap-2">
+        <div className="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-100 p-4 sm:p-5 flex flex-col gap-3 max-h-[calc(100vh-5.5rem)] overflow-y-auto">
+          <nav className="flex flex-col gap-1">
             {menuItems.map((item) => (
               <div key={item.name} className="flex flex-col">
-                <Link
-                  href={item.href}
-                  onClick={(e) => {
-                    if (!item.hasDropdown) setMobileMenuOpen(false);
-                  }}
-                  className="flex items-center justify-between py-2 px-3 rounded-lg text-slate-800 hover:text-primary hover:bg-slate-50 font-medium transition-all duration-200"
-                >
-                  {item.name}
-                  {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4 text-slate-400" />
-                  )}
-                </Link>
-                {/* Mobile Dropdown Sub-menu */}
-                {item.hasDropdown && item.dropdownItems && (
-                  <div className="flex flex-col gap-0.5 pl-4 mt-1 border-l-2 border-slate-100 ml-4">
-                    {item.dropdownItems.map((dropItem) =>
-                      dropItem.isLabel ? (
-                        <div key={dropItem.name} className="px-3 pt-2 pb-1">
-                          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">SEO by City</span>
-                          <div className="mt-1 h-px bg-slate-100" />
-                        </div>
-                      ) : (
-                        <Link
-                          key={dropItem.name}
-                          href={dropItem.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="py-2 px-3 rounded-lg text-[14px] text-slate-600 hover:text-primary hover:bg-slate-50 transition-all duration-200"
-                        >
-                          {dropItem.name}
-                        </Link>
+                {item.hasDropdown ? (
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setExpandedItem(
+                        expandedItem === item.name ? null : item.name,
                       )
-                    )}
-                  </div>
+                    }
+                    className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-[15px] font-medium transition-all duration-200 text-left ${
+                      expandedItem === item.name
+                        ? "bg-slate-50 text-primary font-semibold"
+                        : "text-slate-800 hover:text-primary hover:bg-slate-50"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                    <ChevronDown
+                      className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+                        expandedItem === item.name
+                          ? "rotate-180 text-primary"
+                          : ""
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setExpandedItem(null);
+                    }}
+                    className="flex items-center justify-between py-2.5 px-3.5 rounded-xl text-slate-800 hover:text-primary hover:bg-slate-50 font-medium text-[15px] transition-all duration-200"
+                  >
+                    {item.name}
+                  </Link>
                 )}
+
+                {/* Mobile Dropdown Sub-menu */}
+                {item.hasDropdown &&
+                  item.dropdownItems &&
+                  expandedItem === item.name && (
+                    <div className="flex flex-col gap-1 pl-3 pr-1 py-1 mt-1 border-l-2 border-primary/25 ml-4">
+                      <Link
+                        href={item.href}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setExpandedItem(null);
+                        }}
+                        className="flex items-center justify-between py-2 px-3 rounded-lg text-[13.5px] font-semibold text-primary hover:bg-primary/5 transition-colors"
+                      >
+                        <span>All {item.name} Overview</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      {item.dropdownItems.map((dropItem) =>
+                        dropItem.isLabel ? (
+                          <div key={dropItem.name} className="px-3 pt-2 pb-1">
+                            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                              {dropItem.name.replace(/^[─\s]+|[─\s]+$/g, "")}
+                            </span>
+                            <div className="mt-1 h-px bg-slate-100" />
+                          </div>
+                        ) : (
+                          <Link
+                            key={dropItem.name}
+                            href={dropItem.href}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              setExpandedItem(null);
+                            }}
+                            className="py-2 px-3 rounded-lg text-[13.5px] text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors"
+                          >
+                            {dropItem.name}
+                          </Link>
+                        ),
+                      )}
+                    </div>
+                  )}
               </div>
             ))}
           </nav>
 
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-3">
             <Link
-              href="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center bg-linear-to-r from-primary to-secondary text-white py-3 rounded-xl font-semibold text-center shadow-lg"
+              href="/contact/"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setExpandedItem(null);
+              }}
+              className="flex items-center justify-center bg-linear-to-r from-primary to-secondary text-white py-3.5 rounded-xl font-semibold text-center shadow-lg shadow-primary/15 hover:shadow-primary/25 transition-all duration-200"
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" strokeWidth={2.5} />

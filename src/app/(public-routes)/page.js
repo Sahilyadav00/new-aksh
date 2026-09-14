@@ -46,6 +46,9 @@ export const metadata = {
   title: "Digital Marketing Agency in Jaipur | SEO & Ads Company Aksh Digital",
   description:
     "Aksh Digital is a full-service software development and performance digital marketing agency headquartered in Jaipur, serving clients across India, USA, UK, and worldwide.",
+  alternates: {
+    canonical: "https://www.akshdigital.in/",
+  },
 };
 
 const trustBadges = [
@@ -72,7 +75,7 @@ const coreServiceCards = [
       "Rank on Page 1 for high-intent national, global, and local search queries. We cover technical audits, semantic keyword mapping, high-authority link acquisition, and localized Google Map pack rankings.",
     keyFocus:
       "Local SEO (Jaipur & Indian Metros), Enterprise National SEO, and International E-Commerce Search Strategy.",
-    href: "/services/seo-strategies",
+    href: "/services/seo/",
     icon: Search,
   },
   {
@@ -81,7 +84,7 @@ const coreServiceCards = [
       "Eliminate wasted ad spend. We create, test, and optimize high-converting Google Search, Performance Max, and Meta ad campaigns engineered for strict ROAS targets.",
     keyFocus:
       "Google Ads, Meta Ads (Facebook & Instagram), B2B LinkedIn Marketing, Multi-Tier Retargeting.",
-    href: "/services/performance-marketing",
+    href: "/services/performance-marketing/",
     icon: Zap,
   },
   {
@@ -90,7 +93,7 @@ const coreServiceCards = [
       "Modern, ultra-fast, and responsive digital products built with Next.js, React, Node.js, and mobile frameworks. Designed for seamless user experience and maximum conversion rates.",
     keyFocus:
       "Custom Web Apps, Corporate Websites, Headless E-Commerce, iOS & Android Apps.",
-    href: "/services/web-development",
+    href: "/services/web-development/",
     icon: Layers,
   },
   {
@@ -99,7 +102,7 @@ const coreServiceCards = [
       "Elevate your brand narrative with thumb-stopping creative design, community management, and data-backed viral social distribution.",
     keyFocus:
       "Multi-Platform Management, Creative Video Strategy, Social Ads, Brand Identity Systems.",
-    href: "/services/social-media",
+    href: "/services/social-media-marketing/",
     icon: Megaphone,
   },
 ];
@@ -311,7 +314,7 @@ export default function Home() {
             {/* Primary & Secondary CTAs */}
             <div className="flex flex-wrap gap-4 items-center w-full sm:w-auto animate-on-load-fade-up animation-delay-400">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="group flex items-center justify-center gap-2 bg-linear-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-bold text-[15px] hover:shadow-[0_8px_25px_-5px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto shadow-lg shadow-primary/10"
               >
                 <span>Schedule a Strategy Call</span>
@@ -321,7 +324,7 @@ export default function Home() {
                 />
               </Link>
               <Link
-                href="/services"
+                href="/services/"
                 className="group flex items-center justify-center gap-2 bg-transparent text-slate-700 border border-slate-300 hover:border-slate-400 px-8 py-4 rounded-full font-bold text-[15px] hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
               >
                 <span>Explore Our Services</span>
@@ -330,19 +333,6 @@ export default function Home() {
                   strokeWidth={2.5}
                 />
               </Link>
-            </div>
-
-            {/* Trust Badges Strip */}
-            <div className="mt-10 pt-6 border-t border-slate-100 w-full grid grid-cols-2 sm:grid-cols-2 gap-3">
-              {trustBadges.map((badge, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-700"
-                >
-                  <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span>{badge}</span>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -362,6 +352,21 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white  ">
+        {/* Trust Badges Strip */}
+        <div className="border-t border-slate-100 px-8 pt-6 pb-10 w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {trustBadges.map((badge, idx) => (
+            <div
+              key={idx}
+              className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-700"
+            >
+              <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+              <span>{badge}</span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -495,7 +500,7 @@ export default function Home() {
 
                 <div className="mt-8 flex flex-wrap items-center gap-5 sm:gap-6 reveal reveal-right delay-500">
                   <Link
-                    href="/about"
+                    href="/about/"
                     className="inline-flex items-center justify-center rounded-full bg-[#3b6fd4] px-7 py-3.5 text-sm font-bold tracking-wide text-white transition-all hover:bg-[#2f5eb8] hover:shadow-md"
                   >
                     MORE ABOUT US
@@ -614,7 +619,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <Link
-              href="/services"
+              href="/services/"
               className="inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-4 text-sm font-bold tracking-wide text-white hover:bg-primary transition-colors duration-300 shadow-md"
             >
               View All Services
@@ -780,7 +785,10 @@ export default function Home() {
               <div className="relative z-10 flex items-center justify-center gap-3 sm:gap-4 pt-8 pb-10">
                 <div
                   className="relative mt-10 w-[46%] shrink-0 overflow-hidden shadow-lg"
-                  style={{ clipPath: "polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 14%)" }}
+                  style={{
+                    clipPath:
+                      "polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 14%)",
+                  }}
                 >
                   <Image
                     src="/assets/images/home/PLAN-01.webp"
@@ -793,7 +801,10 @@ export default function Home() {
 
                 <div
                   className="relative -mt-6 w-[46%] shrink-0 overflow-hidden shadow-lg"
-                  style={{ clipPath: "polygon(0 0, 100% 0, 100% 86%, 86% 100%, 0 100%)" }}
+                  style={{
+                    clipPath:
+                      "polygon(0 0, 100% 0, 100% 86%, 86% 100%, 0 100%)",
+                  }}
                 >
                   <Image
                     src="/assets/images/home/PLAN-02.webp"
@@ -842,25 +853,30 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-5 xl:gap-6">
-            {workProcessSteps.map(({ step, title, description, icon: Icon }) => (
-              <article
-                key={step}
-                className="flex flex-col items-center rounded-xl border border-slate-100 bg-white px-5 py-8 text-center shadow-[0_4px_24px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] sm:px-6 sm:py-9"
-              >
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 text-primary sm:h-18 sm:w-18">
-                  <Icon className="h-7 w-7 sm:h-8 sm:w-8" strokeWidth={1.75} />
-                </span>
-                <p className="mt-5 text-xs font-bold uppercase tracking-wider text-primary">
-                  {step}
-                </p>
-                <h3 className="mt-2 text-lg font-bold text-slate-900 sm:text-xl">
-                  {title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-500">
-                  {description}
-                </p>
-              </article>
-            ))}
+            {workProcessSteps.map(
+              ({ step, title, description, icon: Icon }) => (
+                <article
+                  key={step}
+                  className="flex flex-col items-center rounded-xl border border-slate-100 bg-white px-5 py-8 text-center shadow-[0_4px_24px_rgba(0,0,0,0.04)] transition-shadow hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] sm:px-6 sm:py-9"
+                >
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 text-primary sm:h-18 sm:w-18">
+                    <Icon
+                      className="h-7 w-7 sm:h-8 sm:w-8"
+                      strokeWidth={1.75}
+                    />
+                  </span>
+                  <p className="mt-5 text-xs font-bold uppercase tracking-wider text-primary">
+                    {step}
+                  </p>
+                  <h3 className="mt-2 text-lg font-bold text-slate-900 sm:text-xl">
+                    {title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-500">
+                    {description}
+                  </p>
+                </article>
+              ),
+            )}
           </div>
         </div>
       </section>
@@ -1129,10 +1145,11 @@ export default function Home() {
                   className="flex shrink-0 items-center gap-10 sm:gap-14"
                 >
                   <span
-                    className={`whitespace-nowrap text-xl font-bold uppercase tracking-wide sm:text-2xl md:text-3xl ${isFilled
-                      ? "text-white"
-                      : "text-transparent [-webkit-text-stroke:1.5px_rgba(255,255,255,0.7)]"
-                      }`}
+                    className={`whitespace-nowrap text-xl font-bold uppercase tracking-wide sm:text-2xl md:text-3xl ${
+                      isFilled
+                        ? "text-white"
+                        : "text-transparent [-webkit-text-stroke:1.5px_rgba(255,255,255,0.7)]"
+                    }`}
                   >
                     {name}
                   </span>
@@ -1243,7 +1260,8 @@ export default function Home() {
               </span>
             </div>
             <h2 className="mt-4 text-[28px] font-semibold leading-tight text-[#14183e] sm:text-[34px] md:text-[40px] lg:text-[44px]">
-              Why Businesses Choose Aksh Digital: India&apos;s Trusted Growth Partner
+              Why Businesses Choose Aksh Digital: India&apos;s Trusted Growth
+              Partner
             </h2>
           </div>
 
@@ -1350,7 +1368,7 @@ export default function Home() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="group flex items-center justify-center gap-2 bg-linear-to-r from-primary to-secondary text-white px-9 py-4.5 rounded-full font-bold text-base hover:shadow-[0_8px_30px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
             >
               <span>Book Your Free Consultation & Audit</span>

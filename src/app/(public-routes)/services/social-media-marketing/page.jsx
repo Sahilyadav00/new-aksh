@@ -1,156 +1,143 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  Smartphone,
+  Share2,
   CheckCircle,
   Check,
-  Zap,
-  ShieldCheck,
-  Code2,
+  Heart,
+  MessageCircle,
+  Camera,
   BarChart3,
-  Layers,
+  Users,
+  Zap,
   Sparkles,
-  TrendingUp,
+  Video,
+  Globe,
   MapPin,
   Mail,
+  Layers,
+  ShieldCheck,
+  TrendingUp,
   Clock,
-  Database,
-  Server,
-  Globe,
 } from "lucide-react";
 
 export const metadata = {
-  title: "Custom App Development Services | iOS, Android & Flutter — Aksh Digital",
+  title: "Creative Social Media Marketing Services | Brand Growth — Aksh Digital",
   description:
-    "Mobile app development services engineered for retention, speed, and scale. Native iOS, Android, React Native, Flutter, and custom backend API architecture by Aksh Digital.",
+    "Social media marketing services engineered to engage, convert, and scale. Instagram, LinkedIn, YouTube, Reels production, paid social ads, and community management by Aksh Digital.",
   alternates: {
-    canonical: "https://www.akshdigital.in/services/app-development/",
+    canonical: "https://www.akshdigital.in/services/social-media-marketing/",
   },
 };
 
 const services = [
   {
-    id: "cross-platform",
+    id: "content-strategy",
     number: "01",
-    badge: "React Native & Flutter",
-    title: "Cross-Platform Mobile App Development (React Native & Flutter)",
-    icon: Smartphone,
+    badge: "Editorial Calendars & Copywriting",
+    title: "Comprehensive Content Strategy & Brand Storytelling",
+    icon: Camera,
     points: [
-      "Single codebase deployment across both iOS and Android platforms, cutting development time and maintenance overhead without sacrificing native speed.",
-      "Pixel-perfect UI rendering, smooth 60fps animations, and native device feature access (camera, geolocation, biometrics, Bluetooth).",
-      "Highly scalable state management and modular architecture designed for rapid iteration.",
+      "Data-backed editorial calendars crafted to establish brand authority, educate audiences, and spark engagement.",
+      "Creative copywriting with compelling hooks, engaging storytelling, and clear calls to action.",
     ],
   },
   {
-    id: "native-mobile",
+    id: "video-production",
     number: "02",
-    badge: "Swift (iOS) & Kotlin (Android)",
-    title: "Native iOS & Android Development",
-    icon: Code2,
+    badge: "Reels, Shorts & Motion Design",
+    title: "High-Retention Short-Form Video & Visual Production",
+    icon: Video,
     points: [
-      "Dedicated Swift (iOS) and Kotlin (Android) engineering tailored for hardware-intensive, enterprise-grade applications.",
-      "Strict adherence to Apple App Store Human Interface Guidelines and Google Play Material Design principles.",
-      "Maximum performance, zero-latency rendering, and deep OS-level integration.",
+      "Production of high-performing Instagram Reels, YouTube Shorts, and TikTok-style content tailored to modern algorithmic feeds.",
+      "Carousel design, infographic creation, and interactive motion graphics designed to lower ad fatigue and boost organic reach.",
     ],
   },
   {
-    id: "backend-apis",
+    id: "paid-social",
     number: "03",
-    badge: "Node.js, GraphQL & Microservices",
-    title: "Custom Mobile Backend & Cloud API Architecture",
-    icon: Server,
-    points: [
-      "Resilient backend systems built with Node.js, Python, TypeScript, and GraphQL/REST APIs.",
-      "Scalable database engineering using PostgreSQL, MongoDB, and Redis caching layers deployed on AWS and Docker.",
-      "Secure user authentication, role-based access control, and end-to-end data encryption.",
-    ],
-  },
-  {
-    id: "pwa",
-    number: "04",
-    badge: "Browser-Based App Experience",
-    title: "Progressive Web Apps (PWAs)",
-    icon: Globe,
-    points: [
-      "Lightweight, offline-ready web applications built using Next.js and React that deliver an app-like experience directly inside mobile browsers.",
-      "Instant load times, push notifications, and home screen installation without requiring app store downloads.",
-      "High-converting, low-friction digital touchpoints that reduce user drop-off.",
-    ],
-  },
-  {
-    id: "aso-acquisition",
-    number: "05",
-    badge: "Organic Rankings & Paid Installs",
-    title: "App Store Optimization (ASO) & User Acquisition Synergy",
+    badge: "Meta & LinkedIn Funnels",
+    title: "Paid Social Media Advertising & Retargeting",
     icon: TrendingUp,
     points: [
-      "Seamless alignment with our search engine optimization marketing agency and performance marketing agency India specialists to drive downloads.",
-      "Keyword optimization for app store ranking, compelling screenshot/video design, and high-ROAS paid app install campaigns on Meta and Google UAC.",
+      "Integration with our performance marketing agency India capabilities to run high-converting Meta Ads (Facebook & Instagram) and LinkedIn B2B campaigns.",
+      "Custom pixel tracking, audience segmentation, lookalike audience modeling, and multi-tier retargeting funnels.",
+    ],
+  },
+  {
+    id: "community-management",
+    number: "04",
+    badge: "Audience Care & Social Listening",
+    title: "Community Management & Social Listening",
+    icon: Users,
+    points: [
+      "Active comment moderation, direct message triage, and proactive engagement to foster an authentic brand community.",
+      "Sentiment analysis and social listening to identify trending conversations and customer pain points in real time.",
     ],
   },
 ];
 
-const techStackGroups = [
+const platformsData = [
   {
-    category: "Mobile Frameworks",
-    skills: ["React Native", "Flutter", "Swift (iOS)", "Kotlin (Android)"],
+    name: "Instagram & Threads",
+    badge: "Visual Storytelling",
+    desc: "Aesthetic grid planning, viral short-form Reels, interactive Stories, and influencer collaboration workflows.",
   },
   {
-    category: "Web & Progressive Apps",
-    skills: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    name: "LinkedIn B2B Marketing",
+    badge: "Executive Thought Leadership",
+    desc: "Founder brand building, B2B lead generation funnels, employer branding, and authoritative long-form content.",
   },
   {
-    category: "Backend & APIs",
-    skills: ["Node.js", "Express", "Python", "GraphQL", "RESTful APIs"],
+    name: "YouTube & Video Platforms",
+    badge: "Long & Short-Form Video",
+    desc: "Channel optimization, YouTube Shorts distribution, thumbnail design, and organic video SEO.",
   },
   {
-    category: "Databases & Cloud",
-    skills: ["PostgreSQL", "MongoDB", "Firebase", "AWS", "Docker", "Redis"],
-  },
-  {
-    category: "Tracking & Analytics",
-    skills: ["Firebase Analytics", "Mixpanel", "AppsFlyer", "GA4 Event Tracking"],
+    name: "X (Twitter) & Pinterest",
+    badge: "Real-Time & Discovery",
+    desc: "Real-time conversation management, trending topic integration, and visual product discovery boards.",
   },
 ];
 
 const domesticCities = [
-  { city: "Jaipur (HQ)", slug: "jaipur", tag: "Engineering Lab" },
-  { city: "Delhi NCR", slug: "delhi", tag: "Enterprise Scale" },
-  { city: "Mumbai", slug: "mumbai", tag: "Fintech & Commerce" },
-  { city: "Bangalore", slug: "bangalore", tag: "Startup Hub" },
-  { city: "Pune", slug: "pune", tag: "Software Center" },
-  { city: "Indore", slug: "indore", tag: "Fast-Growth Tech" },
+  { city: "Jaipur (HQ)", slug: "jaipur", tag: "Headquarters" },
+  { city: "Delhi NCR", slug: "delhi", tag: "Metro Scale" },
+  { city: "Mumbai", slug: "mumbai", tag: "Creative Hub" },
+  { city: "Bangalore", slug: "bangalore", tag: "Tech Sector" },
+  { city: "Pune", slug: "pune", tag: "Emerging Metro" },
+  { city: "Indore", slug: "indore", tag: "Tier-2 Growth" },
 ];
 
 const roadmapPhases = [
   {
     phase: "Phase 1",
-    title: "Product Discovery & User Journey Mapping",
-    desc: "We define user personas, map user flows, and outline database schemas to align technology with business goals.",
+    title: "Brand & Audience Audit",
+    desc: "Analyzing existing engagement rates, competitor positioning, and audience demographics.",
   },
   {
     phase: "Phase 2",
-    title: "UI/UX Wireframing & Interactive Prototyping",
-    desc: "Designing clickable, high-fidelity prototypes in Figma to test usability and validate design before development.",
+    title: "Content Pillars & Creative Direction",
+    desc: "Defining visual themes, tonality, weekly content pillars, and video production frameworks.",
   },
   {
     phase: "Phase 3",
-    title: "Sprint Development & Quality Assurance",
-    desc: "Writing clean, test-driven code with rigorous cross-device, functional, security, and edge-case testing.",
+    title: "Production & Distribution",
+    desc: "Designing high-impact creatives, writing conversion-focused copy, and scheduling posts during peak engagement windows.",
   },
   {
     phase: "Phase 4",
-    title: "Store Submission, Analytics & Scale",
-    desc: "Handling end-to-end App Store and Google Play submissions, setting up in-app attribution tracking, and optimizing conversion funnels.",
+    title: "Analytics & Paid Amplification",
+    desc: "Monitoring engagement KPIs, identifying top-performing organic posts, and boosting winners via paid social funnels.",
   },
 ];
 
-export default function AppDevelopmentPage() {
+export default function SocialMediaMarketingPage() {
   return (
     <div className="bg-white">
       {/* ── 1. Hero Section ── */}
       <section className="relative overflow-hidden bg-[#0f1535] py-20 sm:py-24 md:py-28 px-4 sm:px-6">
-        <div className="pointer-events-none absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-violet-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-pink-500/15 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-[#f6ac55]/10 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -160,23 +147,23 @@ export default function AppDevelopmentPage() {
             <span>/</span>
             <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
             <span>/</span>
-            <span className="text-[#f6ac55]">App Development</span>
+            <span className="text-[#f6ac55]">Social Media Marketing</span>
           </nav>
 
           <span className="inline-flex items-center gap-2 rounded-full border border-[#d25c41]/30 bg-[#d25c41]/10 px-4 py-1.5 text-sm font-semibold text-[#f6ac55] mb-6">
             <Sparkles className="h-4 w-4" />
-            Scalable Mobile &amp; Cross-Platform Engineering
+            Brand Storytelling &amp; Social Conversions
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
-            Custom App Development Services Engineered for{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-[#d25c41] to-[#f6ac55]">
-              User Retention, Speed, and Scale
+            Creative Social Media Marketing Services Engineered to{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-[#d25c41] to-[#f6ac55]">
+              Engage, Convert, and Scale
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            A great mobile app must do more than look modern—it must deliver seamless user experiences, rock-solid security, and high lifetime user value. As a full-stack software and digital marketing company, Aksh Digital builds native and cross-platform mobile applications that turn active users into long-term brand advocates. From our engineering hub in Jaipur to fast-scaling enterprises across Pan-India, the USA, the UK, and global markets, we turn innovative product ideas into market-ready applications.
+            Likes and vanity metrics don’t drive revenue—engaged communities and strategic funnels do. As a premier social media marketing agency in India, Aksh Digital blends scroll-stopping visual design, data-driven content distribution, and paid social campaigns to build lasting brand loyalty across Jaipur, Pan-India, the USA, and international markets.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -184,14 +171,14 @@ export default function AppDevelopmentPage() {
               href="/contact/"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm sm:text-base font-bold text-white shadow-lg hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              Schedule a Product Strategy Call
+              Request a Free Social Media Strategy Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <Link
-              href="#tech-stack"
+              href="#core-services"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-xs px-8 py-4 text-sm sm:text-base font-bold text-white hover:bg-white/15 transition-all duration-300"
             >
-              View Tech Stack &amp; Process
+              Explore Our Social Media Solutions
             </Link>
           </div>
         </div>
@@ -201,10 +188,10 @@ export default function AppDevelopmentPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "60 FPS", label: "Smooth Native Rendering", sub: "React Native & Flutter" },
-            { num: "99.9%", label: "Crash-Free Session Rate", sub: "Automated QA pipelines" },
-            { num: "50+", label: "Apps Shipped Worldwide", sub: "iOS App Store & Google Play" },
-            { num: "100%", label: "Source Code & IP Handover", sub: "Full enterprise ownership" },
+            { num: "5.4x", label: "Average Engagement Lift", sub: "Algorithmic reach" },
+            { num: "10M+", label: "Video Views Generated", sub: "Reels & Shorts production" },
+            { num: "3.8x", label: "ROAS on Paid Social", sub: "Meta & LinkedIn funnels" },
+            { num: "100%", label: "Custom Brand Creatives", sub: "Zero stock templates" },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
               <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
@@ -215,37 +202,37 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── 2. Overview: Engineering Mobile Products for High User Lifetime Value ── */}
+      {/* ── 2. Overview: Turning Social Presence into Commercial Value ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41]">
-                  Retention-First Architecture
+                  Conversion-Focused Social Systems
                 </span>
                 <span className="h-px w-8 bg-[#d25c41]/40" />
               </div>
 
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#14183e] leading-tight mb-6">
-                Bridging the Gap Between Intuitive UX, Clean Architecture, and{" "}
-                <span className="text-[#d25c41]">User Acquisition</span>
+                Moving Beyond Random Posting to{" "}
+                <span className="text-[#d25c41]">Full-Funnel Social Growth</span>
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                Building a successful mobile application requires balancing technical stability with post-launch growth marketing. High crash rates, slow transitions, and confusing onboarding flows lead to immediate app uninstalls and wasted acquisition budgets.
+                Most social media accounts underperform because they treat feeds like static notice boards instead of dynamic conversion funnels. Random posts without strategic hooks, inconsistent branding, and zero alignment with paid media result in wasted effort and stagnant growth.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As an integrated digital marketing and web development agency, Aksh Digital approaches mobile app development with end-to-end synergy. We engineer secure, modular front-end and back-end code while building conversion funnels, event tracking, and in-app analytics from day one. Whether you are looking for a reliable digital marketing company in Jaipur to launch a local on-demand service app or an overseas brand seeking a skilled digital marketing agency USA offshore development partner, we build scalable mobile products ready for market success.
+                As a full-stack social media management agency India, Aksh Digital develops social systems that capture attention and nurture prospects toward direct conversion. Whether you need a dedicated social media marketing company in Jaipur to dominate regional brand visibility, multi-city distribution across top Indian hubs, or international creative execution with a trusted digital marketing agency USA partner, we deliver high-impact social media management tailored to your audience.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/contact"
+                  href="/contact/"
                   className="inline-flex items-center gap-2 rounded-full bg-[#d25c41] px-7 py-3.5 text-sm font-bold text-white hover:bg-[#b84d35] transition-all shadow-md"
                 >
-                  Schedule Mobile Product Briefing
+                  Schedule Content Briefing
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -254,19 +241,19 @@ export default function AppDevelopmentPage() {
             <div className="lg:col-span-5 space-y-4">
               {[
                 {
-                  icon: Smartphone,
-                  title: "Zero-Latency UI & Native 60fps",
-                  desc: "Optimized component rendering, gesture responders, and thread isolation for butter-smooth mobile performance.",
+                  icon: Video,
+                  title: "High-Retention Visual Hooks",
+                  desc: "Short-form video engineered with algorithmic pacing that hooks attention in the first 3 seconds.",
                 },
                 {
-                  icon: BarChart3,
-                  title: "Full-Funnel Event & Attribution Tracking",
-                  desc: "Out-of-the-box integration with Firebase, AppsFlyer, and Mixpanel to measure exact acquisition costs and user paths.",
+                  icon: TrendingUp,
+                  title: "Multi-Tier Paid Retargeting",
+                  desc: "Re-engaging video watchers and profile visitors with high-converting social commerce offers.",
                 },
                 {
-                  icon: Layers,
-                  title: "In-App Retention & Re-Engagement",
-                  desc: "Intelligent push notification flows, deep linking, and automated lifecycle triggers that maximize LTV.",
+                  icon: MessageCircle,
+                  title: "Active Community Advocacy",
+                  desc: "Transforming casual followers into brand advocates with responsive DM nurture and community care.",
                 },
               ].map((card, idx) => {
                 const CIcon = card.icon;
@@ -296,18 +283,18 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── 3. Our Core App Development Services ── */}
-      <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100">
+      {/* ── 3. Our Core Social Media Marketing Services ── */}
+      <section id="core-services" className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
-              Full-Lifecycle Engineering
+              Full-Spectrum Execution
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#14183e] tracking-tight">
-              Our Core App Development Services
+              Our Core Social Media Marketing Services
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every build is tailored for maximum performance, frictionless user journeys, and seamless scalability.
+              Every deliverable is crafted by dedicated copywriters, designers, and video strategists to command attention.
             </p>
           </div>
 
@@ -351,16 +338,16 @@ export default function AppDevelopmentPage() {
 
                     <div className="md:w-56 shrink-0 flex flex-col justify-center border-t md:border-t-0 md:border-l border-slate-100 pt-5 md:pt-0 md:pl-8">
                       <span className="text-xs text-slate-400 font-semibold mb-2">
-                        Platform Standard
+                        Deliverable Standard
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Native feature access, end-to-end encryption, and full App Store compliance.
+                        Original creative assets produced and scheduled 2 weeks in advance.
                       </p>
                       <Link
-                        href="/contact"
+                        href="/contact/"
                         className="inline-flex items-center justify-center gap-2 rounded-xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-xs font-bold text-[#d25c41] hover:bg-[#d25c41] hover:text-white hover:border-[#d25c41] transition-all"
                       >
-                        Request App Scope &rarr;
+                        Request Sample Assets &rarr;
                       </Link>
                     </div>
                   </div>
@@ -371,47 +358,46 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── 4. Our Mobile Technology Stack ── */}
-      <section id="tech-stack" className="py-20 sm:py-24 px-4 sm:px-6 bg-white">
+      {/* ── 4. Cross-Platform Expertise ── */}
+      <section className="py-20 sm:py-24 px-4 sm:px-6 bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
-              Production Stack
+              Platform Native
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#14183e] tracking-tight">
-              Our Mobile Technology Stack
+              Cross-Platform Expertise
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              We engineer cross-platform and native ecosystems designed for rapid release cycles and rock-solid uptime.
+              We understand each channel's specific algorithm mechanics and user psychology.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-            {techStackGroups.map((group, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {platformsData.map((plat, pIdx) => (
               <div
-                key={idx}
-                className="rounded-3xl border border-slate-200 bg-[#fafaf9] p-6 sm:p-7 hover:border-[#d25c41]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                key={pIdx}
+                className="rounded-3xl border border-slate-200 bg-[#fafaf9] p-8 hover:border-[#d25c41]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-lg font-bold text-[#14183e] mb-4 border-b border-slate-200/80 pb-3">
-                    {group.category}
+                  <span className="inline-block rounded-full bg-slate-200/80 px-3 py-1 text-xs font-bold text-slate-700 mb-4">
+                    {plat.badge}
+                  </span>
+                  <h3 className="text-2xl font-bold text-[#14183e] mb-3">
+                    {plat.name}
                   </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {group.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="inline-block rounded-full bg-white border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-2xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    {plat.desc}
+                  </p>
                 </div>
 
-                <div className="mt-6 pt-3 border-t border-slate-200/60">
-                  <span className="text-[11px] font-bold text-[#d25c41] uppercase tracking-wider flex items-center gap-1">
-                    <CheckCircle className="h-3 w-3" /> Production Verified
-                  </span>
+                <div className="mt-6 pt-4 border-t border-slate-200/60">
+                  <Link
+                    href="/contact/"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#d25c41] hover:underline"
+                  >
+                    Scale on {plat.name.split(" ")[0]} &rarr;
+                  </Link>
                 </div>
               </div>
             ))}
@@ -419,7 +405,7 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── 5. Global Offshore & Domestic Mobile App Delivery ── */}
+      {/* ── 5. Domestic Domination & Global Delivery ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
         
@@ -427,18 +413,18 @@ export default function AppDevelopmentPage() {
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
               <Globe className="h-3.5 w-3.5" />
-              Delivery Architecture
+              Delivery Framework
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Global Offshore &amp; Domestic Mobile App Delivery
+              Domestic Domination &amp; Global Delivery
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We deploy full-lifecycle engineering for emerging Indian digital innovators and dedicated offshore mobile development squads for overseas brands.
+              We engineer localized social playbooks across Indian metros alongside high-velocity global social media support.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Card 1: Pan-India Digital Transformation */}
+            {/* Card 1: Hyper-Local & Metro Distribution */}
             <div className="rounded-3xl border border-white/15 bg-white/5 backdrop-blur-md p-8 sm:p-10 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-6">
@@ -447,7 +433,7 @@ export default function AppDevelopmentPage() {
                   </span>
                   <div>
                     <h3 className="text-2xl font-bold text-white">
-                      Pan-India Digital Transformation
+                      Hyper-Local &amp; Metro Distribution
                     </h3>
                     <p className="text-xs text-[#f6ac55] font-semibold">
                       Jaipur HQ &amp; Top Indian Metros
@@ -456,7 +442,7 @@ export default function AppDevelopmentPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Delivering end-to-end mobile applications for startups and enterprises across Jaipur, Delhi NCR, Mumbai, Bangalore, Pune, and Indore.
+                  Specialized social playbooks as a proven social media marketing agency Delhi, a creative social media agency in Mumbai, a tech-focused social media marketing company Bangalore, an agile social media marketing agency Pune, and a top social media marketing in Indore.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -479,14 +465,14 @@ export default function AppDevelopmentPage() {
               </div>
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
-                <span>Jaipur Software Lab</span>
+                <span>Domestic Indian Social Desk</span>
                 <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
-                  Contact Domestic App Desk &rarr;
+                  Get Domestic Proposal &rarr;
                 </Link>
               </div>
             </div>
 
-            {/* Card 2: Global Offshore Engineering */}
+            {/* Card 2: Global Social Management */}
             <div className="rounded-3xl border border-white/15 bg-white/5 backdrop-blur-md p-8 sm:p-10 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-6">
@@ -495,34 +481,34 @@ export default function AppDevelopmentPage() {
                   </span>
                   <div>
                     <h3 className="text-2xl font-bold text-white">
-                      Global Offshore Engineering (USA, UK, Global)
+                      Global Social Management (USA, UK, Global)
                     </h3>
                     <p className="text-xs text-[#f6ac55] font-semibold">
-                      Outsourced Dedicated Mobile Squads
+                      Outsourced Social Media Services
                     </p>
                   </div>
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Providing overseas companies with dedicated mobile app development teams through outsourced digital marketing services, complete with timezone overlap, weekly sprint reviews, clean documentation, and strict IP protection.
+                  Complete social media strategy and execution for overseas brands through transparent outsourced digital marketing services, offering dedicated timezone overlap, two-week content sprint reviews, and live performance dashboards.
                 </p>
 
                 <div className="space-y-3 mb-6">
                   {[
                     {
                       icon: Clock,
-                      title: "Timezone Aligned Sprints",
-                      desc: "Real-time communication blocks covering EST, PST, and GMT.",
+                      title: "Timezone Aligned Execution",
+                      desc: "Dedicated daily overlap covering EST, PST, and GMT.",
                     },
                     {
                       icon: Zap,
-                      title: "Weekly Demo Builds",
-                      desc: "Deploy testable TestFlight and Google Play Internal builds every sprint.",
+                      title: "Two-Week Content Sprints",
+                      desc: "Content calendars, visual hooks, and ad assets ready 14 days in advance.",
                     },
                     {
-                      icon: ShieldCheck,
-                      title: "Enterprise IP & NDA Security",
-                      desc: "Full intellectual property ownership transferred directly with transparent Git commits.",
+                      icon: BarChart3,
+                      title: "Live Reporting Dashboards",
+                      desc: "Track follower quality, reach velocity, and paid social CAC in real time.",
                     },
                   ].map((item, idx) => {
                     const IIcon = item.icon;
@@ -540,9 +526,9 @@ export default function AppDevelopmentPage() {
               </div>
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
-                <span>International Mobile Desk</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
-                  Book Offshore App Discovery &rarr;
+                <span>Global SMM Operations</span>
+                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                  Schedule International Call &rarr;
                 </Link>
               </div>
             </div>
@@ -550,18 +536,18 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── 6. Our 4-Step Agile App Development Framework ── */}
+      {/* ── 6. Our 4-Phase Social Media Execution Framework ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-white">
         <div className="mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
-              Lifecycle Execution
+              Production &amp; Scaling
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#14183e] tracking-tight">
-              Our 4-Step Agile App Development Framework
+              Our 4-Phase Social Media Execution Framework
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              From user persona mapping to App Store launch and continuous scaling.
+              From audit to high-converting creative distribution, built for predictable audience growth.
             </p>
           </div>
 
@@ -586,18 +572,18 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── 7. Why Ambitious Brands Choose Aksh Digital for App Development ── */}
+      {/* ── 7. Why Choose Aksh Digital for Social Media Marketing? ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
-              The App Engineering Advantage
+              The Aksh Digital Standard
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#14183e] tracking-tight">
-              Why Ambitious Brands Choose Aksh Digital for App Development
+              Why Choose Aksh Digital for Social Media Marketing?
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We eliminate app store friction by combining software engineering with post-launch growth marketing.
+              We turn social channels into profitable community assets that compound brand trust.
             </p>
           </div>
 
@@ -605,18 +591,18 @@ export default function AppDevelopmentPage() {
             {[
               {
                 icon: TrendingUp,
-                title: "Full-Funnel Alignment",
-                desc: "We don't just deploy your app to the store; our growth marketers ensure your application is built for discoverability, retention, and scaling.",
-              },
-              {
-                icon: ShieldCheck,
-                title: "Clean Code & Total IP Ownership",
-                desc: "Fully documented, modular codebases with 100% intellectual property ownership transferred directly to your organization.",
+                title: "Revenue-Focused Mindset",
+                desc: "We focus on qualified traffic, lead generation, and customer lifetime value rather than hollow follower counts.",
               },
               {
                 icon: Layers,
-                title: "Transparent Sprints & Real-Time Collaboration",
-                desc: "Regular video sprint demos, shared Git repositories, and direct communication with project leads.",
+                title: "Unified Design & Marketing Team",
+                desc: "Your social media assets are built by experienced designers and copywriters who understand modern consumer behavior.",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Transparent Monthly Deliverables",
+                desc: "Flexible SMM packages in India with regular milestone reviews, real-time analytics, and zero rigid lock-in contracts.",
               },
             ].map((card, idx) => {
               const PIcon = card.icon;
@@ -638,7 +624,7 @@ export default function AppDevelopmentPage() {
                   </div>
                   <div className="mt-8 pt-4 border-t border-slate-100">
                     <span className="text-xs font-bold text-[#d25c41] uppercase tracking-wider flex items-center gap-1.5">
-                      <CheckCircle className="h-4 w-4" /> Core Guarantee
+                      <CheckCircle className="h-4 w-4" /> Core Value
                     </span>
                   </div>
                 </div>
@@ -648,7 +634,7 @@ export default function AppDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── 8. Ready to Turn Your Product Vision into a Live Application? (Bottom CTA) ── */}
+      {/* ── 8. Ready to Build a High-Converting Social Presence? (Bottom CTA) ── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#d25c41] via-[#c65239] to-[#b84d35] py-20 sm:py-24 px-4 sm:px-6 text-center text-white">
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
@@ -659,15 +645,15 @@ export default function AppDevelopmentPage() {
         />
         <div className="relative z-10 mx-auto max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold text-white mb-6 uppercase tracking-wider">
-            Ready to Turn Your Product Vision into a Live Application?
+            Ready to Build a High-Converting Social Presence?
           </span>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
-            Claim Your Free Technical App Blueprint &amp; Consultation
+            Claim Your Free Social Media Audit Today
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Schedule a 30-minute discovery call with our software engineering team to review your app architecture, timeline, and development roadmap.
+            Let our strategy team analyze your social profiles, evaluate competitor benchmarks, and design a custom 30-day content roadmap.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -675,7 +661,7 @@ export default function AppDevelopmentPage() {
               href="/contact/"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm sm:text-base font-bold text-[#d25c41] hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-0.5"
             >
-              Request Your Free App Consultation
+              Request Your Free Social Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
@@ -688,7 +674,7 @@ export default function AppDevelopmentPage() {
           </div>
 
           <p className="text-xs text-white/70">
-            No obligation. Zero lock-in contracts. Full architectural and cost estimation.
+            No obligation. Zero lock-in contracts. Actionable creative insights.
           </p>
         </div>
       </section>

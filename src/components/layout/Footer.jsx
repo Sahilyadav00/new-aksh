@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Sparkles } from "lucide-react";
 
 // Custom SVG Icons to match mockup design exactly
 const AppleIcon = (props) => (
@@ -45,71 +45,111 @@ const LinkedinIcon = (props) => (
 export default function Footer() {
   return (
     <>
-      <section className="w-full py-12  sm:py-16  md:py-20">
-        <div className="relative mx-auto ">
-          <div className="relative flex md:ps-[30%] min-h-[280px] flex-col md:min-h-[220px] md:flex-row md:items-stretch">
-            <div className="md:absolute left-0 top-0 z-20 text-center flex shrink-0 flex-col justify-center bg-primary md:translate-y-[-30%] px-8 py-10 sm:px-10 sm:py-12 md:w-[35%] md:h-[80%]  lg:px-12 md:pl-[13%]">
-              <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
-                Get In Touch
-              </h2>
-              <p className="text-lg font-medium text-white/90 sm:text-xl">
-                Contact Us
-              </p>
+      {/* ── Pre-Footer Contact Banner ── */}
+      <section className="w-full py-10 sm:py-14 md:py-16 relative z-20">
+        <div className="max-w-384 mx-auto px-3 sm:px-6 md:px-8">
+          <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(20,24,62,0.16)] border border-slate-100 flex flex-col md:flex-row items-stretch">
+            {/* Left Column: Signature Brand Gradient Banner */}
+            <div className="relative z-10 md:w-[38%] bg-gradient-to-br from-[#d25c41] via-[#d25c41] to-[#f6ac55] p-8 sm:p-10 lg:p-12 text-white flex flex-col justify-between overflow-hidden">
+              <div
+                className="pointer-events-none absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, #fff 1px, transparent 1px)",
+                  backgroundSize: "20px 20px",
+                }}
+              />
+              <div className="relative z-10">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1 text-xs font-semibold text-white uppercase tracking-wider mb-4 backdrop-blur-xs">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  Get In Touch
+                </div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight tracking-tight mb-3">
+                  Ready to Scale Your Inbound Revenue?
+                </h2>
+                <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                  Connect with our search specialists and engineering team for a
+                  comprehensive website, SEO &amp; ROI growth audit.
+                </p>
+              </div>
+
+              <div className="relative z-10 mt-8 pt-4">
+                <Link
+                  href="/contact/"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#14183e] text-white px-7 py-3.5 text-sm font-bold shadow-xl hover:bg-slate-900 hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  <span>Claim Free Growth Audit</span>
+                  <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+                </Link>
+              </div>
             </div>
 
-            <div className="relative z-10  flex flex-1 flex-col justify-center bg-[#14183e] px-8 py-10 sm:px-10 sm:py-12 md:-ml-8 md:mt-0 md:pl-16 lg:pl-20">
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 lg:gap-10">
-                <div className="flex flex-col items-center justify-center gap-4">
-                  <Phone
-                    className="mt-1 h-11 w-11  shrink-0 text-secondary/80"
-                    strokeWidth={1.75}
-                  />
-                  <div className="space-y-1 text-white">
-                    <a
-                      href="tel:+980098987984"
-                      className="block text-[15px] hover:text-primary/90 transition-colors sm:text-base"
-                    >
-                      980 098 987 98 4
-                    </a>
-                    <a
-                      href="tel:+098908980675"
-                      className="block text-[15px] hover:text-primary/90 transition-colors sm:text-base"
-                    >
-                      098 (908) 980 675
-                    </a>
+            {/* Right Column: Contact Touchpoints */}
+            <div className="relative z-10 md:w-[62%] bg-[#14183e] p-8 sm:p-10 lg:p-12 flex flex-col justify-center overflow-hidden">
+              <div className="pointer-events-none absolute -right-24 -bottom-24 w-80 h-80 rounded-full bg-[#d25c41]/10 blur-3xl" />
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 relative z-10">
+                {/* Phone / Strategy Call */}
+                <div className="group flex flex-col items-start p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#d25c41]/50 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d25c41]/20 text-[#f6ac55] mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Phone className="h-5 w-5" strokeWidth={2} />
                   </div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
+                    Direct Connect
+                  </span>
+                  <h3 className="text-base font-bold text-white mb-1.5">
+                    Strategy Desk
+                  </h3>
+                  <p className="text-xs text-slate-400 mb-3 leading-relaxed">
+                    Mon – Sat (9:30 AM – 7:00 PM IST)
+                  </p>
+                  <Link
+                    href="/contact/"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#f6ac55] hover:text-white transition-colors mt-auto"
+                  >
+                    <span>Book Discovery Call</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-4">
-                  <Mail
-                    className="mt-1 h-12 w-12 shrink-0 text-secondary/80"
-                    strokeWidth={1.75}
-                  />
-                  <div className="space-y-1 text-center text-white">
-                    <a
-                      href="mailto:info@webexampe.com"
-                      className="block text-[15px] hover:text-primary/90 transition-colors sm:text-base"
-                    >
-                      info@webexampe.com
-                    </a>
-                    <a
-                      href="mailto:jobs@webmail.com"
-                      className="block text-[15px] hover:text-primary/90 transition-colors sm:text-base"
-                    >
-                      jobs.webmail.com
-                    </a>
+                {/* Email Support */}
+                <div className="group flex flex-col items-start p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#d25c41]/50 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f6ac55]/20 text-[#f6ac55] mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Mail className="h-5 w-5" strokeWidth={2} />
                   </div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
+                    Email Inquiries
+                  </span>
+                  <h3 className="text-base font-bold text-white mb-1.5">
+                    Send a Message
+                  </h3>
+                  <a
+                    href="mailto:connect@akshdigital.com"
+                    className="text-xs font-semibold text-[#f6ac55] hover:text-white transition-colors break-all mb-1"
+                  >
+                    connect@akshdigital.com
+                  </a>
+                  <p className="text-[11px] text-slate-400 mt-auto">
+                    Reply within 24 hours
+                  </p>
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-4">
-                  <MapPin
-                    className="mt-1 h-12 w-12 shrink-0 text-secondary/80"
-                    strokeWidth={1.75}
-                  />
-                  <p className="text-[15px] text-center leading-relaxed text-white sm:text-base">
-                    14/A, New Castle Tower
-                    <br />
-                    New York, USA
+                {/* Location HQ */}
+                <div className="group flex flex-col items-start p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#d25c41]/50 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d25c41]/20 text-[#f6ac55] mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <MapPin className="h-5 w-5" strokeWidth={2} />
+                  </div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
+                    Headquarters
+                  </span>
+                  <h3 className="text-base font-bold text-white mb-1">
+                    Jaipur, Rajasthan
+                  </h3>
+                  <p className="text-xs text-slate-300 mb-1">
+                    India (Global Delivery)
+                  </p>
+                  <p className="text-[11px] text-slate-400 mt-auto">
+                    Serving Pan-India, USA &amp; UK
                   </p>
                 </div>
               </div>
@@ -200,12 +240,12 @@ export default function Footer() {
                 <ul className="flex flex-col gap-3.5">
                   {[
                     { label: "Home", href: "/" },
-                    { label: "About Us", href: "/about" },
-                    { label: "Services", href: "/services" },
-                    { label: "Portfolio", href: "/portfolio" },
-                    { label: "Blog", href: "/blog" },
-                    { label: "FAQ", href: "/faq" },
-                    { label: "Contact", href: "/contact" },
+                    { label: "About Us", href: "/about/" },
+                    { label: "Services", href: "/services/" },
+                    { label: "Portfolio", href: "/portfolio/" },
+                    { label: "Blog", href: "/blog/" },
+                    { label: "FAQ", href: "/faq/" },
+                    { label: "Contact", href: "/contact/" },
                   ].map(({ label, href }) => (
                     <li key={label} className="overflow-hidden">
                       <Link
@@ -230,25 +270,32 @@ export default function Footer() {
                 <ul className="flex flex-col gap-3">
                   {[
                     {
-                      label: "SEO Strategies",
-                      href: "/services/seo-strategies",
+                      label: "SEO Services",
+                      href: "/services/seo/",
                     },
                     {
                       label: "Digital Marketing",
-                      href: "/services/digital-marketing",
+                      href: "/services/digital-marketing/",
                     },
-                    { label: "Social Media", href: "/services/social-media" },
+                    {
+                      label: "Social Media Marketing",
+                      href: "/services/social-media-marketing/",
+                    },
                     {
                       label: "Web Development",
-                      href: "/services/web-development",
+                      href: "/services/web-development/",
                     },
                     {
                       label: "App Development",
-                      href: "/services/app-development",
+                      href: "/services/app-development/",
                     },
                     {
                       label: "Performance Marketing",
-                      href: "/services/performance-marketing",
+                      href: "/services/performance-marketing/",
+                    },
+                    {
+                      label: "Graphic Design",
+                      href: "/services/graphic-design/",
                     },
                   ].map(({ label, href }) => (
                     <li key={label} className="overflow-hidden">
@@ -320,17 +367,23 @@ export default function Footer() {
               </div>
               <div className="pt-2 lg:col-span-3 mt-5">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">
-                  SEO Company in
+                  SEO Services in
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  We deliver to : pan india across
+                  {/* We deliver to : pan india across */}
                   {[
-                    { label: "Jaipur", href: "/seo-services/jaipur" },
-                    { label: "Delhi", href: "/seo-services/delhi" },
-                    { label: "Mumbai", href: "/seo-services/mumbai" },
-                    { label: "Bangalore", href: "/seo-services/bangalore" },
-                    { label: "Pune", href: "/seo-services/pune" },
-                    { label: "Indore", href: "/seo-services/indore" },
+                    { label: "Jaipur", href: "/seo-services/jaipur/" },
+                    { label: "Delhi", href: "/seo-services/delhi/" },
+                    { label: "Mumbai", href: "/seo-services/mumbai/" },
+                    { label: "Bangalore", href: "/seo-services/bangalore/" },
+                    { label: "Pune", href: "/seo-services/pune/" },
+                    { label: "Indore", href: "/seo-services/indore/" },
+                    { label: "Chandigarh", href: "/seo-services/chandigarh/" },
+                    { label: "Kolkata", href: "/seo-services/kolkata/" },
+                    { label: "Hyderabad", href: "/seo-services/hyderabad/" },
+                    { label: "Chennai", href: "/seo-services/chennai/" },
+                    { label: "Lucknow", href: "/seo-services/lucknow/" },
+                    { label: "Bhiwadi & Alwar", href: "/seo-services/bhiwadi-alwar/" },
                   ].map(({ label, href }) => (
                     <Link
                       key={label}

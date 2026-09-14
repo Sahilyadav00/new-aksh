@@ -7,6 +7,9 @@ import Link from 'next/link';
 export const metadata = {
     title: 'Contact Aksh Digital | Digital Marketing & Web Development Agency Jaipur',
     description: 'Contact Aksh Digital for SEO, Google Ads, web development, and performance marketing. Serving businesses in Jaipur, Delhi, Mumbai, Bangalore, and global markets (USA, UK).',
+    alternates: {
+        canonical: 'https://www.akshdigital.in/contact/',
+    },
 };
 
 const processSteps = [
@@ -225,7 +228,7 @@ export default function ContactPage() {
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="grayscale opacity-80"
+                    className=""
                 />
             </section>
         </div>

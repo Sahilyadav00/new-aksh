@@ -18,117 +18,116 @@ import {
   ShoppingBag,
   Layers,
   Sparkles,
-  Cpu,
-  Factory,
+  Hospital,
 } from "lucide-react";
 
 export const metadata = {
   title:
-    "SEO Agency in Pune | Best Digital Marketing Company Pune – Aksh Digital",
+    "SEO Agency in Lucknow | Best Digital Marketing Company Lucknow – Aksh Digital",
   description:
-    "Scale organic traffic and direct revenue with Aksh Digital, a results-driven SEO agency in Pune and trusted digital marketing company in Pune. Local SEO, IT enterprise search, Core Web Vitals, and authoritative link building.",
+    "Dominate Page 1 search rankings and scale organic revenue with Aksh Digital, a premier SEO agency in Lucknow and trusted digital marketing company in Lucknow. Local SEO, GBP ranking, technical audits, and link building.",
   alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/pune/",
+    canonical: "https://www.akshdigital.in/seo-services/lucknow/",
   },
 };
 
-const puneHubs = [
-  "Hinjawadi IT Park",
-  "Baner",
-  "Wakad",
-  "Kothrud",
-  "Viman Nagar",
-  "Kharadi",
-  "Magarpatta City",
-  "Koregaon Park",
-  "Kalyani Nagar",
-  "PCMC (Pimpri-Chinchwad)",
-  "Hadapsar",
-  "Senapati Bapat Road",
+const lucknowHubs = [
+  "Gomti Nagar",
+  "Hazratganj",
+  "Aliganj",
+  "Indira Nagar",
+  "Mahanagar",
+  "Shaheed Path",
+  "Alambagh",
+  "Aminabad",
+  "Vibhuti Khand",
+  "Chowk",
+  "Kanpur Road",
+  "Jankipuram",
 ];
 
 const coreServices = [
   {
     number: "01",
-    badge: "IT & SaaS Search Dominance",
-    title: "High-Intent Commercial & IT Enterprise SEO",
-    icon: Cpu,
+    badge: "Local 3-Pack Supremacy",
+    title: "Hyper-Local SEO & Google Business Profile (GBP) Domination",
+    icon: MapPin,
     description:
-      "Target competitive commercial search terms such as 'best digital marketing company in pune', 'seo services in pune', 'digital marketing agency in pune', and industry-specific B2B/B2C transactional queries.",
+      "Dominate the local Google Map 3-Pack for high-intent queries like 'best digital marketing company in lucknow' and 'seo services in lucknow'.",
     points: [
-      "Target competitive commercial search terms such as best digital marketing company in pune, seo services in pune, digital marketing agency in pune, and industry-specific B2B/B2C transactional queries.",
-      "Deep search intent classification, faceted crawl optimization, and topical authority cluster development for SaaS and IT firms.",
-      "Competitor gap analysis engineered to outrank legacy tech competitors and capture ready-to-buy enterprise buyers.",
+      "Dominate the local Google Map 3-Pack for high-intent queries like best digital marketing company in lucknow and seo services in lucknow.",
+      "Build verified local citations across top Indian directories with 100% consistent NAP (Name, Address, Phone Number) data.",
+      "Local review generation systems and geo-tagged visual assets targeting key hubs across Gomti Nagar, Hazratganj, Aliganj, Indira Nagar, Mahanagar, Shaheed Path, and Alambagh.",
     ],
   },
   {
     number: "02",
-    badge: "Map 3-Pack Dominance",
-    title: "Hyper-Local SEO & Google Business Profile (GBP) Optimization",
-    icon: MapPin,
+    badge: "Commercial Intent Mapping",
+    title: "Transactional Keyword Research & City-Specific Mapping",
+    icon: Search,
     description:
-      "Capture high-converting regional footfall and direct commercial inquiries across Pune's top IT parks and residential zones.",
+      "Target commercial search terms for healthcare networks, coaching institutes, real estate builders, IT startups, and traditional manufacturing/chikan handicraft exporters.",
     points: [
-      "As an experienced local search marketing agency, we optimize your Google Business Profile to capture the local Map 3-Pack across high-density Pune hubs (Hinjawadi, Baner, Wakad, Kothrud, Viman Nagar, Kharadi, and PCMC).",
-      "100% NAP (Name, Address, Phone) citation consistency and localized review workflows that build strong regional consumer trust.",
-      "Localized landing page architectures designed for multi-branch clinics, premium retail outlets, and tech service offices.",
+      "Target commercial search terms for healthcare networks, coaching institutes, real estate builders, IT startups, and traditional manufacturing/chikan handicraft exporters.",
+      "Develop localized landing pages optimized to capture user intent across Lucknow and nearby Tier-2 commercial corridors.",
+      "Strategic keyword clustering and intent-matched content silos designed to convert local searchers into booked calls and direct sales.",
     ],
   },
   {
     number: "03",
-    badge: "Speed & Engineering",
+    badge: "Speed & Engineering Precision",
     title: "Technical SEO & Core Web Vitals Optimization",
     icon: Zap,
     description:
-      "Eliminate client-side rendering hurdles and boost site speed to comply with Google Search Essentials.",
+      "Full crawlability audits, indexation fixes, and mobile responsiveness tuning to comply with Google Search Essentials.",
     points: [
-      "JavaScript rendering audits, server-side rendering (SSR) optimization, and mobile-first responsiveness tuning to comply with Google Search Essentials.",
+      "Full crawlability audits, indexation fixes, and mobile responsiveness tuning to comply with Google Search Essentials.",
       "Structured data schema implementation (Organization, LocalBusiness, FAQ, Product, and Service JSON-LD schemas) to secure rich snippet visibility.",
       "Core Web Vitals speed remediation engineered directly by our in-house full-stack developers.",
     ],
   },
   {
     number: "04",
-    badge: "Editorial PR & Trust",
+    badge: "Editorial PR & Trust Signals",
     title: "Digital PR & High-Authority Backlink Acquisition",
     icon: Globe,
     description:
-      "Build enduring domain rating (DR) through ethical, high-quality editorial placements in reputable industry media.",
+      "100% white-hat link acquisition from authoritative media publications, regional news outlets, and niche-relevant blogs.",
     points: [
-      "100% white-hat link acquisition from authoritative tech blogs, reputable regional news outlets, and relevant industry publications.",
-      "Contextual brand citations and editorial outreach designed to compound your domain rating (DR) safely over time.",
-      "Targeted digital PR activations that earn organic backlinks without risking algorithmic penalties.",
+      "100% white-hat link acquisition from authoritative media publications, regional news outlets, and niche-relevant blogs.",
+      "Contextual brand citations and digital PR outreach that safely build and compound domain rating (DR) over time.",
+      "High-authority regional and industry editorial mentions that solidify trust signals and outrank competitors across UP search engines.",
     ],
   },
   {
     number: "05",
-    badge: "Industrial, Real Estate & D2C",
-    title: "Manufacturing, Real Estate & D2C E-Commerce SEO",
-    icon: Factory,
+    badge: "Healthcare, Realty & D2C Focus",
+    title: "Healthcare, Real Estate, Retail & D2C E-Commerce SEO",
+    icon: ShoppingBag,
     description:
-      "Specialized search architectures tailored for Pune's manufacturing supply chains, real estate developers, and direct-to-consumer brands.",
+      "Specialized SEO frameworks for Lucknow’s super-specialty hospitals, real estate townships, fashion brands, and fast-scaling D2C startups.",
     points: [
-      "Tailored SEO frameworks for Pune’s engineering and manufacturing suppliers, luxury real estate developers, and fast-scaling D2C brands.",
-      "Multi-region indexing and structured schema integration to capture buyers locally and nationwide.",
-      "Product-level and high-ticket lead generation funnels designed to maximize conversion from commercial search traffic.",
+      "Specialized SEO frameworks for Lucknow’s super-specialty hospitals, real estate townships, fashion brands, and fast-scaling D2C startups.",
+      "Multi-region indexing and structured schema integration to drive high-margin organic transactions across India and global export markets.",
+      "Product-level schema integration and frictionless transactional funnel optimization designed to maximize organic checkout rates.",
     ],
   },
 ];
 
 const integratedServices = [
   {
-    title: "High-ROAS Paid Media",
-    badge: "Paid Advertising",
+    title: "High-ROAS Paid Ads",
+    badge: "Performance Media",
     icon: Megaphone,
-    desc: "Complement organic rankings with high-converting search and social ad funnels managed by our performance marketing agency in pune specialists.",
+    desc: "Complement organic search rankings with high-converting search and social ad funnels managed by our performance marketing agency in lucknow specialists.",
     href: "/services/performance-marketing/",
     linkText: "Explore Performance Marketing",
   },
   {
-    title: "Social Media Authority",
+    title: "Social Media Dominance",
     badge: "Brand Resonance",
     icon: Share2,
-    desc: "Build brand loyalty and engagement through our dedicated social media marketing agency in pune and social media company in pune teams.",
+    desc: "Build brand equity and engagement through our dedicated social media marketing agency in lucknow and social media company in lucknow teams.",
     href: "/services/social-media-marketing/",
     linkText: "Explore Social Media",
   },
@@ -136,7 +135,7 @@ const integratedServices = [
     title: "Modern Web Development",
     badge: "Engineering",
     icon: Code2,
-    desc: "Deploy fast, conversion-optimized websites built on Next.js and React by our technical engineering unit to guarantee exceptional Core Web Vitals.",
+    desc: "Deploy fast, conversion-optimized websites built on Next.js and React by our technical engineering unit to deliver exceptional speed and Core Web Vitals.",
     href: "/services/web-development/",
     linkText: "Explore Web Development",
   },
@@ -145,23 +144,23 @@ const integratedServices = [
 const roadmapSteps = [
   {
     step: "01",
-    title: "Deep Technical Site & Competitor Gap Audit",
-    desc: "We analyze your site architecture, crawl logs, and backlink health while benchmarking the top-ranking competitors in Pune to identify core ranking bottlenecks.",
+    title: "Technical Site & Competitor Gap Audit",
+    desc: "We analyze your site architecture, crawl logs, and backlink health while benchmarking top-ranking competitors in Lucknow.",
   },
   {
     step: "02",
     title: "On-Page Architecture & Semantic Content Mapping",
-    desc: "We resolve technical crawling errors, implement localized schema, and optimize core web pages for target city keywords and major Pune commercial micro-markets.",
+    desc: "We resolve technical crawling errors, implement localized schema, and optimize core web pages for target city keywords.",
   },
   {
     step: "03",
     title: "Citation Building & Authority Outreach",
-    desc: "We clean up directory listings and launch local digital PR outreach to acquire high-authority backlinks that reinforce domain power and geographic relevance.",
+    desc: "We clean up directory listings and launch local digital PR outreach to acquire high-authority backlinks.",
   },
   {
     step: "04",
     title: "Tracking, Lead Attribution & Conversion Optimization",
-    desc: "Continuous monitoring via Google Search Console and GA4, tracking ranking trajectories, phone inquiries, and organic lead form fills with regular iterative optimizations.",
+    desc: "Continuous monitoring via Google Search Console and GA4, tracking ranking trajectories, phone inquiries, and organic lead form fills.",
   },
 ];
 
@@ -169,17 +168,17 @@ const whyChooseUs = [
   {
     title: "Strict White-Hat Compliance",
     icon: ShieldCheck,
-    desc: "100% compliant with Google Search Essentials to ensure sustainable, penalty-free long-term rankings through every core algorithm update.",
+    desc: "100% compliant with Google Search Essentials to ensure sustainable, penalty-free long-term rankings.",
   },
   {
     title: "Live, Real-Time Dashboards",
     icon: BarChart3,
-    desc: "24/7 visibility into keyword rankings, organic traffic trends, and lead attribution with transparent, executive-level ROI reporting.",
+    desc: "24/7 visibility into keyword rankings, organic traffic trends, and lead attribution.",
   },
   {
     title: "Integrated Development & Marketing",
     icon: Building2,
-    desc: "Developers, SEO strategists, and copywriters working collaboratively under one roof to resolve complex technical hurdles without vendor delays.",
+    desc: "Developers, SEO strategists, and copywriters working collaboratively under one roof.",
   },
 ];
 
@@ -190,38 +189,39 @@ const otherCities = [
   { city: "Bangalore", slug: "bangalore" },
   { city: "Hyderabad", slug: "hyderabad" },
   { city: "Chennai", slug: "chennai" },
+  { city: "Pune", slug: "pune" },
   { city: "Indore", slug: "indore" },
   { city: "Chandigarh", slug: "chandigarh" },
   { city: "Kolkata", slug: "kolkata" },
-  { city: "Lucknow", slug: "lucknow" },
   { city: "Bhiwadi & Alwar", slug: "bhiwadi-alwar" },
 ];
 
-export default function SEOPunePage() {
+export default function SEOLucknowPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Aksh Digital - SEO Agency in Pune",
+    name: "Aksh Digital - SEO Agency in Lucknow",
     description:
-      "Premier SEO services and digital marketing agency in Pune specializing in IT enterprise search, local SEO, Core Web Vitals remediation, and link building.",
-    url: "https://www.akshdigital.in/seo-services/pune/",
+      "Premier SEO agency and digital marketing company in Lucknow specializing in local search optimization, Google Business Profile ranking, technical SEO, and link building.",
+    url: "https://www.akshdigital.in/seo-services/lucknow/",
     email: "connect@akshdigital.com",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Pune",
-      addressRegion: "Maharashtra",
+      addressLocality: "Lucknow",
+      addressRegion: "Uttar Pradesh",
       addressCountry: "IN",
     },
     areaServed: [
-      "Pune",
-      "Hinjawadi",
-      "Baner",
-      "Wakad",
-      "Kothrud",
-      "Viman Nagar",
-      "Kharadi",
-      "PCMC",
-      "Maharashtra",
+      "Lucknow",
+      "Gomti Nagar",
+      "Hazratganj",
+      "Aliganj",
+      "Indira Nagar",
+      "Mahanagar",
+      "Shaheed Path",
+      "Alambagh",
+      "Kanpur",
+      "Uttar Pradesh",
       "India",
     ],
     priceRange: "$$",
@@ -251,108 +251,108 @@ export default function SEOPunePage() {
             </Link>
             <span>/</span>
             <Link
-              href="/services"
+              href="/services/"
               className="hover:text-white transition-colors"
             >
               Services
             </Link>
             <span>/</span>
             <Link
-              href="/services/seo"
+              href="/services/seo/"
               className="hover:text-white transition-colors"
             >
               SEO Services
             </Link>
             <span>/</span>
-            <span className="text-[#f6ac55]">Pune</span>
+            <span className="text-[#f6ac55]">Lucknow</span>
           </nav>
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm font-semibold text-[#f6ac55] backdrop-blur-sm mb-6">
             <span className="flex h-2 w-2 rounded-full bg-[#f6ac55] animate-pulse" />
-            High-Intent Search Dominance • Pune Tech & Industrial Hub
+            High-Intent Search Dominance • Lucknow & UP Commercial Hub
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
-            High-Impact SEO Services in Pune Engineered for{" "}
+            Premier SEO Services in Lucknow Engineered for{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d25c41] via-[#f6ac55] to-[#f6ac55]">
-              Page 1 Domination
+              Page 1 Rankings
             </span>{" "}
-            and Direct Revenue
+            and Direct Leads
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10">
-            In one of India&apos;s fastest-growing IT, automotive, and startup
-            epicenters, generic SEO tactics get lost in the noise. Partner with
-            a results-driven SEO agency in Pune and trusted digital marketing
-            company in Pune. Aksh Digital delivers technical site architecture,
-            local search optimization, and high-authority link acquisition that
-            drive qualified inbound revenue across Hinjawadi, Baner, Kothrud,
-            Viman Nagar, and Pan-India.
+            Stop losing commercial customers to local competitors across Uttar
+            Pradesh. As a results-driven SEO agency in Lucknow and trusted
+            digital marketing company in Lucknow, Aksh Digital executes
+            technical site audits, Google Business Profile (GBP) ranking
+            strategies, and authoritative link building to help your brand
+            capture ready-to-buy customers across Lucknow, Kanpur, and
+            Pan-India.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 items-center mb-10">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:opacity-95 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Claim Your Free Pune SEO Audit
+              Claim Your Free Lucknow SEO Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="#pune-seo-framework"
+              href="#lucknow-seo-framework"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
-              View Ranking Strategy
+              Explore Our Ranking Framework
             </a>
           </div>
 
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving IT Giants, Manufacturing Leaders & D2C Brands Across Pune & PCMC</span>
+            <span>Serving Enterprises, Healthcare Providers & Startups Across Lucknow, Kanpur & Uttar Pradesh</span>
           </div>
         </div>
       </section>
 
-      {/* Overview: Why Pune Businesses Need Advanced SEO Execution */}
+      {/* Overview: Why Lucknow Businesses Need Localized SEO Precision */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#d25c41]/10 px-3.5 py-1 text-xs font-semibold text-[#d25c41] uppercase tracking-wider mb-4">
-                Overview: Advanced Search Execution
+                Overview: Localized SEO Precision
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Regional Commercial Demand into Predictable Inbound Growth
+                Turning Uttar Pradesh’s Capital into a Predictable Inbound Growth Engine
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
-                Pune represents a powerhouse economy blending IT enterprises in
-                Hinjawadi and Magarpatta, manufacturing giants in PCMC, and
-                booming educational, real estate, and D2C startups in Baner,
-                Kalyani Nagar, and Koregaon Park. To capture high-value
-                commercial searches in this ecosystem, your business needs
-                technical precision and deep local relevance.
+                Lucknow is rapidly transforming into a prominent economic and
+                startup hub in North India. From IT and tech parks in Gomti Nagar
+                and Shaheed Path to thriving healthcare, education, real estate,
+                retail, and traditional export businesses across Hazratganj,
+                Alambagh, and Aminabad, standard search tactics fail against
+                aggressive regional competitors.
               </p>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
                 As a full-stack software and digital marketing company, Aksh
                 Digital approaches search ranking with engineering rigor. By
-                pairing modern web speed (Next.js, React) with semantic keyword
-                targeting, structured data architecture, and white-hat digital
-                PR, our search engine optimization marketing agency secures
-                lasting Page 1 positions, helps you capture high-intent
-                commercial buyers, and lowers your long-term customer acquisition
-                costs (CAC).
+                pairing modern front-end speed (Next.js, React) with semantic
+                topical authority mapping, structured data architecture, and
+                white-hat digital PR, our search engine optimization marketing
+                agency secures lasting Page 1 positions, captures high-converting
+                queries, and lowers your long-term customer acquisition costs
+                (CAC).
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-full bg-[#0f1535] px-6 py-3 text-sm font-semibold text-white hover:bg-[#d25c41] transition-colors duration-300"
                 >
-                  Consult Our Pune SEO Team
+                  Consult Our Lucknow SEO Team
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
@@ -367,15 +367,14 @@ export default function SEOPunePage() {
             <div className="lg:col-span-5">
               <div className="rounded-3xl border border-slate-200 bg-gradient-to-b from-[#fafaf9] to-white p-8 shadow-sm">
                 <h3 className="text-xl font-bold text-[#0f1535] mb-2">
-                  Key Pune Tech & Industrial Hubs
+                  Key Lucknow Commercial Corridors
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                  We deploy localized entity architectures tailored to Pune&apos;s
-                  premier IT corridors, manufacturing zones, and affluent
-                  commercial districts.
+                  We deploy localized entity architectures tailored to Lucknow&apos;s
+                  prominent commercial, IT, and retail centers.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {puneHubs.map((hub) => (
+                  {lucknowHubs.map((hub) => (
                     <span
                       key={hub}
                       className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 shadow-sm"
@@ -388,7 +387,7 @@ export default function SEOPunePage() {
                 <div className="pt-6 border-t border-slate-200/80 space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
-                      Pune Map 3-Pack Target
+                      Lucknow Map 3-Pack Target
                     </span>
                     <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
                   </div>
@@ -400,7 +399,7 @@ export default function SEOPunePage() {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
-                      Full-Stack Architecture
+                      Full-Stack Infrastructure
                     </span>
                     <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
                   </div>
@@ -411,20 +410,20 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* Core SEO Services in Pune */}
+      {/* Core SEO Services in Lucknow */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-[#fafaf9]">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#d25c41]/10 px-3.5 py-1 text-xs font-semibold text-[#d25c41] uppercase tracking-wider mb-4">
-              Our Core SEO Services in Pune
+              Our Core SEO Services in Lucknow
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Engineered for Page 1 Domination and Direct Revenue
+              Engineered for Page 1 Rankings and Direct Leads
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Every vertical in Pune demands tactical execution. Here is our
-              multi-layered SEO arsenal designed to capture high-value commercial
-              market share.
+              Every vertical in Lucknow requires tailored search positioning.
+              Explore our structured frameworks designed to capture high-value
+              commercial queries across Uttar Pradesh.
             </p>
           </div>
 
@@ -482,7 +481,7 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* Integrated Growth: Full-Suite Synergies for Pune Brands */}
+      {/* Integrated Growth: Full-Suite Synergies for Lucknow Brands */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -490,12 +489,12 @@ export default function SEOPunePage() {
               Integrated Growth Ecosystem
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Integrated Growth: Full-Suite Synergies for Pune Brands
+              Integrated Growth: Full-Suite Synergies for Lucknow Brands
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Accelerate pipeline growth by uniting high-intent organic rankings
-              with high-ROAS performance ads, social brand authority, and
-              cutting-edge web engineering.
+              Accelerate your digital trajectory by combining high-intent organic
+              rankings with high-ROAS paid media, social brand resonance, and
+              modern web development.
             </p>
           </div>
 
@@ -537,9 +536,9 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* 4-Step Pune SEO Roadmap */}
+      {/* Our 4-Step Lucknow SEO Roadmap */}
       <section
-        id="pune-seo-framework"
+        id="lucknow-seo-framework"
         className="py-20 sm:py-28 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden"
       >
         <div className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#d25c41]/15 blur-3xl" />
@@ -548,14 +547,15 @@ export default function SEOPunePage() {
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1 text-xs font-semibold text-[#f6ac55] uppercase tracking-wider mb-4">
-              Our 4-Step Pune SEO Roadmap
+              Our 4-Step Lucknow SEO Roadmap
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
-              Disciplined Roadmap to Page 1 Supremacy
+              Systematic Roadmap to Lucknow Search Dominance
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              We eliminate guesswork with a battle-tested 4-step framework engineered
-              to systematically elevate your Pune business to Page 1.
+              We eliminate guesswork with a battle-tested 4-step framework
+              engineered to systematically elevate your Lucknow business to
+              Page 1.
             </p>
           </div>
 
@@ -585,14 +585,14 @@ export default function SEOPunePage() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] transition-all duration-300"
             >
-              Start Step 1: Claim Your Pune Audit
+              Start Step 1: Claim Your Lucknow Audit
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Aksh Digital as Your Pune SEO Partner? */}
+      {/* Why Choose Aksh Digital as Your Lucknow SEO Partner? */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-[#fafaf9]">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -600,12 +600,12 @@ export default function SEOPunePage() {
               The Aksh Digital Advantage
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Why Choose Aksh Digital as Your Pune SEO Partner?
+              Why Choose Aksh Digital as Your Lucknow SEO Partner?
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              We blend software engineering speed, industrial domain knowledge,
+              We blend software engineering speed, regional market insight,
               and strict white-hat ethics to deliver compounding commercial
-              returns.
+              returns across Uttar Pradesh.
             </p>
           </div>
 
@@ -654,32 +654,32 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* Ready to Outrank Competitors in Pune? (Bottom CTA) */}
+      {/* Ready to Dominate Page 1 Rankings in Lucknow? (Bottom CTA) */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0f1535] via-[#1a224c] to-[#0f1535] py-20 sm:py-24 px-4 sm:px-6 text-center text-white">
         <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
         <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#d25c41]/20 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] uppercase tracking-wider mb-6">
-            Ready to Outrank Competitors in Pune?
+            Ready to Dominate Page 1 Rankings in Lucknow?
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
-            Claim Your Free Pune Technical & SEO Audit Today
+            Claim Your Free Lucknow Technical & SEO Audit Today
           </h2>
 
           <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Let our search specialists analyze your website&apos;s ranking
-            bottlenecks and outline a custom 90-day search roadmap for the Pune
-            market.
+            bottlenecks and outline a custom 90-day search roadmap for the
+            Lucknow market.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <Link
-              href="/contact"
+              href="/contact/"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              Request Your Free Pune SEO Audit
+              Request Your Free Lucknow SEO Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
@@ -693,7 +693,7 @@ export default function SEOPunePage() {
 
           <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Pune, Maharashtra • Pan-India</span>
+            <span>Lucknow, Uttar Pradesh • Pan-India</span>
           </div>
         </div>
       </section>
