@@ -81,6 +81,12 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} — Aksh Digital Blog`,
     description: post.excerpt,
+<<<<<<< HEAD
+=======
+    alternates: {
+      canonical: `https://www.akshdigital.in/blog/${slug}/`,
+    },
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
   };
 }
 
@@ -95,7 +101,11 @@ export default async function BlogPostPage({ params }) {
       <div className="min-h-screen flex items-center justify-center bg-white">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-[#14183e] mb-4">Article Not Found</h1>
+<<<<<<< HEAD
           <Link href="/blog" className="text-[#d25c41] font-semibold hover:underline">← Back to Blog</Link>
+=======
+          <Link href="/blog/" className="text-[#d25c41] font-semibold hover:underline">← Back to Blog</Link>
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
         </div>
       </div>
     );
@@ -111,7 +121,11 @@ export default async function BlogPostPage({ params }) {
           <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8 flex-wrap">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
+<<<<<<< HEAD
             <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+=======
+            <Link href="/blog/" className="hover:text-white transition-colors">Blog</Link>
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
             <span>/</span>
             <span className="text-[#f6ac55] line-clamp-1">{post.title}</span>
           </nav>
@@ -208,10 +222,17 @@ export default async function BlogPostPage({ params }) {
 
           {/* Navigation */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
+<<<<<<< HEAD
             <Link href="/blog" className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 hover:border-[#d25c41] hover:text-[#d25c41] transition-all duration-200">
               <ArrowLeft className="h-4 w-4" /> Back to All Articles
             </Link>
             <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-[#d25c41] px-6 py-3 text-sm font-bold text-white hover:bg-[#b84d35] transition-colors ml-auto">
+=======
+            <Link href="/blog/" className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-700 hover:border-[#d25c41] hover:text-[#d25c41] transition-all duration-200">
+              <ArrowLeft className="h-4 w-4" /> Back to All Articles
+            </Link>
+            <Link href="/contact/" className="inline-flex items-center gap-2 rounded-full bg-[#d25c41] px-6 py-3 text-sm font-bold text-white hover:bg-[#b84d35] transition-colors ml-auto">
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
               Work With Us <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
           </div>
@@ -225,7 +246,11 @@ export default async function BlogPostPage({ params }) {
             <h2 className="text-2xl font-bold text-[#14183e] mb-8">More in {post.category}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {relatedPosts.map((rp) => (
+<<<<<<< HEAD
                 <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group flex flex-col rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+=======
+                <Link key={rp.slug} href={`/blog/${rp.slug}/`} className="group flex flex-col rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
                   <div className="relative h-44 overflow-hidden">
                     <Image src={rp.image} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
@@ -246,7 +271,11 @@ export default async function BlogPostPage({ params }) {
         <div className="relative z-10 mx-auto max-w-xl">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Ready to Implement These Strategies?</h2>
           <p className="text-white/80 mb-6 text-sm">Let our experts build and execute a custom digital strategy for your business.</p>
+<<<<<<< HEAD
           <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#d25c41] hover:bg-slate-50 transition-colors shadow-lg">
+=======
+          <Link href="/contact/" className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#d25c41] hover:bg-slate-50 transition-colors shadow-lg">
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
             Get a Free Strategy Call <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
           </Link>
         </div>

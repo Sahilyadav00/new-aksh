@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 import {
   ArrowRight,
@@ -214,4 +215,10 @@ export default function SocialMediaPage() {
       </section>
     </div>
   );
+=======
+import { redirect } from "next/navigation";
+
+export default function SocialMediaRedirect() {
+  redirect("/services/social-media-marketing/");
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
 }

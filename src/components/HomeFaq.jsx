@@ -6,6 +6,7 @@ import { Plus, ArrowRight } from "lucide-react";
 
 const faqs = [
   {
+<<<<<<< HEAD
     question: "What digital marketing services do you offer?",
     answer: "Aksh Digital offers a complete suite of services including SEO Strategies, Performance Marketing (Google Ads & Meta Ads), Social Media Management, Graphic Design, Web Development, and App Development. We specialize in building custom growth campaigns for local and national brands.",
   },
@@ -24,6 +25,26 @@ const faqs = [
   {
     question: "How do we get started with Aksh Digital?",
     answer: "It's simple! Reach out to us via our contact form or book a free audit session. We'll run a preliminary analysis of your website, SEO presence, or ad accounts, and set up a brief consultation call to present our findings and a custom growth strategy.",
+=======
+    question: "Do you work with international clients outside of India?",
+    answer: "Yes. A substantial part of our portfolio includes businesses across the USA, UK, and other global regions. We manage offshore development and global performance marketing campaigns with flexible communication schedules and transparent weekly reporting.",
+  },
+  {
+    question: "How does Aksh Digital handle local SEO for specific cities like Jaipur?",
+    answer: "We implement hyper-local SEO strategies, including Google Business Profile optimization, localized keyword targeting, citations, and localized landing pages that capture immediate regional search intent.",
+  },
+  {
+    question: "What platforms and technologies do you specialize in?",
+    answer: "Our software team specializes in Next.js, React, Node.js, TypeScript, PostgreSQL, and AWS. For digital marketing, we leverage Google Marketing Platform, Meta Ads Manager, SEMrush, Ahrefs, and advanced conversion tracking APIs.",
+  },
+  {
+    question: "How long does it take to see results from SEO and ad campaigns?",
+    answer: "While technical SEO optimizations and local map pack rankings often start delivering leads within 45 to 60 days, competitive national/global terms build over 3 to 6 months. For paid ads (Google & Meta), campaigns are optimized for positive ROAS within the first 30 to 60 days.",
+  },
+  {
+    question: "How do we get started with Aksh Digital?",
+    answer: "It's simple! Book a free strategy call or audit session. We will perform a preliminary analysis of your website, organic visibility, or ad accounts, and deliver a custom digital growth roadmap tailored to your target markets.",
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
   },
 ];
 

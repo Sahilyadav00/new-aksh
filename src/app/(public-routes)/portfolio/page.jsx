@@ -16,6 +16,12 @@ export const metadata = {
   title: "Portfolio | Our Work & Case Studies — Aksh Digital",
   description:
     "Explore Aksh Digital's portfolio — web design, mobile apps, SEO case studies, and digital marketing campaigns that delivered real results for real businesses across India.",
+<<<<<<< HEAD
+=======
+  alternates: {
+    canonical: "https://www.akshdigital.in/portfolio/",
+  },
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
 };
 
 const categories = ["All", "Web Design", "Mobile App", "SEO", "Branding", "Social Media"];
@@ -312,7 +318,11 @@ export default function PortfolioPage() {
         <div className="relative z-10 mx-auto max-w-2xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Your Project Could Be Next</h2>
           <p className="text-white/80 mb-8">Tell us your goals and let's build something remarkable together.</p>
+<<<<<<< HEAD
           <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#d25c41] hover:bg-slate-50 transition-colors shadow-lg">
+=======
+          <Link href="/contact/" className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#d25c41] hover:bg-slate-50 transition-colors shadow-lg">
+>>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
             Start a Project <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
           </Link>
         </div>

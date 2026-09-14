@@ -1,76 +1,4 @@
 import Link from "next/link";
-<<<<<<< HEAD
-import { ArrowRight, MapPin, Search, CheckCircle, TrendingUp, Star, Phone, BarChart3, Globe, Users } from "lucide-react";
-
-export const metadata = {
-  title: "SEO Services in Pune | Best SEO Company Pune — Aksh Digital",
-  description:
-    "Aksh Digital provides expert SEO services in Pune. We help Pune businesses rank higher on Google with local SEO, technical SEO, and content strategies built for the Pune market.",
-};
-
-const cityData = {
-  city: "Pune",
-  tagline: "Pune's Results-Driven SEO Agency",
-  description:
-    "From Hinjewadi IT Park to Koregaon Park, we help Pune's growing business ecosystem dominate local and national search results. Pune is a city on the rise — make sure your business is found when customers are searching.",
-  localFacts: [
-    "Proven results for 35+ Pune-based businesses across diverse industries",
-    "Experience with Pune's IT, education, and manufacturing sectors",
-    "Local citation building for Pune business directories",
-    "GMB optimisation targeting Pune's growing tech-savvy audience",
-  ],
-  nearbyAreas: ["Hinjewadi", "Koregaon Park", "Viman Nagar", "Kharadi", "Wakad", "Baner", "Hadapsar", "Pimpri-Chinchwad"],
-  faqs: [
-    { q: "Which industries do you serve in Pune?", a: "We serve a wide range of Pune industries including IT/software companies, educational institutes, real estate, hospitality, retail, and healthcare businesses." },
-    { q: "Is local SEO relevant for Pune IT companies?", a: "Absolutely! IT companies in Pune compete for specific service keywords. Local SEO helps them rank for searches like 'software company in Pune' or 'IT services Hinjewadi'." },
-    { q: "Can you target specific Pune localities for my business?", a: "Yes, we create locality-specific landing pages and optimise your GMB for specific Pune areas like Hinjewadi, Baner, Koregaon Park, and more." },
-    { q: "How is SEO in Pune different from other cities?", a: "Pune has a unique mix of a tech-savvy audience, a large student population, and established industries. Our SEO strategy for Pune accounts for these demographics and local search behaviour." },
-  ],
-};
-
-const services = [
-  { icon: Search, title: "Local SEO Pune", desc: "Rank for Pune-specific search queries and 'near me' searches that bring in local customers." },
-  { icon: Globe, title: "Technical SEO", desc: "Full technical SEO audits and fixes ensuring your Pune website performs flawlessly." },
-  { icon: BarChart3, title: "Content Marketing", desc: "Pune-focused content that targets local keywords and builds topical authority in your niche." },
-  { icon: TrendingUp, title: "Link Building", desc: "Quality backlinks from Pune and national platforms to boost your site's authority." },
-  { icon: Users, title: "Google Business Profile", desc: "Complete GMB optimisation to appear in Pune's local search pack for relevant queries." },
-  { icon: Star, title: "Reputation Management", desc: "Build positive reviews and manage your online reputation in Pune's business community." },
-];
-
-export default function SEOPunePage() {
-  return (
-    <div className="bg-white">
-      <section className="relative overflow-hidden bg-[#0f1535] py-20 sm:py-24 px-4 sm:px-6">
-        <div className="pointer-events-none absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-[#d25c41]/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-[#f6ac55]/15 blur-3xl" />
-        <div className="relative z-10 mx-auto max-w-4xl">
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8 flex-wrap">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
-            <span>/</span>
-            <Link href="/services/seo-strategies" className="hover:text-white transition-colors">SEO Services</Link>
-            <span>/</span>
-            <span className="text-[#f6ac55]">{cityData.city}</span>
-          </nav>
-          <div className="flex items-center gap-2 mb-5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#d25c41]/20">
-              <MapPin className="h-5 w-5 text-[#d25c41]" />
-            </span>
-            <span className="text-sm font-semibold text-[#f6ac55] uppercase tracking-wider">SEO Services in {cityData.city}</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-[56px] font-bold text-white leading-tight tracking-tight mb-6">
-            SEO Services in{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d25c41] to-[#f6ac55]">{cityData.city}</span>
-          </h1>
-          <p className="text-lg text-slate-400 max-w-2xl leading-relaxed mb-3">{cityData.tagline}</p>
-          <p className="text-base text-slate-500 max-w-2xl leading-relaxed mb-8">{cityData.description}</p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-3.5 text-sm font-bold text-white hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300">
-              Get Free SEO Audit — {cityData.city} <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-            </Link>
-            <Link href="/services/seo-strategies" className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3.5 text-sm font-bold text-white hover:bg-white/10 transition-all duration-300">Our SEO Services</Link>
-=======
 import {
   ArrowRight,
   MapPin,
@@ -91,68 +19,68 @@ import {
   Layers,
   Sparkles,
   Cpu,
-  Factory,
+  HeartPulse,
 } from "lucide-react";
 
 export const metadata = {
   title:
-    "SEO Agency in Pune | Best Digital Marketing Company Pune – Aksh Digital",
+    "SEO Agency in Hyderabad | Best Digital Marketing Company Hyderabad – Aksh Digital",
   description:
-    "Scale organic traffic and direct revenue with Aksh Digital, a results-driven SEO agency in Pune and trusted digital marketing company in Pune. Local SEO, IT enterprise search, Core Web Vitals, and authoritative link building.",
+    "Scale organic traffic and high-intent commercial leads with Aksh Digital, a top SEO agency in Hyderabad and trusted digital marketing company in Hyderabad. Local SEO, SaaS enterprise search, Core Web Vitals, and link building.",
   alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/pune/",
+    canonical: "https://www.akshdigital.in/seo-services/hyderabad/",
   },
 };
 
-const puneHubs = [
-  "Hinjawadi IT Park",
-  "Baner",
-  "Wakad",
-  "Kothrud",
-  "Viman Nagar",
-  "Kharadi",
-  "Magarpatta City",
-  "Koregaon Park",
-  "Kalyani Nagar",
-  "PCMC (Pimpri-Chinchwad)",
-  "Hadapsar",
-  "Senapati Bapat Road",
+const hyderabadHubs = [
+  "HITEC City",
+  "Gachibowli",
+  "Madhapur",
+  "Financial District",
+  "Kondapur",
+  "Jubilee Hills",
+  "Banjara Hills",
+  "Genome Valley",
+  "Secunderabad",
+  "Begumpet",
+  "Kukatpally",
+  "Manikonda",
 ];
 
 const coreServices = [
   {
     number: "01",
-    badge: "IT & SaaS Search Dominance",
-    title: "High-Intent Commercial & IT Enterprise SEO",
+    badge: "SaaS & Enterprise B2B Focus",
+    title: "SaaS, IT Enterprise & High-Intent B2B SEO",
     icon: Cpu,
     description:
-      "Target competitive commercial search terms such as 'best digital marketing company in pune', 'seo services in pune', 'digital marketing agency in pune', and industry-specific B2B/B2C transactional queries.",
+      "Target competitive commercial search terms like 'best digital marketing company in hyderabad', 'seo services in hyderabad', 'digital marketing agency in hyderabad', and enterprise B2B/SaaS queries.",
     points: [
-      "Target competitive commercial search terms such as best digital marketing company in pune, seo services in pune, digital marketing agency in pune, and industry-specific B2B/B2C transactional queries.",
-      "Deep search intent classification, faceted crawl optimization, and topical authority cluster development for SaaS and IT firms.",
-      "Competitor gap analysis engineered to outrank legacy tech competitors and capture ready-to-buy enterprise buyers.",
+      "Target competitive commercial search terms like best digital marketing company in hyderabad, seo services in hyderabad, digital marketing agency in hyderabad, and enterprise B2B/SaaS queries.",
+      "Deep search intent classification, faceted crawl optimization, and topical authority cluster development for IT consulting, SaaS platforms, and enterprise software firms.",
+      "Strategic software comparison pages and bottom-of-funnel conversion assets to attract qualified enterprise buyers.",
     ],
   },
   {
     number: "02",
-    badge: "Map 3-Pack Dominance",
+    badge: "Cyberabad Map 3-Pack Dominance",
     title: "Hyper-Local SEO & Google Business Profile (GBP) Optimization",
     icon: MapPin,
     description:
-      "Capture high-converting regional footfall and direct commercial inquiries across Pune's top IT parks and residential zones.",
+      "Capture high-converting regional footfall and direct commercial inquiries across Hyderabad's dense IT hubs and residential corridors.",
     points: [
-      "As an experienced local search marketing agency, we optimize your Google Business Profile to capture the local Map 3-Pack across high-density Pune hubs (Hinjawadi, Baner, Wakad, Kothrud, Viman Nagar, Kharadi, and PCMC).",
+      "As an experienced local search marketing agency, we optimize your Google Business Profile to capture the local Map 3-Pack across high-density Hyderabad hubs (HITEC City, Gachibowli, Madhapur, Kondapur, Jubilee Hills, Banjara Hills, and Secunderabad).",
       "100% NAP (Name, Address, Phone) citation consistency and localized review workflows that build strong regional consumer trust.",
-      "Localized landing page architectures designed for multi-branch clinics, premium retail outlets, and tech service offices.",
+      "Geo-targeted landing pages structured for multi-branch clinics, commercial realty brokers, and tech campuses.",
     ],
   },
   {
     number: "03",
-    badge: "Speed & Engineering",
+    badge: "Speed & Engineering Precision",
     title: "Technical SEO & Core Web Vitals Optimization",
     icon: Zap,
     description:
-      "Eliminate client-side rendering hurdles and boost site speed to comply with Google Search Essentials.",
+      "Eliminate client-side rendering bottlenecks and optimize website infrastructure to comply with Google Search Essentials.",
     points: [
       "JavaScript rendering audits, server-side rendering (SSR) optimization, and mobile-first responsiveness tuning to comply with Google Search Essentials.",
       "Structured data schema implementation (Organization, LocalBusiness, FAQ, Product, and Service JSON-LD schemas) to secure rich snippet visibility.",
@@ -161,28 +89,28 @@ const coreServices = [
   },
   {
     number: "04",
-    badge: "Editorial PR & Trust",
+    badge: "Editorial PR & Trust Signals",
     title: "Digital PR & High-Authority Backlink Acquisition",
     icon: Globe,
     description:
-      "Build enduring domain rating (DR) through ethical, high-quality editorial placements in reputable industry media.",
+      "Build enduring domain rating (DR) through ethical, high-quality editorial placements in reputable industry and regional media.",
     points: [
-      "100% white-hat link acquisition from authoritative tech blogs, reputable regional news outlets, and relevant industry publications.",
+      "100% white-hat link acquisition from authoritative regional media outlets, reputable tech publications, and niche-relevant industry blogs.",
       "Contextual brand citations and editorial outreach designed to compound your domain rating (DR) safely over time.",
-      "Targeted digital PR activations that earn organic backlinks without risking algorithmic penalties.",
+      "High-tier digital PR coverage that builds enduring entity trust and domain strength without penalty risk.",
     ],
   },
   {
     number: "05",
-    badge: "Industrial, Real Estate & D2C",
-    title: "Manufacturing, Real Estate & D2C E-Commerce SEO",
-    icon: Factory,
+    badge: "Pharma, Healthcare & Real Estate",
+    title: "Pharma, Healthcare, Real Estate & D2C E-Commerce SEO",
+    icon: HeartPulse,
     description:
-      "Specialized search architectures tailored for Pune's manufacturing supply chains, real estate developers, and direct-to-consumer brands.",
+      "Tailored search architectures designed for Genome Valley life sciences, hospital chains, real estate developers, and D2C brands.",
     points: [
-      "Tailored SEO frameworks for Pune’s engineering and manufacturing suppliers, luxury real estate developers, and fast-scaling D2C brands.",
-      "Multi-region indexing and structured schema integration to capture buyers locally and nationwide.",
-      "Product-level and high-ticket lead generation funnels designed to maximize conversion from commercial search traffic.",
+      "Specialized SEO frameworks for Hyderabad’s pharmaceutical manufacturers, clinical healthcare networks, premium real estate developers, and fast-scaling D2C brands.",
+      "Multi-region indexing and structured schema integration to capture buyers locally, nationally, and globally.",
+      "Product and service category schema optimization engineered for high-intent search conversion and qualified inbound calls.",
     ],
   },
 ];
@@ -192,7 +120,7 @@ const integratedServices = [
     title: "High-ROAS Paid Media",
     badge: "Paid Advertising",
     icon: Megaphone,
-    desc: "Complement organic rankings with high-converting search and social ad funnels managed by our performance marketing agency in pune specialists.",
+    desc: "Complement organic rankings with high-converting search and social ad funnels managed by our performance marketing agency in hyderabad specialists.",
     href: "/services/performance-marketing/",
     linkText: "Explore Performance Marketing",
   },
@@ -200,7 +128,7 @@ const integratedServices = [
     title: "Social Media Authority",
     badge: "Brand Resonance",
     icon: Share2,
-    desc: "Build brand loyalty and engagement through our dedicated social media marketing agency in pune and social media company in pune teams.",
+    desc: "Build brand loyalty and engagement through our dedicated social media marketing agency in hyderabad and social media company in hyderabad teams.",
     href: "/services/social-media-marketing/",
     linkText: "Explore Social Media",
   },
@@ -218,12 +146,12 @@ const roadmapSteps = [
   {
     step: "01",
     title: "Deep Technical Site & Competitor Gap Audit",
-    desc: "We analyze your site architecture, crawl logs, and backlink health while benchmarking the top-ranking competitors in Pune to identify core ranking bottlenecks.",
+    desc: "We analyze your site architecture, crawl logs, and backlink health while benchmarking top-ranking competitors in Hyderabad to uncover hidden ranking bottlenecks.",
   },
   {
     step: "02",
     title: "On-Page Architecture & Semantic Content Mapping",
-    desc: "We resolve technical crawling errors, implement localized schema, and optimize core web pages for target city keywords and major Pune commercial micro-markets.",
+    desc: "We resolve technical crawling errors, implement localized schema, and optimize core web pages for target city keywords and Hyderabad commercial micro-markets.",
   },
   {
     step: "03",
@@ -233,7 +161,7 @@ const roadmapSteps = [
   {
     step: "04",
     title: "Tracking, Lead Attribution & Conversion Optimization",
-    desc: "Continuous monitoring via Google Search Console and GA4, tracking ranking trajectories, phone inquiries, and organic lead form fills with regular iterative optimizations.",
+    desc: "Continuous monitoring via Google Search Console and GA4, tracking ranking trajectories, phone inquiries, and organic lead form fills with regular iterative sprints.",
   },
 ];
 
@@ -251,7 +179,7 @@ const whyChooseUs = [
   {
     title: "Integrated Development & Marketing",
     icon: Building2,
-    desc: "Developers, SEO strategists, and copywriters working collaboratively under one roof to resolve complex technical hurdles without vendor delays.",
+    desc: "Developers, SEO strategists, and copywriters working collaboratively under one roof to resolve complex technical hurdles without vendor friction.",
   },
 ];
 
@@ -260,8 +188,8 @@ const otherCities = [
   { city: "Delhi NCR", slug: "delhi" },
   { city: "Mumbai", slug: "mumbai" },
   { city: "Bangalore", slug: "bangalore" },
-  { city: "Hyderabad", slug: "hyderabad" },
   { city: "Chennai", slug: "chennai" },
+  { city: "Pune", slug: "pune" },
   { city: "Indore", slug: "indore" },
   { city: "Chandigarh", slug: "chandigarh" },
   { city: "Kolkata", slug: "kolkata" },
@@ -269,31 +197,29 @@ const otherCities = [
   { city: "Bhiwadi & Alwar", slug: "bhiwadi-alwar" },
 ];
 
-export default function SEOPunePage() {
+export default function SEOHyderabadPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Aksh Digital - SEO Agency in Pune",
+    name: "Aksh Digital - SEO Agency in Hyderabad",
     description:
-      "Premier SEO services and digital marketing agency in Pune specializing in IT enterprise search, local SEO, Core Web Vitals remediation, and link building.",
-    url: "https://www.akshdigital.in/seo-services/pune/",
+      "Premier SEO services and digital marketing agency in Hyderabad specializing in local SEO, SaaS enterprise search, Core Web Vitals remediation, and link building.",
+    url: "https://www.akshdigital.in/seo-services/hyderabad/",
     email: "connect@akshdigital.com",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Pune",
-      addressRegion: "Maharashtra",
+      addressLocality: "Hyderabad",
+      addressRegion: "Telangana",
       addressCountry: "IN",
     },
     areaServed: [
-      "Pune",
-      "Hinjawadi",
-      "Baner",
-      "Wakad",
-      "Kothrud",
-      "Viman Nagar",
-      "Kharadi",
-      "PCMC",
-      "Maharashtra",
+      "Hyderabad",
+      "HITEC City",
+      "Gachibowli",
+      "Madhapur",
+      "Jubilee Hills",
+      "Banjara Hills",
+      "Telangana",
       "India",
     ],
     priceRange: "$$",
@@ -336,33 +262,33 @@ export default function SEOPunePage() {
               SEO Services
             </Link>
             <span>/</span>
-            <span className="text-[#f6ac55]">Pune</span>
+            <span className="text-[#f6ac55]">Hyderabad</span>
           </nav>
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm font-semibold text-[#f6ac55] backdrop-blur-sm mb-6">
             <span className="flex h-2 w-2 rounded-full bg-[#f6ac55] animate-pulse" />
-            High-Intent Search Dominance • Pune Tech & Industrial Hub
+            Enterprise SEO • Tech & Pharma Search Dominance • Hyderabad Hub
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
-            High-Impact SEO Services in Pune Engineered for{" "}
+            High-Impact SEO Services in Hyderabad Engineered for{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d25c41] via-[#f6ac55] to-[#f6ac55]">
-              Page 1 Domination
+              Page 1 Rankings
             </span>{" "}
-            and Direct Revenue
+            and High-Intent Leads
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10">
-            In one of India&apos;s fastest-growing IT, automotive, and startup
-            epicenters, generic SEO tactics get lost in the noise. Partner with
-            a results-driven SEO agency in Pune and trusted digital marketing
-            company in Pune. Aksh Digital delivers technical site architecture,
-            local search optimization, and high-authority link acquisition that
-            drive qualified inbound revenue across Hinjawadi, Baner, Kothrud,
-            Viman Nagar, and Pan-India.
+            In Cyberabad&apos;s booming tech and enterprise landscape, standard
+            optimization gets lost in the noise. Partner with a results-driven
+            SEO agency Hyderabad and trusted digital marketing company in
+            Hyderabad. Aksh Digital delivers technical site architecture, local
+            search optimization, and high-authority link acquisition that drive
+            qualified inbound revenue across HITEC City, Gachibowli, Madhapur,
+            Jubilee Hills, and Pan-India.
           </p>
 
           {/* CTAs */}
@@ -371,94 +297,45 @@ export default function SEOPunePage() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:opacity-95 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Claim Your Free Pune SEO Audit
+              Claim Your Free Hyderabad SEO Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="#pune-seo-framework"
+              href="#hyderabad-seo-framework"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
-              View Ranking Strategy
+              Explore Our Ranking Framework
             </a>
           </div>
 
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving IT Giants, Manufacturing Leaders & D2C Brands Across Pune & PCMC</span>
->>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
+            <span>Serving Tech Startups, Pharma Leaders & Enterprises Across Hyderabad & Telangana</span>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="bg-[#d25c41] py-10 px-4 sm:px-6">
-        <div className="mx-auto max-w-5xl grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-          {[{ num: "35+", label: "Pune Clients Served" }, { num: "80%", label: "First-Page Rankings" }, { num: "3x", label: "Avg. Traffic Growth" }, { num: "5 Months", label: "Avg. Time to Results" }].map(({ num, label }) => (
-            <div key={label}><p className="text-3xl sm:text-4xl font-bold text-white">{num}</p><p className="mt-1 text-sm text-white/80 font-medium">{label}</p></div>
-          ))}
-        </div>
-      </section>
-
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-[#fafaf9]">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#14183e] mb-4">Our SEO Services in {cityData.city}</h2>
-            <p className="text-slate-600 max-w-xl mx-auto">Complete local and national SEO for {cityData.city} businesses across all industries.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-[#d25c41]/30 hover:-translate-y-1 transition-all duration-300">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#d25c41]/10 mb-4"><Icon className="h-6 w-6 text-[#d25c41]" strokeWidth={2} /></span>
-                <h3 className="text-lg font-bold text-[#14183e] mb-2">{title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
-        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-[#14183e] mb-4">Why {cityData.city} Businesses Choose Aksh Digital</h2>
-            <p className="text-slate-600 text-base leading-relaxed mb-6">{cityData.city} is growing rapidly — with new businesses launching every day, the competition for digital visibility has never been higher. We help you get found first.</p>
-            <ul className="space-y-4">
-              {cityData.localFacts.map((fact) => (
-                <li key={fact} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-[#d25c41] mt-0.5 shrink-0" strokeWidth={2} />
-                  <span className="text-slate-700 text-[15px]">{fact}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-[#14183e] mb-4">Areas We Serve in {cityData.city}</h3>
-            <div className="flex flex-wrap gap-2">
-              {cityData.nearbyAreas.map((area) => (
-                <span key={area} className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">
-                  <MapPin className="h-3.5 w-3.5 text-[#d25c41]" />{area}
-                </span>
-              ))}
-=======
-      {/* Overview: Why Pune Businesses Need Advanced SEO Execution */}
+      {/* Overview: Why Hyderabad Businesses Need Advanced SEO Execution */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#d25c41]/10 px-3.5 py-1 text-xs font-semibold text-[#d25c41] uppercase tracking-wider mb-4">
-                Overview: Advanced Search Execution
+                Overview: Advanced SEO Execution
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Regional Commercial Demand into Predictable Inbound Growth
+                Turning Cyberabad&apos;s Search Demand into Predictable Inbound Growth
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
-                Pune represents a powerhouse economy blending IT enterprises in
-                Hinjawadi and Magarpatta, manufacturing giants in PCMC, and
-                booming educational, real estate, and D2C startups in Baner,
-                Kalyani Nagar, and Koregaon Park. To capture high-value
-                commercial searches in this ecosystem, your business needs
-                technical precision and deep local relevance.
+                Hyderabad represents one of Asia&apos;s most powerful economic
+                engines, blending massive IT and SaaS conglomerates in HITEC
+                City and Financial District, biotech and pharmaceutical giants
+                in Genome Valley, alongside booming luxury real estate,
+                healthcare, and retail across Jubilee Hills and Banjara Hills.
+                To capture high-value commercial searches in this ecosystem,
+                your business needs technical precision and deep local
+                relevance.
               </p>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
                 As a full-stack software and digital marketing company, Aksh
@@ -467,15 +344,15 @@ export default function SEOPunePage() {
                 targeting, structured data architecture, and white-hat digital
                 PR, our search engine optimization marketing agency secures
                 lasting Page 1 positions, helps you capture high-intent
-                commercial buyers, and lowers your long-term customer acquisition
-                costs (CAC).
+                commercial buyers, and lowers your long-term customer
+                acquisition costs (CAC).
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-full bg-[#0f1535] px-6 py-3 text-sm font-semibold text-white hover:bg-[#d25c41] transition-colors duration-300"
                 >
-                  Consult Our Pune SEO Team
+                  Consult Our Hyderabad SEO Team
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
@@ -490,15 +367,15 @@ export default function SEOPunePage() {
             <div className="lg:col-span-5">
               <div className="rounded-3xl border border-slate-200 bg-gradient-to-b from-[#fafaf9] to-white p-8 shadow-sm">
                 <h3 className="text-xl font-bold text-[#0f1535] mb-2">
-                  Key Pune Tech & Industrial Hubs
+                  Key Hyderabad Commercial Corridors
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                  We deploy localized entity architectures tailored to Pune&apos;s
-                  premier IT corridors, manufacturing zones, and affluent
-                  commercial districts.
+                  We deploy localized entity architectures tailored to
+                  Hyderabad&apos;s leading tech zones, corporate avenues, and
+                  healthcare clusters.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {puneHubs.map((hub) => (
+                  {hyderabadHubs.map((hub) => (
                     <span
                       key={hub}
                       className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 shadow-sm"
@@ -511,7 +388,7 @@ export default function SEOPunePage() {
                 <div className="pt-6 border-t border-slate-200/80 space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
-                      Pune Map 3-Pack Target
+                      Hyderabad Map 3-Pack Target
                     </span>
                     <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
                   </div>
@@ -523,44 +400,31 @@ export default function SEOPunePage() {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
-                      Full-Stack Architecture
+                      Full-Stack Infrastructure
                     </span>
                     <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
                   </div>
                 </div>
               </div>
->>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-[#fafaf9]">
-        <div className="mx-auto max-w-3xl">
-          <div className="text-center mb-12"><h2 className="text-3xl font-bold text-[#14183e]">FAQs — SEO in {cityData.city}</h2></div>
-          <div className="space-y-4">
-            {cityData.faqs.map(({ q, a }) => (
-              <div key={q} className="rounded-xl border border-slate-200 bg-white p-6">
-                <h3 className="text-base font-bold text-[#14183e] mb-2">{q}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{a}</p>
-              </div>
-            ))}
-=======
-      {/* Core SEO Services in Pune */}
+      {/* Core SEO Services in Hyderabad */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-[#fafaf9]">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#d25c41]/10 px-3.5 py-1 text-xs font-semibold text-[#d25c41] uppercase tracking-wider mb-4">
-              Our Core SEO Services in Pune
+              Our Core SEO Services in Hyderabad
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Engineered for Page 1 Domination and Direct Revenue
+              Engineered for Page 1 Rankings and High-Intent Leads
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Every vertical in Pune demands tactical execution. Here is our
-              multi-layered SEO arsenal designed to capture high-value commercial
-              market share.
+              Every vertical in Cyberabad requires strategic positioning. Here
+              is our multi-layered SEO framework designed to capture high-value
+              commercial market share.
             </p>
           </div>
 
@@ -614,21 +478,11 @@ export default function SEOPunePage() {
                 </div>
               );
             })}
->>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="py-12 px-4 sm:px-6 bg-white border-y border-slate-100">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-slate-500 mb-4">SEO Services in Other Cities</p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {[{ city: "Jaipur", slug: "jaipur" }, { city: "Delhi", slug: "delhi" }, { city: "Mumbai", slug: "mumbai" }, { city: "Bangalore", slug: "bangalore" }, { city: "Indore", slug: "indore" }].map(({ city, slug }) => (
-              <Link key={slug} href={`/seo-services/${slug}`} className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:border-[#d25c41] hover:text-[#d25c41] transition-all duration-200">
-                SEO in {city} <ArrowRight className="h-3.5 w-3.5" />
-=======
-      {/* Integrated Growth: Full-Suite Synergies for Pune Brands */}
+      {/* Integrated Growth: Full-Suite Synergies for Hyderabad Brands */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -636,7 +490,7 @@ export default function SEOPunePage() {
               Integrated Growth Ecosystem
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Integrated Growth: Full-Suite Synergies for Pune Brands
+              Integrated Growth: Full-Suite Synergies for Hyderabad Brands
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Accelerate pipeline growth by uniting high-intent organic rankings
@@ -683,9 +537,9 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* 4-Step Pune SEO Roadmap */}
+      {/* 4-Step Hyderabad SEO Roadmap */}
       <section
-        id="pune-seo-framework"
+        id="hyderabad-seo-framework"
         className="py-20 sm:py-28 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden"
       >
         <div className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#d25c41]/15 blur-3xl" />
@@ -694,14 +548,14 @@ export default function SEOPunePage() {
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1 text-xs font-semibold text-[#f6ac55] uppercase tracking-wider mb-4">
-              Our 4-Step Pune SEO Roadmap
+              Our 4-Step Hyderabad SEO Roadmap
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
               Disciplined Roadmap to Page 1 Supremacy
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               We eliminate guesswork with a battle-tested 4-step framework engineered
-              to systematically elevate your Pune business to Page 1.
+              to systematically elevate your Hyderabad business to Page 1.
             </p>
           </div>
 
@@ -731,14 +585,14 @@ export default function SEOPunePage() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] transition-all duration-300"
             >
-              Start Step 1: Claim Your Pune Audit
+              Start Step 1: Claim Your Hyderabad Audit
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Aksh Digital as Your Pune SEO Partner? */}
+      {/* Why Choose Aksh Digital as Your Hyderabad SEO Partner? */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-[#fafaf9]">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -746,12 +600,12 @@ export default function SEOPunePage() {
               The Aksh Digital Advantage
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Why Choose Aksh Digital as Your Pune SEO Partner?
+              Why Choose Aksh Digital as Your Hyderabad SEO Partner?
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              We blend software engineering speed, industrial domain knowledge,
+              We blend software engineering speed, regional market insight,
               and strict white-hat ethics to deliver compounding commercial
-              returns.
+              returns across Telangana.
             </p>
           </div>
 
@@ -794,46 +648,30 @@ export default function SEOPunePage() {
               >
                 SEO in {city}
                 <ArrowRight className="h-3 w-3" />
->>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#d25c41] to-[#b84d35] py-16 px-4 sm:px-6 text-center">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        <div className="relative z-10 mx-auto max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Rank #1 in {cityData.city}?</h2>
-          <p className="text-white/80 mb-8">Get a free SEO audit tailored for your {cityData.city} business — start dominating local search today.</p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#d25c41] hover:bg-slate-50 transition-colors shadow-lg">
-              Get Free SEO Audit <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-            </Link>
-            <a href="tel:+919999999999" className="inline-flex items-center gap-2 rounded-full border-2 border-white/60 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors">
-              <Phone className="h-4 w-4" /> Call Us Now
-            </a>
-          </div>
-=======
-      {/* Ready to Outrank Competitors in Pune? (Bottom CTA) */}
+      {/* Ready to Outrank Competitors in Hyderabad? (Bottom CTA) */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0f1535] via-[#1a224c] to-[#0f1535] py-20 sm:py-24 px-4 sm:px-6 text-center text-white">
         <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
         <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#d25c41]/20 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] uppercase tracking-wider mb-6">
-            Ready to Outrank Competitors in Pune?
+            Ready to Outrank Competitors in Hyderabad?
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
-            Claim Your Free Pune Technical & SEO Audit Today
+            Claim Your Free Hyderabad Technical & SEO Audit Today
           </h2>
 
           <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Let our search specialists analyze your website&apos;s ranking
-            bottlenecks and outline a custom 90-day search roadmap for the Pune
-            market.
+            bottlenecks and outline a custom 90-day search roadmap for the
+            Hyderabad market.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -841,7 +679,7 @@ export default function SEOPunePage() {
               href="/contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              Request Your Free Pune SEO Audit
+              Request Your Free Hyderabad SEO Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
@@ -855,9 +693,8 @@ export default function SEOPunePage() {
 
           <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Pune, Maharashtra • Pan-India</span>
+            <span>Hyderabad, Telangana • Pan-India</span>
           </div>
->>>>>>> 9b27782b22dc25313cff6685ac30d7a71074b758
         </div>
       </section>
     </div>

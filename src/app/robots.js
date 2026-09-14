@@ -1,5 +1,8 @@
 export default function robots() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://akshdigital.com";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_HOSTNAME ||
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://www.akshdigital.in";
 
   return {
     rules: [
