@@ -8,21 +8,132 @@ import {
   Plus,
   ArrowRight,
   MessageSquare,
-  Globe,
-  Settings,
-  ShieldAlert,
 } from "lucide-react";
 
 const faqCategories = [
   { id: "all", label: "All Questions" },
   { id: "general", label: "General & Agency" },
-  { id: "seo", label: "SEO & Local Search" },
-  { id: "ads", label: "Paid Ads & PPC" },
-  { id: "dev", label: "Web & App Dev" },
+  { id: "seo", label: "SEO & Organic Growth" },
+  { id: "ads", label: "Performance & Ads" },
+  { id: "dev", label: "Web & Mobile Dev" },
+  { id: "social", label: "Social Media & Branding" },
+  { id: "pricing", label: "Pricing & Onboarding" },
 ];
 
 const faqs = [
-  // General
+  // General & Agency Capabilities (New)
+  {
+    category: "general",
+    question: "Why is Aksh Digital considered the best digital marketing agency in India for scaling businesses?",
+    answer: "Aksh Digital stands out because we operate as a unified software and digital marketing company. Rather than offering fragmented marketing tactics, we integrate modern technical web development (Next.js, React, Node.js) with high-impact SEO strategies and high-ROAS performance marketing to create complete, predictable revenue engines for our clients.",
+  },
+  {
+    category: "general",
+    question: "What services are included under your full-service digital marketing agency?",
+    answer: "As a full service digital marketing agency, we provide end-to-end solutions, including search engine optimization (SEO), Google and Meta performance advertising, full-stack web development and digital marketing, social media management, conversion rate optimization (CRO), and custom UI/UX design.",
+  },
+  {
+    category: "general",
+    question: "How does Aksh Digital serve international clients looking for a digital marketing agency in USA or UK?",
+    answer: "We deliver reliable outsourced digital marketing services to overseas businesses. Our offshore delivery model features dedicated timezone overlap (EST, PST, and GMT), two-week agile sprint workflows, clear communication via Slack and Google Meet, and enterprise-grade execution at cost-effective rates.",
+  },
+  {
+    category: "general",
+    question: "Do you offer localized digital marketing services across different Indian cities?",
+    answer: "Yes. In addition to our headquarters as a premier digital marketing company in Jaipur, we manage multi-city campaigns as a trusted digital marketing agency in Delhi NCR, a results-driven digital marketing agency Mumbai, an agile digital marketing agency Bangalore, a data-backed digital marketing company in Pune, and a top digital marketing agency Indore.",
+  },
+
+  // SEO & Organic Growth (New)
+  {
+    category: "seo",
+    question: "How long does it take to see results with your search engine optimization marketing agency?",
+    answer: "Comprehensive SEO strategies typically deliver noticeable keyword ranking shifts and organic traffic improvements within 3 to 6 months. However, local search optimizations—such as Google Business Profile rankings and localized landing pages—often start driving phone calls and qualified inquiries within 45 to 60 days.",
+  },
+  {
+    category: "seo",
+    question: "What specific SEO services do you execute to dominate Page 1 search results?",
+    answer: "Our approach as a dedicated SEO agency in India includes comprehensive technical site audits, Core Web Vitals optimization, semantic keyword mapping, on-page optimization, content strategy, high-authority white-hat link acquisition, and local map pack optimization.",
+  },
+  {
+    category: "seo",
+    question: "Why is technical SEO critical for modern web applications?",
+    answer: "Search engines prioritize speed, crawlability, and mobile responsiveness. As a web development and digital marketing company, we ensure your Next.js and React web builds feature server-side rendering (SSR), clean URL architecture, and optimized metadata to maximize organic search visibility.",
+  },
+  {
+    category: "seo",
+    question: "How does local SEO help businesses in Jaipur and tier-1 Indian metros?",
+    answer: "Local SEO targets high-intent search queries from customers in your specific geographic area. We optimize your Google Business Profile, build localized citations, and develop city-specific landing pages to capture nearby demand and drive inbound leads.",
+  },
+
+  // Performance Marketing & Paid Ads (New)
+  {
+    category: "ads",
+    question: "How does your performance marketing agency India maximize ROAS on ad spend?",
+    answer: "We eliminate wasted ad spend through multi-tier retargeting funnels, granular audience segmentation, continuous creative A/B testing, and server-side tracking. Every campaign on Google Ads and Meta Ads is managed against strict return on ad spend (ROAS) and cost per acquisition (CPA) targets.",
+  },
+  {
+    category: "ads",
+    question: "Which paid advertising platforms does Aksh Digital specialize in?",
+    answer: "As an experienced paid advertising agency, we manage Google Search Ads, Performance Max, Google Shopping, YouTube Ads, Meta Ads (Facebook & Instagram), and LinkedIn B2B ad campaigns tailored to your specific audience.",
+  },
+  {
+    category: "ads",
+    question: "How do you prevent ad fatigue and rising customer acquisition costs?",
+    answer: "We implement rapid creative testing frameworks, rotating high-converting video and static assets regularly while refining audience exclusions, lookalike modeling, and landing page conversion rate optimization (CRO).",
+  },
+
+  // Web & Mobile App Development (New)
+  {
+    category: "dev",
+    question: "Why should businesses choose a custom Next.js/React website over a basic CMS template?",
+    answer: "Custom web solutions built with Next.js, React, and Node.js load significantly faster, offer superior security, scale effortlessly, and provide search engines with fully rendered HTML. This leads to higher organic rankings and better conversion rates compared to bloated CMS platforms.",
+  },
+  {
+    category: "dev",
+    question: "Do your web development services include conversion rate optimization (CRO)?",
+    answer: "Yes. Every web project engineered by our team includes conversion-focused UI/UX design, intuitive navigation funnels, clear calls to action (CTAs), lightning-fast load times, and seamless mobile responsiveness.",
+  },
+
+  // Social Media Marketing & Brand Building (New)
+  {
+    category: "social",
+    question: "How does your social media marketing agency in India build real brand engagement?",
+    answer: "We focus on value-driven content distribution rather than empty vanity metrics. Our team creates scroll-stopping visual designs, short-form video strategies, and targeted social ad funnels that build community trust and drive bottom-of-the-funnel conversions.",
+  },
+  {
+    category: "social",
+    question: "Can Aksh Digital manage both organic social media and paid social ads simultaneously?",
+    answer: "Yes. We align organic community storytelling with paid Meta and LinkedIn ad campaigns to ensure consistent brand messaging across the entire customer lifecycle.",
+  },
+
+  // Pricing, Onboarding & Analytics (New)
+  {
+    category: "pricing",
+    question: "How much do digital marketing packages in India typically cost with Aksh Digital?",
+    answer: "We offer customized, transparent digital marketing packages based on your project scope, target markets, and growth goals. For ad management, we operate on a clear flat-fee or tiered percentage model with zero hidden fees.",
+  },
+  {
+    category: "pricing",
+    question: "Do you require long-term lock-in contracts?",
+    answer: "No. We believe in earning your business every month through transparent performance, measurable revenue impact, and compounding digital growth.",
+  },
+  {
+    category: "pricing",
+    question: "How do you track and report campaign performance?",
+    answer: "You receive 24/7 access to live, real-time reporting dashboards integrating GA4, Google Search Console, and ad platform metrics. We also schedule bi-weekly or monthly strategy reviews to discuss progress and upcoming sprint plans.",
+  },
+  {
+    category: "pricing",
+    question: "How do we get started with Aksh Digital?",
+    answer: "Simply request a free consultation through our contact page. Our team will conduct a preliminary technical and marketing audit of your digital presence and present a custom growth strategy within 24 to 48 hours.",
+  },
+  {
+    category: "pricing",
+    question: "What makes Aksh Digital different from typical digital agencies?",
+    answer: "We eliminate the gap between software engineering and marketing. With us, you get clean, modern codebase development and data-driven growth marketing executed by one dedicated, accountable team.",
+  },
+
+  // Existing FAQs
   {
     category: "general",
     question: "What digital marketing services does Aksh Digital provide?",
@@ -43,7 +154,6 @@ const faqs = [
     question: "What sets Aksh Digital apart from other agencies?",
     answer: "We don't just run campaigns; we build custom growth engines. Unlike generic agencies that rely on templated strategies and stock creatives, we have in-house copywriters, designers, and developers. Every line of code, ad copy, and creative is tailored specifically to your audience and business KPIs.",
   },
-  // SEO
   {
     category: "seo",
     question: "How long does it take to see organic traffic growth from SEO?",
@@ -64,7 +174,6 @@ const faqs = [
     question: "How do you measure SEO success?",
     answer: "We focus on business-centric metrics. While we track keyword rankings and search impressions, our primary KPIs are organic traffic growth, GMB phone calls/direction requests, contact form submissions, and organic leads generated.",
   },
-  // Paid Ads
   {
     category: "ads",
     question: "What advertising platforms do you manage?",
@@ -85,7 +194,6 @@ const faqs = [
     question: "Are your ad management fees included in the ad budget?",
     answer: "No, our ad management fee is billed separately. 100% of your ad budget goes directly to the advertising platforms (Google or Meta) via your linked credit card or billing account. This ensures total transparency in ad spend.",
   },
-  // Development
   {
     category: "dev",
     question: "What technologies do you use for website development?",
@@ -128,8 +236,28 @@ export default function FaqPage() {
     });
   }, [activeCategory, searchTerm]);
 
+  // Structured data for Google FAQ Rich Results
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="bg-white">
+      {/* Schema.org FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#0f1535] py-20 sm:py-24 px-4 sm:px-6">
         <div className="pointer-events-none absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-[#d25c41]/15 blur-3xl" />
@@ -145,17 +273,17 @@ export default function FaqPage() {
 
           <span className="inline-flex items-center gap-2 rounded-full border border-[#d25c41]/30 bg-[#d25c41]/10 px-4 py-1.5 text-sm font-semibold text-[#f6ac55] mb-6">
             <HelpCircle className="h-4 w-4" />
-            Support Center
+            Common Questions & Clear Answers
           </span>
           
           <h1 className="text-4xl sm:text-5xl md:text-[56px] font-bold text-white leading-tight tracking-tight mb-6">
-            How Can We{" "}
+            Frequently Asked Questions About Our{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d25c41] to-[#f6ac55]">
-              Help You?
+              Digital Marketing Solutions
             </span>
           </h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8">
-            Browse through our frequently asked questions or type a keyword below to find quick answers.
+          <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed mb-8">
+            Everything you need to know about our workflow, ad management, organic SEO, custom web engineering, and international delivery.
           </p>
 
           {/* Search Bar */}
@@ -179,7 +307,7 @@ export default function FaqPage() {
 
       {/* Category Tabs */}
       <section className="border-b border-slate-100 bg-white py-6 px-4 sm:px-6 sticky top-0 z-40 shadow-xs">
-        <div className="mx-auto max-w-4xl flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto scrollbar-none py-1">
+        <div className="mx-auto max-w-4xl flex items-center  gap-2 sm:gap-3 overflow-x-auto scrollbar-none py-1">
           {faqCategories.map(({ id, label }) => (
             <button
               key={id}
@@ -281,7 +409,7 @@ export default function FaqPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-[#d25c41] hover:bg-slate-50 transition-colors shadow-lg"
             >
               Contact Support

@@ -18,69 +18,68 @@ import {
   ShoppingBag,
   Layers,
   Sparkles,
-  Cpu,
   Factory,
 } from "lucide-react";
 
 export const metadata = {
   title:
-    "SEO Agency in Pune | Best Digital Marketing Company Pune – Aksh Digital",
+    "SEO Agency in Kolkata | Best Digital Marketing Company Kolkata – Aksh Digital",
   description:
-    "Scale organic traffic and direct revenue with Aksh Digital, a results-driven SEO agency in Pune and trusted digital marketing company in Pune. Local SEO, IT enterprise search, Core Web Vitals, and authoritative link building.",
+    "Scale organic traffic and high-value commercial revenue with Aksh Digital, a top SEO agency Kolkata and trusted digital marketing company in Kolkata. Local SEO, IT enterprise search, Core Web Vitals, and authoritative link building.",
   alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/pune/",
+    canonical: "https://www.akshdigital.in/seo-services/kolkata/",
   },
 };
 
-const puneHubs = [
-  "Hinjawadi IT Park",
-  "Baner",
-  "Wakad",
-  "Kothrud",
-  "Viman Nagar",
-  "Kharadi",
-  "Magarpatta City",
-  "Koregaon Park",
-  "Kalyani Nagar",
-  "PCMC (Pimpri-Chinchwad)",
-  "Hadapsar",
-  "Senapati Bapat Road",
+const kolkataHubs = [
+  "Salt Lake (Sector V)",
+  "New Town",
+  "Park Street",
+  "Ballygunge",
+  "Alipore",
+  "Gariahat",
+  "Howrah Industrial Belt",
+  "Burrabazar Commercial Area",
+  "Rajarhat",
+  "Camac Street",
+  "Dalhousie (BBD Bagh)",
+  "Jadavpur",
 ];
 
 const coreServices = [
   {
     number: "01",
-    badge: "IT & SaaS Search Dominance",
+    badge: "Enterprise & IT Search Capture",
     title: "High-Intent Commercial & IT Enterprise SEO",
-    icon: Cpu,
+    icon: Search,
     description:
-      "Target competitive commercial search terms such as 'best digital marketing company in pune', 'seo services in pune', 'digital marketing agency in pune', and industry-specific B2B/B2C transactional queries.",
+      "Target competitive commercial search terms such as 'best digital marketing company in kolkata', 'seo services in kolkata', 'digital marketing agency in kolkata', and industry-specific B2B/B2C transactional queries.",
     points: [
-      "Target competitive commercial search terms such as best digital marketing company in pune, seo services in pune, digital marketing agency in pune, and industry-specific B2B/B2C transactional queries.",
-      "Deep search intent classification, faceted crawl optimization, and topical authority cluster development for SaaS and IT firms.",
-      "Competitor gap analysis engineered to outrank legacy tech competitors and capture ready-to-buy enterprise buyers.",
+      "Target competitive commercial search terms such as best digital marketing company in kolkata, seo services in kolkata, digital marketing agency in kolkata, and industry-specific B2B/B2C transactional queries.",
+      "Deep search intent classification, faceted crawl optimization, and topical authority cluster development for IT consulting, SaaS, and corporate enterprises.",
+      "Competitor search gap analysis engineered to outrank legacy domains and capture ready-to-buy commercial clients.",
     ],
   },
   {
     number: "02",
-    badge: "Map 3-Pack Dominance",
+    badge: "Kolkata Map 3-Pack Dominance",
     title: "Hyper-Local SEO & Google Business Profile (GBP) Optimization",
     icon: MapPin,
     description:
-      "Capture high-converting regional footfall and direct commercial inquiries across Pune's top IT parks and residential zones.",
+      "Capture high-converting regional footfall and direct commercial inquiries across Kolkata's prime IT corridors and traditional commercial districts.",
     points: [
-      "As an experienced local search marketing agency, we optimize your Google Business Profile to capture the local Map 3-Pack across high-density Pune hubs (Hinjawadi, Baner, Wakad, Kothrud, Viman Nagar, Kharadi, and PCMC).",
+      "As an experienced local search marketing agency, we optimize your Google Business Profile to capture the local Map 3-Pack across high-density Kolkata hubs (Salt Lake Sector V, New Town, Park Street, Ballygunge, Alipore, Gariahat, and Howrah).",
       "100% NAP (Name, Address, Phone) citation consistency and localized review workflows that build strong regional consumer trust.",
-      "Localized landing page architectures designed for multi-branch clinics, premium retail outlets, and tech service offices.",
+      "Localized landing page architectures designed for healthcare clinics, retail stores, educational institutions, and corporate consultancies.",
     ],
   },
   {
     number: "03",
-    badge: "Speed & Engineering",
+    badge: "Speed & Engineering Precision",
     title: "Technical SEO & Core Web Vitals Optimization",
     icon: Zap,
     description:
-      "Eliminate client-side rendering hurdles and boost site speed to comply with Google Search Essentials.",
+      "Eliminate crawling bottlenecks and optimize server performance for seamless indexing by Googlebot.",
     points: [
       "JavaScript rendering audits, server-side rendering (SSR) optimization, and mobile-first responsiveness tuning to comply with Google Search Essentials.",
       "Structured data schema implementation (Organization, LocalBusiness, FAQ, Product, and Service JSON-LD schemas) to secure rich snippet visibility.",
@@ -89,28 +88,28 @@ const coreServices = [
   },
   {
     number: "04",
-    badge: "Editorial PR & Trust",
+    badge: "Editorial PR & Trust Signals",
     title: "Digital PR & High-Authority Backlink Acquisition",
     icon: Globe,
     description:
-      "Build enduring domain rating (DR) through ethical, high-quality editorial placements in reputable industry media.",
+      "Build enduring domain rating (DR) through ethical, high-quality editorial placements in reputable industry and regional media.",
     points: [
-      "100% white-hat link acquisition from authoritative tech blogs, reputable regional news outlets, and relevant industry publications.",
+      "100% white-hat link acquisition from authoritative regional news outlets, reputable industry publications, and niche-relevant blogs.",
       "Contextual brand citations and editorial outreach designed to compound your domain rating (DR) safely over time.",
-      "Targeted digital PR activations that earn organic backlinks without risking algorithmic penalties.",
+      "Targeted regional media outreach that boosts local trust signals, brand mentions, and organic ranking power.",
     ],
   },
   {
     number: "05",
-    badge: "Industrial, Real Estate & D2C",
-    title: "Manufacturing, Real Estate & D2C E-Commerce SEO",
+    badge: "Manufacturing, Export & D2C",
+    title: "Manufacturing, Export, Retail & D2C E-Commerce SEO",
     icon: Factory,
     description:
-      "Specialized search architectures tailored for Pune's manufacturing supply chains, real estate developers, and direct-to-consumer brands.",
+      "Specialized search architectures tailored for Eastern India's manufacturing exporters, tea and textile labels, and fast-growing D2C brands.",
     points: [
-      "Tailored SEO frameworks for Pune’s engineering and manufacturing suppliers, luxury real estate developers, and fast-scaling D2C brands.",
-      "Multi-region indexing and structured schema integration to capture buyers locally and nationwide.",
-      "Product-level and high-ticket lead generation funnels designed to maximize conversion from commercial search traffic.",
+      "Tailored SEO frameworks for Kolkata’s textile, tea, leather, and engineering exporters, as well as fast-scaling regional D2C brands.",
+      "Multi-region indexing and structured schema integration to capture buyers locally, nationally, and globally.",
+      "Product-level schema integration and frictionless transactional funnel optimization designed to maximize organic checkout rates.",
     ],
   },
 ];
@@ -120,7 +119,7 @@ const integratedServices = [
     title: "High-ROAS Paid Media",
     badge: "Paid Advertising",
     icon: Megaphone,
-    desc: "Complement organic rankings with high-converting search and social ad funnels managed by our performance marketing agency in pune specialists.",
+    desc: "Complement organic rankings with high-converting search and social ad funnels managed by our performance marketing agency in kolkata specialists.",
     href: "/services/performance-marketing/",
     linkText: "Explore Performance Marketing",
   },
@@ -128,7 +127,7 @@ const integratedServices = [
     title: "Social Media Authority",
     badge: "Brand Resonance",
     icon: Share2,
-    desc: "Build brand loyalty and engagement through our dedicated social media marketing agency in pune and social media company in pune teams.",
+    desc: "Build brand loyalty and engagement through our dedicated social media marketing agency in kolkata and social media company in kolkata teams.",
     href: "/services/social-media-marketing/",
     linkText: "Explore Social Media",
   },
@@ -146,12 +145,12 @@ const roadmapSteps = [
   {
     step: "01",
     title: "Deep Technical Site & Competitor Gap Audit",
-    desc: "We analyze your site architecture, crawl logs, and backlink health while benchmarking the top-ranking competitors in Pune to identify core ranking bottlenecks.",
+    desc: "We analyze your site architecture, crawl logs, and backlink health while benchmarking top-ranking competitors in Kolkata to uncover hidden ranking bottlenecks.",
   },
   {
     step: "02",
     title: "On-Page Architecture & Semantic Content Mapping",
-    desc: "We resolve technical crawling errors, implement localized schema, and optimize core web pages for target city keywords and major Pune commercial micro-markets.",
+    desc: "We resolve technical crawling errors, implement localized schema, and optimize core web pages for target city keywords and Kolkata commercial micro-markets.",
   },
   {
     step: "03",
@@ -161,7 +160,7 @@ const roadmapSteps = [
   {
     step: "04",
     title: "Tracking, Lead Attribution & Conversion Optimization",
-    desc: "Continuous monitoring via Google Search Console and GA4, tracking ranking trajectories, phone inquiries, and organic lead form fills with regular iterative optimizations.",
+    desc: "Continuous monitoring via Google Search Console and GA4, tracking ranking trajectories, phone inquiries, and organic lead form fills with regular iterative sprints.",
   },
 ];
 
@@ -179,7 +178,7 @@ const whyChooseUs = [
   {
     title: "Integrated Development & Marketing",
     icon: Building2,
-    desc: "Developers, SEO strategists, and copywriters working collaboratively under one roof to resolve complex technical hurdles without vendor delays.",
+    desc: "Developers, SEO strategists, and copywriters working collaboratively under one roof to resolve complex technical hurdles without vendor friction.",
   },
 ];
 
@@ -188,40 +187,39 @@ const otherCities = [
   { city: "Delhi NCR", slug: "delhi" },
   { city: "Mumbai", slug: "mumbai" },
   { city: "Bangalore", slug: "bangalore" },
-  { city: "Hyderabad", slug: "hyderabad" },
   { city: "Chennai", slug: "chennai" },
+  { city: "Hyderabad", slug: "hyderabad" },
+  { city: "Pune", slug: "pune" },
   { city: "Indore", slug: "indore" },
   { city: "Chandigarh", slug: "chandigarh" },
-  { city: "Kolkata", slug: "kolkata" },
   { city: "Lucknow", slug: "lucknow" },
   { city: "Bhiwadi & Alwar", slug: "bhiwadi-alwar" },
 ];
 
-export default function SEOPunePage() {
+export default function SEOKolkataPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Aksh Digital - SEO Agency in Pune",
+    name: "Aksh Digital - SEO Agency in Kolkata",
     description:
-      "Premier SEO services and digital marketing agency in Pune specializing in IT enterprise search, local SEO, Core Web Vitals remediation, and link building.",
-    url: "https://www.akshdigital.in/seo-services/pune/",
+      "Premier SEO services and digital marketing agency in Kolkata specializing in local SEO, IT enterprise search, Core Web Vitals remediation, and link building.",
+    url: "https://www.akshdigital.in/seo-services/kolkata/",
     email: "connect@akshdigital.com",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Pune",
-      addressRegion: "Maharashtra",
+      addressLocality: "Kolkata",
+      addressRegion: "West Bengal",
       addressCountry: "IN",
     },
     areaServed: [
-      "Pune",
-      "Hinjawadi",
-      "Baner",
-      "Wakad",
-      "Kothrud",
-      "Viman Nagar",
-      "Kharadi",
-      "PCMC",
-      "Maharashtra",
+      "Kolkata",
+      "Salt Lake",
+      "New Town",
+      "Park Street",
+      "Howrah",
+      "Ballygunge",
+      "Alipore",
+      "West Bengal",
       "India",
     ],
     priceRange: "$$",
@@ -264,33 +262,33 @@ export default function SEOPunePage() {
               SEO Services
             </Link>
             <span>/</span>
-            <span className="text-[#f6ac55]">Pune</span>
+            <span className="text-[#f6ac55]">Kolkata</span>
           </nav>
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm font-semibold text-[#f6ac55] backdrop-blur-sm mb-6">
             <span className="flex h-2 w-2 rounded-full bg-[#f6ac55] animate-pulse" />
-            High-Intent Search Dominance • Pune Tech & Industrial Hub
+            High-Intent Search Dominance • Eastern India Commercial Hub
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
-            High-Impact SEO Services in Pune Engineered for{" "}
+            Premier SEO Services in Kolkata Engineered for{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d25c41] via-[#f6ac55] to-[#f6ac55]">
-              Page 1 Domination
+              Page 1 Rankings
             </span>{" "}
-            and Direct Revenue
+            and Scalable Revenue
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10">
-            In one of India&apos;s fastest-growing IT, automotive, and startup
-            epicenters, generic SEO tactics get lost in the noise. Partner with
-            a results-driven SEO agency in Pune and trusted digital marketing
-            company in Pune. Aksh Digital delivers technical site architecture,
-            local search optimization, and high-authority link acquisition that
-            drive qualified inbound revenue across Hinjawadi, Baner, Kothrud,
-            Viman Nagar, and Pan-India.
+            In the cultural and commercial capital of Eastern India, standing
+            out requires more than basic optimization. Partner with a
+            results-focused SEO agency Kolkata and trusted digital marketing
+            company in Kolkata. Aksh Digital executes technical site
+            architecture, local search optimization, and high-authority link
+            acquisition that drive qualified inbound revenue across Salt Lake
+            (Sector V), New Town, Park Street, Howrah, and Pan-India.
           </p>
 
           {/* CTAs */}
@@ -299,11 +297,11 @@ export default function SEOPunePage() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:opacity-95 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Claim Your Free Pune SEO Audit
+              Claim Your Free Kolkata SEO Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="#pune-seo-framework"
+              href="#kolkata-seo-framework"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               View Ranking Strategy
@@ -313,27 +311,28 @@ export default function SEOPunePage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving IT Giants, Manufacturing Leaders & D2C Brands Across Pune & PCMC</span>
+            <span>Serving Enterprises, Exporters & High-Growth Brands Across Kolkata & Eastern India</span>
           </div>
         </div>
       </section>
 
-      {/* Overview: Why Pune Businesses Need Advanced SEO Execution */}
+      {/* Overview: Why Kolkata Businesses Need Advanced SEO Execution */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#d25c41]/10 px-3.5 py-1 text-xs font-semibold text-[#d25c41] uppercase tracking-wider mb-4">
-                Overview: Advanced Search Execution
+                Overview: Advanced SEO Execution
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
                 Turning Regional Commercial Demand into Predictable Inbound Growth
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
-                Pune represents a powerhouse economy blending IT enterprises in
-                Hinjawadi and Magarpatta, manufacturing giants in PCMC, and
-                booming educational, real estate, and D2C startups in Baner,
-                Kalyani Nagar, and Koregaon Park. To capture high-value
+                Kolkata is a powerhouse economy blending IT and tech enterprises
+                in Salt Lake Sector V and New Town, traditional industrial,
+                manufacturing, and export giants across Howrah and Burrabazar,
+                alongside booming healthcare, education, retail, and real estate
+                hubs across South Kolkata and Rajarhat. To capture high-value
                 commercial searches in this ecosystem, your business needs
                 technical precision and deep local relevance.
               </p>
@@ -344,15 +343,15 @@ export default function SEOPunePage() {
                 targeting, structured data architecture, and white-hat digital
                 PR, our search engine optimization marketing agency secures
                 lasting Page 1 positions, helps you capture high-intent
-                commercial buyers, and lowers your long-term customer acquisition
-                costs (CAC).
+                commercial buyers, and lowers your long-term customer
+                acquisition costs (CAC).
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-full bg-[#0f1535] px-6 py-3 text-sm font-semibold text-white hover:bg-[#d25c41] transition-colors duration-300"
                 >
-                  Consult Our Pune SEO Team
+                  Consult Our Kolkata SEO Team
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
@@ -367,15 +366,15 @@ export default function SEOPunePage() {
             <div className="lg:col-span-5">
               <div className="rounded-3xl border border-slate-200 bg-gradient-to-b from-[#fafaf9] to-white p-8 shadow-sm">
                 <h3 className="text-xl font-bold text-[#0f1535] mb-2">
-                  Key Pune Tech & Industrial Hubs
+                  Prime Kolkata Commercial Corridors
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                  We deploy localized entity architectures tailored to Pune&apos;s
-                  premier IT corridors, manufacturing zones, and affluent
-                  commercial districts.
+                  We deploy localized entity architectures tailored to
+                  Kolkata&apos;s leading tech zones, corporate avenues, and
+                  industrial clusters.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {puneHubs.map((hub) => (
+                  {kolkataHubs.map((hub) => (
                     <span
                       key={hub}
                       className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 shadow-sm"
@@ -388,9 +387,9 @@ export default function SEOPunePage() {
                 <div className="pt-6 border-t border-slate-200/80 space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
-                      Pune Map 3-Pack Target
+                      Kolkata Map 3-Pack Authority
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
+                    <span className="font-bold text-[#d25c41]">Top 3 Target</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
@@ -400,7 +399,7 @@ export default function SEOPunePage() {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
-                      Full-Stack Architecture
+                      Full-Stack Infrastructure
                     </span>
                     <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
                   </div>
@@ -411,20 +410,20 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* Core SEO Services in Pune */}
+      {/* Core SEO Services in Kolkata */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-[#fafaf9]">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 rounded-full bg-[#d25c41]/10 px-3.5 py-1 text-xs font-semibold text-[#d25c41] uppercase tracking-wider mb-4">
-              Our Core SEO Services in Pune
+              Our Core SEO Services in Kolkata
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Engineered for Page 1 Domination and Direct Revenue
+              Engineered for Page 1 Rankings and Scalable Revenue
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Every vertical in Pune demands tactical execution. Here is our
-              multi-layered SEO arsenal designed to capture high-value commercial
-              market share.
+              Every vertical in Eastern India requires strategic positioning.
+              Here is our multi-layered SEO framework designed to capture
+              high-value commercial market share.
             </p>
           </div>
 
@@ -482,7 +481,7 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* Integrated Growth: Full-Suite Synergies for Pune Brands */}
+      {/* Integrated Growth: Full-Suite Synergies for Kolkata Brands */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -490,7 +489,7 @@ export default function SEOPunePage() {
               Integrated Growth Ecosystem
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Integrated Growth: Full-Suite Synergies for Pune Brands
+              Integrated Growth: Full-Suite Synergies for Kolkata Brands
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Accelerate pipeline growth by uniting high-intent organic rankings
@@ -537,9 +536,9 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* 4-Step Pune SEO Roadmap */}
+      {/* 4-Step Kolkata SEO Roadmap */}
       <section
-        id="pune-seo-framework"
+        id="kolkata-seo-framework"
         className="py-20 sm:py-28 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden"
       >
         <div className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#d25c41]/15 blur-3xl" />
@@ -548,14 +547,14 @@ export default function SEOPunePage() {
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1 text-xs font-semibold text-[#f6ac55] uppercase tracking-wider mb-4">
-              Our 4-Step Pune SEO Roadmap
+              Our 4-Step Kolkata SEO Roadmap
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
               Disciplined Roadmap to Page 1 Supremacy
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               We eliminate guesswork with a battle-tested 4-step framework engineered
-              to systematically elevate your Pune business to Page 1.
+              to systematically elevate your Kolkata business to Page 1.
             </p>
           </div>
 
@@ -585,14 +584,14 @@ export default function SEOPunePage() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] transition-all duration-300"
             >
-              Start Step 1: Claim Your Pune Audit
+              Start Step 1: Claim Your Kolkata Audit
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Aksh Digital as Your Pune SEO Partner? */}
+      {/* Why Choose Aksh Digital as Your Kolkata SEO Partner? */}
       <section className="py-20 sm:py-28 px-4 sm:px-6 bg-[#fafaf9]">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -600,12 +599,12 @@ export default function SEOPunePage() {
               The Aksh Digital Advantage
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-4">
-              Why Choose Aksh Digital as Your Pune SEO Partner?
+              Why Choose Aksh Digital as Your Kolkata SEO Partner?
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              We blend software engineering speed, industrial domain knowledge,
+              We blend software engineering speed, regional market insight,
               and strict white-hat ethics to deliver compounding commercial
-              returns.
+              returns across Eastern India.
             </p>
           </div>
 
@@ -654,24 +653,24 @@ export default function SEOPunePage() {
         </div>
       </section>
 
-      {/* Ready to Outrank Competitors in Pune? (Bottom CTA) */}
+      {/* Ready to Outrank Competitors in Kolkata? (Bottom CTA) */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0f1535] via-[#1a224c] to-[#0f1535] py-20 sm:py-24 px-4 sm:px-6 text-center text-white">
         <div className="pointer-events-none absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
         <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#d25c41]/20 blur-3xl" />
 
         <div className="relative z-10 mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] uppercase tracking-wider mb-6">
-            Ready to Outrank Competitors in Pune?
+            Ready to Outrank Competitors in Kolkata?
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
-            Claim Your Free Pune Technical & SEO Audit Today
+            Claim Your Free Kolkata Technical & SEO Audit Today
           </h2>
 
           <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Let our search specialists analyze your website&apos;s ranking
-            bottlenecks and outline a custom 90-day search roadmap for the Pune
-            market.
+            bottlenecks and outline a custom 90-day search roadmap for the
+            Kolkata market.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -679,7 +678,7 @@ export default function SEOPunePage() {
               href="/contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#d25c41] to-[#f6ac55] px-8 py-4 text-sm font-bold text-white hover:shadow-[0_8px_25px_rgba(210,92,65,0.4)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              Request Your Free Pune SEO Audit
+              Request Your Free Kolkata SEO Audit
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
@@ -693,7 +692,7 @@ export default function SEOPunePage() {
 
           <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Pune, Maharashtra • Pan-India</span>
+            <span>Kolkata, West Bengal • Pan-India</span>
           </div>
         </div>
       </section>
