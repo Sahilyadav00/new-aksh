@@ -41,15 +41,19 @@ const LinkedinIcon = (props) => (
     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
   </svg>
 );
+const InstagramIcon = (props) => (
+  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" {...props}>
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+  </svg>
+);
 
 export default function Footer() {
   return (
     <>
       {/* ── Pre-Footer Contact Banner ── */}
-      <section className="w-full py-10 sm:py-14 md:py-16 relative z-20">
+      {/* <section className="w-full py-10 sm:py-14 md:py-16 relative z-20">
         <div className="max-w-384 mx-auto px-3 sm:px-6 md:px-8">
           <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(20,24,62,0.16)] border border-slate-100 flex flex-col md:flex-row items-stretch">
-            {/* Left Column: Signature Brand Gradient Banner */}
             <div className="relative z-10 md:w-[38%] bg-gradient-to-br from-[#d25c41] via-[#d25c41] to-[#f6ac55] p-8 sm:p-10 lg:p-12 text-white flex flex-col justify-between overflow-hidden">
               <div
                 className="pointer-events-none absolute inset-0 opacity-10"
@@ -84,12 +88,10 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Right Column: Contact Touchpoints */}
             <div className="relative z-10 md:w-[62%] bg-[#14183e] p-8 sm:p-10 lg:p-12 flex flex-col justify-center overflow-hidden">
               <div className="pointer-events-none absolute -right-24 -bottom-24 w-80 h-80 rounded-full bg-[#d25c41]/10 blur-3xl" />
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 relative z-10">
-                {/* Phone / Strategy Call */}
                 <div className="group flex flex-col items-start p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#d25c41]/50 hover:bg-white/10 transition-all duration-300">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d25c41]/20 text-[#f6ac55] mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Phone className="h-5 w-5" strokeWidth={2} />
@@ -112,7 +114,6 @@ export default function Footer() {
                   </Link>
                 </div>
 
-                {/* Email Support */}
                 <div className="group flex flex-col items-start p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#d25c41]/50 hover:bg-white/10 transition-all duration-300">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f6ac55]/20 text-[#f6ac55] mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Mail className="h-5 w-5" strokeWidth={2} />
@@ -124,17 +125,16 @@ export default function Footer() {
                     Send a Message
                   </h3>
                   <a
-                    href="mailto:connect@akshdigital.com"
+                    href="mailto:akshdigital9@gmail.com"
                     className="text-xs font-semibold text-[#f6ac55] hover:text-white transition-colors break-all mb-1"
                   >
-                    connect@akshdigital.com
+                    akshdigital9@gmail.com
                   </a>
                   <p className="text-[11px] text-slate-400 mt-auto">
                     Reply within 24 hours
                   </p>
                 </div>
 
-                {/* Location HQ */}
                 <div className="group flex flex-col items-start p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#d25c41]/50 hover:bg-white/10 transition-all duration-300">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d25c41]/20 text-[#f6ac55] mb-4 group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="h-5 w-5" strokeWidth={2} />
@@ -156,7 +156,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <footer className="relative bg-[#f4f5f7] text-slate-800 py-16 overflow-hidden w-full mt-auto border-t border-slate-200/50">
         {/* Decorative background rings to match mockup visual circles */}
@@ -270,13 +270,18 @@ export default function Footer() {
                 <ul className="flex flex-col gap-3">
                   {[
                     {
-                      label: "SEO Services",
-                      href: "/services/seo/",
-                    },
-                    {
                       label: "Digital Marketing",
                       href: "/services/digital-marketing/",
                     },
+                    {
+                      label: "Performance Marketing",
+                      href: "/services/performance-marketing/",
+                    },
+                    {
+                      label: "SEO Services",
+                      href: "/services/seo/",
+                    },
+
                     {
                       label: "Social Media Marketing",
                       href: "/services/social-media-marketing/",
@@ -289,10 +294,7 @@ export default function Footer() {
                       label: "App Development",
                       href: "/services/app-development/",
                     },
-                    {
-                      label: "Performance Marketing",
-                      href: "/services/performance-marketing/",
-                    },
+
                     {
                       label: "Graphic Design",
                       href: "/services/graphic-design/",
@@ -314,9 +316,6 @@ export default function Footer() {
               <div>
                 <div className="bg-white rounded-[2rem] p-7 sm:p-8 shadow-[0_24px_50px_-15px_rgba(0,0,0,0.04)] border border-slate-100/90 flex flex-col gap-6 w-full lg:max-w-sm ml-auto">
                   <div>
-                    <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
-                      Address
-                    </span>
                     <h4 className="text-[22px] font-bold text-slate-900 leading-tight mb-2">
                       Ready To Get Started?
                     </h4>
@@ -334,10 +333,10 @@ export default function Footer() {
                       </div>
                       <div className="min-w-0">
                         <a
-                          href="mailto:connect@akshdigital.com"
+                          href="mailto:akshdigital9@gmail.com"
                           className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors truncate"
                         >
-                          connect@akshdigital.com
+                          akshdigital9@gmail.com
                         </a>
                         {/* <a
                       href="mailto:info@Niotech.com"
@@ -355,10 +354,10 @@ export default function Footer() {
                       </div>
                       <div>
                         <a
-                          href="tel:+88012365478900"
+                          href="tel:+919549949918"
                           className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors"
                         >
-                          +880 123 654 789 00
+                          9549949918
                         </a>
                       </div>
                     </div>
@@ -383,7 +382,10 @@ export default function Footer() {
                     { label: "Hyderabad", href: "/seo-services/hyderabad/" },
                     { label: "Chennai", href: "/seo-services/chennai/" },
                     { label: "Lucknow", href: "/seo-services/lucknow/" },
-                    { label: "Bhiwadi & Alwar", href: "/seo-services/bhiwadi-alwar/" },
+                    {
+                      label: "Bhiwadi & Alwar",
+                      href: "/seo-services/bhiwadi-alwar/",
+                    },
                   ].map(({ label, href }) => (
                     <Link
                       key={label}
@@ -406,32 +408,32 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 lg:mr-20">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61593092715463"
                 className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"
                 aria-label="Facebook"
               >
                 <FacebookIcon />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"
                 aria-label="Twitter"
               >
                 <TwitterIcon />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"
                 aria-label="Linkedin"
               >
                 <LinkedinIcon />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/_akshdigital/"
                 className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"
-                aria-label="Pinterest"
+                aria-label="Instagram"
               >
-                <PinterestIcon />
+                <InstagramIcon />
               </a>
             </div>
           </div>

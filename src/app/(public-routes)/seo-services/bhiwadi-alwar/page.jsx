@@ -204,7 +204,7 @@ export default function SEOBhiwadiAlwarPage() {
     description:
       "Premier SEO agency and digital marketing company in Bhiwadi and Alwar specializing in industrial B2B SEO, local 3-Pack ranking, technical audits, and link building.",
     url: "https://www.akshdigital.in/seo-services/bhiwadi-alwar/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bhiwadi",
@@ -285,8 +285,8 @@ export default function SEOBhiwadiAlwarPage() {
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10">
             Stop losing lucrative B2B manufacturing and commercial contracts to
             competitors across the NCR corridor. As a proven SEO agency in
-            Bhiwadi and trusted digital marketing company in Alwar, Aksh
-            Digital executes technical site audits, Google Business Profile (GBP)
+            Bhiwadi and trusted digital marketing company in Alwar, Aksh Digital
+            executes technical site audits, Google Business Profile (GBP)
             ranking strategies, and authoritative link building to help your
             industrial and commercial business capture ready-to-buy clients
             across Bhiwadi, Neemrana, Khushkhera, Alwar, and Pan-India.
@@ -312,7 +312,10 @@ export default function SEOBhiwadiAlwarPage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving Manufacturers, Exporters & Industrial Units Across Bhiwadi, Neemrana, Alwar & NCR</span>
+            <span>
+              Serving Manufacturers, Exporters & Industrial Units Across
+              Bhiwadi, Neemrana, Alwar & NCR
+            </span>
           </div>
         </div>
       </section>
@@ -326,7 +329,8 @@ export default function SEOBhiwadiAlwarPage() {
                 Overview: Industrial & Local SEO Precision
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Northern India&apos;s Industrial Gateway into a Predictable B2B Lead Engine
+                Turning Northern India&apos;s Industrial Gateway into a
+                Predictable B2B Lead Engine
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 The Bhiwadi–Neemrana–Alwar industrial corridor is one of India’s
@@ -342,9 +346,9 @@ export default function SEOBhiwadiAlwarPage() {
                 pairing modern front-end speed (Next.js, React) with semantic
                 topical authority mapping, structured data architecture, and
                 white-hat digital PR, our search engine optimization marketing
-                agency secures lasting Page 1 positions, captures high-converting
-                B2B queries, and lowers your long-term customer acquisition costs
-                (CAC).
+                agency secures lasting Page 1 positions, captures
+                high-converting B2B queries, and lowers your long-term customer
+                acquisition costs (CAC).
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -369,9 +373,9 @@ export default function SEOBhiwadiAlwarPage() {
                   Key Regional Manufacturing Belts
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                  We deploy localized entity architectures tailored to
-                  Bhiwadi and Alwar&apos;s leading RIICO industrial parks and
-                  export clusters.
+                  We deploy localized entity architectures tailored to Bhiwadi
+                  and Alwar&apos;s leading RIICO industrial parks and export
+                  clusters.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {bhiwadiAlwarHubs.map((hub) => (
@@ -389,19 +393,25 @@ export default function SEOBhiwadiAlwarPage() {
                     <span className="text-slate-600 font-medium">
                       B2B Map 3-Pack Target
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Authority
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Citation Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% NAP Match</span>
+                    <span className="font-bold text-emerald-600">
+                      100% NAP Match
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Full-Stack Infrastructure
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Pass
+                    </span>
                   </div>
                 </div>
               </div>
@@ -422,8 +432,8 @@ export default function SEOBhiwadiAlwarPage() {
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Every industrial vertical requires customized search positioning.
-              Explore our B2B-focused search frameworks designed to capture high-value
-              corporate inquiries.
+              Explore our B2B-focused search frameworks designed to capture
+              high-value corporate inquiries.
             </p>
           </div>
 
@@ -492,9 +502,9 @@ export default function SEOBhiwadiAlwarPage() {
               Integrated Growth: Full-Suite Synergies for Bhiwadi & Alwar Brands
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Accelerate corporate pipeline growth by combining high-intent organic
-              rankings with high-ROAS performance ads, corporate social branding,
-              and modern web development.
+              Accelerate corporate pipeline growth by combining high-intent
+              organic rankings with high-ROAS performance ads, corporate social
+              branding, and modern web development.
             </p>
           </div>
 
@@ -683,11 +693,11 @@ export default function SEOBhiwadiAlwarPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

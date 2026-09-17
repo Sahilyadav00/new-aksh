@@ -26,7 +26,7 @@ export default function WhatsAppButton() {
     setCookie("whatsapp_tooltip_dismissed", "true", 30);
   };
 
-  const whatsappNumber = "+919876543210"; // Aksh Digital Phone Number
+  const whatsappNumber = "+919549949918"; // Aksh Digital Phone Number
   const initialMessage = encodeURIComponent(
     "Hi Aksh Digital! I visited your website and would like to learn more about your digital marketing services."
   );

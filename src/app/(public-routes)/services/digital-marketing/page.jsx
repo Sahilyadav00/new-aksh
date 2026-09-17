@@ -23,7 +23,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Complete Digital Marketing Services | High-ROAS Growth — Aksh Digital",
+  title:
+    "Complete Digital Marketing Services | High-ROAS Growth — Aksh Digital",
   description:
     "Complete digital marketing services engineered for high ROI and market domination. SEO, Google & Meta Ads, Next.js web engineering, social media, and CRO by Aksh Digital.",
 };
@@ -139,9 +140,16 @@ export default function DigitalMarketingPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <Link
+              href="/services"
+              className="hover:text-white transition-colors"
+            >
+              Services
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">Digital Marketing</span>
           </nav>
@@ -159,7 +167,11 @@ export default function DigitalMarketingPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            Turn your digital channels into predictable revenue streams. As a leading full-service digital marketing agency, Aksh Digital blends creative storytelling, search visibility, high-ROAS paid advertising, and conversion rate optimization to scale brands across Jaipur, Pan-India, the USA, and international markets.
+            Turn your digital channels into predictable revenue streams. As a
+            leading full-service digital marketing agency, Aksh Digital blends
+            creative storytelling, search visibility, high-ROAS paid
+            advertising, and conversion rate optimization to scale brands across
+            Jaipur, Pan-India, the USA, and international markets.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -184,13 +196,31 @@ export default function DigitalMarketingPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "4.2x", label: "Average ROAS", sub: "Across Meta & Google Ads" },
-            { num: "₹50Cr+", label: "Client Revenue", sub: "Generated systematically" },
-            { num: "45%", label: "CPA Reduction", sub: "Funnel & CRO refinement" },
-            { num: "98%", label: "Partner Retention", sub: "Month-to-month contracts" },
+            {
+              num: "4.2x",
+              label: "Average ROAS",
+              sub: "Across Meta & Google Ads",
+            },
+            {
+              num: "₹5Lac+",
+              label: "Client Revenue",
+              sub: "Generated systematically",
+            },
+            {
+              num: "45%",
+              label: "CPA Reduction",
+              sub: "Funnel & CRO refinement",
+            },
+            {
+              num: "98%",
+              label: "Partner Retention",
+              sub: "Month-to-month contracts",
+            },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">
+                {num}
+              </p>
               <p className="mt-1 text-sm font-bold text-[#d25c41]">{label}</p>
               <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
             </div>
@@ -216,11 +246,23 @@ export default function DigitalMarketingPage() {
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                Many brands struggle with digital growth because their marketing efforts operate in silos—developers build without considering user acquisition, social media teams focus on vanity likes, and ad agencies burn budget without fixing landing page conversion rates.
+                Many brands struggle with digital growth because their marketing
+                efforts operate in silos—developers build without considering
+                user acquisition, social media teams focus on vanity likes, and
+                ad agencies burn budget without fixing landing page conversion
+                rates.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As an integrated digital marketing and web development agency, Aksh Digital eliminates this fragmentation. We design, deploy, and scale holistic digital marketing solutions where technical web speed, organic SEO strategies, paid acquisition, and brand creative work together seamlessly. Whether you are an ambitious enterprise looking for a premier digital marketing company in Jaipur or an overseas business seeking an agile digital marketing agency USA partner, we deliver measurable, compounding results.
+                As an integrated digital marketing and web development agency,
+                Aksh Digital eliminates this fragmentation. We design, deploy,
+                and scale holistic digital marketing solutions where technical
+                web speed, organic SEO strategies, paid acquisition, and brand
+                creative work together seamlessly. Whether you are an ambitious
+                enterprise looking for a premier digital marketing company in
+                Jaipur or an overseas business seeking an agile digital
+                marketing agency USA partner, we deliver measurable, compounding
+                results.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -280,7 +322,10 @@ export default function DigitalMarketingPage() {
       </section>
 
       {/* ── 3. Our Core Digital Marketing Verticals ── */}
-      <section id="core-verticals" className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100">
+      <section
+        id="core-verticals"
+        className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
@@ -290,7 +335,8 @@ export default function DigitalMarketingPage() {
               Our Core Digital Marketing Verticals
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Precision execution across each revenue lever, customized to scale with your business stage.
+              Precision execution across each revenue lever, customized to scale
+              with your business stage.
             </p>
           </div>
 
@@ -337,7 +383,8 @@ export default function DigitalMarketingPage() {
                         Strategic Channel
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Tailored roadmap engineered around strict ROAS and volume targets.
+                        Tailored roadmap engineered around strict ROAS and
+                        volume targets.
                       </p>
                       <Link
                         href={vert.link}
@@ -357,8 +404,15 @@ export default function DigitalMarketingPage() {
 
       {/* ── 4. Tailored Execution: Hyper-Local Precision & Global Scale ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -369,7 +423,8 @@ export default function DigitalMarketingPage() {
               Tailored Execution: Hyper-Local Precision &amp; Global Scale
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We deploy proven digital marketing models calibrated for regional Indian metros and international overseas markets.
+              We deploy proven digital marketing models calibrated for regional
+              Indian metros and international overseas markets.
             </p>
           </div>
 
@@ -392,7 +447,11 @@ export default function DigitalMarketingPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Proven growth playbooks tailored for local market nuances as a trusted digital marketing agency in Delhi NCR, a data-driven digital marketing agency Mumbai, an agile digital marketing agency Bangalore, a results-driven digital marketing company in Pune, and a top digital marketing agency Indore.
+                  Proven growth playbooks tailored for local market nuances as a
+                  trusted digital marketing agency in Delhi NCR, a data-driven
+                  digital marketing agency Mumbai, an agile digital marketing
+                  agency Bangalore, a results-driven digital marketing company
+                  in Pune, and a top digital marketing agency Indore.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -416,7 +475,10 @@ export default function DigitalMarketingPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Domestic Indian Operations</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Contact Domestic Team &rarr;
                 </Link>
               </div>
@@ -440,7 +502,9 @@ export default function DigitalMarketingPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Dedicated outsourced digital marketing services for companies in the USA, UK, and worldwide, providing complete timezone overlap, bi-weekly sprint reviews, and live metric tracking.
+                  Dedicated outsourced digital marketing services for companies
+                  in the USA, UK, and worldwide, providing complete timezone
+                  overlap, bi-weekly sprint reviews, and live metric tracking.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -463,11 +527,18 @@ export default function DigitalMarketingPage() {
                   ].map((item, idx) => {
                     const IIcon = item.icon;
                     return (
-                      <div key={idx} className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3">
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                      >
                         <IIcon className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-xs font-bold text-white">{item.title}</p>
-                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">{item.desc}</p>
+                          <p className="text-xs font-bold text-white">
+                            {item.title}
+                          </p>
+                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                            {item.desc}
+                          </p>
                         </div>
                       </div>
                     );
@@ -477,7 +548,10 @@ export default function DigitalMarketingPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Global Offshore Desk</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Schedule Offshore Consultation &rarr;
                 </Link>
               </div>
@@ -497,7 +571,8 @@ export default function DigitalMarketingPage() {
               Our 4-Phase Growth Framework
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              A disciplined, cyclical process designed to take your brand from initial audit to compounding market dominance.
+              A disciplined, cyclical process designed to take your brand from
+              initial audit to compounding market dominance.
             </p>
           </div>
 
@@ -533,7 +608,8 @@ export default function DigitalMarketingPage() {
               Why Ambitious Brands Choose Aksh Digital
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Built on transparency, engineering rigor, and real commercial revenue.
+              Built on transparency, engineering rigor, and real commercial
+              revenue.
             </p>
           </div>
 
@@ -589,7 +665,8 @@ export default function DigitalMarketingPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -603,7 +680,8 @@ export default function DigitalMarketingPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Request a free 30-minute digital marketing audit and strategic roadmap with our Jaipur team.
+            Request a free 30-minute digital marketing audit and strategic
+            roadmap with our Jaipur team.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -615,16 +693,17 @@ export default function DigitalMarketingPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 
           <p className="text-xs text-white/70">
-            No obligation. Zero lock-in contracts. Full funnel and channel evaluation.
+            No obligation. Zero lock-in contracts. Full funnel and channel
+            evaluation.
           </p>
         </div>
       </section>

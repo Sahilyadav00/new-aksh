@@ -20,7 +20,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Custom App Development Services | iOS, Android & Flutter — Aksh Digital",
+  title:
+    "Custom App Development Services | iOS, Android & Flutter — Aksh Digital",
   description:
     "Mobile app development services engineered for retention, speed, and scale. Native iOS, Android, React Native, Flutter, and custom backend API architecture by Aksh Digital.",
   alternates: {
@@ -109,7 +110,12 @@ const techStackGroups = [
   },
   {
     category: "Tracking & Analytics",
-    skills: ["Firebase Analytics", "Mixpanel", "AppsFlyer", "GA4 Event Tracking"],
+    skills: [
+      "Firebase Analytics",
+      "Mixpanel",
+      "AppsFlyer",
+      "GA4 Event Tracking",
+    ],
   },
 ];
 
@@ -156,9 +162,16 @@ export default function AppDevelopmentPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+            <Link
+              href="/services/"
+              className="hover:text-white transition-colors"
+            >
+              Services
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">App Development</span>
           </nav>
@@ -176,7 +189,14 @@ export default function AppDevelopmentPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            A great mobile app must do more than look modern—it must deliver seamless user experiences, rock-solid security, and high lifetime user value. As a full-stack software and digital marketing company, Aksh Digital builds native and cross-platform mobile applications that turn active users into long-term brand advocates. From our engineering hub in Jaipur to fast-scaling enterprises across Pan-India, the USA, the UK, and global markets, we turn innovative product ideas into market-ready applications.
+            A great mobile app must do more than look modern—it must deliver
+            seamless user experiences, rock-solid security, and high lifetime
+            user value. As a full-stack software and digital marketing company,
+            Aksh Digital builds native and cross-platform mobile applications
+            that turn active users into long-term brand advocates. From our
+            engineering hub in Jaipur to fast-scaling enterprises across
+            Pan-India, the USA, the UK, and global markets, we turn innovative
+            product ideas into market-ready applications.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -201,13 +221,31 @@ export default function AppDevelopmentPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "60 FPS", label: "Smooth Native Rendering", sub: "React Native & Flutter" },
-            { num: "99.9%", label: "Crash-Free Session Rate", sub: "Automated QA pipelines" },
-            { num: "50+", label: "Apps Shipped Worldwide", sub: "iOS App Store & Google Play" },
-            { num: "100%", label: "Source Code & IP Handover", sub: "Full enterprise ownership" },
+            {
+              num: "60 FPS",
+              label: "Smooth Native Rendering",
+              sub: "React Native & Flutter",
+            },
+            {
+              num: "99.9%",
+              label: "Crash-Free Session Rate",
+              sub: "Automated QA pipelines",
+            },
+            {
+              num: "50+",
+              label: "Apps Shipped Worldwide",
+              sub: "iOS App Store & Google Play",
+            },
+            {
+              num: "100%",
+              label: "Source Code & IP Handover",
+              sub: "Full enterprise ownership",
+            },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">
+                {num}
+              </p>
               <p className="mt-1 text-sm font-bold text-[#d25c41]">{label}</p>
               <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
             </div>
@@ -233,11 +271,22 @@ export default function AppDevelopmentPage() {
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                Building a successful mobile application requires balancing technical stability with post-launch growth marketing. High crash rates, slow transitions, and confusing onboarding flows lead to immediate app uninstalls and wasted acquisition budgets.
+                Building a successful mobile application requires balancing
+                technical stability with post-launch growth marketing. High
+                crash rates, slow transitions, and confusing onboarding flows
+                lead to immediate app uninstalls and wasted acquisition budgets.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As an integrated digital marketing and web development agency, Aksh Digital approaches mobile app development with end-to-end synergy. We engineer secure, modular front-end and back-end code while building conversion funnels, event tracking, and in-app analytics from day one. Whether you are looking for a reliable digital marketing company in Jaipur to launch a local on-demand service app or an overseas brand seeking a skilled digital marketing agency USA offshore development partner, we build scalable mobile products ready for market success.
+                As an integrated digital marketing and web development agency,
+                Aksh Digital approaches mobile app development with end-to-end
+                synergy. We engineer secure, modular front-end and back-end code
+                while building conversion funnels, event tracking, and in-app
+                analytics from day one. Whether you are looking for a reliable
+                digital marketing company in Jaipur to launch a local on-demand
+                service app or an overseas brand seeking a skilled digital
+                marketing agency USA offshore development partner, we build
+                scalable mobile products ready for market success.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -307,7 +356,8 @@ export default function AppDevelopmentPage() {
               Our Core App Development Services
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every build is tailored for maximum performance, frictionless user journeys, and seamless scalability.
+              Every build is tailored for maximum performance, frictionless user
+              journeys, and seamless scalability.
             </p>
           </div>
 
@@ -354,7 +404,8 @@ export default function AppDevelopmentPage() {
                         Platform Standard
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Native feature access, end-to-end encryption, and full App Store compliance.
+                        Native feature access, end-to-end encryption, and full
+                        App Store compliance.
                       </p>
                       <Link
                         href="/contact"
@@ -382,7 +433,8 @@ export default function AppDevelopmentPage() {
               Our Mobile Technology Stack
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              We engineer cross-platform and native ecosystems designed for rapid release cycles and rock-solid uptime.
+              We engineer cross-platform and native ecosystems designed for
+              rapid release cycles and rock-solid uptime.
             </p>
           </div>
 
@@ -421,8 +473,15 @@ export default function AppDevelopmentPage() {
 
       {/* ── 5. Global Offshore & Domestic Mobile App Delivery ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -433,7 +492,9 @@ export default function AppDevelopmentPage() {
               Global Offshore &amp; Domestic Mobile App Delivery
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We deploy full-lifecycle engineering for emerging Indian digital innovators and dedicated offshore mobile development squads for overseas brands.
+              We deploy full-lifecycle engineering for emerging Indian digital
+              innovators and dedicated offshore mobile development squads for
+              overseas brands.
             </p>
           </div>
 
@@ -456,7 +517,9 @@ export default function AppDevelopmentPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Delivering end-to-end mobile applications for startups and enterprises across Jaipur, Delhi NCR, Mumbai, Bangalore, Pune, and Indore.
+                  Delivering end-to-end mobile applications for startups and
+                  enterprises across Jaipur, Delhi NCR, Mumbai, Bangalore, Pune,
+                  and Indore.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -480,7 +543,10 @@ export default function AppDevelopmentPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Jaipur Software Lab</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Contact Domestic App Desk &rarr;
                 </Link>
               </div>
@@ -504,7 +570,10 @@ export default function AppDevelopmentPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Providing overseas companies with dedicated mobile app development teams through outsourced digital marketing services, complete with timezone overlap, weekly sprint reviews, clean documentation, and strict IP protection.
+                  Providing overseas companies with dedicated mobile app
+                  development teams through outsourced digital marketing
+                  services, complete with timezone overlap, weekly sprint
+                  reviews, clean documentation, and strict IP protection.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -527,11 +596,18 @@ export default function AppDevelopmentPage() {
                   ].map((item, idx) => {
                     const IIcon = item.icon;
                     return (
-                      <div key={idx} className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3">
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                      >
                         <IIcon className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-xs font-bold text-white">{item.title}</p>
-                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">{item.desc}</p>
+                          <p className="text-xs font-bold text-white">
+                            {item.title}
+                          </p>
+                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                            {item.desc}
+                          </p>
                         </div>
                       </div>
                     );
@@ -541,7 +617,10 @@ export default function AppDevelopmentPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>International Mobile Desk</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Book Offshore App Discovery &rarr;
                 </Link>
               </div>
@@ -561,7 +640,8 @@ export default function AppDevelopmentPage() {
               Our 4-Step Agile App Development Framework
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              From user persona mapping to App Store launch and continuous scaling.
+              From user persona mapping to App Store launch and continuous
+              scaling.
             </p>
           </div>
 
@@ -597,7 +677,8 @@ export default function AppDevelopmentPage() {
               Why Ambitious Brands Choose Aksh Digital for App Development
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We eliminate app store friction by combining software engineering with post-launch growth marketing.
+              We eliminate app store friction by combining software engineering
+              with post-launch growth marketing.
             </p>
           </div>
 
@@ -653,7 +734,8 @@ export default function AppDevelopmentPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -667,7 +749,9 @@ export default function AppDevelopmentPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Schedule a 30-minute discovery call with our software engineering team to review your app architecture, timeline, and development roadmap.
+            Schedule a 30-minute discovery call with our software engineering
+            team to review your app architecture, timeline, and development
+            roadmap.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -679,16 +763,17 @@ export default function AppDevelopmentPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 
           <p className="text-xs text-white/70">
-            No obligation. Zero lock-in contracts. Full architectural and cost estimation.
+            No obligation. Zero lock-in contracts. Full architectural and cost
+            estimation.
           </p>
         </div>
       </section>

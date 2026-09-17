@@ -22,7 +22,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Creative Social Media Marketing Services | Brand Growth — Aksh Digital",
+  title:
+    "Creative Social Media Marketing Services | Brand Growth — Aksh Digital",
   description:
     "Social media marketing services engineered to engage, convert, and scale. Instagram, LinkedIn, YouTube, Reels production, paid social ads, and community management by Aksh Digital.",
   alternates: {
@@ -143,9 +144,16 @@ export default function SocialMediaMarketingPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+            <Link
+              href="/services/"
+              className="hover:text-white transition-colors"
+            >
+              Services
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">Social Media Marketing</span>
           </nav>
@@ -163,7 +171,12 @@ export default function SocialMediaMarketingPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            Likes and vanity metrics don’t drive revenue—engaged communities and strategic funnels do. As a premier social media marketing agency in India, Aksh Digital blends scroll-stopping visual design, data-driven content distribution, and paid social campaigns to build lasting brand loyalty across Jaipur, Pan-India, the USA, and international markets.
+            Likes and vanity metrics don’t drive revenue—engaged communities and
+            strategic funnels do. As a premier social media marketing agency in
+            India, Aksh Digital blends scroll-stopping visual design,
+            data-driven content distribution, and paid social campaigns to build
+            lasting brand loyalty across Jaipur, Pan-India, the USA, and
+            international markets.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -188,13 +201,31 @@ export default function SocialMediaMarketingPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "5.4x", label: "Average Engagement Lift", sub: "Algorithmic reach" },
-            { num: "10M+", label: "Video Views Generated", sub: "Reels & Shorts production" },
-            { num: "3.8x", label: "ROAS on Paid Social", sub: "Meta & LinkedIn funnels" },
-            { num: "100%", label: "Custom Brand Creatives", sub: "Zero stock templates" },
+            {
+              num: "5.4x",
+              label: "Average Engagement Lift",
+              sub: "Algorithmic reach",
+            },
+            {
+              num: "10M+",
+              label: "Video Views Generated",
+              sub: "Reels & Shorts production",
+            },
+            {
+              num: "3.8x",
+              label: "ROAS on Paid Social",
+              sub: "Meta & LinkedIn funnels",
+            },
+            {
+              num: "100%",
+              label: "Custom Brand Creatives",
+              sub: "Zero stock templates",
+            },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">
+                {num}
+              </p>
               <p className="mt-1 text-sm font-bold text-[#d25c41]">{label}</p>
               <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
             </div>
@@ -216,15 +247,28 @@ export default function SocialMediaMarketingPage() {
 
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#14183e] leading-tight mb-6">
                 Moving Beyond Random Posting to{" "}
-                <span className="text-[#d25c41]">Full-Funnel Social Growth</span>
+                <span className="text-[#d25c41]">
+                  Full-Funnel Social Growth
+                </span>
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                Most social media accounts underperform because they treat feeds like static notice boards instead of dynamic conversion funnels. Random posts without strategic hooks, inconsistent branding, and zero alignment with paid media result in wasted effort and stagnant growth.
+                Most social media accounts underperform because they treat feeds
+                like static notice boards instead of dynamic conversion funnels.
+                Random posts without strategic hooks, inconsistent branding, and
+                zero alignment with paid media result in wasted effort and
+                stagnant growth.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As a full-stack social media management agency India, Aksh Digital develops social systems that capture attention and nurture prospects toward direct conversion. Whether you need a dedicated social media marketing company in Jaipur to dominate regional brand visibility, multi-city distribution across top Indian hubs, or international creative execution with a trusted digital marketing agency USA partner, we deliver high-impact social media management tailored to your audience.
+                As a full-stack social media management agency India, Aksh
+                Digital develops social systems that capture attention and
+                nurture prospects toward direct conversion. Whether you need a
+                dedicated social media marketing company in Jaipur to dominate
+                regional brand visibility, multi-city distribution across top
+                Indian hubs, or international creative execution with a trusted
+                digital marketing agency USA partner, we deliver high-impact
+                social media management tailored to your audience.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -284,7 +328,10 @@ export default function SocialMediaMarketingPage() {
       </section>
 
       {/* ── 3. Our Core Social Media Marketing Services ── */}
-      <section id="core-services" className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100">
+      <section
+        id="core-services"
+        className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
@@ -294,7 +341,8 @@ export default function SocialMediaMarketingPage() {
               Our Core Social Media Marketing Services
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every deliverable is crafted by dedicated copywriters, designers, and video strategists to command attention.
+              Every deliverable is crafted by dedicated copywriters, designers,
+              and video strategists to command attention.
             </p>
           </div>
 
@@ -341,7 +389,8 @@ export default function SocialMediaMarketingPage() {
                         Deliverable Standard
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Original creative assets produced and scheduled 2 weeks in advance.
+                        Original creative assets produced and scheduled 2 weeks
+                        in advance.
                       </p>
                       <Link
                         href="/contact/"
@@ -369,7 +418,8 @@ export default function SocialMediaMarketingPage() {
               Cross-Platform Expertise
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              We understand each channel's specific algorithm mechanics and user psychology.
+              We understand each channel's specific algorithm mechanics and user
+              psychology.
             </p>
           </div>
 
@@ -407,8 +457,15 @@ export default function SocialMediaMarketingPage() {
 
       {/* ── 5. Domestic Domination & Global Delivery ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -419,7 +476,8 @@ export default function SocialMediaMarketingPage() {
               Domestic Domination &amp; Global Delivery
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We engineer localized social playbooks across Indian metros alongside high-velocity global social media support.
+              We engineer localized social playbooks across Indian metros
+              alongside high-velocity global social media support.
             </p>
           </div>
 
@@ -442,7 +500,11 @@ export default function SocialMediaMarketingPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Specialized social playbooks as a proven social media marketing agency Delhi, a creative social media agency in Mumbai, a tech-focused social media marketing company Bangalore, an agile social media marketing agency Pune, and a top social media marketing in Indore.
+                  Specialized social playbooks as a proven social media
+                  marketing agency Delhi, a creative social media agency in
+                  Mumbai, a tech-focused social media marketing company
+                  Bangalore, an agile social media marketing agency Pune, and a
+                  top social media marketing in Indore.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -466,7 +528,10 @@ export default function SocialMediaMarketingPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Domestic Indian Social Desk</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Get Domestic Proposal &rarr;
                 </Link>
               </div>
@@ -490,7 +555,10 @@ export default function SocialMediaMarketingPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Complete social media strategy and execution for overseas brands through transparent outsourced digital marketing services, offering dedicated timezone overlap, two-week content sprint reviews, and live performance dashboards.
+                  Complete social media strategy and execution for overseas
+                  brands through transparent outsourced digital marketing
+                  services, offering dedicated timezone overlap, two-week
+                  content sprint reviews, and live performance dashboards.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -513,11 +581,18 @@ export default function SocialMediaMarketingPage() {
                   ].map((item, idx) => {
                     const IIcon = item.icon;
                     return (
-                      <div key={idx} className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3">
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                      >
                         <IIcon className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-xs font-bold text-white">{item.title}</p>
-                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">{item.desc}</p>
+                          <p className="text-xs font-bold text-white">
+                            {item.title}
+                          </p>
+                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                            {item.desc}
+                          </p>
                         </div>
                       </div>
                     );
@@ -527,7 +602,10 @@ export default function SocialMediaMarketingPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Global SMM Operations</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Schedule International Call &rarr;
                 </Link>
               </div>
@@ -547,7 +625,8 @@ export default function SocialMediaMarketingPage() {
               Our 4-Phase Social Media Execution Framework
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              From audit to high-converting creative distribution, built for predictable audience growth.
+              From audit to high-converting creative distribution, built for
+              predictable audience growth.
             </p>
           </div>
 
@@ -583,7 +662,8 @@ export default function SocialMediaMarketingPage() {
               Why Choose Aksh Digital for Social Media Marketing?
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We turn social channels into profitable community assets that compound brand trust.
+              We turn social channels into profitable community assets that
+              compound brand trust.
             </p>
           </div>
 
@@ -639,7 +719,8 @@ export default function SocialMediaMarketingPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -653,7 +734,8 @@ export default function SocialMediaMarketingPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Let our strategy team analyze your social profiles, evaluate competitor benchmarks, and design a custom 30-day content roadmap.
+            Let our strategy team analyze your social profiles, evaluate
+            competitor benchmarks, and design a custom 30-day content roadmap.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -665,11 +747,11 @@ export default function SocialMediaMarketingPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

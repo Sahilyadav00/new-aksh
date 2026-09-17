@@ -205,7 +205,7 @@ export default function SEOPunePage() {
     description:
       "Premier SEO services and digital marketing agency in Pune specializing in IT enterprise search, local SEO, Core Web Vitals remediation, and link building.",
     url: "https://www.akshdigital.in/seo-services/pune/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Pune",
@@ -313,7 +313,10 @@ export default function SEOPunePage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving IT Giants, Manufacturing Leaders & D2C Brands Across Pune & PCMC</span>
+            <span>
+              Serving IT Giants, Manufacturing Leaders & D2C Brands Across Pune
+              & PCMC
+            </span>
           </div>
         </div>
       </section>
@@ -327,7 +330,8 @@ export default function SEOPunePage() {
                 Overview: Advanced Search Execution
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Regional Commercial Demand into Predictable Inbound Growth
+                Turning Regional Commercial Demand into Predictable Inbound
+                Growth
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 Pune represents a powerhouse economy blending IT enterprises in
@@ -344,8 +348,8 @@ export default function SEOPunePage() {
                 targeting, structured data architecture, and white-hat digital
                 PR, our search engine optimization marketing agency secures
                 lasting Page 1 positions, helps you capture high-intent
-                commercial buyers, and lowers your long-term customer acquisition
-                costs (CAC).
+                commercial buyers, and lowers your long-term customer
+                acquisition costs (CAC).
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -370,9 +374,9 @@ export default function SEOPunePage() {
                   Key Pune Tech & Industrial Hubs
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                  We deploy localized entity architectures tailored to Pune&apos;s
-                  premier IT corridors, manufacturing zones, and affluent
-                  commercial districts.
+                  We deploy localized entity architectures tailored to
+                  Pune&apos;s premier IT corridors, manufacturing zones, and
+                  affluent commercial districts.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {puneHubs.map((hub) => (
@@ -390,19 +394,25 @@ export default function SEOPunePage() {
                     <span className="text-slate-600 font-medium">
                       Pune Map 3-Pack Target
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Authority
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Citation Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% NAP Match</span>
+                    <span className="font-bold text-emerald-600">
+                      100% NAP Match
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Full-Stack Architecture
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Pass
+                    </span>
                   </div>
                 </div>
               </div>
@@ -423,8 +433,8 @@ export default function SEOPunePage() {
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Every vertical in Pune demands tactical execution. Here is our
-              multi-layered SEO arsenal designed to capture high-value commercial
-              market share.
+              multi-layered SEO arsenal designed to capture high-value
+              commercial market share.
             </p>
           </div>
 
@@ -554,8 +564,8 @@ export default function SEOPunePage() {
               Disciplined Roadmap to Page 1 Supremacy
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              We eliminate guesswork with a battle-tested 4-step framework engineered
-              to systematically elevate your Pune business to Page 1.
+              We eliminate guesswork with a battle-tested 4-step framework
+              engineered to systematically elevate your Pune business to Page 1.
             </p>
           </div>
 
@@ -683,11 +693,11 @@ export default function SEOPunePage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

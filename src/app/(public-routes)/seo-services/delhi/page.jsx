@@ -203,7 +203,7 @@ export default function SEODelhiPage() {
     description:
       "Premier SEO services and digital marketing agency in Delhi NCR providing local SEO, enterprise search optimization, Core Web Vitals remediation, and link building.",
     url: "https://www.akshdigital.in/seo-services/delhi/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Delhi",
@@ -308,7 +308,10 @@ export default function SEODelhiPage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving Enterprise & High-Growth Brands Across Delhi, Gurgaon, Noida & NCR</span>
+            <span>
+              Serving Enterprise & High-Growth Brands Across Delhi, Gurgaon,
+              Noida & NCR
+            </span>
           </div>
         </div>
       </section>
@@ -322,7 +325,8 @@ export default function SEODelhiPage() {
                 Overview: Advanced NCR Search Strategy
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Cutting Through Extreme Market Saturation with Technical SEO Precision
+                Cutting Through Extreme Market Saturation with Technical SEO
+                Precision
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 Delhi NCR is one of the densest and most competitive commercial
@@ -335,9 +339,9 @@ export default function SEODelhiPage() {
                 As an integrated digital marketing and web development agency,
                 Aksh Digital approaches search ranking with engineering rigor.
                 By pairing modern web speed (Next.js, React) with deep semantic
-                keyword mapping, entity-based search optimization, and
-                white-hat digital PR, our search engine optimization marketing
-                agency secures long-term Page 1 positions, helps you capture
+                keyword mapping, entity-based search optimization, and white-hat
+                digital PR, our search engine optimization marketing agency
+                secures long-term Page 1 positions, helps you capture
                 high-converting queries, and reduces reliance on expensive paid
                 ads.
               </p>
@@ -384,19 +388,25 @@ export default function SEODelhiPage() {
                     <span className="text-slate-600 font-medium">
                       NCR Google 3-Pack Strategy
                     </span>
-                    <span className="font-bold text-[#d25c41]">Active Targeting</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Active Targeting
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Citation Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% NAP Match</span>
+                    <span className="font-bold text-emerald-600">
+                      100% NAP Match
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Technical Speed Audit
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Ready</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Ready
+                    </span>
                   </div>
                 </div>
               </div>
@@ -487,9 +497,9 @@ export default function SEODelhiPage() {
               Integrated Growth: Full-Suite Synergies in Delhi NCR
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Achieve exponential growth by aligning high-intent organic rankings
-              with high-ROAS paid media, social brand resonance, and custom web
-              engineering.
+              Achieve exponential growth by aligning high-intent organic
+              rankings with high-ROAS paid media, social brand resonance, and
+              custom web engineering.
             </p>
           </div>
 
@@ -663,9 +673,9 @@ export default function SEODelhiPage() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Let our search specialists analyze your website&apos;s hidden ranking
-            bottlenecks and outline a custom 90-day search roadmap for the Delhi
-            NCR market.
+            Let our search specialists analyze your website&apos;s hidden
+            ranking bottlenecks and outline a custom 90-day search roadmap for
+            the Delhi NCR market.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -677,11 +687,11 @@ export default function SEODelhiPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

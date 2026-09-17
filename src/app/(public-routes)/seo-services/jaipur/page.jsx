@@ -204,7 +204,7 @@ export default function SEOJaipurPage() {
     description:
       "Premier SEO services and digital marketing agency in Jaipur specializing in local SEO, Google Business Profile optimization, and technical search engineering.",
     url: "https://www.akshdigital.in/seo-services/jaipur/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Jaipur",
@@ -313,7 +313,10 @@ export default function SEOJaipurPage() {
           {/* Location Verification Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Headquartered in Jaipur, Rajasthan • Serving Local & Pan-India Enterprises</span>
+            <span>
+              Headquartered in Jaipur, Rajasthan • Serving Local & Pan-India
+              Enterprises
+            </span>
           </div>
         </div>
       </section>
@@ -327,14 +330,15 @@ export default function SEOJaipurPage() {
                 Overview: Localized SEO Precision
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Regional Search Demand into Predictable Inbound Customers
+                Turning Regional Search Demand into Predictable Inbound
+                Customers
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 Jaipur is one of India&apos;s fastest-growing commercial and
                 startup hubs. Whether you operate a luxury hospitality brand, an
                 export business, a healthcare clinic, or a modern retail store,
-                standard national SEO strategies won&apos;t capture local
-                buyers searching for immediate solutions.
+                standard national SEO strategies won&apos;t capture local buyers
+                searching for immediate solutions.
               </p>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
                 As a full-stack software and digital marketing company
@@ -390,19 +394,25 @@ export default function SEOJaipurPage() {
                     <span className="text-slate-600 font-medium">
                       Google Map 3-Pack Reach
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Verified</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Verified
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       NAP Consistency Guarantee
                     </span>
-                    <span className="font-bold text-emerald-600">100% Accurate</span>
+                    <span className="font-bold text-emerald-600">
+                      100% Accurate
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Local Intent Lead Attribution
                     </span>
-                    <span className="font-bold text-[#0f1535]">Call & Direction Tracking</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Call & Direction Tracking
+                    </span>
                   </div>
                 </div>
               </div>
@@ -554,8 +564,9 @@ export default function SEOJaipurPage() {
               A Transparent, Data-Driven Ranking Process
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              We eliminate guesswork with a disciplined 4-step framework engineered
-              to systematically elevate your Jaipur business to Page 1.
+              We eliminate guesswork with a disciplined 4-step framework
+              engineered to systematically elevate your Jaipur business to Page
+              1.
             </p>
           </div>
 
@@ -604,8 +615,8 @@ export default function SEOJaipurPage() {
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               We combine localized market intuition with elite engineering
-              standards so your search investments produce compounding commercial
-              returns.
+              standards so your search investments produce compounding
+              commercial returns.
             </p>
           </div>
 
@@ -683,11 +694,11 @@ export default function SEOJaipurPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

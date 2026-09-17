@@ -203,7 +203,7 @@ export default function SEOMumbaiPage() {
     description:
       "Premier SEO services and digital marketing agency in Mumbai specializing in local SEO, enterprise search optimization, Core Web Vitals remediation, and link building.",
     url: "https://www.akshdigital.in/seo-services/mumbai/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Mumbai",
@@ -286,8 +286,8 @@ export default function SEOMumbaiPage() {
             Mumbai and trusted digital marketing agency in Mumbai. Aksh Digital
             builds technical site architectures, executes semantic content
             mapping, and secures high-authority digital PR backlinks that
-            position your brand on Page 1 across South Mumbai, BKC, Andheri, Navi
-            Mumbai, and Pan-India.
+            position your brand on Page 1 across South Mumbai, BKC, Andheri,
+            Navi Mumbai, and Pan-India.
           </p>
 
           {/* CTAs */}
@@ -310,7 +310,10 @@ export default function SEOMumbaiPage() {
           {/* Market Indicator */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving Enterprise, D2C & High-Growth Brands Across Mumbai Metropolitan Region</span>
+            <span>
+              Serving Enterprise, D2C & High-Growth Brands Across Mumbai
+              Metropolitan Region
+            </span>
           </div>
         </div>
       </section>
@@ -324,14 +327,16 @@ export default function SEOMumbaiPage() {
                 Overview: Mumbai Search Precision
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Dominating Search Results in India’s Most Competitive Commercial Hub
+                Dominating Search Results in India’s Most Competitive Commercial
+                Hub
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 From corporate enterprises in Bandra-Kurla Complex (BKC) and
                 Nariman Point to high-growth D2C brands, real estate giants, and
-                media firms in Andheri and Lower Parel, Mumbai is one of the most
-                competitive search markets in the country. Generic search tactics
-                fail to capture commercial intent in a crowded landscape.
+                media firms in Andheri and Lower Parel, Mumbai is one of the
+                most competitive search markets in the country. Generic search
+                tactics fail to capture commercial intent in a crowded
+                landscape.
               </p>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
                 As an integrated digital marketing and web development agency,
@@ -367,8 +372,8 @@ export default function SEOMumbaiPage() {
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
                   We engineer geo-targeted organic visibility and Google
-                  Business Profile authority across Mumbai&apos;s primary commercial
-                  epicenters.
+                  Business Profile authority across Mumbai&apos;s primary
+                  commercial epicenters.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {mumbaiHubs.map((hub) => (
@@ -386,19 +391,25 @@ export default function SEOMumbaiPage() {
                     <span className="text-slate-600 font-medium">
                       Mumbai Map 3-Pack Target
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Guaranteed Focus</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Guaranteed Focus
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Citation Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% NAP Match</span>
+                    <span className="font-bold text-emerald-600">
+                      100% NAP Match
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       SSR & Core Web Vitals
                     </span>
-                    <span className="font-bold text-[#0f1535]">Sub-Second Speed</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Sub-Second Speed
+                    </span>
                   </div>
                 </div>
               </div>
@@ -667,8 +678,8 @@ export default function SEOMumbaiPage() {
 
           <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Let our search specialists analyze your website&apos;s ranking
-            bottlenecks and outline a custom 90-day search roadmap for the Mumbai
-            market.
+            bottlenecks and outline a custom 90-day search roadmap for the
+            Mumbai market.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -680,11 +691,11 @@ export default function SEOMumbaiPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 
