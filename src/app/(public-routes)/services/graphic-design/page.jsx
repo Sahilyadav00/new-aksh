@@ -135,9 +135,16 @@ export default function GraphicDesignPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+            <Link
+              href="/services/"
+              className="hover:text-white transition-colors"
+            >
+              Services
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">Graphic Design</span>
           </nav>
@@ -155,7 +162,13 @@ export default function GraphicDesignPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            Visuals should do more than look good—they must build trust and inspire action. As a premier digital marketing and design agency, Aksh Digital blends creative storytelling with conversion-focused design principles. From our creative studio in Jaipur to fast-scaling brands across Pan-India, the USA, and worldwide, we produce visual assets that elevate your brand and maximize campaign ROI.
+            Visuals should do more than look good—they must build trust and
+            inspire action. As a premier digital marketing and design agency,
+            Aksh Digital blends creative storytelling with conversion-focused
+            design principles. From our creative studio in Jaipur to
+            fast-scaling brands across Pan-India, the USA, and worldwide, we
+            produce visual assets that elevate your brand and maximize campaign
+            ROI.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -180,13 +193,31 @@ export default function GraphicDesignPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "500+", label: "Creative Assets Delivered", sub: "Digital & physical print" },
-            { num: "48hr", label: "Sprint Turnaround", sub: "Fast concept delivery" },
-            { num: "33%", label: "Higher Conversion Lift", sub: "Custom UI/UX & ad creatives" },
-            { num: "100%", label: "Source File Ownership", sub: "Figma, AI, PSD & SVG" },
+            {
+              num: "500+",
+              label: "Creative Assets Delivered",
+              sub: "Digital & physical print",
+            },
+            {
+              num: "48hr",
+              label: "Sprint Turnaround",
+              sub: "Fast concept delivery",
+            },
+            {
+              num: "33%",
+              label: "Higher Conversion Lift",
+              sub: "Custom UI/UX & ad creatives",
+            },
+            {
+              num: "100%",
+              label: "Source File Ownership",
+              sub: "Figma, AI, PSD & SVG",
+            },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">
+                {num}
+              </p>
               <p className="mt-1 text-sm font-bold text-[#d25c41]">{label}</p>
               <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
             </div>
@@ -208,15 +239,28 @@ export default function GraphicDesignPage() {
 
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#14183e] leading-tight mb-6">
                 Moving from Basic Visuals to{" "}
-                <span className="text-[#d25c41]">Conversion-Optimized Brand Design</span>
+                <span className="text-[#d25c41]">
+                  Conversion-Optimized Brand Design
+                </span>
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                In crowded digital feeds, your visual presentation determines whether a prospective customer stops to engage or scrolls past. Weak design, inconsistent branding, and generic stock imagery erode trust and decrease ad performance.
+                In crowded digital feeds, your visual presentation determines
+                whether a prospective customer stops to engage or scrolls past.
+                Weak design, inconsistent branding, and generic stock imagery
+                erode trust and decrease ad performance.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As an integrated digital marketing and web development agency, Aksh Digital treats graphic design as a core performance mechanism. We design visual assets that support your entire customer journey—from thumb-stopping social ads and polished corporate branding to frictionless web UI/UX. Whether you need a dedicated branding agency in Jaipur to define your local identity or an agile offshore design team supporting your international campaigns as a digital marketing agency USA partner, we deliver creative assets built to perform.
+                As an integrated digital marketing and web development agency,
+                Aksh Digital treats graphic design as a core performance
+                mechanism. We design visual assets that support your entire
+                customer journey—from thumb-stopping social ads and polished
+                corporate branding to frictionless web UI/UX. Whether you need a
+                dedicated branding agency in Jaipur to define your local
+                identity or an agile offshore design team supporting your
+                international campaigns as a digital marketing agency USA
+                partner, we deliver creative assets built to perform.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -276,7 +320,10 @@ export default function GraphicDesignPage() {
       </section>
 
       {/* ── 3. Our Core Graphic Design & Creative Services ── */}
-      <section id="core-services" className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100">
+      <section
+        id="core-services"
+        className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
@@ -286,7 +333,8 @@ export default function GraphicDesignPage() {
               Our Core Graphic Design &amp; Creative Services
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every design asset is crafted by senior art directors and conversion specialists with an eye for commercial results.
+              Every design asset is crafted by senior art directors and
+              conversion specialists with an eye for commercial results.
             </p>
           </div>
 
@@ -333,7 +381,8 @@ export default function GraphicDesignPage() {
                         Design Standard
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Structured Figma workspaces, live prototyping, and uncompressed production exports.
+                        Structured Figma workspaces, live prototyping, and
+                        uncompressed production exports.
                       </p>
                       <Link
                         href="/contact"
@@ -352,8 +401,15 @@ export default function GraphicDesignPage() {
 
       {/* ── 4. Cross-Market Delivery: Local Excellence & Global Scale ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -364,7 +420,9 @@ export default function GraphicDesignPage() {
               Cross-Market Delivery: Local Excellence &amp; Global Scale
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              High-touch creative brand identity for domestic Indian champions paired with flexible offshore design bandwidth for overseas partners.
+              High-touch creative brand identity for domestic Indian champions
+              paired with flexible offshore design bandwidth for overseas
+              partners.
             </p>
           </div>
 
@@ -387,7 +445,9 @@ export default function GraphicDesignPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Delivering custom visual branding tailored for regional nuances as a trusted creative partner in Jaipur, Delhi NCR, Mumbai, Bangalore, Pune, and Indore.
+                  Delivering custom visual branding tailored for regional
+                  nuances as a trusted creative partner in Jaipur, Delhi NCR,
+                  Mumbai, Bangalore, Pune, and Indore.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -411,7 +471,10 @@ export default function GraphicDesignPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Jaipur Creative Studio</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Contact Design Studio &rarr;
                 </Link>
               </div>
@@ -435,7 +498,10 @@ export default function GraphicDesignPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Dedicated design sprints for international agencies and enterprises needing high-volume creative production, rapid turnaround times, and direct Slack/Figma collaboration through our outsourced digital marketing services.
+                  Dedicated design sprints for international agencies and
+                  enterprises needing high-volume creative production, rapid
+                  turnaround times, and direct Slack/Figma collaboration through
+                  our outsourced digital marketing services.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -458,11 +524,18 @@ export default function GraphicDesignPage() {
                   ].map((item, idx) => {
                     const IIcon = item.icon;
                     return (
-                      <div key={idx} className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3">
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                      >
                         <IIcon className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-xs font-bold text-white">{item.title}</p>
-                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">{item.desc}</p>
+                          <p className="text-xs font-bold text-white">
+                            {item.title}
+                          </p>
+                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                            {item.desc}
+                          </p>
                         </div>
                       </div>
                     );
@@ -472,7 +545,10 @@ export default function GraphicDesignPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>International Design Desk</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Book Offshore Design Sprint &rarr;
                 </Link>
               </div>
@@ -492,7 +568,8 @@ export default function GraphicDesignPage() {
               Our 4-Step Creative Workflow
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              A structured, collaborative pipeline designed to eliminate endless revision rounds and deliver high-impact results.
+              A structured, collaborative pipeline designed to eliminate endless
+              revision rounds and deliver high-impact results.
             </p>
           </div>
 
@@ -528,7 +605,8 @@ export default function GraphicDesignPage() {
               Why Choose Aksh Digital for Graphic Design?
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We connect visual artistry directly with commercial performance metrics.
+              We connect visual artistry directly with commercial performance
+              metrics.
             </p>
           </div>
 
@@ -584,7 +662,8 @@ export default function GraphicDesignPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -598,7 +677,9 @@ export default function GraphicDesignPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Let our design team evaluate your current brand assets and provide actionable recommendations to enhance visual appeal and conversion rates.
+            Let our design team evaluate your current brand assets and provide
+            actionable recommendations to enhance visual appeal and conversion
+            rates.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -610,16 +691,17 @@ export default function GraphicDesignPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 
           <p className="text-xs text-white/70">
-            No obligation. Zero lock-in contracts. Actionable visual recommendations.
+            No obligation. Zero lock-in contracts. Actionable visual
+            recommendations.
           </p>
         </div>
       </section>

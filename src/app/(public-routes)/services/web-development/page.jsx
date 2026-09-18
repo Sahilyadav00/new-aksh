@@ -107,7 +107,11 @@ const techStackGroups = [
   },
   {
     category: "Tracking & Analytics",
-    skills: ["Google Tag Manager", "GA4 Server-Side Tracking", "Meta Conversions API (CAPI)"],
+    skills: [
+      "Google Tag Manager",
+      "GA4 Server-Side Tracking",
+      "Meta Conversions API (CAPI)",
+    ],
   },
 ];
 
@@ -154,9 +158,16 @@ export default function WebDevelopmentPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+            <Link
+              href="/services/"
+              className="hover:text-white transition-colors"
+            >
+              Services
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">Web Development</span>
           </nav>
@@ -174,7 +185,13 @@ export default function WebDevelopmentPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            A website shouldn't just exist as an online brochure—it must function as your highest-converting sales engine. As a premier web development and digital marketing company, Aksh Digital engineers lightning-fast, custom web applications using Next.js, React, and Node.js. Headquartered in Jaipur and serving high-growth brands across Pan-India, the USA, the UK, and global markets, we build digital infrastructure that drives measurable revenue.
+            A website shouldn't just exist as an online brochure—it must
+            function as your highest-converting sales engine. As a premier web
+            development and digital marketing company, Aksh Digital engineers
+            lightning-fast, custom web applications using Next.js, React, and
+            Node.js. Headquartered in Jaipur and serving high-growth brands
+            across Pan-India, the USA, the UK, and global markets, we build
+            digital infrastructure that drives measurable revenue.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -199,13 +216,31 @@ export default function WebDevelopmentPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "<1.2s", label: "Average Page Load Time", sub: "Core Web Vitals green" },
-            { num: "100%", label: "Server-Side Rendered (SSR)", sub: "Next.js & React architecture" },
-            { num: "99.9%", label: "Cloud Uptime Reliability", sub: "AWS & Docker deployment" },
-            { num: "0%", label: "Third-Party CMS Bloat", sub: "Clean, bespoke codebases" },
+            {
+              num: "<1.2s",
+              label: "Average Page Load Time",
+              sub: "Core Web Vitals green",
+            },
+            {
+              num: "100%",
+              label: "Server-Side Rendered (SSR)",
+              sub: "Next.js & React architecture",
+            },
+            {
+              num: "99.9%",
+              label: "Cloud Uptime Reliability",
+              sub: "AWS & Docker deployment",
+            },
+            {
+              num: "0%",
+              label: "Third-Party CMS Bloat",
+              sub: "Clean, bespoke codebases",
+            },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">
+                {num}
+              </p>
               <p className="mt-1 text-sm font-bold text-[#d25c41]">{label}</p>
               <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
             </div>
@@ -231,11 +266,23 @@ export default function WebDevelopmentPage() {
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                Slow loading speeds, bloated CMS plugins, and poor mobile responsiveness quietly destroy your marketing ROI. When your codebase is poorly structured, search engines struggle to crawl your pages, and prospective customers bounce before seeing your offer.
+                Slow loading speeds, bloated CMS plugins, and poor mobile
+                responsiveness quietly destroy your marketing ROI. When your
+                codebase is poorly structured, search engines struggle to crawl
+                your pages, and prospective customers bounce before seeing your
+                offer.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As an integrated digital marketing and website development firm, Aksh Digital approaches web creation with full-funnel thinking. We combine clean, scalable front-end and back-end architecture with built-in SEO strategies and conversion rate optimization (CRO). Whether you are an Indian enterprise looking for a dependable digital marketing company in Jaipur or an international brand seeking a high-caliber digital marketing agency USA offshore development partner, we build digital platforms built to scale.
+                As an integrated digital marketing and website development firm,
+                Aksh Digital approaches web creation with full-funnel thinking.
+                We combine clean, scalable front-end and back-end architecture
+                with built-in SEO strategies and conversion rate optimization
+                (CRO). Whether you are an Indian enterprise looking for a
+                dependable digital marketing company in Jaipur or an
+                international brand seeking a high-caliber digital marketing
+                agency USA offshore development partner, we build digital
+                platforms built to scale.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -305,7 +352,8 @@ export default function WebDevelopmentPage() {
               Our Core Web Development Services
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every build is engineered from scratch for enterprise reliability, high-volume traffic, and maximum conversion rates.
+              Every build is engineered from scratch for enterprise reliability,
+              high-volume traffic, and maximum conversion rates.
             </p>
           </div>
 
@@ -352,7 +400,8 @@ export default function WebDevelopmentPage() {
                         Engineering Standard
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Custom Git repository, clean modular architecture, and complete source code handover.
+                        Custom Git repository, clean modular architecture, and
+                        complete source code handover.
                       </p>
                       <Link
                         href="/contact"
@@ -380,7 +429,8 @@ export default function WebDevelopmentPage() {
               Our Modern Technology Stack
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              We leverage production-grade technologies trusted by the world's most demanding tech leaders.
+              We leverage production-grade technologies trusted by the world's
+              most demanding tech leaders.
             </p>
           </div>
 
@@ -419,8 +469,15 @@ export default function WebDevelopmentPage() {
 
       {/* ── 5. Cross-Market Web Engineering: Domestic Mastery & Global Delivery ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -428,10 +485,12 @@ export default function WebDevelopmentPage() {
               Global Engineering Desk
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Cross-Market Web Engineering: Domestic Mastery &amp; Global Delivery
+              Cross-Market Web Engineering: Domestic Mastery &amp; Global
+              Delivery
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We build enterprise-grade software products for Indian market leaders and high-performing offshore teams for overseas clients.
+              We build enterprise-grade software products for Indian market
+              leaders and high-performing offshore teams for overseas clients.
             </p>
           </div>
 
@@ -454,7 +513,8 @@ export default function WebDevelopmentPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Delivering high-converting web solutions as a trusted partner across Jaipur, Delhi NCR, Mumbai, Bangalore, Pune, and Indore.
+                  Delivering high-converting web solutions as a trusted partner
+                  across Jaipur, Delhi NCR, Mumbai, Bangalore, Pune, and Indore.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -478,7 +538,10 @@ export default function WebDevelopmentPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Jaipur Development Lab</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Contact Domestic Engineering &rarr;
                 </Link>
               </div>
@@ -502,7 +565,10 @@ export default function WebDevelopmentPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Providing overseas enterprises with dedicated software teams through outsourced digital marketing services, offering complete timezone overlap, bi-weekly sprint reviews via Jira/Slack, and full IP protection.
+                  Providing overseas enterprises with dedicated software teams
+                  through outsourced digital marketing services, offering
+                  complete timezone overlap, bi-weekly sprint reviews via
+                  Jira/Slack, and full IP protection.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -525,11 +591,18 @@ export default function WebDevelopmentPage() {
                   ].map((item, idx) => {
                     const IIcon = item.icon;
                     return (
-                      <div key={idx} className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3">
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                      >
                         <IIcon className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-xs font-bold text-white">{item.title}</p>
-                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">{item.desc}</p>
+                          <p className="text-xs font-bold text-white">
+                            {item.title}
+                          </p>
+                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                            {item.desc}
+                          </p>
                         </div>
                       </div>
                     );
@@ -539,7 +612,10 @@ export default function WebDevelopmentPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>International Engineering Desk</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Schedule Offshore Architecture Call &rarr;
                 </Link>
               </div>
@@ -559,7 +635,8 @@ export default function WebDevelopmentPage() {
               Our 4-Step Agile Web Development Process
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              From architecture blueprint to production release, built for speed and precision.
+              From architecture blueprint to production release, built for speed
+              and precision.
             </p>
           </div>
 
@@ -595,7 +672,8 @@ export default function WebDevelopmentPage() {
               Why Choose Aksh Digital for Web Development?
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We bridge software engineering with conversion rate optimization to build websites that sell.
+              We bridge software engineering with conversion rate optimization
+              to build websites that sell.
             </p>
           </div>
 
@@ -651,7 +729,8 @@ export default function WebDevelopmentPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -665,7 +744,8 @@ export default function WebDevelopmentPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Let our full-stack engineering team evaluate your current website's code quality, speed bottlenecks, and conversion flow.
+            Let our full-stack engineering team evaluate your current website's
+            code quality, speed bottlenecks, and conversion flow.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -677,16 +757,17 @@ export default function WebDevelopmentPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 
           <p className="text-xs text-white/70">
-            No obligation. Zero lock-in contracts. Comprehensive code &amp; speed analysis.
+            No obligation. Zero lock-in contracts. Comprehensive code &amp;
+            speed analysis.
           </p>
         </div>
       </section>

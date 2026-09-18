@@ -204,7 +204,7 @@ export default function SEOKolkataPage() {
     description:
       "Premier SEO services and digital marketing agency in Kolkata specializing in local SEO, IT enterprise search, Core Web Vitals remediation, and link building.",
     url: "https://www.akshdigital.in/seo-services/kolkata/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kolkata",
@@ -311,7 +311,10 @@ export default function SEOKolkataPage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving Enterprises, Exporters & High-Growth Brands Across Kolkata & Eastern India</span>
+            <span>
+              Serving Enterprises, Exporters & High-Growth Brands Across Kolkata
+              & Eastern India
+            </span>
           </div>
         </div>
       </section>
@@ -325,7 +328,8 @@ export default function SEOKolkataPage() {
                 Overview: Advanced SEO Execution
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Regional Commercial Demand into Predictable Inbound Growth
+                Turning Regional Commercial Demand into Predictable Inbound
+                Growth
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 Kolkata is a powerhouse economy blending IT and tech enterprises
@@ -389,19 +393,25 @@ export default function SEOKolkataPage() {
                     <span className="text-slate-600 font-medium">
                       Kolkata Map 3-Pack Authority
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Target</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Target
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Citation Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% NAP Match</span>
+                    <span className="font-bold text-emerald-600">
+                      100% NAP Match
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Full-Stack Infrastructure
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Pass
+                    </span>
                   </div>
                 </div>
               </div>
@@ -553,8 +563,9 @@ export default function SEOKolkataPage() {
               Disciplined Roadmap to Page 1 Supremacy
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              We eliminate guesswork with a battle-tested 4-step framework engineered
-              to systematically elevate your Kolkata business to Page 1.
+              We eliminate guesswork with a battle-tested 4-step framework
+              engineered to systematically elevate your Kolkata business to Page
+              1.
             </p>
           </div>
 
@@ -602,9 +613,9 @@ export default function SEOKolkataPage() {
               Why Choose Aksh Digital as Your Kolkata SEO Partner?
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              We blend software engineering speed, regional market insight,
-              and strict white-hat ethics to deliver compounding commercial
-              returns across Eastern India.
+              We blend software engineering speed, regional market insight, and
+              strict white-hat ethics to deliver compounding commercial returns
+              across Eastern India.
             </p>
           </div>
 
@@ -682,11 +693,11 @@ export default function SEOKolkataPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

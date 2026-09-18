@@ -205,7 +205,7 @@ export default function SEOChennaiPage() {
     description:
       "Premier SEO services and digital marketing agency in Chennai specializing in SaaS SEO, local search optimization, Core Web Vitals, and link building.",
     url: "https://www.akshdigital.in/seo-services/chennai/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Chennai",
@@ -283,11 +283,11 @@ export default function SEOChennaiPage() {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10">
-            In South India’s premier manufacturing and SaaS capital, generic
-            SEO tactics get lost in the noise. Partner with a results-driven
-            SEO agency in Chennai and trusted digital marketing company in
-            Chennai. Aksh Digital delivers technical site architecture, local
-            search optimization, and high-authority link acquisition that drive
+            In South India’s premier manufacturing and SaaS capital, generic SEO
+            tactics get lost in the noise. Partner with a results-driven SEO
+            agency in Chennai and trusted digital marketing company in Chennai.
+            Aksh Digital delivers technical site architecture, local search
+            optimization, and high-authority link acquisition that drive
             qualified inbound revenue across OMR (Old Mahabalipuram Road),
             Guindy, T. Nagar, Anna Nagar, and Pan-India.
           </p>
@@ -312,7 +312,10 @@ export default function SEOChennaiPage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving SaaS Disruptors, Automotive Giants & Retail Chains Across Chennai & South India</span>
+            <span>
+              Serving SaaS Disruptors, Automotive Giants & Retail Chains Across
+              Chennai & South India
+            </span>
           </div>
         </div>
       </section>
@@ -326,16 +329,18 @@ export default function SEOChennaiPage() {
                 Overview: Advanced SEO Execution
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Regional Commercial Demand into Predictable Inbound Growth
+                Turning Regional Commercial Demand into Predictable Inbound
+                Growth
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 Chennai is a powerhouse economy blending global SaaS and IT
-                giants along the OMR IT Corridor and Guindy, automotive and heavy
-                engineering leaders in Sriperumbudur and Ambattur, alongside
-                booming healthcare networks, retail institutions, and real
-                estate hubs across T. Nagar, Nungambakkam, and Anna Nagar. To
-                capture high-value commercial searches in this ecosystem, your
-                business needs technical precision and deep local relevance.
+                giants along the OMR IT Corridor and Guindy, automotive and
+                heavy engineering leaders in Sriperumbudur and Ambattur,
+                alongside booming healthcare networks, retail institutions, and
+                real estate hubs across T. Nagar, Nungambakkam, and Anna Nagar.
+                To capture high-value commercial searches in this ecosystem,
+                your business needs technical precision and deep local
+                relevance.
               </p>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
                 As a full-stack software and digital marketing company, Aksh
@@ -390,19 +395,25 @@ export default function SEOChennaiPage() {
                     <span className="text-slate-600 font-medium">
                       Chennai Map 3-Pack Target
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Authority
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Citation Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% NAP Match</span>
+                    <span className="font-bold text-emerald-600">
+                      100% NAP Match
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Full-Stack Infrastructure
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Pass
+                    </span>
                   </div>
                 </div>
               </div>
@@ -554,8 +565,9 @@ export default function SEOChennaiPage() {
               Disciplined Roadmap to Page 1 Supremacy
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              We eliminate guesswork with a battle-tested 4-step framework engineered
-              to systematically elevate your Chennai business to Page 1.
+              We eliminate guesswork with a battle-tested 4-step framework
+              engineered to systematically elevate your Chennai business to Page
+              1.
             </p>
           </div>
 
@@ -603,9 +615,9 @@ export default function SEOChennaiPage() {
               Why Choose Aksh Digital as Your Chennai SEO Partner?
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              We blend software engineering speed, regional market insight,
-              and strict white-hat ethics to deliver compounding commercial
-              returns across Tamil Nadu.
+              We blend software engineering speed, regional market insight, and
+              strict white-hat ethics to deliver compounding commercial returns
+              across Tamil Nadu.
             </p>
           </div>
 
@@ -683,11 +695,11 @@ export default function SEOChennaiPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

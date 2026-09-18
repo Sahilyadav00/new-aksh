@@ -204,7 +204,7 @@ export default function SEOLucknowPage() {
     description:
       "Premier SEO agency and digital marketing company in Lucknow specializing in local search optimization, Google Business Profile ranking, technical SEO, and link building.",
     url: "https://www.akshdigital.in/seo-services/lucknow/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lucknow",
@@ -313,7 +313,10 @@ export default function SEOLucknowPage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving Enterprises, Healthcare Providers & Startups Across Lucknow, Kanpur & Uttar Pradesh</span>
+            <span>
+              Serving Enterprises, Healthcare Providers & Startups Across
+              Lucknow, Kanpur & Uttar Pradesh
+            </span>
           </div>
         </div>
       </section>
@@ -327,15 +330,16 @@ export default function SEOLucknowPage() {
                 Overview: Localized SEO Precision
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Uttar Pradesh’s Capital into a Predictable Inbound Growth Engine
+                Turning Uttar Pradesh’s Capital into a Predictable Inbound
+                Growth Engine
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 Lucknow is rapidly transforming into a prominent economic and
-                startup hub in North India. From IT and tech parks in Gomti Nagar
-                and Shaheed Path to thriving healthcare, education, real estate,
-                retail, and traditional export businesses across Hazratganj,
-                Alambagh, and Aminabad, standard search tactics fail against
-                aggressive regional competitors.
+                startup hub in North India. From IT and tech parks in Gomti
+                Nagar and Shaheed Path to thriving healthcare, education, real
+                estate, retail, and traditional export businesses across
+                Hazratganj, Alambagh, and Aminabad, standard search tactics fail
+                against aggressive regional competitors.
               </p>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
                 As a full-stack software and digital marketing company, Aksh
@@ -343,9 +347,9 @@ export default function SEOLucknowPage() {
                 pairing modern front-end speed (Next.js, React) with semantic
                 topical authority mapping, structured data architecture, and
                 white-hat digital PR, our search engine optimization marketing
-                agency secures lasting Page 1 positions, captures high-converting
-                queries, and lowers your long-term customer acquisition costs
-                (CAC).
+                agency secures lasting Page 1 positions, captures
+                high-converting queries, and lowers your long-term customer
+                acquisition costs (CAC).
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -370,8 +374,8 @@ export default function SEOLucknowPage() {
                   Key Lucknow Commercial Corridors
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                  We deploy localized entity architectures tailored to Lucknow&apos;s
-                  prominent commercial, IT, and retail centers.
+                  We deploy localized entity architectures tailored to
+                  Lucknow&apos;s prominent commercial, IT, and retail centers.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {lucknowHubs.map((hub) => (
@@ -389,19 +393,25 @@ export default function SEOLucknowPage() {
                     <span className="text-slate-600 font-medium">
                       Lucknow Map 3-Pack Target
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Authority
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Citation Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% NAP Match</span>
+                    <span className="font-bold text-emerald-600">
+                      100% NAP Match
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Full-Stack Infrastructure
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Pass
+                    </span>
                   </div>
                 </div>
               </div>
@@ -492,9 +502,9 @@ export default function SEOLucknowPage() {
               Integrated Growth: Full-Suite Synergies for Lucknow Brands
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Accelerate your digital trajectory by combining high-intent organic
-              rankings with high-ROAS paid media, social brand resonance, and
-              modern web development.
+              Accelerate your digital trajectory by combining high-intent
+              organic rankings with high-ROAS paid media, social brand
+              resonance, and modern web development.
             </p>
           </div>
 
@@ -554,8 +564,8 @@ export default function SEOLucknowPage() {
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               We eliminate guesswork with a battle-tested 4-step framework
-              engineered to systematically elevate your Lucknow business to
-              Page 1.
+              engineered to systematically elevate your Lucknow business to Page
+              1.
             </p>
           </div>
 
@@ -603,9 +613,9 @@ export default function SEOLucknowPage() {
               Why Choose Aksh Digital as Your Lucknow SEO Partner?
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              We blend software engineering speed, regional market insight,
-              and strict white-hat ethics to deliver compounding commercial
-              returns across Uttar Pradesh.
+              We blend software engineering speed, regional market insight, and
+              strict white-hat ethics to deliver compounding commercial returns
+              across Uttar Pradesh.
             </p>
           </div>
 
@@ -683,11 +693,11 @@ export default function SEOLucknowPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

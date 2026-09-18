@@ -204,7 +204,7 @@ export default function SEOChandigarhPage() {
     description:
       "Premier SEO services and digital marketing agency in Chandigarh specializing in Tricity local SEO, GBP ranking, technical audits, and link building.",
     url: "https://www.akshdigital.in/seo-services/chandigarh/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Chandigarh",
@@ -266,7 +266,8 @@ export default function SEOChandigarhPage() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm font-semibold text-[#f6ac55] backdrop-blur-sm mb-6">
             <span className="flex h-2 w-2 rounded-full bg-[#f6ac55] animate-pulse" />
-            High-Intent Search Dominance • Tricity Market (Chandigarh, Mohali, Panchkula)
+            High-Intent Search Dominance • Tricity Market (Chandigarh, Mohali,
+            Panchkula)
           </div>
 
           {/* Headline */}
@@ -308,7 +309,10 @@ export default function SEOChandigarhPage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving High-Growth Enterprises Across Chandigarh, Mohali, Panchkula & North India</span>
+            <span>
+              Serving High-Growth Enterprises Across Chandigarh, Mohali,
+              Panchkula & North India
+            </span>
           </div>
         </div>
       </section>
@@ -322,7 +326,8 @@ export default function SEOChandigarhPage() {
                 Overview: Localized SEO Precision
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f1535] leading-tight mb-6">
-                Turning Northern India&apos;s Commercial Hub into a Predictable Inbound Growth Engine
+                Turning Northern India&apos;s Commercial Hub into a Predictable
+                Inbound Growth Engine
               </h2>
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
                 The Chandigarh Tricity region is a booming economic powerhouse,
@@ -367,8 +372,8 @@ export default function SEOChandigarhPage() {
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
                   We engineer localized entity architectures tailored to
-                  Chandigarh, Mohali, and Panchkula&apos;s primary commercial and tech
-                  epicenters.
+                  Chandigarh, Mohali, and Panchkula&apos;s primary commercial
+                  and tech epicenters.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {tricityHubs.map((hub) => (
@@ -386,19 +391,25 @@ export default function SEOChandigarhPage() {
                     <span className="text-slate-600 font-medium">
                       Tricity Map 3-Pack Target
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Authority</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Authority
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       NAP Consistency
                     </span>
-                    <span className="font-bold text-emerald-600">100% Verified</span>
+                    <span className="font-bold text-emerald-600">
+                      100% Verified
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Full-Stack Infrastructure
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Pass
+                    </span>
                   </div>
                 </div>
               </div>
@@ -489,9 +500,9 @@ export default function SEOChandigarhPage() {
               Integrated Growth: Full-Suite Synergies for Chandigarh Brands
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Accelerate inbound lead volume by uniting high-intent organic rankings
-              with high-ROAS performance media, social brand authority, and
-              cutting-edge web engineering.
+              Accelerate inbound lead volume by uniting high-intent organic
+              rankings with high-ROAS performance media, social brand authority,
+              and cutting-edge web engineering.
             </p>
           </div>
 
@@ -550,8 +561,9 @@ export default function SEOChandigarhPage() {
               Disciplined Roadmap to Page 1 Supremacy
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              We eliminate guesswork with a battle-tested 4-step framework engineered
-              to systematically elevate your Tricity business to Page 1.
+              We eliminate guesswork with a battle-tested 4-step framework
+              engineered to systematically elevate your Tricity business to Page
+              1.
             </p>
           </div>
 
@@ -679,11 +691,11 @@ export default function SEOChandigarhPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

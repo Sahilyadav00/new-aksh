@@ -21,7 +21,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Enterprise SEO Strategies & Services | Page 1 Domination — Aksh Digital",
+  title:
+    "Enterprise SEO Strategies & Services | Page 1 Domination — Aksh Digital",
   description:
     "Enterprise SEO strategies engineered for Page 1 domination and high-intent leads. Technical audits, high-authority link acquisition, local SEO, and semantic content by Aksh Digital.",
   alternates: {
@@ -139,9 +140,16 @@ export default function SEOStrategiesPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumbs */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+            <Link
+              href="/services/"
+              className="hover:text-white transition-colors"
+            >
+              Services
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">SEO Strategies</span>
           </nav>
@@ -159,7 +167,11 @@ export default function SEOStrategiesPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            Stop chasing vanity traffic. As a leading SEO agency in India, Aksh Digital executes technical audits, high-authority link acquisition, and semantic content architecture that position your brand in front of ready-to-buy customers across Jaipur, Pan-India, the USA, and worldwide.
+            Stop chasing vanity traffic. As a leading SEO agency in India, Aksh
+            Digital executes technical audits, high-authority link acquisition,
+            and semantic content architecture that position your brand in front
+            of ready-to-buy customers across Jaipur, Pan-India, the USA, and
+            worldwide.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -184,13 +196,31 @@ export default function SEOStrategiesPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "3.8x", label: "Average Traffic Lift", sub: "Within 6–9 months" },
-            { num: "85%+", label: "Page 1 Keyword Share", sub: "High-intent queries" },
-            { num: "60%", label: "Reduction in Blended CAC", sub: "Compounding organic assets" },
-            { num: "100%", label: "White-Hat Compliance", sub: "Google Search Essentials" },
+            {
+              num: "3.8x",
+              label: "Average Traffic Lift",
+              sub: "Within 6–9 months",
+            },
+            {
+              num: "85%+",
+              label: "Page 1 Keyword Share",
+              sub: "High-intent queries",
+            },
+            {
+              num: "60%",
+              label: "Reduction in Blended CAC",
+              sub: "Compounding organic assets",
+            },
+            {
+              num: "100%",
+              label: "White-Hat Compliance",
+              sub: "Google Search Essentials",
+            },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">
+                {num}
+              </p>
               <p className="mt-1 text-sm font-bold text-[#d25c41]">{label}</p>
               <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
             </div>
@@ -199,7 +229,10 @@ export default function SEOStrategiesPage() {
       </section>
 
       {/* ── 2. Overview: Why Modern SEO Demands an Engineering Approach ── */}
-      <section id="seo-framework" className="py-20 sm:py-24 px-4 sm:px-6 bg-white">
+      <section
+        id="seo-framework"
+        className="py-20 sm:py-24 px-4 sm:px-6 bg-white"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
@@ -212,15 +245,26 @@ export default function SEOStrategiesPage() {
 
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#14183e] leading-tight mb-6">
                 Turning Organic Search into a{" "}
-                <span className="text-[#d25c41]">Predictable Inbound Revenue Engine</span>
+                <span className="text-[#d25c41]">
+                  Predictable Inbound Revenue Engine
+                </span>
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                Search algorithms have evolved far beyond basic keyword stuffing and low-quality directory backlinks. Modern search engines demand lightning-fast site architecture, clean code structure, semantic topical authority, and genuine user value.
+                Search algorithms have evolved far beyond basic keyword stuffing
+                and low-quality directory backlinks. Modern search engines
+                demand lightning-fast site architecture, clean code structure,
+                semantic topical authority, and genuine user value.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As a unified web development and digital marketing company, Aksh Digital approaches SEO with technical precision. By combining modern front-end frameworks (Next.js, React) with data-driven on-page and off-page optimization, our organic search marketing agency builds search assets that capture high-intent buyers, lower your customer acquisition costs (CAC), and protect your brand from volatile algorithm shifts.
+                As a unified web development and digital marketing company, Aksh
+                Digital approaches SEO with technical precision. By combining
+                modern front-end frameworks (Next.js, React) with data-driven
+                on-page and off-page optimization, our organic search marketing
+                agency builds search assets that capture high-intent buyers,
+                lower your customer acquisition costs (CAC), and protect your
+                brand from volatile algorithm shifts.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -290,7 +334,9 @@ export default function SEOStrategiesPage() {
               Our Core SEO Services &amp; Strategic Verticals
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every vertical is calibrated to capture market share across technical infrastructure, localized search, and high-converting commercial intent.
+              Every vertical is calibrated to capture market share across
+              technical infrastructure, localized search, and high-converting
+              commercial intent.
             </p>
           </div>
 
@@ -357,7 +403,8 @@ export default function SEOStrategiesPage() {
                         Execution Standard
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Custom scope aligned with target search volume and business pipeline goals.
+                        Custom scope aligned with target search volume and
+                        business pipeline goals.
                       </p>
                       <Link
                         href="/contact"
@@ -376,8 +423,15 @@ export default function SEOStrategiesPage() {
 
       {/* ── 4. Global Offshore & Domestic SEO Execution ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -388,7 +442,9 @@ export default function SEOStrategiesPage() {
               Global Offshore &amp; Domestic SEO Execution
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Tailored organic search deployment whether you are building local dominance in Indian cities or acquiring market share across the USA and global territories.
+              Tailored organic search deployment whether you are building local
+              dominance in Indian cities or acquiring market share across the
+              USA and global territories.
             </p>
           </div>
 
@@ -411,7 +467,11 @@ export default function SEOStrategiesPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  From establishing localized market dominance for brands searching for a trusted digital marketing company in Jaipur to competing nationally across competitive Indian metro markets, we build authoritative footprint across Tier-1 and Tier-2 growth hubs.
+                  From establishing localized market dominance for brands
+                  searching for a trusted digital marketing company in Jaipur to
+                  competing nationally across competitive Indian metro markets,
+                  we build authoritative footprint across Tier-1 and Tier-2
+                  growth hubs.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -430,7 +490,10 @@ export default function SEOStrategiesPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Domestic Indian Desk</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Get Local SEO Proposal &rarr;
                 </Link>
               </div>
@@ -454,7 +517,10 @@ export default function SEOStrategiesPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Structured hreflang implementations, multi-regional search targeting, and offshore campaign execution for businesses partnering with an international digital marketing agency USA specialist.
+                  Structured hreflang implementations, multi-regional search
+                  targeting, and offshore campaign execution for businesses
+                  partnering with an international digital marketing agency USA
+                  specialist.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -463,9 +529,14 @@ export default function SEOStrategiesPage() {
                     "Timezone-overlapping communication (EST, PST, GMT) with transparent sprint reporting.",
                     "Global competitor backlink gap replication and high-DA editorial outreach.",
                   ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5 rounded-xl bg-white/5 border border-white/10 p-3">
+                    <div
+                      key={idx}
+                      className="flex items-start gap-2.5 rounded-xl bg-white/5 border border-white/10 p-3"
+                    >
                       <Check className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
-                      <p className="text-xs text-slate-300 leading-snug">{item}</p>
+                      <p className="text-xs text-slate-300 leading-snug">
+                        {item}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -473,7 +544,10 @@ export default function SEOStrategiesPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>International SEO Desk</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Schedule Global Briefing &rarr;
                 </Link>
               </div>
@@ -493,7 +567,8 @@ export default function SEOStrategiesPage() {
               Our 4-Step SEO Growth Roadmap
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              A disciplined, technical approach that removes guesswork and builds sustainable ranking momentum.
+              A disciplined, technical approach that removes guesswork and
+              builds sustainable ranking momentum.
             </p>
           </div>
 
@@ -529,7 +604,8 @@ export default function SEOStrategiesPage() {
               Why Ambitious Brands Partner with Aksh Digital for SEO
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Built on transparency, engineering rigor, and real commercial revenue.
+              Built on transparency, engineering rigor, and real commercial
+              revenue.
             </p>
           </div>
 
@@ -585,7 +661,8 @@ export default function SEOStrategiesPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -599,7 +676,8 @@ export default function SEOStrategiesPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Discover hidden indexing errors, content gaps, and high-value keyword opportunities with our Jaipur strategy team.
+            Discover hidden indexing errors, content gaps, and high-value
+            keyword opportunities with our Jaipur strategy team.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -611,16 +689,17 @@ export default function SEOStrategiesPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 
           <p className="text-xs text-white/70">
-            No obligation. Zero lock-in contracts. Full technical crawl breakdown.
+            No obligation. Zero lock-in contracts. Full technical crawl
+            breakdown.
           </p>
         </div>
       </section>

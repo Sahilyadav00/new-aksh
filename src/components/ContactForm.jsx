@@ -152,7 +152,6 @@ export default function ContactForm() {
                 value={formData.website}
                 onChange={handleChange}
                 placeholder="https://yourwebsite.com"
-                placeholder="https://yourbusiness.com"
                 className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-slate-800"
               />
             </div>

@@ -35,7 +35,7 @@ export default function AdminLoginPage() {
       if (response.ok && data.success) {
         setStatus("success");
         localStorage.setItem("admin_username", username);
-        router.push("/admin/dashboard");
+        router.push("/admin/dashboard/");
       } else {
         setStatus("error");
         setErrorMsg(data.error || "Invalid username or password.");

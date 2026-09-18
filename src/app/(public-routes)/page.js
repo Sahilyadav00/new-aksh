@@ -299,7 +299,7 @@ export default function Home() {
 
             {/* Primary H1 Headline */}
             <h1 className="text-[32px] sm:text-[46px] md:text-[54px] lg:text-[60px] font-semibold text-slate-900 leading-[1.15] mt-6 mb-6 tracking-tight animate-on-load-fade-up animation-delay-200">
-              Full-Service Software Development & Performance Marketing Agency
+              Software Development & Performance Marketing Agency
             </h1>
 
             {/* Sub-Headline */}
@@ -506,19 +506,19 @@ export default function Home() {
                     MORE ABOUT US
                   </Link>
 
-                  <div className="flex items-center gap-3">
+                  {/* <div className="flex items-center gap-3">
                     <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-linear-to-br from-primary to-secondary text-sm font-bold text-white ring-2 ring-white shadow-md">
                       RR
                     </div>
                     <div>
                       <p className="text-[15px] font-bold text-slate-900">
-                        Ronald Richards
+                        
                       </p>
                       <p className="text-sm text-slate-500">
                         Co-Founder, Aksh Digital
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -953,7 +953,7 @@ export default function Home() {
       </section>
 
       {/* Extra Section 2: Interactive "Free Website & SEO Audit" Lead Magnet */}
-      <section className="w-full bg-linear-to-b from-slate-50 to-white px-3 sm:px-6 md:px-8 py-16 sm:py-20 border-b border-slate-200/60">
+      {/* <section className="w-full bg-linear-to-b from-slate-50 to-white px-3 sm:px-6 md:px-8 py-16 sm:py-20 border-b border-slate-200/60">
         <div className="mx-auto max-w-4xl text-center mb-10">
           <div className="flex items-center gap-2">
             <span className="text-sm font-semibold text-primary sm:text-[15px]">
@@ -974,7 +974,7 @@ export default function Home() {
           </p>
         </div>
         <FreeAuditForm />
-      </section>
+      </section> */}
 
       {/* Extra Section 3: Industry / Vertical Expertise Grid */}
       <section className="w-full bg-white px-3 sm:px-6 md:px-8 py-16 sm:py-20">
@@ -1017,7 +1017,7 @@ export default function Home() {
       </section>
 
       {/* Extra Section 4: "Why Choose Aksh Digital" Comparison Table */}
-      <section className="w-full bg-[#faf9f7] px-3 sm:px-6 md:px-8 py-16 sm:py-20 border-y border-slate-200/60">
+      {/* <section className="w-full bg-[#faf9f7] px-3 sm:px-6 md:px-8 py-16 sm:py-20 border-y border-slate-200/60">
         <div className="mx-auto max-w-5xl">
           <div className="mb-14">
             <div className="flex items-center gap-2">
@@ -1106,7 +1106,7 @@ export default function Home() {
             </table>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Development technologies marquee */}
       <section className="relative w-full overflow-hidden border-y border-white/10 bg-[url('/assets/images/home/process-1.webp')] bg-cover bg-center py-5 sm:py-6">
@@ -1382,7 +1382,7 @@ export default function Home() {
           <div className="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-slate-400 text-xs sm:text-sm">
             <span className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </span>
             <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-2">

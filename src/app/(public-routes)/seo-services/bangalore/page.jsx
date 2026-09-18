@@ -204,7 +204,7 @@ export default function SEOBangalorePage() {
     description:
       "Premier SEO services and digital marketing agency in Bangalore specializing in SaaS SEO, enterprise search optimization, Core Web Vitals, and authoritative link building.",
     url: "https://www.akshdigital.in/seo-services/bangalore/",
-    email: "connect@akshdigital.com",
+    email: "hdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bangalore",
@@ -309,7 +309,10 @@ export default function SEOBangalorePage() {
           {/* Market Reach Tag */}
           <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
             <MapPin className="h-4 w-4 text-[#d25c41]" />
-            <span>Serving SaaS Leaders, Startups & Global Enterprises Across Bengaluru</span>
+            <span>
+              Serving SaaS Leaders, Startups & Global Enterprises Across
+              Bengaluru
+            </span>
           </div>
         </div>
       </section>
@@ -335,11 +338,11 @@ export default function SEOBangalorePage() {
               <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8">
                 As a full-service software and digital marketing company, Aksh
                 Digital approaches search ranking with engineering rigor. By
-                integrating modern web frameworks (Next.js, React, Node.js)
-                with semantic topical authority mapping and authoritative
-                white-hat digital PR, our search engine optimization marketing
-                agency builds organic search assets that drive qualified leads
-                and reduce your customer acquisition costs (CAC).
+                integrating modern web frameworks (Next.js, React, Node.js) with
+                semantic topical authority mapping and authoritative white-hat
+                digital PR, our search engine optimization marketing agency
+                builds organic search assets that drive qualified leads and
+                reduce your customer acquisition costs (CAC).
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -364,8 +367,9 @@ export default function SEOBangalorePage() {
                   Key Tech & Startup Corridors
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-                  We deploy localized entity architecture tailored to Bangalore&apos;s
-                  tech hubs, enterprise zones, and startup clusters.
+                  We deploy localized entity architecture tailored to
+                  Bangalore&apos;s tech hubs, enterprise zones, and startup
+                  clusters.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {bangaloreHubs.map((hub) => (
@@ -383,19 +387,25 @@ export default function SEOBangalorePage() {
                     <span className="text-slate-600 font-medium">
                       Bangalore Map 3-Pack Authority
                     </span>
-                    <span className="font-bold text-[#d25c41]">Top 3 Target</span>
+                    <span className="font-bold text-[#d25c41]">
+                      Top 3 Target
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       SaaS Intent Keyword Capture
                     </span>
-                    <span className="font-bold text-emerald-600">High-Intent B2B</span>
+                    <span className="font-bold text-emerald-600">
+                      High-Intent B2B
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-slate-600 font-medium">
                       Next.js & React Optimization
                     </span>
-                    <span className="font-bold text-[#0f1535]">Core Web Vitals Pass</span>
+                    <span className="font-bold text-[#0f1535]">
+                      Core Web Vitals Pass
+                    </span>
                   </div>
                 </div>
               </div>
@@ -486,9 +496,9 @@ export default function SEOBangalorePage() {
               Integrated Growth: Full-Suite Synergies for Bangalore Brands
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Pair organic search positioning with multi-channel performance ads,
-              social media authority, and modern software engineering to lower
-              CAC and accelerate enterprise scaling.
+              Pair organic search positioning with multi-channel performance
+              ads, social media authority, and modern software engineering to
+              lower CAC and accelerate enterprise scaling.
             </p>
           </div>
 
@@ -547,8 +557,9 @@ export default function SEOBangalorePage() {
               A Repeatable, High-Impact Search Engine
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              We eliminate guesswork with a disciplined 4-phase framework engineered
-              to capture market share from entrenched tech and SaaS competitors.
+              We eliminate guesswork with a disciplined 4-phase framework
+              engineered to capture market share from entrenched tech and SaaS
+              competitors.
             </p>
           </div>
 
@@ -675,11 +686,11 @@ export default function SEOBangalorePage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

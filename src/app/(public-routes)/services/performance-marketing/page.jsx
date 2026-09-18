@@ -21,7 +21,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Performance Marketing Services | High-ROAS Google & Meta Ads — Aksh Digital",
+  title:
+    "Performance Marketing Services | High-ROAS Google & Meta Ads — Aksh Digital",
   description:
     "Data-driven performance marketing services engineered to lower CAC and maximize ROAS. Google Ads, Meta Ads, LinkedIn ABM, server-side tracking, and landing page CRO by Aksh Digital.",
   alternates: {
@@ -136,9 +137,16 @@ export default function PerformanceMarketingPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/services/" className="hover:text-white transition-colors">Services</Link>
+            <Link
+              href="/services/"
+              className="hover:text-white transition-colors"
+            >
+              Services
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">Performance Marketing</span>
           </nav>
@@ -156,7 +164,12 @@ export default function PerformanceMarketingPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-            Stop burning ad budget on vanity impressions and empty clicks. As a dedicated performance marketing agency India, Aksh Digital builds, tests, and optimizes full-funnel paid advertising campaigns across Google, Meta, and LinkedIn. From our growth hub in Jaipur to ambitious businesses across Pan-India, the USA, the UK, and global markets, we turn media spend into predictable, compounding revenue.
+            Stop burning ad budget on vanity impressions and empty clicks. As a
+            dedicated performance marketing agency India, Aksh Digital builds,
+            tests, and optimizes full-funnel paid advertising campaigns across
+            Google, Meta, and LinkedIn. From our growth hub in Jaipur to
+            ambitious businesses across Pan-India, the USA, the UK, and global
+            markets, we turn media spend into predictable, compounding revenue.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -181,13 +194,31 @@ export default function PerformanceMarketingPage() {
       <section className="border-b border-slate-100 bg-[#fafaf9] py-8 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { num: "4.4x", label: "Average Campaign ROAS", sub: "Google & Meta ad accounts" },
-            { num: "55%", label: "Reduction in Blended CAC", sub: "Creative & landing page CRO" },
-            { num: "₹50Cr+", label: "Ad-Generated Revenue", sub: "Scaled for client partners" },
-            { num: "0%", label: "Hidden Fees or Markups", sub: "100% direct client billing" },
+            {
+              num: "4.4x",
+              label: "Average Campaign ROAS",
+              sub: "Google & Meta ad accounts",
+            },
+            {
+              num: "55%",
+              label: "Reduction in Blended CAC",
+              sub: "Creative & landing page CRO",
+            },
+            {
+              num: "₹5Lac+",
+              label: "Ad-Generated Revenue",
+              sub: "Scaled for client partners",
+            },
+            {
+              num: "0%",
+              label: "Hidden Fees or Markups",
+              sub: "100% direct client billing",
+            },
           ].map(({ num, label, sub }) => (
             <div key={label} className="p-3">
-              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">{num}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-[#14183e]">
+                {num}
+              </p>
               <p className="mt-1 text-sm font-bold text-[#d25c41]">{label}</p>
               <p className="text-xs text-slate-500 mt-0.5">{sub}</p>
             </div>
@@ -209,15 +240,30 @@ export default function PerformanceMarketingPage() {
 
               <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-[#14183e] leading-tight mb-6">
                 Eliminating Ad Waste with{" "}
-                <span className="text-[#d25c41]">Scientific Testing and Conversion Tracking</span>
+                <span className="text-[#d25c41]">
+                  Scientific Testing and Conversion Tracking
+                </span>
               </h2>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-                Rising customer acquisition costs (CAC) and privacy changes mean broad targeting and generic ad boosts no longer work. Running profitable paid campaigns requires rigorous audience segmentation, dynamic creative testing, and server-side tracking.
+                Rising customer acquisition costs (CAC) and privacy changes mean
+                broad targeting and generic ad boosts no longer work. Running
+                profitable paid campaigns requires rigorous audience
+                segmentation, dynamic creative testing, and server-side
+                tracking.
               </p>
 
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8">
-                As a full-stack software and digital marketing company, Aksh Digital approaches performance marketing with technical and creative precision. We connect conversion-optimized landing pages (Next.js, React) with high-converting direct-response creatives and granular tracking architecture. Whether you need a top digital marketing company in Jaipur to capture local commercial leads or a proven paid advertising agency to scale your international e-commerce revenue as an offshore digital marketing agency USA partner, we deliver transparent, performance-driven growth.
+                As a full-stack software and digital marketing company, Aksh
+                Digital approaches performance marketing with technical and
+                creative precision. We connect conversion-optimized landing
+                pages (Next.js, React) with high-converting direct-response
+                creatives and granular tracking architecture. Whether you need a
+                top digital marketing company in Jaipur to capture local
+                commercial leads or a proven paid advertising agency to scale
+                your international e-commerce revenue as an offshore digital
+                marketing agency USA partner, we deliver transparent,
+                performance-driven growth.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -277,7 +323,10 @@ export default function PerformanceMarketingPage() {
       </section>
 
       {/* ── 3. Our Core Performance Marketing Services ── */}
-      <section id="core-services" className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100">
+      <section
+        id="core-services"
+        className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9] border-t border-slate-100"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-[#d25c41] block mb-3">
@@ -287,7 +336,8 @@ export default function PerformanceMarketingPage() {
               Our Core Performance Marketing Services
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every paid acquisition campaign is engineered around bottom-line profitability and strict CAC/ROAS benchmarks.
+              Every paid acquisition campaign is engineered around bottom-line
+              profitability and strict CAC/ROAS benchmarks.
             </p>
           </div>
 
@@ -334,7 +384,8 @@ export default function PerformanceMarketingPage() {
                         Accountability Standard
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                        Zero media markups. Live Looker Studio reporting dashboards accessible 24/7.
+                        Zero media markups. Live Looker Studio reporting
+                        dashboards accessible 24/7.
                       </p>
                       <Link
                         href="/contact"
@@ -353,8 +404,15 @@ export default function PerformanceMarketingPage() {
 
       {/* ── 4. Cross-Market Media Buying: Domestic Domination & Global Scale ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -365,7 +423,8 @@ export default function PerformanceMarketingPage() {
               Cross-Market Media Buying: Domestic Domination &amp; Global Scale
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We manage performance advertising calibrated for localized Indian metros and global e-commerce/B2B markets.
+              We manage performance advertising calibrated for localized Indian
+              metros and global e-commerce/B2B markets.
             </p>
           </div>
 
@@ -388,7 +447,12 @@ export default function PerformanceMarketingPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Delivering high-ROAS paid search and social campaigns tailored for regional and metro audiences as a proven digital marketing agency in Delhi NCR, a results-driven digital marketing agency Mumbai, an agile digital marketing agency Bangalore, a data-backed digital marketing company in Pune, and a top digital marketing agency Indore.
+                  Delivering high-ROAS paid search and social campaigns tailored
+                  for regional and metro audiences as a proven digital marketing
+                  agency in Delhi NCR, a results-driven digital marketing agency
+                  Mumbai, an agile digital marketing agency Bangalore, a
+                  data-backed digital marketing company in Pune, and a top
+                  digital marketing agency Indore.
                 </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-6">
@@ -412,7 +476,10 @@ export default function PerformanceMarketingPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Domestic Media Buying Hub</span>
-                <Link href="/contact/" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact/"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Get Domestic Media Proposal &rarr;
                 </Link>
               </div>
@@ -436,7 +503,10 @@ export default function PerformanceMarketingPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  Providing international businesses with dedicated media buyers and campaign managers through outsourced digital marketing services, offering daily performance monitoring, timezone overlap, and strict ROAS accountability.
+                  Providing international businesses with dedicated media buyers
+                  and campaign managers through outsourced digital marketing
+                  services, offering daily performance monitoring, timezone
+                  overlap, and strict ROAS accountability.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -459,11 +529,18 @@ export default function PerformanceMarketingPage() {
                   ].map((item, idx) => {
                     const IIcon = item.icon;
                     return (
-                      <div key={idx} className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3">
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                      >
                         <IIcon className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-xs font-bold text-white">{item.title}</p>
-                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">{item.desc}</p>
+                          <p className="text-xs font-bold text-white">
+                            {item.title}
+                          </p>
+                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                            {item.desc}
+                          </p>
                         </div>
                       </div>
                     );
@@ -473,7 +550,10 @@ export default function PerformanceMarketingPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Global Paid Media Desk</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Book Offshore Account Review &rarr;
                 </Link>
               </div>
@@ -493,7 +573,8 @@ export default function PerformanceMarketingPage() {
               Our 4-Phase Paid Media Scaling Framework
             </h2>
             <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base sm:text-lg leading-relaxed">
-              From audit to aggressive budget scaling, engineered to compound return on investment.
+              From audit to aggressive budget scaling, engineered to compound
+              return on investment.
             </p>
           </div>
 
@@ -529,7 +610,8 @@ export default function PerformanceMarketingPage() {
               Why Ambitious Brands Choose Aksh Digital for Performance Marketing
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We align our incentives with your net profitability and revenue growth.
+              We align our incentives with your net profitability and revenue
+              growth.
             </p>
           </div>
 
@@ -585,7 +667,8 @@ export default function PerformanceMarketingPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -599,7 +682,9 @@ export default function PerformanceMarketingPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Let our media buyers analyze your Google and Meta ad accounts to identify budget leakage, tracking errors, and high-growth scaling opportunities.
+            Let our media buyers analyze your Google and Meta ad accounts to
+            identify budget leakage, tracking errors, and high-growth scaling
+            opportunities.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -611,16 +696,17 @@ export default function PerformanceMarketingPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 
           <p className="text-xs text-white/70">
-            No obligation. Zero lock-in contracts. Detailed account &amp; funnel analysis.
+            No obligation. Zero lock-in contracts. Detailed account &amp; funnel
+            analysis.
           </p>
         </div>
       </section>

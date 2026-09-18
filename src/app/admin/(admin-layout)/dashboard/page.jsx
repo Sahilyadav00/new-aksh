@@ -175,7 +175,7 @@ export default function AdminDashboardPage() {
       console.error("Logout request failed", err);
     }
     localStorage.removeItem("admin_username");
-    router.push("/admin/login");
+    router.push("/admin/login/");
   };
 
   // Contacts / Leads actions

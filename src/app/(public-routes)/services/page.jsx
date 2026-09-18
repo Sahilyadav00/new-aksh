@@ -34,7 +34,8 @@ const servicesData = [
     id: "seo",
     slug: "seo",
     badge: "Organic Visibility & Search Authority",
-    headline: "Dominate Page 1 Rankings with a Top Search Engine Optimization Marketing Agency",
+    headline:
+      "Dominate Page 1 Rankings with a Top Search Engine Optimization Marketing Agency",
     overview:
       "Stop settling for low-intent traffic. Our SEO strategies focus on driving qualified organic leads and high-converting buyers directly to your digital doorstep.",
     icon: Search,
@@ -54,14 +55,19 @@ const servicesData = [
         desc: "High-intent keyword mapping, competitive content gap analysis, and white-hat digital PR link building.",
       },
     ],
-    targetMarkets: ["Local (Jaipur)", "National (India-wide)", "International (USA, UK, Worldwide)"],
+    targetMarkets: [
+      "Local (Jaipur)",
+      "National (India-wide)",
+      "International (USA, UK, Worldwide)",
+    ],
     linkText: "Explore SEO Strategies",
   },
   {
     id: "ads",
     slug: "performance-marketing",
     badge: "High-ROAS Paid Acquisition",
-    headline: "Scale Ad Revenue with a Proven Performance Marketing Agency India",
+    headline:
+      "Scale Ad Revenue with a Proven Performance Marketing Agency India",
     overview:
       "Eliminate wasted ad spend with targeted ad campaigns engineered for strict customer acquisition cost (CAC) and return on ad spend (ROAS) targets.",
     icon: Target,
@@ -85,14 +91,19 @@ const servicesData = [
         desc: "Accurate attribution modeling via Google Tag Manager and Conversions API (CAPI).",
       },
     ],
-    targetMarkets: ["D2C Brands", "B2B SaaS & Tech", "Local & Multi-City Services"],
+    targetMarkets: [
+      "D2C Brands",
+      "B2B SaaS & Tech",
+      "Local & Multi-City Services",
+    ],
     linkText: "Explore Performance Marketing",
   },
   {
     id: "dev",
     slug: "web-development",
     badge: "Modern Engineering & CRO",
-    headline: "Fast, Scalable Products from a Leading Web Development and Digital Marketing Company",
+    headline:
+      "Fast, Scalable Products from a Leading Web Development and Digital Marketing Company",
     overview:
       "We design and build ultra-fast, responsive web and mobile applications from the ground up, turning visitors into long-term customers.",
     icon: Code2,
@@ -116,14 +127,19 @@ const servicesData = [
         desc: "Data-backed UI/UX wireframing, A/B landing page testing, and heat-map analytics.",
       },
     ],
-    targetMarkets: ["Fast-Growing Startups", "E-Commerce Stores", "Enterprise Platforms"],
+    targetMarkets: [
+      "Fast-Growing Startups",
+      "E-Commerce Stores",
+      "Enterprise Platforms",
+    ],
     linkText: "Explore Web Engineering",
   },
   {
     id: "social",
     slug: "social-media-marketing",
     badge: "Audience Engagement & Brand Equity",
-    headline: "Transform Followers into Brand Advocates with a Premier Social Media Marketing Agency in India",
+    headline:
+      "Transform Followers into Brand Advocates with a Premier Social Media Marketing Agency in India",
     overview:
       "Build a lasting, recognizable brand identity that commands attention across crowded feeds.",
     icon: Share2,
@@ -143,7 +159,11 @@ const servicesData = [
         desc: "Aligning organic brand storytelling with high-converting social media advertising funnels.",
       },
     ],
-    targetMarkets: ["Consumer Brands", "Personal Brands & Founders", "B2B Social Thought Leadership"],
+    targetMarkets: [
+      "Consumer Brands",
+      "Personal Brands & Founders",
+      "B2B Social Thought Leadership",
+    ],
     linkText: "Explore Social Media Services",
   },
   {
@@ -170,7 +190,11 @@ const servicesData = [
         desc: "Pitch decks, brochures, landing page graphics, and sales enablement assets.",
       },
     ],
-    targetMarkets: ["Emerging Brands", "Performance Advertisers", "Corporate Rebranding"],
+    targetMarkets: [
+      "Emerging Brands",
+      "Performance Advertisers",
+      "Corporate Rebranding",
+    ],
     linkText: "Explore Creative Design",
   },
 ];
@@ -209,7 +233,8 @@ const faqs = [
       "Yes! We offer a free 30-minute consultation call and preliminary audit where we analyse your current digital presence, search rankings, or ad accounts, and present a tailored roadmap with zero commitment.",
   },
   {
-    question: "How do you coordinate with international clients in the USA or UK?",
+    question:
+      "How do you coordinate with international clients in the USA or UK?",
     answer:
       "We operate an agile offshore delivery model with dedicated daily timezone overlap (EST, PST, GMT). We manage sprint communications via Slack and Google Meet, providing weekly reviews and 24/7 access to live reporting dashboards.",
   },
@@ -248,7 +273,9 @@ export default function ServicesPage() {
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex items-center justify-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">
+              Home
+            </Link>
             <span>/</span>
             <span className="text-[#f6ac55]">Services</span>
           </nav>
@@ -266,7 +293,12 @@ export default function ServicesPage() {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            As a full service digital marketing agency, Aksh Digital unites modern software engineering with data-backed media buying. From our headquarters as a trusted digital marketing company in Jaipur to high-growth enterprises seeking an agile digital marketing agency USA partner, we deliver transparent, revenue-driven complete digital marketing solutions.
+            As a full service digital marketing agency, Aksh Digital unites
+            modern software engineering with data-backed media buying. From our
+            headquarters as a trusted digital marketing company in Jaipur to
+            high-growth enterprises seeking an agile digital marketing agency
+            USA partner, we deliver transparent, revenue-driven complete digital
+            marketing solutions.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -293,10 +325,16 @@ export default function ServicesPage() {
           {[
             { label: "200+ Projects", desc: "Delivered Pan-India & Global" },
             { label: "3.4x Average ROAS", desc: "Performance Ad Spend" },
-            { label: "98% Client Retention", desc: "Month-to-Month Partnerships" },
+            {
+              label: "98% Client Retention",
+              desc: "Month-to-Month Partnerships",
+            },
             { label: "Zero Lock-In", desc: "Agile Two-Week Sprints" },
           ].map((stat, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center p-3 rounded-xl hover:bg-slate-50 transition-colors">
+            <div
+              key={idx}
+              className="flex flex-col items-center text-center p-3 rounded-xl hover:bg-slate-50 transition-colors"
+            >
               <span className="text-2xl sm:text-3xl font-extrabold text-[#14183e] mb-1">
                 {stat.label}
               </span>
@@ -309,7 +347,10 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 2. Services Overview Grid ── */}
-      <section id="services-overview" className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9]">
+      <section
+        id="services-overview"
+        className="py-20 sm:py-24 px-4 sm:px-6 bg-[#fafaf9]"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-3">
@@ -323,7 +364,8 @@ export default function ServicesPage() {
               Services Overview Grid
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Every service is engineered as a high-performance growth channel, integrating seamlessly with your broader revenue strategy.
+              Every service is engineered as a high-performance growth channel,
+              integrating seamlessly with your broader revenue strategy.
             </p>
           </div>
 
@@ -406,14 +448,17 @@ export default function ServicesPage() {
                     {/* Right Column: CTA Box */}
                     <div className="lg:w-72 shrink-0 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-slate-100 pt-6 lg:pt-0 lg:pl-8">
                       <div className="rounded-2xl bg-gradient-to-br from-slate-50 to-orange-50/30 p-5 border border-slate-100">
-                        <span className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${service.bg} mb-4`}>
+                        <span
+                          className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${service.bg} mb-4`}
+                        >
                           <Icon className="h-6 w-6 text-[#d25c41]" />
                         </span>
                         <h4 className="text-base font-bold text-[#14183e] mb-1">
                           Tailored Execution
                         </h4>
                         <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                          Customized deliverables with dedicated account direction and transparent ROI reporting.
+                          Customized deliverables with dedicated account
+                          direction and transparent ROI reporting.
                         </p>
                         <Link
                           href={`/services/${service.slug}/`}
@@ -443,8 +488,15 @@ export default function ServicesPage() {
 
       {/* ── 3. Global Offshore & Domestic Delivery Framework ── */}
       <section className="py-20 sm:py-24 px-4 sm:px-6 bg-[#0f1535] text-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-        
+        <div
+          className="pointer-events-none absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold text-[#f6ac55] mb-4">
@@ -455,7 +507,8 @@ export default function ServicesPage() {
               Global Offshore &amp; Domestic Delivery Framework
             </h2>
             <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Engineered to serve dynamic regional businesses across India and enterprise brands worldwide with agile collaboration.
+              Engineered to serve dynamic regional businesses across India and
+              enterprise brands worldwide with agile collaboration.
             </p>
           </div>
 
@@ -478,7 +531,11 @@ export default function ServicesPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  We provide customized campaigns as a leading digital marketing agency in Delhi NCR, a data-driven digital marketing agency Mumbai, an agile digital marketing agency Bangalore, a results-oriented digital marketing company in Pune, and a top digital marketing agency Indore.
+                  We provide customized campaigns as a leading digital marketing
+                  agency in Delhi NCR, a data-driven digital marketing agency
+                  Mumbai, an agile digital marketing agency Bangalore, a
+                  results-oriented digital marketing company in Pune, and a top
+                  digital marketing agency Indore.
                 </p>
 
                 {/* City Badges */}
@@ -503,7 +560,10 @@ export default function ServicesPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>Headquarters: Jaipur, Rajasthan</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Contact Domestic Desk &rarr;
                 </Link>
               </div>
@@ -527,7 +587,10 @@ export default function ServicesPage() {
                 </div>
 
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  We offer flexible outsourced digital marketing services for international brands in the USA, UK, and worldwide, complete with overlapping timezone communication, transparent bi-weekly sprints, and real-time live reporting.
+                  We offer flexible outsourced digital marketing services for
+                  international brands in the USA, UK, and worldwide, complete
+                  with overlapping timezone communication, transparent bi-weekly
+                  sprints, and real-time live reporting.
                 </p>
 
                 {/* Offshore Highlights */}
@@ -551,11 +614,18 @@ export default function ServicesPage() {
                   ].map((feature, fIdx) => {
                     const FIcon = feature.icon;
                     return (
-                      <div key={fIdx} className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3">
+                      <div
+                        key={fIdx}
+                        className="flex items-start gap-3 rounded-xl bg-white/5 border border-white/10 p-3"
+                      >
                         <FIcon className="h-4 w-4 text-[#f6ac55] shrink-0 mt-0.5" />
                         <div>
-                          <p className="text-xs font-bold text-white">{feature.title}</p>
-                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">{feature.desc}</p>
+                          <p className="text-xs font-bold text-white">
+                            {feature.title}
+                          </p>
+                          <p className="text-[11px] text-slate-300 leading-snug mt-0.5">
+                            {feature.desc}
+                          </p>
                         </div>
                       </div>
                     );
@@ -565,7 +635,10 @@ export default function ServicesPage() {
 
               <div className="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-400">
                 <span>International Delivery Desk</span>
-                <Link href="/contact" className="text-[#f6ac55] hover:underline font-semibold">
+                <Link
+                  href="/contact"
+                  className="text-[#f6ac55] hover:underline font-semibold"
+                >
                   Book International Briefing &rarr;
                 </Link>
               </div>
@@ -585,7 +658,8 @@ export default function ServicesPage() {
               Why Choose Our Digital Marketing Solutions?
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              We eliminate the traditional friction between engineering and media buying to build predictable growth engines.
+              We eliminate the traditional friction between engineering and
+              media buying to build predictable growth engines.
             </p>
           </div>
 
@@ -610,7 +684,8 @@ export default function ServicesPage() {
                   </div>
                   <div className="mt-8 pt-4 border-t border-slate-200/60">
                     <span className="text-xs font-bold text-[#d25c41] uppercase tracking-wider flex items-center gap-1">
-                      <CheckCircle2 className="h-3.5 w-3.5" /> Guaranteed Standard
+                      <CheckCircle2 className="h-3.5 w-3.5" /> Guaranteed
+                      Standard
                     </span>
                   </div>
                 </div>
@@ -677,7 +752,8 @@ export default function ServicesPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundImage:
+              "radial-gradient(circle, #fff 1px, transparent 1px)",
             backgroundSize: "24px 24px",
           }}
         />
@@ -691,7 +767,9 @@ export default function ServicesPage() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            Book a free 30-minute growth and technical audit with our Jaipur team to evaluate your current digital presence and discover high-value conversion opportunities.
+            Book a free 30-minute growth and technical audit with our Jaipur
+            team to evaluate your current digital presence and discover
+            high-value conversion opportunities.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -703,11 +781,11 @@ export default function ServicesPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:connect@akshdigital.com"
+              href="mailto:hdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              connect@akshdigital.com
+              hdigital9@gmail.com
             </a>
           </div>
 

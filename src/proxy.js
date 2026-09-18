@@ -8,8 +8,14 @@ const COOKIE_NAME = "admin_session";
 export async function proxy(request) {
   const { pathname } = request.nextUrl;
 
+  // Normalize pathname to strip trailing slash for consistent route checks
+  const normalizedPath =
+    pathname.length > 1 && pathname.endsWith("/")
+      ? pathname.slice(0, -1)
+      : pathname;
+
   // We are only concerned with routes starting with /admin
-  if (pathname.startsWith("/admin")) {
+  if (normalizedPath === "/admin" || normalizedPath.startsWith("/admin/")) {
     const token = request.cookies.get(COOKIE_NAME)?.value;
     let isValid = false;
 
@@ -22,28 +28,26 @@ export async function proxy(request) {
       }
     }
 
+    const isLoginPage = normalizedPath === "/admin/login";
+    const isRootAdmin = normalizedPath === "/admin";
+
     // 1. If requesting exact /admin path
-    if (pathname === "/admin") {
-      if (isValid) {
-        return NextResponse.redirect(new URL("/admin/dashboard", request.url));
-      } else {
-        return NextResponse.redirect(new URL("/admin/login", request.url));
-      }
+    if (isRootAdmin) {
+      const destination = isValid ? "/admin/dashboard/" : "/admin/login/";
+      return NextResponse.redirect(new URL(destination, request.url));
     }
 
     // 2. If requesting the login page
-    if (pathname === "/admin/login") {
+    if (isLoginPage) {
       if (isValid) {
-        return NextResponse.redirect(new URL("/admin/dashboard", request.url));
+        return NextResponse.redirect(new URL("/admin/dashboard/", request.url));
       }
       return NextResponse.next();
     }
 
-    // 3. If requesting any other page under /admin (like /admin/dashboard or sub-routes)
-    if (pathname.startsWith("/admin/") && pathname !== "/admin/login") {
-      if (!isValid) {
-        return NextResponse.redirect(new URL("/admin/login", request.url));
-      }
+    // 3. If requesting any protected page under /admin (like /admin/dashboard or sub-routes)
+    if (!isValid) {
+      return NextResponse.redirect(new URL("/admin/login/", request.url));
     }
   }
 
@@ -51,5 +55,6 @@ export async function proxy(request) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/admin", "/admin/:path*"],
 };
+
