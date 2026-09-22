@@ -205,7 +205,7 @@ export default function SEOHyderabadPage() {
     description:
       "Premier SEO services and digital marketing agency in Hyderabad specializing in local SEO, SaaS enterprise search, Core Web Vitals remediation, and link building.",
     url: "https://www.akshdigital.in/seo-services/hyderabad/",
-    email: "hdigital9@gmail.com",
+    email: "akshdigital9@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Hyderabad",
@@ -694,11 +694,11 @@ export default function SEOHyderabadPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:hdigital9@gmail.com"
+              href="mailto:akshdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition-colors"
             >
               <Mail className="h-4 w-4 text-[#f6ac55]" />
-              hdigital9@gmail.com
+              akshdigital9@gmail.com
             </a>
           </div>
 

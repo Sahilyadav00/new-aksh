@@ -125,10 +125,10 @@ export default function Footer() {
                     Send a Message
                   </h3>
                   <a
-                    href="mailto:akshdigital9@gmail.com"
+                    href="mailto:aksakshdigital9@gmail.com"
                     className="text-xs font-semibold text-[#f6ac55] hover:text-white transition-colors break-all mb-1"
                   >
-                    akshdigital9@gmail.com
+                    aksakshdigital9@gmail.com
                   </a>
                   <p className="text-[11px] text-slate-400 mt-auto">
                     Reply within 24 hours
@@ -333,10 +333,10 @@ export default function Footer() {
                       </div>
                       <div className="min-w-0">
                         <a
-                          href="mailto:akshdigital9@gmail.com"
+                          href="mailto:aksakshdigital9@gmail.com"
                           className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors truncate"
                         >
-                          akshdigital9@gmail.com
+                          aksakshdigital9@gmail.com
                         </a>
                         {/* <a
                       href="mailto:info@Niotech.com"

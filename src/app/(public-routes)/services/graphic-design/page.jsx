@@ -691,11 +691,11 @@ export default function GraphicDesignPage() {
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
             </Link>
             <a
-              href="mailto:hdigital9@gmail.com"
+              href="mailto:akshdigital9@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-xs px-7 py-4 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all"
             >
               <Mail className="h-4 w-4" />
-              hdigital9@gmail.com
+              akshdigital9@gmail.com
             </a>
           </div>
 

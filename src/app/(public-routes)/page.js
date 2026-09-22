@@ -1382,7 +1382,7 @@ export default function Home() {
           <div className="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-slate-400 text-xs sm:text-sm">
             <span className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
-              hdigital9@gmail.com
+              akshdigital9@gmail.com
             </span>
             <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-2">
