@@ -474,7 +474,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-8 flex items-center justify-center gap-2 text-slate-400 text-sm">
             <Mail className="h-4 w-4 text-primary" />
-            <span>hdigital9@gmail.com</span>
+            <span>akshdigital9@gmail.com</span>
           </div>
         </div>
       </section>

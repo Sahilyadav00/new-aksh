@@ -45,8 +45,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      detail: "hdigital9@gmail.com",
-      action: "mailto:hdigital9@gmail.com",
+      detail: "akshdigital9@gmail.com",
+      action: "mailto:akshdigital9@gmail.com",
       actionLabel: "Send an Email",
     },
     {
