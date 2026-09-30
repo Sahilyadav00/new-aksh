@@ -125,10 +125,10 @@ export default function Footer() {
                     Send a Message
                   </h3>
                   <a
-                    href="mailto:aksakshdigital9@gmail.com"
+                    href="mailto:akshdigital9@gmail.com"
                     className="text-xs font-semibold text-[#f6ac55] hover:text-white transition-colors break-all mb-1"
                   >
-                    aksakshdigital9@gmail.com
+                    akshdigital9@gmail.com
                   </a>
                   <p className="text-[11px] text-slate-400 mt-auto">
                     Reply within 24 hours
@@ -217,7 +217,7 @@ export default function Footer() {
               <div className="w-full h-48 sm:h-52 rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 transition-all duration-300 hover:shadow-md hover:border-slate-300 mt-2">
                 <iframe
                   title="Aksh Digital Location Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.629050516898!2d75.78727085!3d26.9124336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3e16275039f%3A0x67c33116dfa996f0!2sJaipur%2C%20Rajasthan%2C%20India!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2738.3645126381944!2d75.79978247543862!3d26.888135776661827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDUzJzE3LjMiTiA3NcKwNDgnMDguNSJF!5e1!3m2!1sen!2sin!4v1790759315840!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -226,6 +226,7 @@ export default function Footer() {
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-full transition-all duration-300"
                 />
+                
               </div>
             </div>
             <div className="grid grid-cols-1! md:grid-cols-2! lg:grid-cols-[auto_auto_auto] gap-8 lg:pl-10">
@@ -333,17 +334,12 @@ export default function Footer() {
                       </div>
                       <div className="min-w-0">
                         <a
-                          href="mailto:aksakshdigital9@gmail.com"
+                          href="mailto:akshdigital9@gmail.com"
                           className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors truncate"
                         >
-                          aksakshdigital9@gmail.com
+                          akshdigital9@gmail.com
                         </a>
-                        {/* <a
-                      href="mailto:info@Niotech.com"
-                      className="text-[14px] text-slate-600 hover:text-primary block font-medium transition-colors truncate"
-                    >
-                      info@Niotech.com
-                    </a> */}
+                    
                       </div>
                     </div>
 
@@ -421,13 +417,13 @@ export default function Footer() {
               >
                 <TwitterIcon />
               </a> */}
-              {/* <a
-                href="#"
+              <a
+                href="https://www.linkedin.com/company/aksh-digital-marketing-agency" 
                 className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"
                 aria-label="Linkedin"
               >
                 <LinkedinIcon />
-              </a> */}
+              </a>
               <a
                 href="https://www.instagram.com/_akshdigital/"
                 className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"

@@ -48,11 +48,11 @@ body {
    Premium Entry & Scroll Animations
    ========================================== */
 
-/* Keyframe definitions */
+/* Keyframe definitions with natural, silky easing */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
@@ -63,7 +63,7 @@ body {
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateX(-24px);
   }
   to {
     opacity: 1;
@@ -74,7 +74,7 @@ body {
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(24px);
   }
   to {
     opacity: 1;
@@ -85,7 +85,7 @@ body {
 @keyframes scaleUp {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.97);
   }
   to {
     opacity: 1;
@@ -95,42 +95,47 @@ body {
 
 /* Page load animations (immediate entrance) */
 .animate-on-load-fade-up {
-  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
+  will-change: opacity, transform;
 }
 
 .animate-on-load-fade-left {
-  animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeInLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
+  will-change: opacity, transform;
 }
 
 .animate-on-load-fade-right {
-  animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeInRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
+  will-change: opacity, transform;
 }
 
 .animate-on-load-scale {
-  animation: scaleUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: scaleUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
+  will-change: opacity, transform;
 }
 
 /* Scroll reveal base and directional options */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(18px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
 .reveal.reveal-left {
-  transform: translateX(-40px);
+  transform: translateX(-24px);
 }
 
 .reveal.reveal-right {
-  transform: translateX(40px);
+  transform: translateX(24px);
 }
 
 .reveal.reveal-scale {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 /* Activated state when in viewport */
@@ -140,18 +145,123 @@ body {
 }
 
 /* Staggered delay modifiers for lists / grids */
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-400 { transition-delay: 400ms; }
-.delay-500 { transition-delay: 500ms; }
-.delay-600 { transition-delay: 600ms; }
-.delay-700 { transition-delay: 700ms; }
-.delay-800 { transition-delay: 800ms; }
+.delay-100 { transition-delay: 60ms; }
+.delay-200 { transition-delay: 120ms; }
+.delay-300 { transition-delay: 180ms; }
+.delay-400 { transition-delay: 240ms; }
+.delay-500 { transition-delay: 300ms; }
+.delay-600 { transition-delay: 360ms; }
+.delay-700 { transition-delay: 420ms; }
+.delay-800 { transition-delay: 480ms; }
 
-.animation-delay-100 { animation-delay: 100ms; }
-.animation-delay-200 { animation-delay: 200ms; }
-.animation-delay-300 { animation-delay: 300ms; }
-.animation-delay-400 { animation-delay: 400ms; }
-.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-100 { animation-delay: 60ms; }
+.animation-delay-200 { animation-delay: 120ms; }
+.animation-delay-300 { animation-delay: 180ms; }
+.animation-delay-400 { animation-delay: 240ms; }
+.animation-delay-500 { animation-delay: 300ms; }
+
+/* Butter-smooth card hover utility */
+.card-smooth {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease;
+  will-change: transform;
+}
+
+/* Ambient Floating & Pulse Keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-1deg);
+  }
+}
+
+@keyframes meshShift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.08);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+.animate-mesh-1 {
+  animation: meshShift 18s ease-in-out infinite;
+}
+
+.animate-mesh-2 {
+  animation: meshShift 22s ease-in-out infinite reverse;
+}
+
+.animate-marquee-scroll-reverse {
+  animation: marquee-scroll-reverse 40s linear infinite;
+}
+
+.animate-marquee-scroll-reverse:hover {
+  animation-play-state: paused;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Glassmorphism & card hover effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 
