@@ -19,30 +19,30 @@ const AndroidIcon = (props) => (
 );
 
 const PinterestIcon = (props) => (
-  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" {...props}>
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" {...props}>
     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.4 7.63 11.13-.1-.95-.2-2.4.04-3.43.22-.93 1.4-5.93 1.4-5.93s-.36-.72-.36-1.77c0-1.66.96-2.9 2.17-2.9 1.02 0 1.51.77 1.51 1.69 0 1.03-.66 2.56-.99 3.99-.28 1.19.6 2.16 1.77 2.16 2.12 0 3.76-2.24 3.76-5.47 0-2.86-2.06-4.86-5-4.86-3.4 0-5.4 2.56-5.4 5.2 0 1.03.4 2.13.9 2.73.1.12.1.22.08.33-.1.39-.3 1.2-.34 1.35-.06.24-.2.33-.46.21-1.73-.8-2.82-3.34-2.82-5.37 0-4.37 3.18-8.38 9.15-8.38 4.8 0 8.53 3.42 8.53 8 0 4.77-3 8.6-7.17 8.6-1.4 0-2.72-.73-3.17-1.59l-.86 3.29c-.31 1.2-1.15 2.7-1.72 3.63A12 12 0 1 0 12 0z" />
   </svg>
 );
 
 const FacebookIcon = (props) => (
-  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" {...props}>
+  <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" {...props}>
     <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
   </svg>
 );
 
 const TwitterIcon = (props) => (
-  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" {...props}>
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" {...props}>
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 );
 
 const LinkedinIcon = (props) => (
-  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" {...props}>
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" {...props}>
     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
   </svg>
 );
 const InstagramIcon = (props) => (
-  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" {...props}>
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" {...props}>
     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
   </svg>
 );
@@ -83,7 +83,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-2 rounded-full bg-[#14183e] text-white px-7 py-3.5 text-sm font-bold shadow-xl hover:bg-slate-900 hover:-translate-y-0.5 transition-all duration-300"
                 >
                   <span>Claim Free Growth Audit</span>
-                  <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+                  <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
                 </Link>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function Footer() {
         </div>
       </section> */}
 
-      <footer className="relative bg-[#f4f5f7] text-slate-800 py-16 overflow-hidden w-full mt-auto border-t border-slate-200/50">
+      <footer className="relative bg-[#f4f5f7] text-slate-800 py-6 md:py-12 overflow-hidden w-full mt-auto border-t border-slate-200/50">
         {/* Decorative background rings to match mockup visual circles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-1">
           {/* Left Concentric Arcs */}
@@ -177,7 +177,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-12 lg:gap-8 items-start">
             {/* Column 1: Logo & Branding */}
             <div className="flex flex-col">
-              <Link href="/" className="inline-block mb-6">
+              <Link href="/" className="inline-block mb-4">
                 <Image
                   src="/assets/images/logo/logo.png"
                   alt="AKSH DIGITAL Logo"
@@ -187,7 +187,7 @@ export default function Footer() {
                   priority
                 />
               </Link>
-              <p className="text-black text-[15px] leading-relaxed mb-8 max-w-sm">
+              <p className="text-black text-xs  leading-relaxed mb-4 max-w-sm">
                 Aksh Digital is a premium digital marketing agency in Jaipur
                 offering SEO services, Google Ads management, social media
                 marketing, and website development across India. We help
@@ -214,7 +214,7 @@ export default function Footer() {
               </a>
             </div> */}
 
-              <div className="w-full h-48 sm:h-52 rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 transition-all duration-300 hover:shadow-md hover:border-slate-300 mt-2">
+              <div className="w-full h-46 rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 transition-all duration-300 hover:shadow-md hover:border-slate-300 mt-2">
                 <iframe
                   title="Aksh Digital Location Map"
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2738.3645126381944!2d75.79978247543862!3d26.888135776661827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDUzJzE3LjMiTiA3NcKwNDgnMDguNSJF!5e1!3m2!1sen!2sin!4v1790759315840!5m2!1sen!2sin"
@@ -226,10 +226,9 @@ export default function Footer() {
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-full transition-all duration-300"
                 />
-                
               </div>
             </div>
-            <div className="grid grid-cols-1! md:grid-cols-2! lg:grid-cols-[auto_auto_auto] gap-8 lg:pl-10">
+            <div className="grid grid-cols-2! lg:grid-cols-[auto_auto_auto] gap-8 lg:pl-10">
               {/* Column 2: Quick Links */}
               <div className=" max-w-50">
                 <div className="relative mb-6 pb-2 inline-block">
@@ -314,7 +313,7 @@ export default function Footer() {
               </div>
 
               {/* Column 4: Contact / Address Card */}
-              <div>
+              <div className="max-lg:col-span-2">
                 <div className="bg-white rounded-[2rem] p-7 sm:p-8 shadow-[0_24px_50px_-15px_rgba(0,0,0,0.04)] border border-slate-100/90 flex flex-col gap-6 w-full lg:max-w-sm ml-auto">
                   <div>
                     <h4 className="text-[22px] font-bold text-slate-900 leading-tight mb-2">
@@ -339,7 +338,6 @@ export default function Footer() {
                         >
                           akshdigital9@gmail.com
                         </a>
-                    
                       </div>
                     </div>
 
@@ -360,7 +358,7 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="pt-2 lg:col-span-3 mt-5">
+              <div className="pt-2 col-span-2 lg:col-span-3 mt-5">
                 <p className="text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">
                   SEO Services in
                 </p>
@@ -418,7 +416,7 @@ export default function Footer() {
                 <TwitterIcon />
               </a> */}
               <a
-                href="https://www.linkedin.com/company/aksh-digital-marketing-agency" 
+                href="https://www.linkedin.com/company/aksh-digital-marketing-agency"
                 className="p-2 hover:bg-slate-200/60 rounded-full transition-colors duration-200 text-black hover:text-primary"
                 aria-label="Linkedin"
               >

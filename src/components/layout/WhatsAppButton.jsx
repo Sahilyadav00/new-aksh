@@ -6,18 +6,30 @@ import { getCookie, setCookie } from "../../lib/cookies";
 
 export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    // Show a welcoming tooltip after 5 seconds to invite interaction
-    const timer = setTimeout(() => {
+    // Show a welcoming tooltip after 3 seconds to invite interaction
+    const showTimer = setTimeout(() => {
       const dismissed = getCookie("whatsapp_tooltip_dismissed");
       if (!dismissed) {
         setShowTooltip(true);
       }
+    }, 3000);
+
+    return () => clearTimeout(showTimer);
+  }, []);
+
+  // Automatically hide the tooltip after 5 seconds (pauses if user hovers over it)
+  useEffect(() => {
+    if (!showTooltip || isHovered) return;
+
+    const hideTimer = setTimeout(() => {
+      setShowTooltip(false);
     }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(hideTimer);
+  }, [showTooltip, isHovered]);
 
   const handleDismissTooltip = (e) => {
     e.preventDefault();
@@ -36,7 +48,11 @@ export default function WhatsAppButton() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none">
       {/* Interactive Tooltip Chat Prompt */}
       {showTooltip && (
-        <div className="relative mb-3 max-w-72 bg-white rounded-2xl p-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] border border-slate-100 flex gap-3 items-start animate-fade-in-up pointer-events-auto">
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="relative mb-3 max-w-72 bg-white rounded-2xl p-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] border border-slate-100 flex gap-3 items-start animate-fade-in-up pointer-events-auto"
+        >
           <button
             onClick={handleDismissTooltip}
             className="absolute top-2 right-2 text-slate-400 hover:text-slate-600 transition-colors p-0.5 rounded-full hover:bg-slate-100"

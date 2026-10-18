@@ -147,7 +147,7 @@ export default function HomeTestimonials() {
         </div>
 
         {/* Trust summary strip */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 sm:gap-12 pt-6 border-t border-slate-200/60 text-slate-600 text-xs sm:text-sm font-semibold">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-12 pt-6  text-slate-600 text-xs sm:text-sm font-semibold">
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-emerald-500" />
             <span>100% Genuine Project Reviews</span>

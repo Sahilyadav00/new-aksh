@@ -264,4 +264,32 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ==========================================
+   Google Bard / Gemini AI Gradient Effects
+   ========================================== */
+@keyframes bardGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bard-gradient {
+  background: linear-gradient(115deg, #4285F4 0%, #9B72CF 36%, #D96570 72%, #F59E0B 100%);
+  background-size: 220% 220%;
+  animation: bardGradientShift 5s ease infinite;
+}
+
+.bard-gradient-glow {
+  background: linear-gradient(115deg, #4285F4 0%, #9B72CF 36%, #D96570 72%, #F59E0B 100%);
+  background-size: 220% 220%;
+  animation: bardGradientShift 5s ease infinite;
+}
+
+
 

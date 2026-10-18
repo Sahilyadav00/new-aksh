@@ -71,48 +71,7 @@ export default function InteractiveProcessSteps() {
 
   return (
     <div className="mt-12">
-      {/* Step Selection Tabs / Timeline Strip */}
-      <div className="hidden sm:grid grid-cols-4 gap-4 mb-8 relative">
-        {/* Connecting Line */}
-        <div
-          className="absolute top-1/2 left-8 right-8 h-0.5 bg-slate-200 -translate-y-1/2 z-0"
-          aria-hidden="true"
-        />
-
-        {steps.map((item, index) => {
-          const isActive = activeStep === index;
-          const Icon = item.icon;
-
-          return (
-            <button
-              key={item.step}
-              onClick={() => setActiveStep(index)}
-              className={`relative z-10 flex flex-col items-center p-3 rounded-2xl transition-all duration-300 cursor-pointer ${
-                isActive
-                  ? "bg-white shadow-md border border-primary/30 scale-105"
-                  : "bg-white/60 hover:bg-white border border-transparent hover:border-slate-200"
-              }`}
-            >
-              <div
-                className={`h-11 w-11 rounded-full flex items-center justify-center font-bold text-sm transition-colors duration-300 ${
-                  isActive
-                    ? "bg-primary text-white shadow-md shadow-primary/20"
-                    : "bg-slate-100 text-slate-600"
-                }`}
-              >
-                {item.step}
-              </div>
-              <span
-                className={`mt-2 text-xs font-bold transition-colors ${
-                  isActive ? "text-primary" : "text-slate-600"
-                }`}
-              >
-                {item.title}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+     
 
       {/* Grid of Step Cards with Active Highlight */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
@@ -180,16 +139,7 @@ export default function InteractiveProcessSteps() {
                 </div>
               </div>
 
-              {/* Bottom active pill */}
-              <div className="mt-5 pt-3 text-center">
-                <span
-                  className={`text-[11px] font-bold uppercase tracking-wider transition-colors ${
-                    isActive ? "text-primary" : "text-slate-400 group-hover:text-slate-600"
-                  }`}
-                >
-                  {isActive ? "Active Stage" : "Click to Explore"}
-                </span>
-              </div>
+            
             </div>
           );
         })}

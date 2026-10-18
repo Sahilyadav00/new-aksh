@@ -96,6 +96,57 @@ const serviceData = [
   },
 ];
 
+const serviceThemes = {
+  seo: {
+    cardBg: "bg-gradient-to-br from-white via-[#fffaf5] to-orange-100/40",
+    border: "border-orange-200/90 hover:border-orange-400",
+    shadowHover: "hover:shadow-[0_20px_45px_-10px_rgba(234,88,12,0.22)]",
+    watermarkColor: "text-orange-500/10 group-hover:text-orange-500/32",
+    categoryText: "text-orange-600",
+    badge: "bg-orange-100/90 text-orange-800 border-orange-200",
+    topBar: "bg-gradient-to-r from-orange-500 to-amber-500",
+    arrowBtn:
+      "bg-orange-50 border-orange-200 text-orange-600 group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500",
+    actionLink: "text-orange-600 group-hover:text-orange-700",
+  },
+  ads: {
+    cardBg: "bg-gradient-to-br from-white via-[#f8faff] to-blue-100/40",
+    border: "border-blue-200/90 hover:border-blue-400",
+    shadowHover: "hover:shadow-[0_20px_45px_-10px_rgba(37,99,235,0.22)]",
+    watermarkColor: "text-blue-500/10 group-hover:text-blue-500/32",
+    categoryText: "text-blue-600",
+    badge: "bg-blue-100/90 text-blue-800 border-blue-200",
+    topBar: "bg-gradient-to-r from-blue-500 to-indigo-500",
+    arrowBtn:
+      "bg-blue-50 border-blue-200 text-blue-600 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500",
+    actionLink: "text-blue-600 group-hover:text-blue-700",
+  },
+  dev: {
+    cardBg: "bg-gradient-to-br from-white via-[#f6fdfa] to-emerald-100/40",
+    border: "border-emerald-200/90 hover:border-emerald-400",
+    shadowHover: "hover:shadow-[0_20px_45px_-10px_rgba(16,185,129,0.22)]",
+    watermarkColor: "text-emerald-500/10 group-hover:text-emerald-500/32",
+    categoryText: "text-emerald-600",
+    badge: "bg-emerald-100/90 text-emerald-800 border-emerald-200",
+    topBar: "bg-gradient-to-r from-emerald-500 to-teal-500",
+    arrowBtn:
+      "bg-emerald-50 border-emerald-200 text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-500",
+    actionLink: "text-emerald-600 group-hover:text-emerald-700",
+  },
+  social: {
+    cardBg: "bg-gradient-to-br from-white via-[#fff8fa] to-rose-100/40",
+    border: "border-rose-200/90 hover:border-rose-400",
+    shadowHover: "hover:shadow-[0_20px_45px_-10px_rgba(244,63,94,0.22)]",
+    watermarkColor: "text-rose-500/10 group-hover:text-rose-500/32",
+    categoryText: "text-rose-600",
+    badge: "bg-rose-100/90 text-rose-800 border-rose-200",
+    topBar: "bg-gradient-to-r from-rose-500 to-pink-500",
+    arrowBtn:
+      "bg-rose-50 border-rose-200 text-rose-600 group-hover:bg-rose-500 group-hover:text-white group-hover:border-rose-500",
+    actionLink: "text-rose-600 group-hover:text-rose-700",
+  },
+};
+
 const categoryTabs = [
   { id: "all", label: "All Capabilities" },
   { id: "seo", label: "Search & SEO" },
@@ -134,93 +185,102 @@ export default function InteractiveServiceTabs() {
         })}
       </div>
 
-      {/* Services Grid with Light Gradient Backgrounds & Hover Elevation */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {filteredServices.map((service, idx) => {
+      {/* Services Grid with Distinct Light Colors, Bold Watermark Icons & Elevation */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-8">
+        {filteredServices.map((service) => {
           const Icon = service.icon;
+          const theme = serviceThemes[service.id] || serviceThemes.seo;
 
           return (
             <div
               key={service.title}
-              className={`group relative rounded-3xl border border-slate-200/90 bg-linear-to-br from-white via-[#faf9f6] to-orange-50/20 p-7 sm:p-9 shadow-sm hover:shadow-2xl hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between`}
+              className={`group relative rounded-3xl border ${theme.border} ${theme.cardBg} p-7 sm:p-9 shadow-[0_4px_22px_-6px_rgba(0,0,0,0.04)] ${theme.shadowHover} hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden`}
             >
-              {/* Top Gradient Highlight Bar */}
-              <div className="absolute top-0 left-8 right-8 h-1 rounded-b-full bg-linear-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* Top Gradient Highlight Line on Hover */}
+              <div
+                className={`absolute top-0 left-8 right-8 h-1 rounded-b-full ${theme.topBar} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+              />
 
-              <div>
-                {/* Header row with Icon, Badge, and Action Link */}
-                <div className="flex items-center justify-between gap-3 mb-6">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-xs">
-                      <Icon className="h-7 w-7" strokeWidth={2} />
-                    </span>
-                    <span
-                      className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold border ${service.badgeColor}`}
-                    >
-                      <TrendingUp className="w-3 h-3" />
-                      {service.badge}
-                    </span>
+              {/* Big, Distinctly Colored, Bold Watermark Icon in Card Background */}
+              <div
+                className={`absolute bottom-2 right-2 pointer-events-none select-none ${theme.watermarkColor} transition-all duration-500 transform group-hover:scale-105 group-hover:-rotate-3`}
+                aria-hidden="true"
+              >
+                <Icon
+                  className="w-56 h-56 sm:w-64 sm:h-64 -mr-4 -mb-4"
+                  strokeWidth={3}
+                />
+              </div>
+
+              <div className="relative z-10">
+                {/* Header row with Category, Badge, Title and Circular Action Button */}
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="flex-1 pr-2">
+                    {/* Category Label & Metric Tag */}
+                    <div className="flex items-center gap-2 mb-2 flex-wrap">
+                      <span
+                        className={`text-[11px] font-bold uppercase tracking-wider ${theme.categoryText}`}
+                      >
+                        {service.category}
+                      </span>
+                      <span className="inline-block w-1 h-1 rounded-full bg-slate-300" />
+                      <span
+                        className={`inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-0.5 rounded-full border shadow-2xs ${theme.badge}`}
+                      >
+                        <TrendingUp className="w-3 h-3" />
+                        {service.badge}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl sm:text-[22px] font-bold text-slate-900 group-hover:text-primary transition-colors leading-snug">
+                      {service.title}
+                    </h3>
                   </div>
 
+                  {/* Circular Arrow Link */}
                   <Link
                     href={service.href}
-                    className="text-slate-400 group-hover:text-primary transition-colors h-10 w-10 rounded-full flex items-center justify-center group-hover:bg-primary/10"
+                    className={`shrink-0 w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 shadow-2xs group-hover:scale-105 ${theme.arrowBtn}`}
                     aria-label={service.title}
                   >
                     <ArrowRight
                       className="h-5 w-5 -rotate-45 group-hover:rotate-0 transition-transform duration-300"
-                      strokeWidth={2.5}
+                      strokeWidth={2.2}
                     />
                   </Link>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-
-                <p className="mt-3 text-slate-600 text-sm sm:text-[15px] leading-relaxed">
+                {/* Summary Description */}
+                <p className="mt-3 text-slate-600 text-sm sm:text-[14.5px] leading-relaxed">
                   {service.summary}
                 </p>
 
-                {/* Key Deliverables Bullet Pills */}
-                <div className="mt-5 space-y-2">
-                  {service.deliverables.map((item, dIdx) => (
-                    <div
-                      key={dIdx}
-                      className="flex items-center gap-2 text-xs sm:text-[13px] text-slate-700 font-medium"
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-
+                {/* Key Focus */}
                 <div className="mt-6 pt-4 border-t border-slate-200/60">
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                  <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
                     Key Focus:
                   </p>
-                  <p className="text-xs sm:text-sm font-semibold text-slate-800">
+                  <p className="text-xs sm:text-[13.5px] font-semibold text-slate-800 leading-snug">
                     {service.keyFocus}
                   </p>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 flex items-center justify-between">
+              {/* Bottom Footer Actions */}
+              <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between relative z-10">
                 <Link
                   href={service.href}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary group-hover:underline"
+                  className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider ${theme.actionLink} transition-all`}
                 >
-                  <span>Learn More</span>
-                  <ArrowRight
-                    className="h-3.5 w-3.5 group-hover:translate-x-1.5 transition-transform"
-                    strokeWidth={2.5}
-                  />
+                  <span>Explore Capabilities</span>
+                  <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
                 </Link>
                 <Link
                   href="/contact/"
-                  className="text-[11px] font-semibold text-slate-500 hover:text-slate-900 transition-colors"
+                  className="text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors"
                 >
-                  Book Consultation →
+                  Book Strategy Call →
                 </Link>
               </div>
             </div>
