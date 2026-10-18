@@ -3,6 +3,7 @@ import Link from "next/link";
 import HomeTestimonials from "@/components/HomeTestimonials";
 import HomeFaq from "@/components/HomeFaq";
 import ScrollObserver from "@/components/ScrollObserver";
+import HomeScrollAnimations from "@/components/HomeScrollAnimations";
 import FreeAuditForm from "@/components/FreeAuditForm";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import DualTechMarquee from "@/components/DualTechMarquee";
@@ -334,9 +335,10 @@ export default function Home() {
   return (
     <>
       <ScrollObserver />
+      <HomeScrollAnimations />
 
       {/* 1. Hero Section with Warm Light Gradient Background */}
-      <section className="max-w-384 mx-auto w-full bg-linear-to-b from-[#fdfaf8] via-[#faf7f3] to-[#f8f4ed] border-b border-orange-100/60 shadow-[0_12px_40px_-15px_rgba(210,92,65,0.04)] px-3 md:px-6 py-4  relative overflow-hidden">
+      <section className="home-hero-section max-w-384 mx-auto w-full bg-linear-to-b from-[#fdfaf8] via-[#faf7f3] to-[#f8f4ed] border-b border-orange-100/60 shadow-[0_12px_40px_-15px_rgba(210,92,65,0.04)] px-3 md:px-6 py-4  relative overflow-hidden">
         {/* Ambient Gradient Glows and Dotted Pattern */}
         <div
           className="pointer-events-none absolute -top-24 right-0 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-orange-200/20 via-amber-100/15 to-transparent blur-3xl"
@@ -360,7 +362,7 @@ export default function Home() {
           {/* Left Column: Text Content */}
           <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left max-w-2xl">
             {/* Live Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-orange-200/80 bg-orange-50/70 text-orange-600 text-xs sm:text-[13px] font-semibold tracking-wide shadow-2xs animate-on-load-fade-up animation-delay-100">
+            <div className="home-hero-pill inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-orange-200/80 bg-orange-50/70 text-orange-600 text-xs sm:text-[13px] font-semibold tracking-wide shadow-2xs">
               <span className="h-2 w-2 rounded-full bg-orange-500" />
               <span>Global Vision • Local Precision • Scalable Results</span>
               <ArrowRight
@@ -370,7 +372,7 @@ export default function Home() {
             </div>
 
             {/* Primary H1 Headline */}
-            <h1 className="text-[34px] sm:text-[46px] md:text-[52px] lg:text-[56px] xl:text-[60px] font-extrabold text-slate-900 leading-[1.1] mt-5 mb-5 tracking-tight animate-on-load-fade-up animation-delay-200">
+            <h1 className="home-hero-title text-[34px] sm:text-[46px] md:text-[52px] lg:text-[56px] xl:text-[60px] font-extrabold text-slate-900 leading-[1.1] mt-5 mb-5 tracking-tight">
               Software Development &amp;{" "}
               <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#e85b2e] via-[#ee7439] to-[#f58d4a]">
                 Performance Marketing Agency
@@ -378,7 +380,7 @@ export default function Home() {
             </h1>
 
             {/* Sub-Headline */}
-            <p className="text-slate-600 text-[14.5px] sm:text-[15.5px] md:text-[16px] leading-relaxed mb-7 max-w-xl animate-on-load-fade-up animation-delay-300">
+            <p className="home-hero-sub text-slate-600 text-[14.5px] sm:text-[15.5px] md:text-[16px] leading-relaxed mb-7 max-w-xl">
               Partner with the leading growth and engineering agency in India
               for scalable web applications, dominant SEO strategies, and
               high-ROAS paid media campaigns. From Jaipur to high-growth
@@ -387,10 +389,10 @@ export default function Home() {
             </p>
 
             {/* Primary & Secondary CTAs */}
-            <div className="flex flex-wrap gap-3.5 sm:gap-4 items-center w-full sm:w-auto animate-on-load-fade-up animation-delay-400">
+            <div className="flex flex-wrap gap-3.5 sm:gap-4 items-center w-full sm:w-auto">
               <Link
                 href="/contact/"
-                className="group inline-flex items-center justify-center gap-2.5 bg-linear-to-r from-[#e85b2e] via-[#ee7439] to-[#f58d4a] text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-[15px] shadow-[0_10px_25px_-5px_rgba(232,91,46,0.45)] hover:shadow-[0_16px_32px_-5px_rgba(232,91,46,0.6)] hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
+                className="home-hero-cta group inline-flex items-center justify-center gap-2.5 bg-linear-to-r from-[#e85b2e] via-[#ee7439] to-[#f58d4a] text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-[15px] shadow-[0_10px_25px_-5px_rgba(232,91,46,0.45)] hover:shadow-[0_16px_32px_-5px_rgba(232,91,46,0.6)] hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
               >
                 <span>Schedule a Strategy Call</span>
                 <ArrowRight
@@ -400,7 +402,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/services/"
-                className="group inline-flex items-center justify-center gap-2.5 bg-white text-slate-800 border border-slate-200/90 hover:border-slate-300 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-[15px] shadow-xs hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
+                className="home-hero-cta group inline-flex items-center justify-center gap-2.5 bg-white text-slate-800 border border-slate-200/90 hover:border-slate-300 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-[15px] shadow-xs hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
               >
                 <span>Explore Our Services</span>
                 <ArrowRight
@@ -411,8 +413,8 @@ export default function Home() {
             </div>
 
             {/* 4-Pillars Trust Features Strip */}
-            <div className="mt-9 pt-7 border-t border-slate-200/70 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-4 w-full animate-on-load-fade-up animation-delay-500">
-              <div className="flex items-center gap-3">
+            <div className="mt-9 pt-7 border-t border-slate-200/70 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-4 w-full">
+              <div className="home-hero-trust-item flex items-center gap-3">
                 <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-orange-100/70 text-[#e85b2e] shadow-2xs">
                   <Rocket className="w-5 h-5" strokeWidth={2.2} />
                 </div>
@@ -422,7 +424,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="home-hero-trust-item flex items-center gap-3">
                 <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-orange-100/70 text-[#e85b2e] shadow-2xs">
                   <TrendingUp className="w-5 h-5" strokeWidth={2.2} />
                 </div>
@@ -432,7 +434,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="home-hero-trust-item flex items-center gap-3">
                 <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-orange-100/70 text-[#e85b2e] shadow-2xs">
                   <Users className="w-5 h-5" strokeWidth={2.2} />
                 </div>
@@ -442,7 +444,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="home-hero-trust-item flex items-center gap-3">
                 <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-orange-100/70 text-[#e85b2e] shadow-2xs">
                   <ShieldCheck className="w-5 h-5" strokeWidth={2.2} />
                 </div>
@@ -455,7 +457,7 @@ export default function Home() {
           </div>
 
           {/* Right Column: Visual Component matching Reference Mockup with Floating UI Badges */}
-          <div className="lg:col-span-6 xl:col-span-6 relative w-full flex items-center justify-center lg:justify-end animate-on-load-scale animation-delay-200 py-6 sm:py-8 select-none">
+          <div className="lg:col-span-6 xl:col-span-6 relative w-full flex items-center justify-center lg:justify-end py-6 sm:py-8 select-none">
             <div className="relative w-full max-w-[480px] sm:max-w-[520px] md:max-w-[560px] flex items-center justify-center">
               {/* 1. Ambient Concentric Warm Circular Halos behind the Girl */}
               <div
@@ -495,7 +497,7 @@ export default function Home() {
 
               {/* 2. Main Hero Transparent Girl Image with Bottom-Only Shadow */}
               <div className="relative z-10 w-full flex flex-col items-center justify-center">
-                <div className="relative w-fit flex items-center justify-center">
+                <div className="home-hero-image relative w-fit flex items-center justify-center">
                   <Image
                     src="/assets/images/home/hero-imagee.png"
                     alt="Aksh Digital - Growth & Performance Marketing"
@@ -517,7 +519,7 @@ export default function Home() {
               </div>
 
               {/* 3. Floating UI Card: Rating Badge (Top Left) */}
-              <div className="absolute top-0 -left-2 sm:top-2 sm:-left-6 lg:-left-8 z-20 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 sm:p-3.5 shadow-[0_14px_36px_rgba(0,0,0,0.08)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3.5 hover:scale-105 transition-all duration-300 card-smooth">
+              <div className="home-hero-card-left absolute top-0 -left-2 sm:top-2 sm:-left-6 lg:-left-8 z-20 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 sm:p-3.5 shadow-[0_14px_36px_rgba(0,0,0,0.08)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3.5 hover:scale-105 transition-all duration-300 card-smooth">
                 {/* Avatar Stack */}
                 <div className="flex -space-x-2">
                   <span className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-linear-to-tr from-amber-400 to-orange-400 text-white font-bold text-[9px] ring-2 ring-white">
@@ -565,7 +567,7 @@ export default function Home() {
               </div>
 
               {/* 4. Floating UI Card: Performance Ads Bar (Bottom Left) */}
-              <div className="absolute bottom-6 -left-2 sm:bottom-10 sm:-left-6 lg:-left-6 z-20 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-[0_14px_36px_rgba(0,0,0,0.08)] border border-slate-100/90 flex flex-col min-w-[140px] sm:min-w-[170px] hover:scale-105 transition-all duration-300 card-smooth">
+              <div className="home-hero-card-bottom absolute bottom-6 -left-2 sm:bottom-10 sm:-left-6 lg:-left-6 z-20 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-[0_14px_36px_rgba(0,0,0,0.08)] border border-slate-100/90 flex flex-col min-w-[140px] sm:min-w-[170px] hover:scale-105 transition-all duration-300 card-smooth">
                 <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold text-amber-500 mb-2">
                   <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
                   <span className="text-slate-800 font-extrabold">
@@ -597,7 +599,7 @@ export default function Home() {
               </div>
 
               {/* 5. Floating UI Card: Growth Chart (Top Right) */}
-              <div className="absolute top-2 -right-2 sm:top-6 sm:-right-6 lg:-right-8 z-20 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.09)] border border-slate-100/90 flex flex-col min-w-[155px] sm:min-w-[190px] md:min-w-[210px] hover:scale-105 transition-all duration-300 card-smooth">
+              <div className="home-hero-card-bottom absolute top-2 -right-2 sm:top-6 sm:-right-6 lg:-right-8 z-20 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.09)] border border-slate-100/90 flex flex-col min-w-[155px] sm:min-w-[190px] md:min-w-[210px] hover:scale-105 transition-all duration-300 card-smooth">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-2.5 text-[11px]">
                   <span className="font-extrabold text-slate-900 text-xs sm:text-[13px]">
@@ -662,7 +664,7 @@ export default function Home() {
               </div>
 
               {/* 6. Floating UI Card: Web & Mobile Development Badge (Bottom Right) */}
-              <div className="absolute bottom-8 -right-2 sm:bottom-14 sm:-right-6 lg:-right-6 z-20 bg-white/95 backdrop-blur-md rounded-2xl px-3 sm:px-4 py-2.5 sm:py-3 shadow-[0_14px_36px_rgba(0,0,0,0.08)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3 hover:scale-105 transition-all duration-300 card-smooth">
+              <div className="home-hero-card-bottom absolute bottom-8 -right-2 sm:bottom-14 sm:-right-6 lg:-right-6 z-20 bg-white/95 backdrop-blur-md rounded-2xl px-3 sm:px-4 py-2.5 sm:py-3 shadow-[0_14px_36px_rgba(0,0,0,0.08)] border border-slate-100/90 flex items-center gap-2.5 sm:gap-3 hover:scale-105 transition-all duration-300 card-smooth">
                 <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-xl bg-orange-100/80 text-orange-600 font-mono font-bold text-xs sm:text-sm shadow-2xs">
                   {"</>"}
                 </div>
@@ -696,12 +698,12 @@ export default function Home() {
       </section>
 
       {/* Trust Badges Strip with Soft Warm Gradient */}
-      <section className="bg-[linear-gradient(90deg,#f5f2ed_50%,#FFCC8041_100%)] border-b border-orange-100/70 py-6">
+      <section className="home-trust-strip bg-[linear-gradient(90deg,#f5f2ed_50%,#FFCC8041_100%)] border-b border-orange-100/70 py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 w-full grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {trustBadges.map((badge, idx) => (
             <div
               key={idx}
-              className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 bg-linear-to-br from-white to-orange-50/40 rounded-xl px-3.5 py-2.5 border border-orange-100/80 shadow-2xs hover:border-primary/40 hover:shadow-xs transition-all duration-300"
+              className="home-trust-badge flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 bg-linear-to-br from-white to-orange-50/40 rounded-xl px-3.5 py-2.5 border border-orange-100/80 shadow-2xs hover:border-primary/40 hover:shadow-xs transition-all duration-300"
             >
               <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
               <span>{badge}</span>
@@ -731,7 +733,7 @@ export default function Home() {
       </section> */}
 
       {/* 3. About Aksh Digital Section */}
-      <section className="relative w-full overflow-hidden bg-linear-to-b from-[#f5f2ed] via-[#faf8f5] to-[#f4f1ea] px-3 sm:px-6 md:px-8 pt-6 sm:pt-12 md:pt-16 border-b border-orange-100/60">
+      <section className="home-about-section relative w-full overflow-hidden bg-linear-to-b from-[#f5f2ed] via-[#faf8f5] to-[#f4f1ea] px-3 sm:px-6 md:px-8 pt-6 sm:pt-12 md:pt-16 border-b border-orange-100/60">
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-violet-200/35 blur-3xl" />
           <div className="absolute -right-16 top-0 h-64 w-64 rounded-full bg-orange-200/40 blur-3xl" />
@@ -740,7 +742,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="grid grid-cols-1 items-center  lg:grid-cols-2 gap-6 lg:gap-12 ">
             {/* Left: image + floating elements */}
-            <div className="relative mx-auto w-full max-w-lg lg:max-w-none reveal reveal-left">
+            <div className="home-about-image relative mx-auto w-full max-w-lg lg:max-w-none">
               <Lightbulb
                 className="pointer-events-none absolute -left-2 top-8 z-0 h-28 w-28 text-slate-200/80 sm:h-36 sm:w-36"
                 strokeWidth={1}
@@ -758,7 +760,7 @@ export default function Home() {
             </div>
 
             {/* Right: content */}
-            <div className="relative font-sans">
+            <div className="home-about-text relative font-sans">
               <Target
                 className="pointer-events-none absolute -right-2 top-0 z-0 h-24 w-24 text-slate-200/70 sm:h-32 sm:w-32"
                 strokeWidth={1}
@@ -766,7 +768,7 @@ export default function Home() {
               />
 
               <div className="relative z-10">
-                <div className="flex items-center gap-2 reveal reveal-right">
+                <div className="flex items-center gap-2">
                   <span className="text-sm font-semibold text-primary sm:text-[15px]">
                     About Aksh Digital
                   </span>
@@ -777,12 +779,12 @@ export default function Home() {
                   </span>
                 </div>
 
-                <h2 className="mt-4 text-[28px] font-bold leading-tight text-[#1a2744] sm:text-[34px] md:text-[38px] lg:text-[42px] reveal reveal-right delay-100">
+                <h2 className="mt-4 text-[28px] font-bold leading-tight text-[#1a2744] sm:text-[34px] md:text-[38px] lg:text-[42px]">
                   Empowering Businesses with Software Innovation &amp;
                   Data-Driven Growth
                 </h2>
 
-                <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-slate-600 sm:text-base reveal reveal-right delay-200">
+                <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-slate-600 sm:text-base">
                   Aksh Digital is a full-service software development and
                   performance digital marketing agency headquartered in Jaipur,
                   serving ambitious businesses across India, the USA, the UK,
@@ -801,8 +803,8 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
           <div className="">
             {/* Key Performance Highlights with Animated Counters */}
-            <ul className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 reveal reveal-right delay-300">
-              <li className="flex gap-4 bg-linear-to-br from-white via-white to-orange-50/30 p-5 rounded-2xl border border-orange-200/60 shadow-xs hover:shadow-xl hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-300">
+            <ul className="home-about-stats-grid mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
+              <li className="home-about-stat-card flex gap-4 bg-linear-to-br from-white via-white to-orange-50/30 p-5 rounded-2xl border border-orange-200/60 shadow-xs hover:shadow-xl hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-300">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-white shadow-xs">
                   <Megaphone className="h-5 w-5" strokeWidth={2} />
                 </span>
@@ -817,7 +819,7 @@ export default function Home() {
                   </p>
                 </div>
               </li>
-              <li className="flex gap-4 bg-linear-to-br from-white via-white to-orange-50/30 p-5 rounded-2xl border border-orange-200/60 shadow-xs hover:shadow-xl hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-300">
+              <li className="home-about-stat-card flex gap-4 bg-linear-to-br from-white via-white to-orange-50/30 p-5 rounded-2xl border border-orange-200/60 shadow-xs hover:shadow-xl hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-300">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-white shadow-xs">
                   <TrendingUp className="h-5 w-5" strokeWidth={2} />
                 </span>
@@ -835,10 +837,10 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="flex delay-300">
+          <div className="home-about-quote flex delay-300">
             <div>
               {/* Micro-CTA Quote */}
-              <p className="mt-8 flex gap-2 text-[15px] font-bold italic text-[#1e3a6e] sm:text-base reveal reveal-right delay-400">
+              <p className="mt-8 flex gap-2 text-[15px] font-bold italic text-[#1e3a6e] sm:text-base">
                 <Quote
                   className="mt-0.5 h-6 w-6 shrink-0 fill-[#93c5fd] text-[#93c5fd]"
                   aria-hidden
@@ -849,7 +851,7 @@ export default function Home() {
                 </span>
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-5 sm:gap-6 reveal reveal-right delay-500">
+              <div className="mt-8 flex flex-wrap items-center gap-5 sm:gap-6">
                 <Link
                   href="/about/"
                   className="inline-flex items-center justify-center rounded-full bg-[#3b6fd4] px-7 py-3.5 text-sm font-bold tracking-wide text-white transition-all hover:bg-[#2f5eb8] hover:shadow-md"
@@ -871,9 +873,9 @@ export default function Home() {
       </section>
 
       {/* 4. Core Services Section with Interactive Tabs & Light Gradient */}
-      <section className="w-full bg-linear-to-b from-[#f4f1ea] via-[#faf8f5] to-white px-3 sm:px-6 md:px-8 py-12  border-b border-orange-100/50">
+      <section className="home-services-section w-full bg-linear-to-b from-[#f4f1ea] via-[#faf8f5] to-white px-3 sm:px-6 md:px-8 py-12  border-b border-orange-100/50">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-10 sm:mb-12">
+          <div className="home-services-header mb-10 sm:mb-12">
             <div className="flex items-center gap-2">
               <span className="text-sm font-semibold text-primary sm:text-[15px]">
                 What We Do
@@ -894,12 +896,14 @@ export default function Home() {
           </div>
 
           {/* Interactive Service Filter Tabs */}
-          <InteractiveServiceTabs />
+          <div className="home-services-tabs">
+            <InteractiveServiceTabs />
+          </div>
 
           <div className="mt-12 text-center">
             <Link
               href="/services/"
-              className="inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-4 text-sm font-bold tracking-wide text-white hover:bg-primary transition-colors duration-300 shadow-md"
+              className="home-services-cta inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-4 text-sm font-bold tracking-wide text-white hover:bg-primary transition-colors duration-300 shadow-md"
             >
               View All Services &amp; Case Studies
             </Link>
@@ -908,10 +912,10 @@ export default function Home() {
       </section>
 
       {/* 5. Global & Local Delivery Framework */}
-      <section className="relative w-full bg-linear-to-b from-[#f6f4ee] via-[#faf8f5] to-[#f4f1eb]  px-4 sm:px-6 md:px-8 py-12  overflow-hidden">
+      <section className="home-hubs-section relative w-full bg-linear-to-b from-[#f6f4ee] via-[#faf8f5] to-[#f4f1eb]  px-4 sm:px-6 md:px-8 py-12  overflow-hidden">
         <div className="relative z-10 mx-auto max-w-6xl">
           {/* Section Header: Centered Eyebrow & High-Contrast Heading */}
-          <div className="relative mb-12  text-center max-w-3xl mx-auto">
+          <div className="home-hubs-header relative mb-12  text-center max-w-3xl mx-auto">
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center justify-center gap-3 mb-3 sm:mb-4">
               <span className="h-0.5 w-6 rounded-full bg-primary" />
@@ -937,9 +941,9 @@ export default function Home() {
           </div>
 
           {/* Two Distinct Comparison Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="home-hubs-cards grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card 1: For International Clients */}
-            <div className="group relative rounded-3xl border-2 border-[#5dade2] bg-white p-7 sm:p-9 lg:p-11 shadow-[0_12px_40px_-12px_rgba(59,130,246,0.12)] hover:shadow-[0_20px_50px_-12px_rgba(59,130,246,0.22)] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div className="home-hubs-card-global group relative rounded-3xl border-2 border-[#5dade2] bg-white p-7 sm:p-9 lg:p-11 shadow-[0_12px_40px_-12px_rgba(59,130,246,0.12)] hover:shadow-[0_20px_50px_-12px_rgba(59,130,246,0.22)] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
               {/* World Map with Dotted Network Connections in Top-Right */}
               <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-36 sm:w-48 h-24 sm:h-28 pointer-events-none select-none opacity-80">
                 <Image
@@ -963,8 +967,8 @@ export default function Home() {
                   <path
                     d="M0 245L37.5 262.8C75 280.7 150 316.3 225 320.5C300 324.7 375 297.3 450 314.5C525 331.7 600 393.3 675 414.3C750 435.3 825 415.7 862.5 405.8L900 396L900 601L862.5 601C825 601 750 601 675 601C600 601 525 601 450 601C375 601 300 601 225 601C150 601 75 601 37.5 601L0 601Z"
                     fill="#dbeafe"
-                    stroke-linecap="round"
-                    stroke-linejoin="miter"
+                    strokeLinecap="round"
+                    strokeLinejoin="miter"
                   />
                 </svg>
               </div>
@@ -1008,7 +1012,7 @@ export default function Home() {
             </div>
 
             {/* Card 2: For Pan-India & Local Businesses */}
-            <div className="group relative rounded-3xl border-2 border-[#f97316] bg-white p-7 sm:p-9 lg:p-11 shadow-[0_12px_40px_-12px_rgba(249,115,22,0.12)] hover:shadow-[0_20px_50px_-12px_rgba(249,115,22,0.22)] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+            <div className="home-hubs-card-local group relative rounded-3xl border-2 border-[#f97316] bg-white p-7 sm:p-9 lg:p-11 shadow-[0_12px_40px_-12px_rgba(249,115,22,0.12)] hover:shadow-[0_20px_50px_-12px_rgba(249,115,22,0.22)] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between">
               {/* Miniature Hawa Mahal in Top-Right Corner */}
               <div className="absolute top-2 right-2 sm:top-3 sm:right-3 w-36 sm:w-60 pointer-events-none select-none opacity-90 overflow-hidden">
                 <Image
@@ -1082,10 +1086,10 @@ export default function Home() {
       </section>
 
       {/* How We Do & Interactive Process Steps */}
-      <section className="w-full py-12 bg-linear-to-b from-[#f6f4ee] via-[#faf8f5] to-[#f4f1eb] px-3 sm:px-6 md:px-8 border-b border-orange-100/50">
+      <section className="home-process-section w-full py-12 bg-linear-to-b from-[#f6f4ee] via-[#faf8f5] to-[#f4f1eb] px-3 sm:px-6 md:px-8 border-b border-orange-100/50">
         <div className="mx-auto max-w-7xl">
           {/* Follow 4 Easy Work Steps - Interactive Process Timeline */}
-          <div className="text-center">
+          <div className="home-process-header text-center">
             <div className="flex items-center justify-center gap-3">
               <span
                 className="h-px w-8 bg-slate-200 sm:w-12"
@@ -1113,12 +1117,14 @@ export default function Home() {
           </div>
 
           {/* Interactive Step-by-Step Component */}
-          <InteractiveProcessSteps />
+          <div className="home-process-steps">
+            <InteractiveProcessSteps />
+          </div>
         </div>
       </section>
 
       {/* Extra Section 3: Industry / Vertical Expertise (Honeycomb Hexagons) */}
-      <section className="w-full bg-linear-to-b from-[#fbf9f5] via-[#faf7f2] to-[#f6f2ea] px-3 sm:px-6 md:px-8 py-12 border-t border-slate-200/60 relative overflow-hidden">
+      <section className="home-hexagons-section w-full bg-linear-to-b from-[#fbf9f5] via-[#faf7f2] to-[#f6f2ea] px-3 sm:px-6 md:px-8 py-12 border-t border-slate-200/60 relative overflow-hidden">
         {/* Soft Ambient Warm Glow */}
         <div
           className="pointer-events-none absolute -top-24 right-1/4 h-96 w-96 rounded-full bg-orange-200/20 blur-3xl"
@@ -1130,7 +1136,7 @@ export default function Home() {
         />
 
         <div className="mx-auto max-w-6xl relative z-10">
-          <div className=" text-center max-w-3xl mx-auto">
+          <div className="home-hexagons-header text-center max-w-3xl mx-auto">
             {/* Centered Eyebrow */}
             <div className="inline-flex items-center justify-center gap-2 mb-3">
               <span className="text-sm font-semibold text-primary sm:text-[15px] tracking-wide">
@@ -1160,22 +1166,26 @@ export default function Home() {
           </div>
 
           {/* Hexagonal Honeycomb Cluster */}
-          <IndustryHexagons />
+          <div className="home-hexagons-cluster">
+            <IndustryHexagons />
+          </div>
         </div>
       </section>
 
       {/* Dual Technologies & Growth Stack Marquee */}
-      <DualTechMarquee
-        devTechnologies={devTechnologies}
-        growthTools={growthTools}
-      />
+      <div className="home-tech-marquee">
+        <DualTechMarquee
+          devTechnologies={devTechnologies}
+          growthTools={growthTools}
+        />
+      </div>
 
       {/* 7. Client Results & Testimonials */}
       <HomeTestimonials />
 
       {/* Latest Work / Interactive Portfolio */}
-      <section className="relative w-full bg-linear-to-b from-[#f8f6f2] via-[#faf8f5] to-[#f4f0e8] px-3 sm:px-6 md:px-8 py-12 border-t border-slate-200/60">
-        <div className="relative z-10 mx-auto max-w-7xl text-center">
+      <section className="home-portfolio-section relative w-full bg-linear-to-b from-[#f8f6f2] via-[#faf8f5] to-[#f4f0e8] px-3 sm:px-6 md:px-8 py-12 border-t border-slate-200/60">
+        <div className="home-portfolio-header relative z-10 mx-auto max-w-7xl text-center">
           <div className="flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-slate-200 sm:w-12" aria-hidden />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary sm:text-sm">
@@ -1193,13 +1203,15 @@ export default function Home() {
           </p>
         </div>
 
-        <InteractivePortfolio />
+        <div className="home-portfolio-body">
+          <InteractivePortfolio />
+        </div>
       </section>
 
       {/* Extra Section 7: Why Businesses Choose Aksh Digital (SEO Trust Narrative) */}
-      <section className="w-full bg-linear-to-b from-[#f4f1ea] via-[#faf8f5] to-[#f1ede5] px-3 sm:px-6 md:px-8 py-12 border-t border-slate-200/60">
+      <section className="home-why-section w-full bg-linear-to-b from-[#f4f1ea] via-[#faf8f5] to-[#f1ede5] px-3 sm:px-6 md:px-8 py-12 border-t border-slate-200/60">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-14 text-center ">
+          <div className="home-why-header mb-14 text-center ">
             <div className="flex items-center gap-2 justify-center">
               <span className="flex gap-1" aria-hidden>
                 <span className="h-0.5 w-2 rounded-full bg-primary/30" />
@@ -1228,11 +1240,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          <div className="home-why-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {whyChooseUsPillars.map((pillar, idx) => (
               <div
                 key={pillar.title}
-                className="group relative rounded-3xl border border-white/80 bg-linear-to-br from-white/85 via-white/70 to-white/50 backdrop-blur-md p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_-12px_rgba(210,92,65,0.18)] hover:border-primary/40 hover:bg-white/90 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                className="home-why-card group relative rounded-3xl border border-white/80 bg-linear-to-br from-white/85 via-white/70 to-white/50 backdrop-blur-md p-7 sm:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_-12px_rgba(210,92,65,0.18)] hover:border-primary/40 hover:bg-white/90 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden"
               >
                 {/* Subtle Glass Top Highlight */}
                 <div className="absolute top-0 left-6 right-6 h-0.5 bg-linear-to-r from-transparent via-white to-transparent pointer-events-none" />
@@ -1269,7 +1281,7 @@ export default function Home() {
       <HomeFaq />
 
       {/* 9. Final Call to Action (CTA Banner) */}
-      <section className="w-full bg-linear-to-r from-slate-950 via-slate-900 to-slate-950 text-white py-18 sm:py-24 px-3 sm:px-6 md:px-8 relative overflow-hidden border-t border-slate-800">
+      <section className="home-cta-section w-full bg-linear-to-r from-slate-950 via-slate-900 to-slate-950 text-white py-18 sm:py-24 px-3 sm:px-6 md:px-8 relative overflow-hidden border-t border-slate-800">
         {/* Ambient Animated Blobs */}
         <div
           className="pointer-events-none absolute -top-24 left-1/4 h-80 w-80 rounded-full bg-primary/20 blur-3xl animate-mesh-1"
@@ -1280,7 +1292,7 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        <div className="mx-auto max-w-5xl text-center relative z-10">
+        <div className="home-cta-content mx-auto max-w-5xl text-center relative z-10">
           <div className="flex items-center gap-2 justify-center mb-6">
             <span className="text-xs sm:text-sm font-semibold text-primary uppercase tracking-widest">
               Let&apos;s Build Your Growth Roadmap

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import {
   FolderOpen,
   Mail,
@@ -26,6 +27,15 @@ import {
   Lock,
   Upload,
 } from "lucide-react";
+
+const TiptapEditor = dynamic(() => import("@/components/TipTapEditor"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[400px] border border-slate-200 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 text-xs">
+      Loading Rich Text Editor...
+    </div>
+  ),
+});
 
 export default function AdminDashboardPage() {
   const router = useRouter();
@@ -53,9 +63,7 @@ export default function AdminDashboardPage() {
   const [blogReadTime, setBlogReadTime] = useState("");
   const [blogImage, setBlogImage] = useState("");
   const [blogTags, setBlogTags] = useState("");
-  const [blogIntro, setBlogIntro] = useState("");
-  const [blogConclusion, setBlogConclusion] = useState("");
-  const [blogSections, setBlogSections] = useState([{ heading: "", body: "" }]);
+  const [blogContent, setBlogContent] = useState("");
 
   // Settings / Security Password Change States
   const [currentPassword, setCurrentPassword] = useState("");
@@ -214,9 +222,7 @@ export default function AdminDashboardPage() {
     setBlogReadTime("");
     setBlogImage("");
     setBlogTags("");
-    setBlogIntro("");
-    setBlogConclusion("");
-    setBlogSections([{ heading: "", body: "" }]);
+    setBlogContent("");
     setFormError("");
     setFormSuccess(false);
     setImageUploading(false);
@@ -233,13 +239,29 @@ export default function AdminDashboardPage() {
     setBlogReadTime(blog.readTime || "");
     setBlogImage(blog.image || "");
     setBlogTags(Array.isArray(blog.tags) ? blog.tags.join(", ") : "");
-    setBlogIntro(blog.content?.intro || "");
-    setBlogConclusion(blog.content?.conclusion || "");
-    setBlogSections(
-      Array.isArray(blog.content?.sections) && blog.content.sections.length > 0
-        ? blog.content.sections.map((s) => ({ heading: s.heading || "", body: s.body || "" }))
-        : [{ heading: "", body: "" }]
-    );
+
+    // Support raw HTML string or convert legacy section-based structure
+    if (typeof blog.content === "string") {
+      setBlogContent(blog.content);
+    } else if (blog.content) {
+      const parts = [];
+      if (blog.content.intro) {
+        parts.push(`<p><strong>${blog.content.intro}</strong></p>`);
+      }
+      if (Array.isArray(blog.content.sections)) {
+        blog.content.sections.forEach((s) => {
+          if (s.heading) parts.push(`<h2>${s.heading}</h2>`);
+          if (s.body) parts.push(`<p>${s.body.replace(/\n/g, "<br/>")}</p>`);
+        });
+      }
+      if (blog.content.conclusion) {
+        parts.push(`<blockquote><p><strong>Key Takeaway:</strong> ${blog.content.conclusion}</p></blockquote>`);
+      }
+      setBlogContent(parts.join(""));
+    } else {
+      setBlogContent("");
+    }
+
     setFormError("");
     setFormSuccess(false);
     setImageUploading(false);
@@ -247,25 +269,16 @@ export default function AdminDashboardPage() {
     setIsModalOpen(true);
   };
 
-  const handleAddSection = () => {
-    setBlogSections([...blogSections, { heading: "", body: "" }]);
-  };
-
-  const handleRemoveSection = (index) => {
-    if (blogSections.length === 1) return;
-    setBlogSections(blogSections.filter((_, i) => i !== index));
-  };
-
-  const handleSectionChange = (index, field, value) => {
-    const updated = [...blogSections];
-    updated[index][field] = value;
-    setBlogSections(updated);
-  };
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
     setFormError("");
+
+    if (!blogContent || blogContent.trim() === "" || blogContent === "<p></p>") {
+      setFormError("Article content is required.");
+      setSubmitting(false);
+      return;
+    }
 
     const payload = {
       title: blogTitle,
@@ -274,11 +287,7 @@ export default function AdminDashboardPage() {
       readTime: blogReadTime,
       image: blogImage,
       tags: blogTags,
-      content: {
-        intro: blogIntro,
-        sections: blogSections.filter((s) => s.heading || s.body),
-        conclusion: blogConclusion,
-      },
+      content: blogContent,
     };
 
     try {
@@ -798,7 +807,7 @@ export default function AdminDashboardPage() {
             onClick={() => setIsModalOpen(false)}
           />
 
-          <div className="relative bg-white w-full max-w-2xl h-full shadow-[0_0_50px_rgba(0,0,0,0.15)] flex flex-col z-10 animate-slide-left">
+          <div className="relative bg-white w-full max-w-4xl h-full shadow-[0_0_50px_rgba(0,0,0,0.15)] flex flex-col z-10 animate-slide-left">
             <header className="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
               <div>
                 <h3 className="font-bold text-slate-800 text-lg">
@@ -993,95 +1002,18 @@ export default function AdminDashboardPage() {
                   />
                 </div>
 
-                <div className="border-t border-slate-100 pt-4">
-                  <h4 className="font-bold text-slate-800 text-sm mb-3">Detailed Content Layout</h4>
-                </div>
-
-                {/* Content Intro */}
-                <div className="space-y-1.5">
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
-                    Introduction Paragraph
-                  </label>
-                  <textarea
-                    required
-                    rows={3}
-                    value={blogIntro}
-                    onChange={(e) => setBlogIntro(e.target.value)}
-                    placeholder="Opening paragraph of the article, usually displayed in bold..."
-                    className="w-full px-4 py-2 border border-slate-200 rounded-xl focus:outline-none focus:border-[#d25c41] transition-all resize-none"
-                  />
-                </div>
-
-                {/* Repeatable Sections */}
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
+                <div className="border-t border-slate-100 pt-4 space-y-2">
+                  <div className="flex items-center justify-between">
                     <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
-                      Body Sections
+                      Article Content (Rich Text)
                     </label>
-                    <button
-                      type="button"
-                      onClick={handleAddSection}
-                      className="text-xs font-bold text-[#d25c41] hover:underline flex items-center gap-1 cursor-pointer"
-                    >
-                      <Plus className="w-3.5 h-3.5" />
-                      Add Section
-                    </button>
+                    <span className="text-[11px] text-slate-400">
+                      Supports Headings, Lists, Images, Links &amp; Tables
+                    </span>
                   </div>
-
-                  {blogSections.map((sec, idx) => (
-                    <div key={idx} className="p-4 bg-slate-50 border border-slate-150 rounded-2xl relative space-y-3">
-                      <button
-                        type="button"
-                        onClick={() => handleRemoveSection(idx)}
-                        disabled={blogSections.length === 1}
-                        className="absolute top-2 right-2 text-slate-400 hover:text-red-500 p-1 rounded-full hover:bg-slate-200/50 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                        title="Remove Section"
-                      >
-                        <X className="w-3.5 h-3.5" />
-                      </button>
-
-                      <div className="space-y-1.5 pr-6">
-                        <label className="block text-[11px] font-bold text-slate-400 uppercase">
-                          Section {idx + 1} Heading
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={sec.heading}
-                          onChange={(e) => handleSectionChange(idx, "heading", e.target.value)}
-                          placeholder="e.g. 1. Focus on Intent Over Keywords"
-                          className="w-full px-3 py-1.5 border border-slate-200 rounded-lg bg-white focus:outline-none focus:border-[#d25c41] transition-all text-xs"
-                        />
-                      </div>
-
-                      <div className="space-y-1.5">
-                        <label className="block text-[11px] font-bold text-slate-400 uppercase">
-                          Section {idx + 1} Body
-                        </label>
-                        <textarea
-                          required
-                          rows={4}
-                          value={sec.body}
-                          onChange={(e) => handleSectionChange(idx, "body", e.target.value)}
-                          placeholder="Write the paragraph content here..."
-                          className="w-full px-3 py-1.5 border border-slate-200 rounded-lg bg-white focus:outline-none focus:border-[#d25c41] transition-all text-xs resize-none"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Conclusion */}
-                <div className="space-y-1.5">
-                  <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
-                    Conclusion / Key Takeaway
-                  </label>
-                  <textarea
-                    rows={3}
-                    value={blogConclusion}
-                    onChange={(e) => setBlogConclusion(e.target.value)}
-                    placeholder="Concluding takeaway summary text..."
-                    className="w-full px-4 py-2 border border-slate-200 rounded-xl focus:outline-none focus:border-[#d25c41] transition-all resize-none"
+                  <TiptapEditor
+                    content={blogContent}
+                    onChange={(html) => setBlogContent(html)}
                   />
                 </div>
               </div>

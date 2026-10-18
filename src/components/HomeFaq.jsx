@@ -41,10 +41,10 @@ export default function HomeFaq() {
   };
 
   return (
-    <section className="relative w-full bg-[linear-gradient(0deg,rgba(255,255,255,1)_50%,rgba(244,241,234,1)_100%)] px-3 sm:px-6 md:px-8 py-6 sm:py-12  border-y border-slate-200/50">
+    <section className="home-faq-section relative w-full bg-[linear-gradient(0deg,rgba(255,255,255,1)_50%,rgba(244,241,234,1)_100%)] px-3 sm:px-6 md:px-8 py-6 sm:py-12  border-y border-slate-200/50">
       <div className="mx-auto max-w-3xl relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="home-faq-header text-center mb-12">
           <div className="flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-slate-200 sm:w-12" aria-hidden />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#d25c41] sm:text-sm">
@@ -62,11 +62,11 @@ export default function HomeFaq() {
         </div>
 
         {/* Accordions */}
-        <div className="space-y-4">
+        <div className="home-faq-list space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden"
+              className="home-faq-item rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden"
             >
               <button
                 onClick={() => toggleFaq(index)}

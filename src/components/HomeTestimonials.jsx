@@ -37,7 +37,7 @@ export default function HomeTestimonials() {
   const [selectedIdx, setSelectedIdx] = useState(null);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#fafaf9] px-3 sm:px-6 md:px-8 py-14 sm:py-20 border-y border-slate-200/50">
+    <section className="home-testimonials-section relative w-full overflow-hidden bg-[#fafaf9] px-3 sm:px-6 md:px-8 py-14 sm:py-20 border-y border-slate-200/50">
       {/* Decorative ambient background */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -50,7 +50,7 @@ export default function HomeTestimonials() {
 
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="home-testimonials-header text-center mb-12 sm:mb-16">
           <div className="flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-slate-200 sm:w-12" aria-hidden />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary sm:text-sm">
@@ -77,7 +77,7 @@ export default function HomeTestimonials() {
                   key={i}
                   onMouseEnter={() => setSelectedIdx(i)}
                   onMouseLeave={() => setSelectedIdx(null)}
-                  className={`relative group rounded-3xl border bg-white p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
+                  className={`home-testimonial-card relative group rounded-3xl border bg-white p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                     isSelected
                       ? "border-primary/40 shadow-xl -translate-y-1.5"
                       : "border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-lg"

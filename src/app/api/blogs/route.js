@@ -48,7 +48,11 @@ export async function POST(request) {
     // Estimate read time if not provided
     let finalReadTime = readTime;
     if (!finalReadTime) {
-      const wordsCount = JSON.stringify(content).split(/\s+/).length;
+      const textOnly = (typeof content === "string" ? content : JSON.stringify(content))
+        .replace(/<[^>]*>/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+      const wordsCount = textOnly.split(/\s+/).filter(Boolean).length;
       const minutes = Math.max(1, Math.ceil(wordsCount / 200));
       finalReadTime = `${minutes} min read`;
     }
@@ -63,11 +67,7 @@ export async function POST(request) {
       author: author || "Aksh Digital Team",
       image: image || "/assets/images/home/BLOG-01.WEBP",
       tags: Array.isArray(tags) ? tags : typeof tags === "string" ? tags.split(",").map(t => t.trim()) : [],
-      content: {
-        intro: content.intro || excerpt,
-        sections: Array.isArray(content.sections) ? content.sections : [],
-        conclusion: content.conclusion || "",
-      },
+      content: typeof content === "string" ? content : (content?.html || content?.intro || ""),
     };
 
     await createBlog(newBlog);
