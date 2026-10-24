@@ -46,19 +46,21 @@ export default function Header() {
       href: "/services/",
       hasDropdown: true,
       dropdownItems: [
-        { name: "SEO Services", href: "/services/seo/" },
+        { name: "Digital Marketing", href: "/services/digital-marketing/" },
         {
           name: "Performance Marketing",
           href: "/services/performance-marketing/",
         },
-        { name: "Digital Marketing", href: "/services/digital-marketing/" },
+        { name: "SEO Services", href: "/services/seo/" },
+
         {
           name: "Social Media Marketing",
           href: "/services/social-media-marketing/",
         },
-        { name: "Graphic Design", href: "/services/graphic-design/" },
         { name: "Web Development", href: "/services/web-development/" },
         { name: "App Development", href: "/services/app-development/" },
+
+        { name: "Graphic Design", href: "/services/graphic-design/" },
         // { name: "── SEO by City ──", href: "/services/seo/", isLabel: true },
         // { name: "SEO in Jaipur", href: "/seo-services/jaipur/" },
         // { name: "SEO in Delhi", href: "/seo-services/delhi/" },

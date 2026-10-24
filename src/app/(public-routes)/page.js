@@ -372,9 +372,9 @@ export default function Home() {
             </div>
 
             {/* Primary H1 Headline */}
-            <h1 className="home-hero-title text-[34px] sm:text-[46px] md:text-[52px] lg:text-[56px] xl:text-[60px] font-extrabold text-slate-900 leading-[1.1] mt-5 mb-5 tracking-tight">
+            <h1 className="home-hero-title text-[34px] sm:text-[46px] md:text-[52px] lg:text-[56px] xl:text-[64px] font-semibold text-slate-900 leading-[1.1] mt-5 mb-5 tracking-tight">
               Software Development &amp;{" "}
-              <span className="block text-transparent bg-clip-text bg-linear-to-r from-[#e85b2e] via-[#ee7439] to-[#f58d4a]">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#e85b2e] via-[#ee7439] to-[#f58d4a]">
                 Performance Marketing Agency
               </span>
             </h1>
@@ -810,7 +810,7 @@ export default function Home() {
                 </span>
                 <div>
                   <div className="text-xl font-semibold leading-tight text-slate-900">
-                    <AnimatedCounter target={450} suffix="+" /> Successful
+                    <AnimatedCounter target={50} suffix="+" /> Successful
                     Campaigns
                   </div>
                   <p className="text-xs text-slate-500 mt-1">
@@ -825,7 +825,7 @@ export default function Home() {
                 </span>
                 <div>
                   <div className="text-xl font-semibold leading-tight text-slate-900">
-                    <AnimatedCounter target={300} suffix="%" /> Average Traffic
+                    <AnimatedCounter target={200} suffix="%" /> Average Traffic
                     Growth
                   </div>
                   <p className="text-xs text-slate-500 mt-1">
@@ -861,12 +861,13 @@ export default function Home() {
               </div>
             </div>
             <Image
-              src="/assets/images/home/person-on-desk.webp"
+              src="/assets/images/home/Futuristic-3D-Analytics-Workspace.webp"
               alt=""
               width={100}
               height={100}
-              className="h-auto w-full hidden sm:block object-contain drop-shadow-lg "
+              className="h-auto w-1/2 hidden sm:block object-contain drop-shadow-lg "
               aria-hidden
+              unoptimized
             />
           </div>
         </div>

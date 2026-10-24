@@ -5,30 +5,30 @@ import { Star, Quote, CheckCircle2, TrendingUp, Sparkles } from "lucide-react";
 
 const testimonials = [
   {
-    tag: "SEO & E-Commerce",
+    tag: "Social Media Management",
     kpi: "+410% Organic Traffic",
-    text: "Aksh Digital scaled our organic search traffic by 410% within 8 months. Their Jaipur and international SEO strategies delivered quality inbound leads consistently.",
-    name: "Aman Singhal",
-    role: "Founder, D2C Lifestyle Apparel",
-    initials: "AS",
+    text: "Aksh Digital has helped us strengthen our digital presence through strategic social media management and targeted advertising campaigns. Their creative content and audience-focused approach help us showcase our travel experiences, reach potential customers, and build a stronger brand online.",
+    name: "Royal Routes",
+    role: "Founder",
+    initials: "RR",
     rating: 5,
   },
   {
     tag: "Web & Mobile Development",
     kpi: "2x Trial Signups",
-    text: "The web platform built by Aksh Digital cut our load times in half and doubled our trial conversions. Flawless communication across time zones and rock-solid code.",
-    name: "Vikram Mehta",
-    role: "CEO, PropTech Cloud Solutions",
-    initials: "VM",
+    text: "Aksh Digital helped us build a professional website for ITRAA that reflects our brand identity and premium fragrance collection. Their focus on modern design, user experience, and responsive development has helped us create a stronger digital presence for our brand.",
+    name: "ITRAA",
+    role: "Founder",
+    initials: "I",
     rating: 5,
   },
   {
     tag: "Performance Marketing",
     kpi: "4.3x Blended ROAS",
-    text: "Our blended ROAS hit 4.3x within 60 days of handing over our Google and Meta ad accounts. They are easily our highest-ROI growth partner.",
-    name: "Rohit Verma",
-    role: "Head of Growth, Multi-Brand Retail",
-    initials: "RV",
+    text: "Aksh Digital has supported Padhaaro Saa with a complete digital marketing approach, from social media management and creative content to SEO, online advertising, and website development. Their integrated strategy helps us strengthen our brand presence, reach the right audience, and grow our business digitally.",
+    name: "Padhaaro Saa",
+    role: "Founder",
+    initials: "PS",
     rating: 5,
   },
 ];
@@ -62,7 +62,8 @@ export default function HomeTestimonials() {
             Delivering Measurable Impact for Ambitious Brands
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm sm:text-base text-slate-600 leading-relaxed">
-            Real founders, proven ROAS, and scalable technology. See why growth leaders trust Aksh Digital.
+            Real founders, proven ROAS, and scalable technology. See why growth
+            leaders trust Aksh Digital.
           </p>
         </div>
 
@@ -142,7 +143,7 @@ export default function HomeTestimonials() {
                   </div>
                 </div>
               );
-            }
+            },
           )}
         </div>
 
