@@ -3,7 +3,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Search, ArrowRight, Menu, X } from "lucide-react";
+import {
+  ChevronDown,
+  Search,
+  ArrowRight,
+  Menu,
+  X,
+  Sparkles,
+} from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,13 +46,21 @@ export default function Header() {
       href: "/services/",
       hasDropdown: true,
       dropdownItems: [
-        { name: "SEO Services", href: "/services/seo/" },
-        { name: "Performance Marketing", href: "/services/performance-marketing/" },
         { name: "Digital Marketing", href: "/services/digital-marketing/" },
-        { name: "Social Media Marketing", href: "/services/social-media-marketing/" },
-        { name: "Graphic Design", href: "/services/graphic-design/" },
+        {
+          name: "Performance Marketing",
+          href: "/services/performance-marketing/",
+        },
+        { name: "SEO Services", href: "/services/seo/" },
+
+        {
+          name: "Social Media Marketing",
+          href: "/services/social-media-marketing/",
+        },
         { name: "Web Development", href: "/services/web-development/" },
         { name: "App Development", href: "/services/app-development/" },
+
+        { name: "Graphic Design", href: "/services/graphic-design/" },
         // { name: "── SEO by City ──", href: "/services/seo/", isLabel: true },
         // { name: "SEO in Jaipur", href: "/seo-services/jaipur/" },
         // { name: "SEO in Delhi", href: "/seo-services/delhi/" },
@@ -68,8 +83,8 @@ export default function Header() {
   ];
 
   return (
-    <header ref={headerRef} className="relative z-50">
-      <div className="max-w-384 mx-auto bg-white shadow-[0_12px_40px_-15px_rgba(0,0,0,0.06)] border border-slate-100/90 px-3 sm:px-6 md:px-8 py-3 flex items-center justify-between transition-all duration-300">
+    <header ref={headerRef} className="sticky top-0 z-50">
+      <div className="max-w-384 mx-auto bg-white shadow-[0_12px_40px_-15px_rgba(0,0,0,0.06)] border border-slate-100/90 px-3 sm:px-6 md:px-8 py-2  flex items-center justify-between transition-all duration-300">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
@@ -77,7 +92,7 @@ export default function Header() {
             alt="AKSH DIGITAL Logo"
             width={160}
             height={44}
-            className="h-10 w-auto object-contain"
+            className="h-8 sm:h-12 w-auto object-contain"
             priority
           />
         </Link>
@@ -116,7 +131,7 @@ export default function Header() {
                         >
                           {dropItem.name}
                         </Link>
-                      )
+                      ),
                     )}
                   </div>
                 </div>
@@ -138,16 +153,45 @@ export default function Header() {
             />
           </button> */}
 
-          {/* Gradient CTA Button */}
+          {/* Bard Gradient Interactive CTA Button */}
           <Link
             href="/contact/"
-            className="group flex items-center bg-linear-to-r from-primary to-secondary text-white px-7 py-3 rounded-full font-semibold text-[15px] hover:shadow-[0_4px_18px_-4px_rgba(210,92,65,0.35)]  transition-all duration-300"
+            className="group relative inline-flex items-center justify-center px-7 py-2.5 rounded-full font-semibold text-[15px] text-white tracking-wide transition-all duration-300 hover:scale-[1.04] active:scale-[0.98] cursor-pointer"
           >
-            Get Started
-            <ArrowRight
-              className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
-              strokeWidth={2.5}
+            {/* Ambient Bard Aura Glow Behind Button */}
+            {/* <span
+              className="absolute -inset-0.5 rounded-full bard-gradient-glow opacity-70 blur-md group-hover:opacity-100 group-hover:blur-lg transition-all duration-500 -z-10 group-hover:scale-105"
+              aria-hidden="true"
+            /> */}
+
+            {/* Main Bard Gradient Base with Silky Animation */}
+            <span
+              className="absolute inset-0 rounded-full bard-gradient shadow-md"
+              aria-hidden="true"
             />
+
+            {/* Subtle Glass Inner Border Ring */}
+            <span
+              className="absolute inset-0 rounded-full ring-1 ring-white/30 ring-inset pointer-events-none"
+              aria-hidden="true"
+            />
+
+            {/* Shimmer Light Reflection Sweep */}
+            <span
+              className="absolute inset-0 rounded-full overflow-hidden pointer-events-none"
+              aria-hidden="true"
+            >
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/35 to-transparent skew-x-12" />
+            </span>
+
+            {/* Interactive Content */}
+            <span className="relative z-10 flex items-center gap-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
+              <span>Get Started</span>
+              <ArrowRight
+                className="w-4 h-4 ml-0.5 transition-transform duration-300 group-hover:translate-x-1.5"
+                strokeWidth={2.5}
+              />
+            </span>
           </Link>
         </div>
 
@@ -282,10 +326,35 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 setExpandedItem(null);
               }}
-              className="flex items-center justify-center bg-linear-to-r from-primary to-secondary text-white py-3.5 rounded-xl font-semibold text-center shadow-lg shadow-primary/15 hover:shadow-primary/25 transition-all duration-200"
+              className="group relative flex items-center justify-center py-3.5 px-6 rounded-xl font-semibold text-white tracking-wide transition-all duration-300 active:scale-[0.98] overflow-hidden"
             >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" strokeWidth={2.5} />
+              {/* Mobile Ambient Glow */}
+              <span
+                className="absolute -inset-0.5 rounded-xl bard-gradient-glow opacity-75 blur-md -z-10"
+                aria-hidden="true"
+              />
+
+              {/* Mobile Bard Base */}
+              <span
+                className="absolute inset-0 rounded-xl bard-gradient shadow-md"
+                aria-hidden="true"
+              />
+
+              {/* Mobile Inner Border */}
+              <span
+                className="absolute inset-0 rounded-xl ring-1 ring-white/30 ring-inset pointer-events-none"
+                aria-hidden="true"
+              />
+
+              {/* Mobile Content */}
+              <span className="relative z-10 flex items-center justify-center gap-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
+                <Sparkles
+                  className="w-4 h-4 text-amber-200"
+                  strokeWidth={2.2}
+                />
+                <span>Get Started</span>
+                <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+              </span>
             </Link>
           </div>
         </div>

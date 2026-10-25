@@ -156,29 +156,45 @@ export default async function BlogPostPage({ params }) {
       {/* Content */}
       <article className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="mx-auto max-w-3xl">
-          {/* Intro */}
-          <p className="text-lg text-slate-700 leading-relaxed mb-10 font-medium border-l-4 border-[#d25c41] pl-5">
-            {post.content.intro}
-          </p>
+          {/* Content */}
+          {typeof post.content === "string" ? (
+            <div
+              className="prose prose-slate max-w-none text-slate-700 leading-relaxed text-base sm:text-lg prose-headings:text-[#14183e] prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:my-4 prose-p:leading-relaxed prose-a:text-[#d25c41] prose-a:underline hover:prose-a:text-[#b24830] prose-img:rounded-2xl prose-img:shadow-xl prose-img:my-6 prose-table:w-full prose-table:border-collapse prose-table:my-6 prose-th:border prose-th:border-slate-300 prose-th:bg-slate-100 prose-th:p-3 prose-th:text-left prose-td:border prose-td:border-slate-200 prose-td:p-3 prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6 prose-li:my-1.5"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          ) : (
+            <>
+              {/* Intro */}
+              {post.content?.intro && (
+                <p className="text-lg text-slate-700 leading-relaxed mb-10 font-medium border-l-4 border-[#d25c41] pl-5">
+                  {post.content.intro}
+                </p>
+              )}
 
-          {/* Sections */}
-          <div className="space-y-8">
-            {post.content.sections.map((section, i) => (
-              <div key={i}>
-                <h2 className="text-xl sm:text-2xl font-bold text-[#14183e] mb-3">{section.heading}</h2>
-                <p className="text-slate-600 leading-relaxed text-base whitespace-pre-line">{section.body}</p>
-              </div>
-            ))}
-          </div>
+              {/* Sections */}
+              {Array.isArray(post.content?.sections) && (
+                <div className="space-y-8">
+                  {post.content.sections.map((section, i) => (
+                    <div key={i}>
+                      <h2 className="text-xl sm:text-2xl font-bold text-[#14183e] mb-3">{section.heading}</h2>
+                      <p className="text-slate-600 leading-relaxed text-base whitespace-pre-line">{section.body}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
 
-          {/* Conclusion */}
-          <div className="mt-10 rounded-2xl bg-[#fafaf9] border border-slate-200 p-6 sm:p-8">
-            <h3 className="text-lg font-bold text-[#14183e] mb-3 flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-[#d25c41]" />
-              Key Takeaway
-            </h3>
-            <p className="text-slate-700 leading-relaxed">{post.content.conclusion}</p>
-          </div>
+              {/* Conclusion */}
+              {post.content?.conclusion && (
+                <div className="mt-10 rounded-2xl bg-[#fafaf9] border border-slate-200 p-6 sm:p-8">
+                  <h3 className="text-lg font-bold text-[#14183e] mb-3 flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-[#d25c41]" />
+                    Key Takeaway
+                  </h3>
+                  <p className="text-slate-700 leading-relaxed">{post.content.conclusion}</p>
+                </div>
+              )}
+            </>
+          )}
 
           {/* Tags */}
           <div className="mt-8 flex flex-wrap items-center gap-2">

@@ -7,23 +7,29 @@ import { Plus, ArrowRight } from "lucide-react";
 const faqs = [
   {
     question: "Do you work with international clients outside of India?",
-    answer: "Yes. A substantial part of our portfolio includes businesses across the USA, UK, and other global regions. We manage offshore development and global performance marketing campaigns with flexible communication schedules and transparent weekly reporting.",
+    answer:
+      "Yes. A substantial part of our portfolio includes businesses across the USA, UK, and other global regions. We manage offshore development and global performance marketing campaigns with flexible communication schedules and transparent weekly reporting.",
   },
   {
-    question: "How does Aksh Digital handle local SEO for specific cities like Jaipur?",
-    answer: "We implement hyper-local SEO strategies, including Google Business Profile optimization, localized keyword targeting, citations, and localized landing pages that capture immediate regional search intent.",
+    question:
+      "How does Aksh Digital handle local SEO for specific cities like Jaipur?",
+    answer:
+      "We implement hyper-local SEO strategies, including Google Business Profile optimization, localized keyword targeting, citations, and localized landing pages that capture immediate regional search intent.",
   },
   {
     question: "What platforms and technologies do you specialize in?",
-    answer: "Our software team specializes in Next.js, React, Node.js, TypeScript, PostgreSQL, and AWS. For digital marketing, we leverage Google Marketing Platform, Meta Ads Manager, SEMrush, Ahrefs, and advanced conversion tracking APIs.",
+    answer:
+      "Our software team specializes in Next.js, React, Node.js, TypeScript, PostgreSQL, and AWS. For digital marketing, we leverage Google Marketing Platform, Meta Ads Manager, SEMrush, Ahrefs, and advanced conversion tracking APIs.",
   },
   {
     question: "How long does it take to see results from SEO and ad campaigns?",
-    answer: "While technical SEO optimizations and local map pack rankings often start delivering leads within 45 to 60 days, competitive national/global terms build over 3 to 6 months. For paid ads (Google & Meta), campaigns are optimized for positive ROAS within the first 30 to 60 days.",
+    answer:
+      "While technical SEO optimizations and local map pack rankings often start delivering leads within 45 to 60 days, competitive national/global terms build over 3 to 6 months. For paid ads (Google & Meta), campaigns are optimized for positive ROAS within the first 30 to 60 days.",
   },
   {
     question: "How do we get started with Aksh Digital?",
-    answer: "It's simple! Book a free strategy call or audit session. We will perform a preliminary analysis of your website, organic visibility, or ad accounts, and deliver a custom digital growth roadmap tailored to your target markets.",
+    answer:
+      "It's simple! Book a free strategy call or audit session. We will perform a preliminary analysis of your website, organic visibility, or ad accounts, and deliver a custom digital growth roadmap tailored to your target markets.",
   },
 ];
 
@@ -35,11 +41,10 @@ export default function HomeFaq() {
   };
 
   return (
-    <section className="relative w-full bg-[#fafaf9] px-3 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 border-y border-slate-200/50">
+    <section className="home-faq-section relative w-full bg-[linear-gradient(0deg,rgba(255,255,255,1)_50%,rgba(244,241,234,1)_100%)] px-3 sm:px-6 md:px-8 py-6 sm:py-12  border-y border-slate-200/50">
       <div className="mx-auto max-w-3xl relative z-10">
-        
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="home-faq-header text-center mb-12">
           <div className="flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-slate-200 sm:w-12" aria-hidden />
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#d25c41] sm:text-sm">
@@ -51,16 +56,17 @@ export default function HomeFaq() {
             Frequently Asked Questions
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm sm:text-base text-slate-600 leading-relaxed">
-            Find quick answers to common questions about our services, processes, and partnership.
+            Find quick answers to common questions about our services,
+            processes, and partnership.
           </p>
         </div>
 
         {/* Accordions */}
-        <div className="space-y-4">
+        <div className="home-faq-list space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden"
+              className="home-faq-item rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden"
             >
               <button
                 onClick={() => toggleFaq(index)}
@@ -76,7 +82,7 @@ export default function HomeFaq() {
                   {faq.question}
                 </span>
               </button>
-              
+
               <div
                 className={`grid transition-all duration-300 ease-in-out ${
                   openIndex === index
@@ -107,7 +113,6 @@ export default function HomeFaq() {
             </Link>
           </p>
         </div>
-
       </div>
     </section>
   );

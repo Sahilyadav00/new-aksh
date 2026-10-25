@@ -43,11 +43,7 @@ export async function PUT(request, { params }) {
       author: author || existingBlog.author,
       image: image || existingBlog.image,
       tags: Array.isArray(tags) ? tags : typeof tags === "string" ? tags.split(",").map(t => t.trim()) : existingBlog.tags,
-      content: {
-        intro: content?.intro || existingBlog.content.intro,
-        sections: Array.isArray(content?.sections) ? content.sections : existingBlog.content.sections,
-        conclusion: content?.conclusion || existingBlog.content.conclusion,
-      },
+      content: content !== undefined ? content : existingBlog.content,
     };
 
     await updateBlog(slug, updatedBlog);

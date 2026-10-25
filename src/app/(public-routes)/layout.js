@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import WelcomePopup from "@/components/layout/WelcomePopup";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 export default function Layout({ children }) {
   return (
@@ -11,6 +12,7 @@ export default function Layout({ children }) {
       <Footer />
       <WhatsAppButton />
       <WelcomePopup />
+      <ScrollToTop />
     </div>
   );
 }

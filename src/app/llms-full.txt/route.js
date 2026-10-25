@@ -18,7 +18,15 @@ export async function GET() {
   const detailedBlogsMd = blogs
     .map((b) => {
       let sectionsText = "";
-      if (b.content && Array.isArray(b.content.sections)) {
+      if (typeof b.content === "string") {
+        sectionsText = b.content
+          .replace(/<h[1-6][^>]*>(.*?)<\/h[1-6]>/gi, "\n### $1\n")
+          .replace(/<p[^>]*>(.*?)<\/p>/gi, "\n$1\n")
+          .replace(/<li[^>]*>(.*?)<\/li>/gi, "- $1\n")
+          .replace(/<[^>]*>/g, " ")
+          .replace(/\n\s*\n/g, "\n\n")
+          .trim();
+      } else if (b.content && Array.isArray(b.content.sections)) {
         sectionsText = b.content.sections
           .map((s) => `### ${s.heading}\n${s.body}`)
           .join("\n\n");
