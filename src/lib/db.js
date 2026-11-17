@@ -15,7 +15,10 @@ export async function getBlogs() {
 
     // Fetch and return blogs (exclude MongoDB _id from causing Next.js serialization warnings)
     const result = await db.collection("blogs").find({}).toArray();
-    return result.map(({ _id, ...rest }) => rest);
+    const publishedAt = (b) => new Date(b.createdAt || b.date).getTime() || 0;
+    return result
+      .map(({ _id, ...rest }) => rest)
+      .sort((a, b) => publishedAt(b) - publishedAt(a)); // newest first
   } catch (err) {
     console.error("Error reading blogs from MongoDB", err);
     return [];
@@ -53,6 +56,19 @@ export async function updateBlog(slug, updatedBlog) {
     return await db.collection("blogs").updateOne({ slug }, { $set: updatePayload });
   } catch (err) {
     console.error(`Error updating blog ${slug} in MongoDB`, err);
+    return false;
+  }
+}
+
+// Only one post can be featured at a time.
+export async function unsetFeaturedExcept(slug) {
+  try {
+    const db = await getDb();
+    return await db
+      .collection("blogs")
+      .updateMany({ featured: true, slug: { $ne: slug } }, { $set: { featured: false } });
+  } catch (err) {
+    console.error("Error clearing featured blogs in MongoDB", err);
     return false;
   }
 }

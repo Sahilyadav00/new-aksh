@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getBlogBySlug, updateBlog, deleteBlog } from "@/lib/db";
+import { getBlogBySlug, updateBlog, deleteBlog, unsetFeaturedExcept } from "@/lib/db";
+import { parseList, cleanText, revalidateBlogPaths } from "@/lib/blog";
 import { getSession } from "../../../../lib/session";
 
 export async function GET(request, { params }) {
@@ -26,7 +27,10 @@ export async function PUT(request, { params }) {
 
     const { slug } = await params;
     const body = await request.json();
-    const { title, excerpt, category, readTime, author, image, tags, content } = body;
+    const {
+      title, excerpt, category, readTime, author, image, tags, content,
+      metaTitle, metaDescription, metaKeywords, featured,
+    } = body;
 
     const existingBlog = await getBlogBySlug(slug);
 
@@ -42,11 +46,25 @@ export async function PUT(request, { params }) {
       readTime: readTime || existingBlog.readTime,
       author: author || existingBlog.author,
       image: image || existingBlog.image,
-      tags: Array.isArray(tags) ? tags : typeof tags === "string" ? tags.split(",").map(t => t.trim()) : existingBlog.tags,
+      tags: tags !== undefined ? parseList(tags) : existingBlog.tags || [],
       content: content !== undefined ? content : existingBlog.content,
+      // Meta fields can be cleared (empty = fall back to title/excerpt/tags on the page)
+      metaTitle: metaTitle !== undefined ? cleanText(metaTitle) : existingBlog.metaTitle || "",
+      metaDescription:
+        metaDescription !== undefined ? cleanText(metaDescription) : existingBlog.metaDescription || "",
+      metaKeywords:
+        metaKeywords !== undefined ? parseList(metaKeywords) : existingBlog.metaKeywords || [],
+      featured: featured !== undefined ? Boolean(featured) : Boolean(existingBlog.featured),
+      updatedAt: new Date().toISOString(),
     };
 
-    await updateBlog(slug, updatedBlog);
+    const result = await updateBlog(slug, updatedBlog);
+    if (!result) {
+      return NextResponse.json({ error: "Failed to save blog post" }, { status: 500 });
+    }
+    if (updatedBlog.featured) await unsetFeaturedExcept(slug);
+
+    revalidateBlogPaths();
 
     return NextResponse.json({ success: true, blog: { ...existingBlog, ...updatedBlog } });
   } catch (error) {
@@ -64,9 +82,14 @@ export async function DELETE(request, { params }) {
     const { slug } = await params;
     const result = await deleteBlog(slug);
 
-    if (result && result.deletedCount === 0) {
+    if (!result) {
+      return NextResponse.json({ error: "Failed to delete blog post" }, { status: 500 });
+    }
+    if (result.deletedCount === 0) {
       return NextResponse.json({ error: "Blog not found" }, { status: 404 });
     }
+
+    revalidateBlogPaths();
 
     return NextResponse.json({ success: true, message: "Blog post deleted successfully" });
   } catch (error) {

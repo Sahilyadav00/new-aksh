@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { getBlogImage } from "@/lib/blog-image";
 import {
   FolderOpen,
   Mail,
@@ -26,7 +27,15 @@ import {
   Loader2,
   Lock,
   Upload,
+  Star,
 } from "lucide-react";
+
+const META_TITLE_LIMIT = 60;
+const META_DESCRIPTION_LIMIT = 160;
+
+// Mirrors the slug generation in /api/blogs (preview only)
+const toSlug = (text) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 const TiptapEditor = dynamic(() => import("@/components/TipTapEditor"), {
   ssr: false,
@@ -64,6 +73,12 @@ export default function AdminDashboardPage() {
   const [blogImage, setBlogImage] = useState("");
   const [blogTags, setBlogTags] = useState("");
   const [blogContent, setBlogContent] = useState("");
+  const [blogFeatured, setBlogFeatured] = useState(false);
+
+  // SEO / Meta Fields
+  const [blogMetaTitle, setBlogMetaTitle] = useState("");
+  const [blogMetaDescription, setBlogMetaDescription] = useState("");
+  const [blogMetaKeywords, setBlogMetaKeywords] = useState("");
 
   // Settings / Security Password Change States
   const [currentPassword, setCurrentPassword] = useState("");
@@ -223,6 +238,10 @@ export default function AdminDashboardPage() {
     setBlogImage("");
     setBlogTags("");
     setBlogContent("");
+    setBlogFeatured(false);
+    setBlogMetaTitle("");
+    setBlogMetaDescription("");
+    setBlogMetaKeywords("");
     setFormError("");
     setFormSuccess(false);
     setImageUploading(false);
@@ -239,6 +258,10 @@ export default function AdminDashboardPage() {
     setBlogReadTime(blog.readTime || "");
     setBlogImage(blog.image || "");
     setBlogTags(Array.isArray(blog.tags) ? blog.tags.join(", ") : "");
+    setBlogFeatured(Boolean(blog.featured));
+    setBlogMetaTitle(blog.metaTitle || "");
+    setBlogMetaDescription(blog.metaDescription || "");
+    setBlogMetaKeywords(Array.isArray(blog.metaKeywords) ? blog.metaKeywords.join(", ") : "");
 
     // Support raw HTML string or convert legacy section-based structure
     if (typeof blog.content === "string") {
@@ -288,6 +311,10 @@ export default function AdminDashboardPage() {
       image: blogImage,
       tags: blogTags,
       content: blogContent,
+      featured: blogFeatured,
+      metaTitle: blogMetaTitle,
+      metaDescription: blogMetaDescription,
+      metaKeywords: blogMetaKeywords,
     };
 
     try {
@@ -669,13 +696,18 @@ export default function AdminDashboardPage() {
                     >
                       <div className="relative h-40 bg-slate-100 overflow-hidden">
                         <img
-                          src={blog.image || "/assets/images/home/BLOG-01.WEBP"}
+                          src={getBlogImage(blog.image)}
                           alt={blog.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <span className="absolute bottom-3 left-3 bg-[#131433] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
                           {blog.category}
                         </span>
+                        {blog.featured && (
+                          <span className="absolute top-3 left-3 inline-flex items-center gap-1 bg-amber-400 text-[#131433] text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                            <Star className="w-3 h-3" /> Featured
+                          </span>
+                        )}
                       </div>
 
                       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
@@ -1000,6 +1032,108 @@ export default function AdminDashboardPage() {
                     placeholder="e.g. SEO, Search, Google, 2025"
                     className="w-full px-4 py-2 border border-slate-200 rounded-xl focus:outline-none focus:border-[#d25c41] transition-all"
                   />
+                </div>
+
+                {/* Featured Toggle */}
+                <label className="flex items-start gap-3 p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-[#d25c41]/50 transition-all">
+                  <input
+                    type="checkbox"
+                    checked={blogFeatured}
+                    onChange={(e) => setBlogFeatured(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 accent-[#d25c41] cursor-pointer"
+                  />
+                  <span>
+                    <span className="flex items-center gap-1.5 text-xs font-bold text-slate-700 uppercase tracking-wider">
+                      <Star className="w-3.5 h-3.5 text-amber-500" />
+                      Featured Article
+                    </span>
+                    <span className="block text-[11px] text-slate-400 mt-0.5">
+                      Shown as the highlighted post at the top of /blog. Only one post can be featured — this replaces the current one.
+                    </span>
+                  </span>
+                </label>
+
+                {/* SEO & Meta Data */}
+                <div className="border border-slate-200 rounded-2xl p-5 space-y-4 bg-slate-50/50">
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-800">SEO &amp; Meta Data</h4>
+                    <p className="text-[11px] text-slate-400 mt-0.5">
+                      Optional. Leave blank to use the article title, excerpt and tags.
+                    </p>
+                  </div>
+
+                  {/* Meta Title */}
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <label htmlFor="blog-meta-title" className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        Meta Title
+                      </label>
+                      <span className={`text-[11px] font-semibold ${blogMetaTitle.length > META_TITLE_LIMIT ? "text-amber-600" : "text-slate-400"}`}>
+                        {blogMetaTitle.length}/{META_TITLE_LIMIT}
+                      </span>
+                    </div>
+                    <input
+                      id="blog-meta-title"
+                      type="text"
+                      value={blogMetaTitle}
+                      onChange={(e) => setBlogMetaTitle(e.target.value)}
+                      placeholder={blogTitle ? `${blogTitle} — Aksh Digital Blog` : "Title shown in Google results and browser tab"}
+                      className="w-full px-4 py-2 border border-slate-200 rounded-xl bg-white focus:outline-none focus:border-[#d25c41] transition-all"
+                    />
+                  </div>
+
+                  {/* Meta Description */}
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <label htmlFor="blog-meta-description" className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        Meta Description
+                      </label>
+                      <span className={`text-[11px] font-semibold ${blogMetaDescription.length > META_DESCRIPTION_LIMIT ? "text-amber-600" : "text-slate-400"}`}>
+                        {blogMetaDescription.length}/{META_DESCRIPTION_LIMIT}
+                      </span>
+                    </div>
+                    <textarea
+                      id="blog-meta-description"
+                      rows={3}
+                      value={blogMetaDescription}
+                      onChange={(e) => setBlogMetaDescription(e.target.value)}
+                      placeholder={blogExcerpt || "Summary shown under the title in Google results and social shares"}
+                      className="w-full px-4 py-2 border border-slate-200 rounded-xl bg-white focus:outline-none focus:border-[#d25c41] transition-all resize-none"
+                    />
+                  </div>
+
+                  {/* Meta Keywords */}
+                  <div className="space-y-1.5">
+                    <label htmlFor="blog-meta-keywords" className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                      Meta Keywords (Comma separated)
+                    </label>
+                    <input
+                      id="blog-meta-keywords"
+                      type="text"
+                      value={blogMetaKeywords}
+                      onChange={(e) => setBlogMetaKeywords(e.target.value)}
+                      placeholder={blogTags || "e.g. seo agency jaipur, local seo, google ranking"}
+                      className="w-full px-4 py-2 border border-slate-200 rounded-xl bg-white focus:outline-none focus:border-[#d25c41] transition-all"
+                    />
+                  </div>
+
+                  {/* Search Preview */}
+                  <div className="space-y-1.5">
+                    <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
+                      Google Search Preview
+                    </span>
+                    <div className="rounded-xl border border-slate-200 bg-white p-4 space-y-1">
+                      <p className="text-xs text-slate-500 truncate">
+                        www.akshdigital.in › blog › {(modalType === "edit" ? selectedBlogSlug : toSlug(blogTitle)) || "article-url"}
+                      </p>
+                      <p className="text-lg leading-snug text-[#1a0dab] truncate">
+                        {blogMetaTitle || (blogTitle ? `${blogTitle} — Aksh Digital Blog` : "Your article title")}
+                      </p>
+                      <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                        {blogMetaDescription || blogExcerpt || "Your meta description will appear here."}
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="border-t border-slate-100 pt-4 space-y-2">

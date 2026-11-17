@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getBlogs, createBlog } from "@/lib/db";
+import { getBlogs, createBlog, unsetFeaturedExcept } from "@/lib/db";
+import { parseList, cleanText, revalidateBlogPaths } from "@/lib/blog";
 import { getSession } from "../../../lib/session";
 
 export async function GET(request) {
@@ -19,7 +20,10 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const { title, excerpt, category, readTime, author, image, tags, content } = body;
+    const {
+      title, excerpt, category, readTime, author, image, tags, content,
+      metaTitle, metaDescription, metaKeywords, featured,
+    } = body;
 
     if (!title || !excerpt || !category || !content) {
       return NextResponse.json({ error: "Missing required fields (title, excerpt, category, content)" }, { status: 400 });
@@ -42,8 +46,9 @@ export async function POST(request) {
     }
 
     // Format Date: e.g. "June 15, 2026"
+    const now = new Date();
     const options = { year: "numeric", month: "long", day: "numeric" };
-    const formattedDate = new Date().toLocaleDateString("en-US", options);
+    const formattedDate = now.toLocaleDateString("en-US", options);
 
     // Estimate read time if not provided
     let finalReadTime = readTime;
@@ -65,12 +70,24 @@ export async function POST(request) {
       date: formattedDate,
       readTime: finalReadTime,
       author: author || "Aksh Digital Team",
-      image: image || "/assets/images/home/BLOG-01.WEBP",
-      tags: Array.isArray(tags) ? tags : typeof tags === "string" ? tags.split(",").map(t => t.trim()) : [],
+      image: image || "", // empty = placeholder shown at render time
+      tags: parseList(tags),
       content: typeof content === "string" ? content : (content?.html || content?.intro || ""),
+      metaTitle: cleanText(metaTitle),
+      metaDescription: cleanText(metaDescription),
+      metaKeywords: parseList(metaKeywords),
+      featured: Boolean(featured),
+      createdAt: now.toISOString(),
+      updatedAt: now.toISOString(),
     };
 
-    await createBlog(newBlog);
+    const result = await createBlog(newBlog);
+    if (!result) {
+      return NextResponse.json({ error: "Failed to save blog post" }, { status: 500 });
+    }
+    if (newBlog.featured) await unsetFeaturedExcept(slug);
+
+    revalidateBlogPaths();
 
     return NextResponse.json({ success: true, blog: newBlog }, { status: 201 });
   } catch (error) {
