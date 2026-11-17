@@ -57,6 +57,9 @@ export async function GET() {
 - [Blog](${baseUrl}/blog/): Expert articles on SEO, web tech, social media growth, and digital strategy.
 - [FAQ](${baseUrl}/faq/): Answers to common questions regarding pricing, timelines, workflow, and deliverables.
 - [Contact](${baseUrl}/contact/): Get in touch with our team for project inquiries or to schedule a free strategy session.
+- [Careers](${baseUrl}/careers/): Work culture at Aksh Digital and how to share your resume or portfolio for current and future opportunities.
+- [Terms & Conditions](${baseUrl}/terms-and-conditions/): Terms governing use of the website and Aksh Digital's services, payments, refunds, IP, and liability.
+- [Privacy Policy](${baseUrl}/privacy-policy/): How Aksh Digital collects, uses, shares, and protects personal information, including cookies and analytics.
 
 ## Dynamic Articles & Resources
 ${blogListMd || "No articles available at this time."}

@@ -1,3 +1,4 @@
+import { cache } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -11,7 +12,39 @@ import {
   CheckCircle,
   Tag,
 } from "lucide-react";
-import { getBlogs } from "@/lib/db";
+import { getBlogs, getBlogBySlug } from "@/lib/db";
+import { getBlogImage, getBlogCoverImage } from "@/lib/blog-image";
+
+const SITE_URL = "https://www.akshdigital.in";
+const DEFAULT_AUTHOR = "Aksh Digital Team";
+
+// Shared by generateMetadata and the page so the post is fetched once per request.
+const getPost = cache((slug) => getBlogBySlug(slug));
+
+function toIsoDate(value) {
+  const d = new Date(value);
+  return Number.isNaN(d.getTime()) ? undefined : d.toISOString();
+}
+
+function absoluteUrl(src) {
+  if (!src) return undefined;
+  if (/^https?:\/\//i.test(src)) return src;
+  return `${SITE_URL}${src.startsWith("/") ? "" : "/"}${src}`;
+}
+
+// Admin-entered meta fields win; otherwise fall back to the post's own content.
+function getPostSeo(post, slug) {
+  const keywords = post.metaKeywords?.length ? post.metaKeywords : post.tags || [];
+  return {
+    title: post.metaTitle || `${post.title} — Aksh Digital Blog`,
+    description: post.metaDescription || post.excerpt,
+    keywords,
+    url: `${SITE_URL}/blog/${slug}/`,
+    image: absoluteUrl(getBlogCoverImage(post.image)),
+    publishedTime: toIsoDate(post.createdAt || post.date),
+    modifiedTime: toIsoDate(post.updatedAt || post.createdAt || post.date),
+  };
+}
 
 // Custom Social Icon Components since they aren't available in this version of lucide-react
 const Facebook = (props) => (
@@ -75,23 +108,44 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const allPosts = await getBlogs();
-  const post = allPosts.find((p) => p.slug === slug);
-  if (!post) return { title: "Blog — Aksh Digital" };
+  const post = await getPost(slug);
+  if (!post) return { title: "Article Not Found — Aksh Digital Blog", robots: { index: false } };
+
+  const seo = getPostSeo(post, slug);
+  const author = post.author || DEFAULT_AUTHOR;
   return {
-    title: `${post.title} — Aksh Digital Blog`,
-    description: post.excerpt,
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    authors: [{ name: author }],
     alternates: {
-      canonical: `https://www.akshdigital.in/blog/${slug}/`,
+      canonical: seo.url,
+    },
+    openGraph: {
+      type: "article",
+      url: seo.url,
+      siteName: "Aksh Digital",
+      title: seo.title,
+      description: seo.description,
+      publishedTime: seo.publishedTime,
+      modifiedTime: seo.modifiedTime,
+      authors: [author],
+      section: post.category,
+      tags: post.tags || [],
+      images: seo.image ? [{ url: seo.image, alt: post.title }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+      images: seo.image ? [seo.image] : undefined,
     },
   };
 }
 
 export default async function BlogPostPage({ params }) {
   const { slug } = await params;
-  const allPosts = await getBlogs();
-  const post = allPosts.find((p) => p.slug === slug);
-  const relatedPosts = allPosts.filter((p) => p.slug !== slug && p.category === post?.category).slice(0, 3);
+  const post = await getPost(slug);
 
   if (!post) {
     return (
@@ -104,8 +158,37 @@ export default async function BlogPostPage({ params }) {
     );
   }
 
+  const allPosts = await getBlogs();
+  const relatedPosts = allPosts.filter((p) => p.slug !== slug && p.category === post.category).slice(0, 3);
+
+  const seo = getPostSeo(post, slug);
+  const author = post.author || DEFAULT_AUTHOR;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: seo.description,
+    image: seo.image ? [seo.image] : undefined,
+    datePublished: seo.publishedTime,
+    dateModified: seo.modifiedTime,
+    author: { "@type": author === DEFAULT_AUTHOR ? "Organization" : "Person", name: author },
+    publisher: {
+      "@type": "Organization",
+      name: "Aksh Digital",
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/assets/images/logo/logo.png` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": seo.url },
+    articleSection: post.category,
+    keywords: seo.keywords.join(", "),
+  };
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#0f1535] pt-16 sm:pt-20 pb-24 sm:pb-28 px-4 sm:px-6">
         <div className="pointer-events-none absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full bg-[#d25c41]/15 blur-3xl" />
@@ -132,7 +215,7 @@ export default async function BlogPostPage({ params }) {
           <div className="flex flex-wrap items-center gap-5 text-sm text-slate-500">
             <span className="inline-flex items-center gap-2">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#d25c41] text-white text-xs font-bold">AD</span>
-              <span className="text-slate-300">{post.author}</span>
+              <span className="text-slate-300">{author}</span>
             </span>
             <span className="inline-flex items-center gap-1.5 text-slate-400"><Calendar className="h-4 w-4" />{post.date}</span>
             <span className="inline-flex items-center gap-1.5 text-slate-400"><Clock className="h-4 w-4" />{post.readTime}</span>
@@ -144,7 +227,7 @@ export default async function BlogPostPage({ params }) {
       <div className="relative mx-auto max-w-4xl -mt-16 px-4 sm:px-6 z-20">
         <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
           <Image
-            src={post.image}
+            src={getBlogImage(post.image)}
             alt={post.title}
             fill
             className="object-cover"
@@ -197,14 +280,16 @@ export default async function BlogPostPage({ params }) {
           )}
 
           {/* Tags */}
-          <div className="mt-8 flex flex-wrap items-center gap-2">
-            <Tag className="h-4 w-4 text-slate-400 shrink-0" />
-            {post.tags.map((tag) => (
-              <span key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 hover:border-[#d25c41]/40 hover:text-[#d25c41] transition-colors cursor-pointer">
-                {tag}
-              </span>
-            ))}
-          </div>
+          {post.tags?.length > 0 && (
+            <div className="mt-8 flex flex-wrap items-center gap-2">
+              <Tag className="h-4 w-4 text-slate-400 shrink-0" />
+              {post.tags.map((tag) => (
+                <span key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 hover:border-[#d25c41]/40 hover:text-[#d25c41] transition-colors cursor-pointer">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* Share */}
           <div className="mt-8 pt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
@@ -246,7 +331,7 @@ export default async function BlogPostPage({ params }) {
               {relatedPosts.map((rp) => (
                 <Link key={rp.slug} href={`/blog/${rp.slug}/`} className="group flex flex-col rounded-2xl border border-slate-200 bg-white overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <div className="relative h-44 overflow-hidden">
-                    <Image src={rp.image} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <Image src={getBlogImage(rp.image)} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-5">
                     <p className="text-xs text-slate-500 mb-2 flex items-center gap-1"><Calendar className="h-3 w-3" />{rp.date}</p>

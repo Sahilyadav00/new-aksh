@@ -277,59 +277,7 @@ const whyChooseUsPillars = [
   },
 ];
 
-const blogPosts = [
-  {
-    title: "Services That Printing At You Is Important",
-    category: "Workplace",
-    date: "Sep 30, 2024",
-    image: "/assets/images/home/BLOG-01.WEBP",
-  },
-  {
-    title: "A Checklist To Improve Your Daily Routine",
-    category: "Coding",
-    date: "Sep 30, 2024",
-    image: "/assets/images/home/BLOG-02.WEBP",
-  },
-  {
-    title: "That Will Help You Get 1% Better Every Day",
-    category: "Technology",
-    date: "Sep 30, 2024",
-    image: "/assets/images/home/BLOG-03.WEBP",
-  },
-];
 
-const portfolioGallery = [
-  {
-    src: "/assets/images/home/PROJECT-01.webp",
-    alt: "Creative team at work",
-    className: "h-36 w-28 sm:h-48 sm:w-36 shrink-0 relative translate-y-[60px]",
-  },
-  {
-    src: "/assets/images/home/PROJECT-02.webp",
-    alt: "Design review session",
-    className: "h-44 w-32 sm:h-52 sm:w-40 shrink-0 relative -translate-y-6",
-  },
-  {
-    src: "/assets/images/home/PROJECT-03.webp",
-    alt: "Project showcase",
-    className: "h-44 w-32 sm:h-52 sm:w-40 shrink-0 relative translate-y-12",
-  },
-  {
-    src: "/assets/images/home/PROJECT-06.webp",
-    alt: "Studio brainstorming",
-    className: "h-44 w-32 sm:h-52 sm:w-40 shrink-0 relative",
-  },
-  {
-    src: "/assets/images/home/PROJECT-04.webp",
-    alt: "Collaboration workspace",
-    className: "h-44 w-32 sm:h-52 sm:w-40 shrink-0 relative translate-y-30",
-  },
-  {
-    src: "/assets/images/home/PROJECT-05.webp",
-    alt: "Studio brainstorming",
-    className: "h-36 w-28 sm:h-54 sm:w-36 shrink-0 relative translate-y-0",
-  },
-];
 
 export default function Home() {
   return (

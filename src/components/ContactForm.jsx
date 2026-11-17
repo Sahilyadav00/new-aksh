@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Send, Check, Loader2 } from 'lucide-react';
 
 export default function ContactForm() {
@@ -254,6 +255,14 @@ export default function ContactForm() {
               </>
             )}
           </button>
+
+          <p className="text-center text-xs text-slate-500">
+            By submitting this form, you agree to our{' '}
+            <Link href="/terms-and-conditions/" className="font-semibold text-primary hover:underline">
+              Terms &amp; Conditions
+            </Link>
+            .
+          </p>
         </form>
       )}
     </div>
