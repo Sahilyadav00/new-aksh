@@ -23,6 +23,9 @@ export default async function sitemap() {
     { url: "/blog/", priority: 0.8, changeFrequency: "daily" },
     { url: "/contact/", priority: 0.7, changeFrequency: "monthly" },
     { url: "/faq/", priority: 0.6, changeFrequency: "monthly" },
+    { url: "/careers/", priority: 0.5, changeFrequency: "monthly" },
+    { url: "/terms-and-conditions/", priority: 0.3, changeFrequency: "yearly" },
+    { url: "/privacy-policy/", priority: 0.3, changeFrequency: "yearly" },
     // Dedicated Regional & Metropolitan SEO Landing Pages
     { url: "/seo-services/jaipur/", priority: 0.8, changeFrequency: "monthly" },
     { url: "/seo-services/delhi/", priority: 0.8, changeFrequency: "monthly" },

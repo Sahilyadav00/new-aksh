@@ -261,6 +261,7 @@ export default function Footer() {
                     { label: "Portfolio", href: "/portfolio/" },
                     { label: "Blog", href: "/blog/" },
                     { label: "FAQ", href: "/faq/" },
+                    { label: "Careers", href: "/careers/" },
                     { label: "Contact", href: "/contact/" },
                   ].map(({ label, href }) => (
                     <li key={label} className="overflow-hidden">
@@ -412,10 +413,26 @@ export default function Footer() {
 
           {/* Footer Bottom Bar */}
           <div className="mt-5 pt-8 border-t border-slate-200/50 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-[14px] text-slate-600 font-medium">
-              Copyright © 2026 Aksh Digital – Digital Marketing Agency in
-              Jaipur. All Rights Reserved.
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-x-4 gap-y-2 text-center sm:text-left">
+              <p className="text-[14px] text-slate-600 font-medium">
+                Copyright © 2026 Aksh Digital – Digital Marketing Agency in
+                Jaipur. All Rights Reserved.
+              </p>
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/terms-and-conditions/"
+                  className="text-[14px] text-slate-600 hover:text-primary font-medium transition-colors duration-200 whitespace-nowrap"
+                >
+                  Terms &amp; Conditions
+                </Link>
+                <Link
+                  href="/privacy-policy/"
+                  className="text-[14px] text-slate-600 hover:text-primary font-medium transition-colors duration-200 whitespace-nowrap"
+                >
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
             <div className="flex items-center gap-2 lg:mr-20">
               <a
                 href="https://www.facebook.com/profile.php?id=61593092715463"
