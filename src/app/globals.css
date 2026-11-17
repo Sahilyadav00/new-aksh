@@ -291,5 +291,251 @@ html {
   animation: bardGradientShift 5s ease infinite;
 }
 
+/* ==========================================
+   Blog article body (HTML from the TipTap editor)
+   @tailwindcss/typography isn't installed, so the post content is styled here.
+   In the components layer: beats Tailwind's preflight, loses to utilities.
+   ========================================== */
+@layer components {
+  .blog-content {
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+  }
+
+  .blog-content > :first-child,
+  .blog-content > :first-child > :first-child {
+    margin-top: 0;
+  }
+
+  .blog-content > :last-child {
+    margin-bottom: 0;
+  }
+
+  .blog-content p {
+    margin: 1.1em 0;
+  }
+
+  .blog-content .blog-lead {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1e293b;
+    border-left: 4px solid var(--color-primary);
+    padding-left: 1.1rem;
+  }
+
+  .blog-content h1,
+  .blog-content h2,
+  .blog-content h3,
+  .blog-content h4 {
+    color: #14183e;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    scroll-margin-top: 7rem;
+  }
+
+  .blog-content h1 {
+    font-size: 1.75rem;
+    margin: 1.8em 0 0.7em;
+  }
+
+  .blog-content h2 {
+    position: relative;
+    font-size: 1.45rem;
+    margin: 1.9em 0 0.75em;
+    padding-left: 1rem;
+  }
+
+  .blog-content h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    bottom: 0.2em;
+    width: 4px;
+    border-radius: 9999px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+  }
+
+  .blog-content h3 {
+    font-size: 1.2rem;
+    margin: 1.7em 0 0.6em;
+  }
+
+  .blog-content h4 {
+    font-size: 1.05rem;
+    margin: 1.5em 0 0.5em;
+  }
+
+  .blog-content a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgb(210 92 65 / 0.35);
+    text-underline-offset: 3px;
+    transition: color 0.2s, text-decoration-color 0.2s;
+  }
+
+  .blog-content a:hover {
+    color: #b84d35;
+    text-decoration-color: currentColor;
+  }
+
+  .blog-content strong,
+  .blog-content b {
+    color: #14183e;
+    font-weight: 700;
+  }
+
+  .blog-content ul,
+  .blog-content ol {
+    margin: 1.1em 0;
+    padding-left: 1.5em;
+  }
+
+  .blog-content ul {
+    list-style: disc;
+  }
+
+  .blog-content ol {
+    list-style: decimal;
+  }
+
+  .blog-content li {
+    margin: 0.45em 0;
+    padding-left: 0.3em;
+  }
+
+  .blog-content li::marker {
+    color: var(--color-primary);
+  }
+
+  .blog-content ol > li::marker {
+    font-weight: 700;
+  }
+
+  .blog-content li > p {
+    margin: 0;
+  }
+
+  .blog-content blockquote {
+    margin: 1.75em 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 1rem 1rem 0;
+    background: #fff7f2;
+    color: #1e293b;
+    font-style: italic;
+  }
+
+  .blog-content blockquote p {
+    margin: 0.4em 0;
+  }
+
+  .blog-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.75em auto;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px -12px rgb(15 23 42 / 0.2);
+  }
+
+  .blog-content hr {
+    margin: 2.5em 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #fdba74, transparent);
+  }
+
+  .blog-content code {
+    padding: 0.15em 0.4em;
+    border-radius: 0.375rem;
+    background: #fff1ea;
+    color: #b84d35;
+    font-size: 0.9em;
+  }
+
+  .blog-content pre {
+    margin: 1.75em 0;
+    padding: 1.1rem 1.25rem;
+    border-radius: 1rem;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    overflow-x: auto;
+  }
+
+  .blog-content pre code {
+    padding: 0;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  /* Wide tables scroll sideways instead of overflowing the card.
+     TipTap puts every row (including the header row) inside <tbody>. */
+  .blog-content table {
+    display: block;
+    max-width: 100%;
+    margin: 1.75em 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .blog-content table > tbody,
+  .blog-content table > thead {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .blog-content th,
+  .blog-content td {
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #f3e4d8;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .blog-content th {
+    background: #fff4ec;
+    color: #14183e;
+    font-weight: 700;
+  }
+
+  .blog-content tr:nth-child(even) td {
+    background: #fdfaf8;
+  }
+
+  .blog-content th p,
+  .blog-content td p {
+    margin: 0;
+  }
+
+  @media (min-width: 640px) {
+    .blog-content {
+      font-size: 1.0625rem;
+    }
+
+    .blog-content h1 {
+      font-size: 2rem;
+    }
+
+    .blog-content h2 {
+      font-size: 1.65rem;
+    }
+
+    .blog-content h3 {
+      font-size: 1.3rem;
+    }
+  }
+}
+
 
 

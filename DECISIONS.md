@@ -110,3 +110,55 @@
 - The sitemap and llms.txt include `/careers/`.
 - Desktop (1440px) and mobile (390px, no horizontal overflow) screenshots checked.
 - The "Create One." banner heading uses `text-balance` so "One." doesn't wrap onto a line by itself.
+
+## 2026-11-17 — Blog listing + article redesign, blog lead form
+
+**Goal:** Redesign `/blog` and `/blog/[slug]` to match the home page style. Redesign the blog card. Add a lead capture form to the article page that posts to the same API as the Contact form.
+
+- **Shared pieces (new, `src/components/blog/`):**
+  - `BlogUi.jsx`: hero backdrop (warm glows + dotted pattern), eyebrow with the three bars, orange `CategoryPill`, `AuthorAvatar` (initials), the dark `BlogCtaBanner` copied from the home final CTA, and `DEFAULT_AUTHOR`.
+  - `BlogCard.jsx`: grid card used on `/blog` and in related posts, plus `FeaturedBlogCard`. Both use the home card language: white-to-orange gradient, `rounded-3xl`, orange border, hover lift with an orange shadow, and a gradient accent bar that grows on hover.
+  - `BlogLeadForm.jsx`: the lead form.
+- **Category colours:** the per-category colour map (orange, blue, pink…) was dropped from both pages. Every category now uses one orange pill, matching the home page pills.
+- **`/blog`:**
+  - Warm hero with breadcrumb, search, and article/topic counts.
+  - Category chips moved into the content area and are no longer sticky. They used to be `sticky top-0`, which slid them under the sticky header (`z-50`).
+  - Search and filter logic is unchanged.
+  - Dark CTA banner at the bottom.
+- **`/blog/[slug]`:**
+  - Warm hero (breadcrumb, category, title, excerpt, author/date/read-time pill).
+  - Body: the article card on the left and the lead form in a sidebar on the right. On mobile the form comes after the article.
+  - Related posts: same category first, then the latest others, so the section no longer disappears when a category has only one post.
+  - Dark CTA banner.
+  - SEO metadata and JSON-LD are unchanged.
+- **Sticky sidebar:** `lg:[@media(min-height:860px)]:sticky top-24`. It is sticky only when the viewport is tall enough to show the whole form, so on short laptop screens (e.g. 1366×657) the submit button is never cut off.
+- **Lead form (user's choices: compact, sticky sidebar, API untouched):**
+  - Fields: Name, Email, Phone (required), Service, Message.
+  - It POSTs the same payload shape as `ContactForm` (`name, email, phone, website: "", service, message`) to `/api/contacts`. No API changes.
+  - The service is preselected from the post category (SEO → seo, Performance Marketing → performance, Web Development → web-dev, Social Media/Graphic Design → social-media, Digital Marketing → full-service).
+  - Same success/error states and Terms consent line as `ContactForm`. No Privacy link was added, to stay consistent with the earlier decision not to change form consent lines.
+  - A "Prefer to talk? Call us" card sits below the form.
+  - **Not done (user's choice):** a `source` field for blog leads. In admin they look the same as contact-page leads.
+- **Article body styles:** `@tailwindcss/typography` isn't installed, so the old `prose-*` classes did nothing and posts rendered unstyled. Added a scoped `.blog-content` block in `globals.css` inside `@layer components` (it beats preflight and loses to utilities). It styles headings (h2 gets a gradient side bar), lists with orange markers, links, blockquote, images, hr, code/pre, and tables. Tables scroll sideways on small screens; TipTap puts all rows in `<tbody>`, which the CSS relies on. No new dependency was added (user's choice over installing the plugin).
+- **Share buttons:** the old `<button>`s did nothing. They are now real share links (Facebook, X, LinkedIn, WhatsApp) using the canonical post URL. The non-functional Bookmark button was removed. Tags are no longer styled as clickable.
+- **Next 16:** cover images use `loading="eager"` + `fetchPriority="high"` instead of the deprecated `priority` prop.
+
+**Result:** ESLint clean.
+- Checked on a temporary dev server (port 3012, stopped afterwards; its leftover `next dev` child was killed by PID). The server pointed at a **scratch database `akshdigital_blog_preview`** on local MongoDB, seeded with 5 sample posts. The real local `akshdigital` DB was not touched.
+- `/blog/`, two post pages and a missing slug all return 200; the missing slug shows "Article Not Found".
+- Desktop (1440) and mobile (390, no horizontal overflow) screenshots checked.
+- Sidebar is `static` at 1366×657 and `sticky` at 1440×900.
+- Form submit in headless Chrome: POST `/api/contacts` → 201 and the success state shows. It saved exactly one lead, in the scratch DB only. The request goes through the existing 308 trailing-slash redirect, same as `ContactForm`.
+- The dev "1 Issue" badge is still only the pre-existing `WhatsAppButton` styled-jsx hydration mismatch. It also shows on `/careers/`.
+- The scratch DB was left in place; drop it if not needed.
+
+## 2026-11-17 — Blog card titles: 3-line clamp
+
+**Goal:** Vertical blog cards, 3 per row on large screens, titles limited to 3 lines with `line-clamp`.
+
+- **Grid:** No change needed. `/blog` and related posts already use vertical `BlogCard`s in `grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`.
+- **Titles:** `BlogCard` title `line-clamp-2` → `line-clamp-3`. The same card is used for related posts on `/blog/[slug]`, so they change too. `FeaturedBlogCard` title had no clamp; it now uses `line-clamp-3`.
+- **Featured card (user's choice):** The large horizontal featured card stays above the grid.
+- **Alternative considered:** Turning the featured post into the first vertical card in the grid (user declined).
+
+**Result:** ESLint clean on `BlogCard.jsx`.
