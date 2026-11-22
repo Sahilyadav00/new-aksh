@@ -169,7 +169,7 @@ export default function AboutPage() {
       <ScrollObserver />
 
       {/* 1. Hero — warm gradient, two columns like the home hero */}
-      <section className="relative w-full overflow-hidden border-b border-orange-100/60 bg-linear-to-b from-[#fdfaf8] via-[#faf7f3] to-[#f8f4ed] px-4 py-10 shadow-[0_12px_40px_-15px_rgba(210,92,65,0.04)] sm:px-6 sm:py-14 md:px-8 lg:py-16">
+      <section className="relative w-full overflow-hidden border-b border-orange-100/60 bg-linear-to-b from-[#fdfaf8] via-[#faf7f3] to-[#f8f4ed] px-4 py-8 shadow-[0_12px_40px_-15px_rgba(210,92,65,0.04)] sm:px-6 md:px-8">
         <HeroBackdrop />
 
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-14">
