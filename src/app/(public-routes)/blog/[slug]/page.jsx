@@ -330,7 +330,7 @@ export default async function BlogPostPage({ params }) {
       {/* Article + sticky lead form */}
       <section className="w-full bg-linear-to-b from-[#f4f1ea] via-[#faf8f5] to-[#f1ede5] px-4 sm:px-6 md:px-8 pt-6">
         {/* <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_360px]"> */}
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 ">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8">
           <article className="min-w-0">
             <div className="overflow-hidden rounded-3xl border border-orange-200/60 bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
               <div className="relative m-3 aspect-video overflow-hidden rounded-2xl bg-orange-50">
@@ -338,7 +338,7 @@ export default async function BlogPostPage({ params }) {
                   src={getBlogImage(post.image)}
                   alt={post.title}
                   fill
-                  sizes="(min-width: 1280px) 760px, (min-width: 1024px) 60vw, 100vw"
+                  sizes="(min-width: 960px) 870px, 100vw"
                   loading="eager"
                   fetchPriority="high"
                   className="object-cover"

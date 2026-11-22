@@ -985,8 +985,8 @@ export default function Home() {
                   <path
                     d="M0 250L37.5 271.2C75 292.3 150 334.7 225 366.7C300 398.7 375 420.3 450 428C525 435.7 600 429.3 675 393C750 356.7 825 290.3 862.5 257.2L900 224L900 601L862.5 601C825 601 750 601 675 601C600 601 525 601 450 601C375 601 300 601 225 601C150 601 75 601 37.5 601L0 601Z"
                     fill="#ffedd5"
-                    stroke-linecap="round"
-                    stroke-linejoin="miter"
+                    strokeLinecap="round"
+                    strokeLinejoin="miter"
                   />
                 </svg>
               </div>

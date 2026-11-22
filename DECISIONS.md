@@ -162,3 +162,64 @@
 - **Alternative considered:** Turning the featured post into the first vertical card in the grid (user declined).
 
 **Result:** ESLint clean on `BlogCard.jsx`.
+
+## 2026-11-22 — Blog images: 16:9 cards, smaller article cover
+
+**Goal:** Blog card images in 16:9. The article cover image on `/blog/[slug]` was too big (about 1126×633 at desktop) and should fit on one screen.
+
+- **Grid card (`BlogCard`):** image box `aspect-16/10` → `aspect-video` (16:9). This applies to `/blog` and to related posts on the article page.
+- **Featured card (user's choice: everywhere):** 16:9 on every screen size. Desktop used to be `lg:aspect-auto lg:min-h-90`, which stretched the image to the height of the text column. It now keeps 16:9 and is centred vertically next to the text (`self-center`).
+- **Fit (user's choice):** kept `object-cover`. Non-16:9 uploads get their edges cropped to fill the box. 16:9 uploads aren't cropped.
+- **Article page (user's choice: narrow the card):** the article column changed from `max-w-6xl` to `max-w-4xl` (896px). The cover still fills the card at 16:9 and is now about 870×490. Body text lines are shorter too. The column had been 6xl only because of the old lead-form sidebar, which is commented out. Related posts stay `max-w-6xl`. `sizes` updated to `(min-width: 960px) 870px, 100vw`; it still described the sidebar layout.
+- **Alternatives considered:** capping only the image (≤896px wide and ≤60vh tall, centred in the wide card), or a height cap only (crops wider than 16:9 on wide screens). Also considered `object-contain` (no cropping, but adds empty bars).
+
+**Result:** ESLint clean on both files. Not checked in a browser yet.
+
+## 2026-11-22 — About page redesign (home page style)
+
+**Goal:** Restyle `/about/` to match the home page. It used its own older look: slate/white backgrounds, a teal blob, plain cards, and hotlinked Unsplash photos in raw `<img>` tags.
+
+- **File:** `src/app/(public-routes)/about/page.jsx`, rewritten. Metadata and canonical are unchanged. All existing copy is kept word for word (SEO text).
+- **Sections:**
+  1. **Hero (user's choice: two columns like home):** warm gradient + `HeroBackdrop`, orange pill, H1 ending in gradient text "Real Business Growth", gradient + white buttons, and the home 4-icon trust strip. On the right: the team photo with concentric halos, dot grids, and floating cards (4.9/5 rating, +230% revenue growth, Jaipur HQ). Text fades in on load (`animate-on-load-fade-up`). The image isn't animated, so it doesn't delay LCP.
+  2. **Trust badges strip:** the same 4 badges as under the home hero.
+  3. **Our Story:** photo + faint icon watermarks, like the home "About Aksh Digital" block. The home stat cards (`AnimatedCounter`, 50+ campaigns, 200% traffic growth) sit under the photo.
+  4. **Mission & Vision:** a light orange-bordered card and a dark card, both with hover lift and a growing accent bar.
+  5. **Core Pillars:** home-style cards with a gradient icon tile, accent bar and faint 01–04 watermark.
+  6. **India + Global:** copies the home "Local / Global" cards. Orange border + Hawa Mahal + orange wave holds the 6 city hubs. Blue border + network globe + blue wave holds the USA/UK copy, checklist and "Start a Partnership".
+  7. **Why Choose Us:** home glass cards with large watermark numbers, 4 across on desktop.
+  8. **CTA:** reuses `BlogCtaBanner` with the page's existing CTA text.
+- **Shared pieces:** `HeroBackdrop`, `Eyebrow`, `GRADIENT_TEXT` and `BlogCtaBanner` are imported from `components/blog/BlogUi.jsx` as is (not moved; a rename to a neutral folder can come later).
+- **Images (user's choice):** kept the two Unsplash photos but serve them through `next/image` (`images.unsplash.com` is already in `remotePatterns`). Source width raised to 1200 for both. Hero image uses `loading="eager"` + `fetchPriority="high"` (Next 16 deprecates `priority`). They can be swapped for real team photos later.
+- **Scroll reveal (user's choice):** `.reveal` + `ScrollObserver` (no GSAP). The page mounts `ScrollObserver` itself, because it isn't in the public layout. `.reveal` and `.delay-*` are unlayered CSS that set their own `transition`, which would override Tailwind's `transition-all` on hover cards. So `.reveal` goes on **wrapper divs only**, never on a card with hover effects.
+- **Wave SVGs:** the home waves are a fixed 900×600 at the card top, which leaves a bare strip on cards taller than 600px (the city list on mobile). Here they're cropped (`viewBox="0 200 900 400"`) and stretched over the bottom 55% of the card with `preserveAspectRatio="none"`.
+- **Small additions not in the copy:** the city card heading "Pan-India City Hubs", the floating hero cards, and the trust items (all three taken from the home page). The "Hyper-Local Indian Expertise" label moved from above the city list to the section header.
+- **Small fix:** "Start a Partnership" linked to `/contact` without a trailing slash (a 308 redirect with `trailingSlash: true`). It now links to `/contact/`.
+- **Not used (user's choice):** home testimonials.
+- **Alternatives considered:** a centred hero like Careers/Blog (rejected for a home-like look). Also considered swapping in local home images, which would show the same pictures twice on the site.
+
+**Result:** ESLint clean. Checked on the user's running dev server (port 3000) with headless Chrome:
+- `/about/` returns 200.
+- At 1440×900, 1366×657 and 390×844: no horizontal overflow, no broken images, and every `.reveal` block activates when scrolled.
+- Desktop and mobile section screenshots checked. On mobile the floating hero cards stay inside the screen.
+- The only console error is the existing `WhatsAppButton` styled-jsx hydration mismatch (in the layout, not this page).
+
+## 2026-11-22 — Logo / Home links: fix two click bugs
+
+**Request:** "add home page link in footer and header icon". Both logos already linked to `/`, and "Home" was already in the header menu and the footer Quick Links (confirmed in the rendered HTML). The user then said the logo click wasn't working. Real clicks in headless Chrome found two bugs:
+
+1. **On the home page, the logo and "Home" did nothing.** A Next `<Link>` to the current URL causes no visible change, so from the bottom of `/` the click left you where you were.
+2. **Mobile, menu open: the logo couldn't be tapped.** The dim backdrop (`fixed inset-0 z-40`, inside the sticky header) covered the whole header bar, which had no z-index of its own. `elementFromPoint` on the logo and on the ✕ button both returned the backdrop. Tapping the logo only closed the menu and never navigated.
+
+- **Fix (user's choice: logos + Home links):**
+  - New `src/components/layout/HomeLink.jsx` (client). It is a `<Link href="/">` that uses Next 16's `onNavigate` to cancel the navigation when already on `/` and smooth-scroll to the top instead. `onNavigate` only runs for in-app navigation, so Ctrl/⌘-click still opens a new tab (per `node_modules/next/dist/docs/.../link.md`).
+  - Header: the logo uses `HomeLink` and also closes the mobile menu. The desktop and mobile "Home" items use `HomeLink` (`item.href === "/"`). The header bar now has `relative z-50`, so it sits above the backdrop: the logo and ✕ can be tapped and are no longer dimmed while the menu is open.
+  - Footer: the logo and the "Home" Quick Link use `HomeLink`.
+- **Also fixed (user approved):** the home page orange wave SVG used `stroke-linecap` / `stroke-linejoin` (HTML spelling), which logged React's "Invalid DOM property" error on every visit to `/`. Renamed to `strokeLinecap` / `strokeLinejoin`.
+- **Alternatives considered:** logos only, or the mobile menu fix only (user chose both bugs, logos and Home links).
+
+**Result:** ESLint clean on the 4 files. Tested on the running dev server (port 3000) with real mouse events in headless Chrome:
+- Header and footer logo clicks from `/about/`, `/blog/`, `/careers/`, `/contact/` and `/services/` reach `/` at both 1440 and 390 wide (20/20).
+- On `/`: the footer logo scrolls 9261 → 0, the header logo 2500 → 0, header "Home" 3000 → 0, and footer "Home" 9303 → 0.
+- Mobile with the menu open: the logo now navigates `/about/` → `/` and closes the menu. Drawer "Home" goes to the top on `/` and navigates from `/blog/`, closing the menu both times.
+- The `stroke-linecap` console error no longer appears.
