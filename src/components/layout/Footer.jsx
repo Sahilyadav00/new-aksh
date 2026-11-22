@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight, Sparkles } from "lucide-react";
+import HomeLink from "./HomeLink";
 
 // Custom SVG Icons to match mockup design exactly
 const AppleIcon = (props) => (
@@ -56,12 +57,6 @@ const MediumIcon = (props) => (
     <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
   </svg>
 );
-
-
-
-
-
-
 
 export default function Footer() {
   return (
@@ -174,7 +169,7 @@ export default function Footer() {
         </div>
       </section> */}
 
-      <footer className="relative bg-[#f4f5f7] text-slate-800 py-6 md:py-12 overflow-hidden w-full mt-auto border-t border-slate-200/50">
+      <footer className="relative bg-[#f4f5f7] text-slate-800 py-6 md:py-12 overflow-hidden w-full mt-auto border-t border-slate-200/50 max-md:pb-24">
         {/* Decorative background rings to match mockup visual circles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-1">
           {/* Left Concentric Arcs */}
@@ -193,7 +188,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-12 lg:gap-8 items-start">
             {/* Column 1: Logo & Branding */}
             <div className="flex flex-col">
-              <Link href="/" className="inline-block mb-4">
+              <HomeLink className="inline-block mb-4">
                 <Image
                   src="/assets/images/logo/logo.png"
                   alt="AKSH DIGITAL Logo"
@@ -202,7 +197,7 @@ export default function Footer() {
                   className="h-15 w-auto object-contain"
                   priority
                 />
-              </Link>
+              </HomeLink>
               <p className="text-black text-xs  leading-relaxed mb-4 max-w-sm">
                 Aksh Digital is a premium digital marketing agency in Jaipur
                 offering SEO services, Google Ads management, social media
@@ -263,16 +258,19 @@ export default function Footer() {
                     { label: "FAQ", href: "/faq/" },
                     { label: "Careers", href: "/careers/" },
                     { label: "Contact", href: "/contact/" },
-                  ].map(({ label, href }) => (
-                    <li key={label} className="overflow-hidden">
-                      <Link
-                        href={href}
-                        className="text-[15px] text-black hover:text-primary font-medium hover:translate-x-1 transition-all duration-200 inline-block"
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
+                  ].map(({ label, href }) => {
+                    const ItemLink = href === "/" ? HomeLink : Link;
+                    return (
+                      <li key={label} className="overflow-hidden">
+                        <ItemLink
+                          href={href}
+                          className="text-[15px] text-black hover:text-primary font-medium hover:translate-x-1 transition-all duration-200 inline-block"
+                        >
+                          {label}
+                        </ItemLink>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 

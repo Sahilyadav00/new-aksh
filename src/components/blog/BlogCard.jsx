@@ -32,7 +32,7 @@ export default function BlogCard({ post }) {
       href={`/blog/${post.slug}/`}
       className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-orange-200/60 bg-linear-to-br from-white via-white to-orange-50/40 shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:shadow-[0_20px_40px_-12px_rgba(210,92,65,0.22)]"
     >
-      <div className="relative m-3 mb-0 aspect-16/10 overflow-hidden rounded-2xl bg-orange-50">
+      <div className="relative m-3 mb-0 aspect-video overflow-hidden rounded-2xl bg-orange-50">
         <Image
           src={getBlogImage(post.image)}
           alt={post.title}
@@ -78,7 +78,7 @@ export function FeaturedBlogCard({ post }) {
       href={`/blog/${post.slug}/`}
       className="group grid grid-cols-1 overflow-hidden rounded-3xl border border-orange-200/60 bg-linear-to-br from-white via-white to-orange-50/50 shadow-[0_8px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:border-primary/40 hover:shadow-[0_24px_48px_-16px_rgba(210,92,65,0.25)] lg:grid-cols-2"
     >
-      <div className="relative m-3 aspect-16/10 overflow-hidden rounded-2xl bg-orange-50 lg:mr-0 lg:aspect-auto lg:min-h-90">
+      <div className="relative m-3 aspect-video self-center overflow-hidden rounded-2xl bg-orange-50 lg:mr-0">
         <Image
           src={getBlogImage(post.image)}
           alt={post.title}

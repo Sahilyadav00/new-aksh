@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HomeLink from "./HomeLink";
 import {
   ChevronDown,
   Search,
@@ -84,9 +85,16 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-50">
-      <div className="max-w-384 mx-auto bg-white shadow-[0_12px_40px_-15px_rgba(0,0,0,0.06)] border border-slate-100/90 px-3 sm:px-6 md:px-8 py-2  flex items-center justify-between transition-all duration-300">
+      {/* relative z-50 keeps the bar above the mobile menu backdrop (z-40), so the logo and close button stay tappable */}
+      <div className="relative z-50 max-w-384 mx-auto bg-white shadow-[0_12px_40px_-15px_rgba(0,0,0,0.06)] border border-slate-100/90 px-3 sm:px-6 md:px-8 py-2  flex items-center justify-between transition-all duration-300">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+        <HomeLink
+          className="flex items-center gap-2 shrink-0"
+          onClick={() => {
+            setMobileMenuOpen(false);
+            setExpandedItem(null);
+          }}
+        >
           <Image
             src="/assets/images/logo/logo.png"
             alt="AKSH DIGITAL Logo"
@@ -95,49 +103,52 @@ export default function Header() {
             className="h-8 sm:h-12 w-auto object-contain"
             priority
           />
-        </Link>
+        </HomeLink>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-          {menuItems.map((item) => (
-            <div key={item.name} className="relative group py-2">
-              <Link
-                href={item.href}
-                className="flex items-center text-[15px] font-medium text-slate-800 hover:text-primary transition-colors duration-200"
-              >
-                {item.name}
-                {item.hasDropdown && (
-                  <ChevronDown className="w-4 h-4 ml-1 text-slate-400 group-hover:text-primary transition-colors duration-200" />
-                )}
-              </Link>
-
-              {/* Dropdown Menu */}
-              {item.hasDropdown && item.dropdownItems && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.12)] border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 max-h-[80vh] overflow-y-auto">
-                  <div className="py-2">
-                    {item.dropdownItems.map((dropItem) =>
-                      dropItem.isLabel ? (
-                        <div key={dropItem.name} className="px-4 pt-3 pb-1">
-                          <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400">
-                            SEO by City
-                          </span>
-                          <div className="mt-1 h-px bg-slate-100" />
-                        </div>
-                      ) : (
-                        <Link
-                          key={dropItem.name}
-                          href={dropItem.href}
-                          className="block px-4 py-2 text-[14px] text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200"
-                        >
-                          {dropItem.name}
-                        </Link>
-                      ),
-                    )}
+          {menuItems.map((item) => {
+            const ItemLink = item.href === "/" ? HomeLink : Link;
+            return (
+              <div key={item.name} className="relative group py-2">
+                <ItemLink
+                  href={item.href}
+                  className="flex items-center text-[15px] font-medium text-slate-800 hover:text-primary transition-colors duration-200"
+                >
+                  {item.name}
+                  {item.hasDropdown && (
+                    <ChevronDown className="w-4 h-4 ml-1 text-slate-400 group-hover:text-primary transition-colors duration-200" />
+                  )}
+                </ItemLink>
+  
+                {/* Dropdown Menu */}
+                {item.hasDropdown && item.dropdownItems && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.12)] border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 max-h-[80vh] overflow-y-auto">
+                    <div className="py-2">
+                      {item.dropdownItems.map((dropItem) =>
+                        dropItem.isLabel ? (
+                          <div key={dropItem.name} className="px-4 pt-3 pb-1">
+                            <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400">
+                              SEO by City
+                            </span>
+                            <div className="mt-1 h-px bg-slate-100" />
+                          </div>
+                        ) : (
+                          <Link
+                            key={dropItem.name}
+                            href={dropItem.href}
+                            className="block px-4 py-2 text-[14px] text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors duration-200"
+                          >
+                            {dropItem.name}
+                          </Link>
+                        ),
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Right side actions (Desktop) */}
@@ -237,86 +248,89 @@ export default function Header() {
       >
         <div className="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-slate-100 p-4 sm:p-5 flex flex-col gap-3 max-h-[calc(100vh-5.5rem)] overflow-y-auto">
           <nav className="flex flex-col gap-1">
-            {menuItems.map((item) => (
-              <div key={item.name} className="flex flex-col">
-                {item.hasDropdown ? (
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setExpandedItem(
-                        expandedItem === item.name ? null : item.name,
-                      )
-                    }
-                    className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-[15px] font-medium transition-all duration-200 text-left ${
-                      expandedItem === item.name
-                        ? "bg-slate-50 text-primary font-semibold"
-                        : "text-slate-800 hover:text-primary hover:bg-slate-50"
-                    }`}
-                  >
-                    <span>{item.name}</span>
-                    <ChevronDown
-                      className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+            {menuItems.map((item) => {
+              const ItemLink = item.href === "/" ? HomeLink : Link;
+              return (
+                <div key={item.name} className="flex flex-col">
+                  {item.hasDropdown ? (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setExpandedItem(
+                          expandedItem === item.name ? null : item.name,
+                        )
+                      }
+                      className={`flex items-center justify-between py-2.5 px-3.5 rounded-xl text-[15px] font-medium transition-all duration-200 text-left ${
                         expandedItem === item.name
-                          ? "rotate-180 text-primary"
-                          : ""
+                          ? "bg-slate-50 text-primary font-semibold"
+                          : "text-slate-800 hover:text-primary hover:bg-slate-50"
                       }`}
-                    />
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      setExpandedItem(null);
-                    }}
-                    className="flex items-center justify-between py-2.5 px-3.5 rounded-xl text-slate-800 hover:text-primary hover:bg-slate-50 font-medium text-[15px] transition-all duration-200"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-
-                {/* Mobile Dropdown Sub-menu */}
-                {item.hasDropdown &&
-                  item.dropdownItems &&
-                  expandedItem === item.name && (
-                    <div className="flex flex-col gap-1 pl-3 pr-1 py-1 mt-1 border-l-2 border-primary/25 ml-4">
-                      <Link
-                        href={item.href}
-                        onClick={() => {
-                          setMobileMenuOpen(false);
-                          setExpandedItem(null);
-                        }}
-                        className="flex items-center justify-between py-2 px-3 rounded-lg text-[13.5px] font-semibold text-primary hover:bg-primary/5 transition-colors"
-                      >
-                        <span>All {item.name} Overview</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                      {item.dropdownItems.map((dropItem) =>
-                        dropItem.isLabel ? (
-                          <div key={dropItem.name} className="px-3 pt-2 pb-1">
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                              {dropItem.name.replace(/^[─\s]+|[─\s]+$/g, "")}
-                            </span>
-                            <div className="mt-1 h-px bg-slate-100" />
-                          </div>
-                        ) : (
-                          <Link
-                            key={dropItem.name}
-                            href={dropItem.href}
-                            onClick={() => {
-                              setMobileMenuOpen(false);
-                              setExpandedItem(null);
-                            }}
-                            className="py-2 px-3 rounded-lg text-[13.5px] text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors"
-                          >
-                            {dropItem.name}
-                          </Link>
-                        ),
-                      )}
-                    </div>
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown
+                        className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+                          expandedItem === item.name
+                            ? "rotate-180 text-primary"
+                            : ""
+                        }`}
+                      />
+                    </button>
+                  ) : (
+                    <ItemLink
+                      href={item.href}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setExpandedItem(null);
+                      }}
+                      className="flex items-center justify-between py-2.5 px-3.5 rounded-xl text-slate-800 hover:text-primary hover:bg-slate-50 font-medium text-[15px] transition-all duration-200"
+                    >
+                      {item.name}
+                    </ItemLink>
                   )}
-              </div>
-            ))}
+  
+                  {/* Mobile Dropdown Sub-menu */}
+                  {item.hasDropdown &&
+                    item.dropdownItems &&
+                    expandedItem === item.name && (
+                      <div className="flex flex-col gap-1 pl-3 pr-1 py-1 mt-1 border-l-2 border-primary/25 ml-4">
+                        <Link
+                          href={item.href}
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setExpandedItem(null);
+                          }}
+                          className="flex items-center justify-between py-2 px-3 rounded-lg text-[13.5px] font-semibold text-primary hover:bg-primary/5 transition-colors"
+                        >
+                          <span>All {item.name} Overview</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                        {item.dropdownItems.map((dropItem) =>
+                          dropItem.isLabel ? (
+                            <div key={dropItem.name} className="px-3 pt-2 pb-1">
+                              <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                                {dropItem.name.replace(/^[─\s]+|[─\s]+$/g, "")}
+                              </span>
+                              <div className="mt-1 h-px bg-slate-100" />
+                            </div>
+                          ) : (
+                            <Link
+                              key={dropItem.name}
+                              href={dropItem.href}
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setExpandedItem(null);
+                              }}
+                              className="py-2 px-3 rounded-lg text-[13.5px] text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors"
+                            >
+                              {dropItem.name}
+                            </Link>
+                          ),
+                        )}
+                      </div>
+                    )}
+                </div>
+              );
+            })}
           </nav>
 
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-3">
