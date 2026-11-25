@@ -20,16 +20,11 @@ import {
   Sparkles,
   Store,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Indore | Best Digital Marketing Agency Indore – Aksh Digital",
-  description:
-    "Scale organic traffic and high-intent leads with Aksh Digital, a premier SEO agency in Indore and leading digital marketing agency Indore. Local SEO, Google Business Profile ranking, technical audits, and high-authority link building.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/indore/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/indore/");
+}
 
 const indoreHubs = [
   "Vijay Nagar",

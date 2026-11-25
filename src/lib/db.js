@@ -83,6 +83,55 @@ export async function deleteBlog(slug) {
   }
 }
 
+// ── Page SEO overrides (Admin → Page SEO) ──────────────────────────────
+// One document per page path. Missing fields fall back to src/lib/site-pages.js.
+
+export async function getPageMeta(path) {
+  try {
+    const db = await getDb();
+    const result = await db.collection("page_meta").findOne({ path });
+    if (!result) return null;
+    const { _id, ...rest } = result;
+    return rest;
+  } catch (err) {
+    console.error(`Error reading page meta for ${path} from MongoDB`, err);
+    return null;
+  }
+}
+
+export async function getAllPageMeta() {
+  try {
+    const db = await getDb();
+    const result = await db.collection("page_meta").find({}).toArray();
+    return result.map(({ _id, ...rest }) => rest);
+  } catch (err) {
+    console.error("Error reading page meta from MongoDB", err);
+    return [];
+  }
+}
+
+export async function upsertPageMeta(path, fields) {
+  try {
+    const db = await getDb();
+    return await db
+      .collection("page_meta")
+      .updateOne({ path }, { $set: { path, ...fields } }, { upsert: true });
+  } catch (err) {
+    console.error(`Error saving page meta for ${path} to MongoDB`, err);
+    return false;
+  }
+}
+
+export async function deletePageMeta(path) {
+  try {
+    const db = await getDb();
+    return await db.collection("page_meta").deleteOne({ path });
+  } catch (err) {
+    console.error(`Error deleting page meta for ${path} from MongoDB`, err);
+    return false;
+  }
+}
+
 export async function getContacts() {
   try {
     const db = await getDb();

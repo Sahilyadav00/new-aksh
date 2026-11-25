@@ -19,16 +19,11 @@ import {
   Layers,
   Sparkles,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Delhi | Best Digital Marketing Company Delhi NCR – Aksh Digital",
-  description:
-    "Scale organic traffic and outrank competitors with Aksh Digital, a top SEO agency in Delhi and leading digital marketing agency in Delhi NCR providing local SEO, enterprise search optimization, and link building.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/delhi/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/delhi/");
+}
 
 const ncrHubs = [
   "Connaught Place",

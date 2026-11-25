@@ -21,16 +21,11 @@ import {
   Cpu,
   Factory,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Pune | Best Digital Marketing Company Pune – Aksh Digital",
-  description:
-    "Scale organic traffic and direct revenue with Aksh Digital, a results-driven SEO agency in Pune and trusted digital marketing company in Pune. Local SEO, IT enterprise search, Core Web Vitals, and authoritative link building.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/pune/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/pune/");
+}
 
 const puneHubs = [
   "Hinjawadi IT Park",

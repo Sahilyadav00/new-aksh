@@ -1,14 +1,10 @@
 import { getBlogs } from "@/lib/db";
 import BlogListing from "@/components/BlogListing";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title: "Blog | Digital Marketing & SEO Insights — Aksh Digital",
-  description:
-    "Stay ahead with expert articles on SEO, digital marketing, social media, web development, and performance marketing from the Aksh Digital team.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/blog/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/blog/");
+}
 
 export default async function BlogPage() {
   const blogs = await getBlogs();

@@ -20,16 +20,11 @@ import {
   Sparkles,
   Factory,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Bhiwadi & Alwar | Best Digital Marketing Company – Aksh Digital",
-  description:
-    "Capture high-value B2B manufacturing and commercial contracts with Aksh Digital, a top SEO agency in Bhiwadi and trusted digital marketing company in Alwar offering industrial SEO, local 3-Pack ranking, and technical audits.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/bhiwadi-alwar/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/bhiwadi-alwar/");
+}
 
 const bhiwadiAlwarHubs = [
   "RIICO Industrial Area Bhiwadi",

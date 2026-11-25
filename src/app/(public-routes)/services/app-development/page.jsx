@@ -18,16 +18,11 @@ import {
   Server,
   Globe,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "Custom App Development Services | iOS, Android & Flutter — Aksh Digital",
-  description:
-    "Mobile app development services engineered for retention, speed, and scale. Native iOS, Android, React Native, Flutter, and custom backend API architecture by Aksh Digital.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/services/app-development/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/services/app-development/");
+}
 
 const services = [
   {

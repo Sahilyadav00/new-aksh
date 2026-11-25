@@ -1,18 +1,13 @@
 import { ShieldCheck } from "lucide-react";
 import LegalPage, { TextLink } from "@/components/legal/LegalPage";
+import { getPageMetadata } from "@/lib/page-meta";
 
-const SITE_URL = "https://www.akshdigital.in";
 const EFFECTIVE_DATE = "24 October 2026";
 const LAST_UPDATED = "24 October 2026";
 
-export const metadata = {
-  title: "Privacy Policy | Aksh Digital",
-  description:
-    "Learn how Aksh Digital collects, uses, shares, and protects your personal information when you visit our website, contact us, or use our digital marketing and development services.",
-  alternates: {
-    canonical: `${SITE_URL}/privacy-policy/`,
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/privacy-policy/");
+}
 
 // Each section is a list of blocks: { p }, { h3 }, { ul, columns? }, { table: { head, rows } }
 const sections = [

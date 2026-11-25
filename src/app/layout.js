@@ -38,8 +38,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`h-full antialiased ${gilroy.variable}`}>
       <head>
-        <meta name="google-site-verification" content="1x83ZUeR7NpLNt-hSFZotSCeKVxXaedPLc8GKT7gWuY" />
-
+        <meta
+          name="google-site-verification"
+          content="1x83ZUeR7NpLNt-hSFZotSCeKVxXaedPLc8GKT7gWuY"
+        />
+        <meta
+          name="p:domain_verify"
+          content="1fadd6c70b0b039fbc959f0780af91da"
+        />
         {/* Google Analytics (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-T2DPVZG6X8"
@@ -53,7 +59,6 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-T2DPVZG6X8');
           `}
         </Script>
-        
 
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
@@ -81,4 +86,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

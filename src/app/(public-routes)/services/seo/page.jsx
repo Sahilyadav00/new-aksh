@@ -19,16 +19,11 @@ import {
   Sparkles,
   Clock,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "Enterprise SEO Strategies & Services | Page 1 Domination — Aksh Digital",
-  description:
-    "Enterprise SEO strategies engineered for Page 1 domination and high-intent leads. Technical audits, high-authority link acquisition, local SEO, and semantic content by Aksh Digital.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/services/seo/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/services/seo/");
+}
 
 const verticals = [
   {

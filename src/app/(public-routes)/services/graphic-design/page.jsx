@@ -21,15 +21,11 @@ import {
   Zap,
   ShieldCheck,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title: "High-Impact Graphic Design & Brand Identity Services — Aksh Digital",
-  description:
-    "Graphic design services engineered to capture attention and drive conversions. Logos, brand identity, performance ad creatives, UI/UX, and marketing collateral by Aksh Digital.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/services/graphic-design/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/services/graphic-design/");
+}
 
 const services = [
   {

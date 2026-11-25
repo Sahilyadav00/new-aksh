@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { revalidateSitemap } from "@/lib/page-meta";
 
 // Accepts an array or a comma-separated string; returns a trimmed, de-duplicated list.
 export function parseList(value) {
@@ -14,5 +15,5 @@ export function cleanText(value) {
 export function revalidateBlogPaths() {
   revalidatePath("/blog");
   revalidatePath("/(public-routes)/blog/[slug]", "page");
-  revalidatePath("/sitemap.xml");
+  revalidateSitemap();
 }

@@ -20,16 +20,11 @@ import {
   Sparkles,
   Hospital,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Lucknow | Best Digital Marketing Company Lucknow – Aksh Digital",
-  description:
-    "Dominate Page 1 search rankings and scale organic revenue with Aksh Digital, a premier SEO agency in Lucknow and trusted digital marketing company in Lucknow. Local SEO, GBP ranking, technical audits, and link building.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/lucknow/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/lucknow/");
+}
 
 const lucknowHubs = [
   "Gomti Nagar",

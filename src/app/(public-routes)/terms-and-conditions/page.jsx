@@ -1,18 +1,13 @@
 import { Scale } from "lucide-react";
 import LegalPage, { TextLink } from "@/components/legal/LegalPage";
+import { getPageMetadata } from "@/lib/page-meta";
 
-const SITE_URL = "https://www.akshdigital.in";
 const EFFECTIVE_DATE = "24 October 2026";
 const LAST_UPDATED = "24 October 2026";
 
-export const metadata = {
-  title: "Terms & Conditions | Aksh Digital",
-  description:
-    "Read the Terms & Conditions that govern the use of the Aksh Digital website and our SEO, paid advertising, social media, web development, and creative services.",
-  alternates: {
-    canonical: `${SITE_URL}/terms-and-conditions/`,
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/terms-and-conditions/");
+}
 
 // Each section is a list of blocks: { p: "paragraph" } or { ul: [...], columns?: true }
 const sections = [

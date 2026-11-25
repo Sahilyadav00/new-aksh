@@ -20,16 +20,11 @@ import {
   Sparkles,
   Compass,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "Premier SEO Services in Jaipur | Best SEO Company Jaipur — Aksh Digital",
-  description:
-    "Stop losing customers to local competitors. Aksh Digital delivers premier SEO services in Jaipur, Google Business Profile (GBP) ranking, technical audits, and high-intent organic lead generation.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/jaipur/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/jaipur/");
+}
 
 const commercialHubs = [
   "Malviya Nagar",

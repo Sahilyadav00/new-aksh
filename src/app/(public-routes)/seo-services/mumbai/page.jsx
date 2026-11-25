@@ -19,16 +19,11 @@ import {
   Layers,
   Sparkles,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Mumbai | Best Digital Marketing Agency Mumbai – Aksh Digital",
-  description:
-    "Scale organic traffic and commercial inbound revenue with Aksh Digital, a premier SEO agency Mumbai and top digital marketing agency in Mumbai. Local SEO, technical audits, Core Web Vitals, and authoritative link building.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/mumbai/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/mumbai/");
+}
 
 const mumbaiHubs = [
   "Bandra-Kurla Complex (BKC)",

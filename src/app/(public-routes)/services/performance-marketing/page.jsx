@@ -19,16 +19,11 @@ import {
   Clock,
   Search,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "Performance Marketing Services | High-ROAS Google & Meta Ads — Aksh Digital",
-  description:
-    "Data-driven performance marketing services engineered to lower CAC and maximize ROAS. Google Ads, Meta Ads, LinkedIn ABM, server-side tracking, and landing page CRO by Aksh Digital.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/services/performance-marketing/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/services/performance-marketing/");
+}
 
 const services = [
   {
