@@ -21,16 +21,11 @@ import {
   Cpu,
   HeartPulse,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Hyderabad | Best Digital Marketing Company Hyderabad – Aksh Digital",
-  description:
-    "Scale organic traffic and high-intent commercial leads with Aksh Digital, a top SEO agency in Hyderabad and trusted digital marketing company in Hyderabad. Local SEO, SaaS enterprise search, Core Web Vitals, and link building.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/hyderabad/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/hyderabad/");
+}
 
 const hyderabadHubs = [
   "HITEC City",

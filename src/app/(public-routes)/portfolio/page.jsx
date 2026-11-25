@@ -11,15 +11,11 @@ import {
   Search,
   Filter,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title: "Portfolio | Our Work & Case Studies — Aksh Digital",
-  description:
-    "Explore Aksh Digital's portfolio — web design, mobile apps, SEO case studies, and digital marketing campaigns that delivered real results for real businesses across India.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/portfolio/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/portfolio/");
+}
 
 const categories = ["All", "Web Design", "Mobile App", "SEO", "Branding", "Social Media"];
 

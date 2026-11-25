@@ -223,3 +223,50 @@
 - On `/`: the footer logo scrolls 9261 → 0, the header logo 2500 → 0, header "Home" 3000 → 0, and footer "Home" 9303 → 0.
 - Mobile with the menu open: the logo now navigates `/about/` → `/` and closes the menu. Drawer "Home" goes to the top on `/` and navigates from `/blog/`, closing the menu both times.
 - The `stroke-linecap` console error no longer appears.
+
+## 2026-11-25 — Dynamic sitemap + admin-editable page SEO
+
+**Goal:** Make the sitemap dynamic, and let the admin edit metadata for every page except blog posts, which already have their own fields.
+
+**Before:**
+- `sitemap.js` read blog posts from MongoDB, but the 29 other pages were a hardcoded list, each with `lastModified: now`. That tells Google every page changes on every regeneration, which makes it ignore the dates.
+- 28 pages hardcoded `export const metadata` (title, description, canonical). `/faq/` got it from `faq/layout.jsx`.
+- `/services/` (a client component) had **no metadata at all**: no `<title>`.
+- `/services/digital-marketing/` had no canonical.
+- No page except blog posts had Open Graph or Twitter tags.
+
+**Decisions (user's choices):**
+- **Editable fields:** Meta Title, Meta Description, Meta Keywords, plus **Hide from Google** (noindex). Not chosen: social share image, per-page sitemap priority/frequency.
+- **Sitemap lastmod:** the date of the page's last admin SEO edit; omitted if it was never edited. Blog posts keep their own dates.
+- **Defaults live in one file:** `src/lib/site-pages.js`.
+
+**How it works:**
+- `src/lib/site-pages.js`: plain-data list of the 29 pages: path, label, group (Main / Services / City SEO / Legal), sitemap priority + changeFrequency (copied from the old sitemap), and default title + description. It was **generated from the old `metadata` exports**, so the text is word for word. It's safe to import in client components (the admin UI uses `PAGE_GROUPS`/`SITE_URL`).
+- MongoDB `page_meta` collection holds one doc per changed page: `{ path, metaTitle, metaDescription, metaKeywords[], noindex, updatedAt }`. Saving with everything empty deletes the doc (back to defaults). DB helpers are in `src/lib/db.js` (`getPageMeta`, `getAllPageMeta`, `upsertPageMeta`, `deletePageMeta`). They return null/[] on DB errors, so pages fall back to the defaults and builds don't fail.
+- `src/lib/page-meta.js` → `getPageMetadata(path)` returns title, description, keywords (only if set), canonical, Open Graph (website), Twitter `summary` card, and `robots: noindex, follow` when hidden. Every page now does `export function generateMetadata() { return getPageMetadata("/x/"); }`. A path missing from `site-pages.js` throws a clear error.
+- `/services/`: the client page moved (with `git mv`, so history is kept) to `services/ServicesPageClient.jsx`. A new server `services/page.jsx` renders it and provides metadata. A `services/layout.jsx` was **not** used, because layout metadata would be inherited by every `/services/*` page (e.g. a noindex would leak).
+- `sitemap.js`: built from `SITE_PAGES` (minus hidden pages) plus blog posts. A bad legacy `date` string no longer throws.
+- API `src/app/api/admin/page-meta/route.js` has GET (list with defaults + override), PUT (save; all-empty = reset) and DELETE `?path=` (reset). All require the admin session (401 otherwise). Paths not in `site-pages.js`, including blog post paths, get 400.
+- Admin: new sidebar tab **Page SEO** (`src/components/admin/PageSeoManager.jsx`): summary cards, search, pages grouped, Custom/Default/Hidden badges and last-edit date. The right-side editor drawer (same pattern as the blog editor) has char counters (60/160), the default shown as the placeholder, a Hide-from-Google checkbox, a live Google preview, and Reset to default.
+
+**Bug found and fixed (pre-existing): the sitemap never refreshed in production.** With `trailingSlash: true`, the sitemap's cache tag is `_N_T_/sitemap.xml/`, but `revalidatePath` strips trailing slashes (`node_modules/next/dist/server/web/spec-extension/revalidate.js`), so `revalidatePath("/sitemap.xml")` never matched. Blog create/edit/delete has been leaving the production sitemap stale. The fix is a shared `revalidateSitemap()` in `page-meta.js` → `revalidatePath("/sitemap.xml", "layout")`, which matches the sitemap's own `_N_T_/sitemap.xml/layout` tag. `revalidateBlogPaths()` uses it too. Page paths are unaffected: their tags have no trailing slash (`_N_T_/about`).
+
+**New copy (please review):** `/services/` default title "Digital Marketing Services | SEO, Ads & Web Development — Aksh Digital" and a description based on the page's hero text. All other text is unchanged.
+
+**Also:** removed 3 `SITE_URL` constants that only the old metadata used (careers, privacy, terms). Left out the dead `/services/social-media/` page (redirected in `next.config`), as the old sitemap did. The contact page keeps its CRLF line endings.
+
+**Result:**
+- ESLint clean on all 37 changed files.
+- Dev server (temporary, port 3021, scratch DB `akshdigital_blog_preview`): all 29 pages render **exactly** their old title and description (compared with the extracted originals), plus canonical, og:*, and twitter:*. `/services/` now has a title.
+- Sitemap: 29 pages without lastmod + 5 scratch blog posts with dates; the dead page is not listed.
+- API end-to-end, 28/28 checks: 401 without login, 400 for unknown/blog paths, custom title/description/keywords render, keywords trimmed and de-duplicated, noindex renders `noindex, follow` and removes the page from the sitemap, lastmod = save time, DELETE and all-empty PUT both reset.
+- Admin UI screenshots (desktop): 29 rows, editor + Google preview work, no console errors, no horizontal overflow at 390px.
+- **Production** (`next build` + `next start` on the scratch DB), 17/17 checks:
+  - All pages still build static (○).
+  - An admin save shows on the page at its next visit (cache MISS) while other pages stay cached (HIT).
+  - Hide/unhide updates the sitemap.
+  - A new blog post appears in the sitemap and on `/blog/`, and disappears from the sitemap after delete.
+  - The first run of these checks, before the fix, showed the sitemap never refreshing.
+- Test data cleaned up: the scratch DB has no `page_meta` docs, and the test blog post was deleted.
+- **`.next` now holds that test production build (made against the scratch DB).** Run `npm run build` before any `npm start`.
+- Note for local testing: starting `next dev` from Git Bash with a lowercase `d:/` path made every `.jsx` route 404. Starting from `D:/` works.

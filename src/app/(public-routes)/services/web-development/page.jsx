@@ -20,15 +20,11 @@ import {
   Server,
   Smartphone,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title: "Custom Web Development & Engineering Services — Aksh Digital",
-  description:
-    "High-performance custom web development engineered for speed, security, and scalability. Next.js, React, Node.js, headless e-commerce, and SaaS platforms by Aksh Digital.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/services/web-development/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/services/web-development/");
+}
 
 const services = [
   {

@@ -20,16 +20,11 @@ import {
   Sparkles,
   Cpu,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Bangalore | Best Digital Marketing Agency Bangalore – Aksh Digital",
-  description:
-    "Scale organic traffic and high-intent inbound revenue with Aksh Digital, a top SEO agency Bangalore and leading digital marketing agency Bangalore. SaaS SEO, tech enterprise search & Core Web Vitals engineering.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/bangalore/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/bangalore/");
+}
 
 const bangaloreHubs = [
   "Koramangala",

@@ -28,16 +28,11 @@ import {
   GRADIENT_TEXT,
   HeroBackdrop,
 } from "@/components/blog/BlogUi";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "About Aksh Digital | Digital Marketing & Web Development Agency India",
-  description:
-    "Aksh Digital is a full-service digital marketing and web development agency in Jaipur. We help businesses across India, USA, and UK scale with SEO, performance ads, and modern web builds.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/about/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/about/");
+}
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80";

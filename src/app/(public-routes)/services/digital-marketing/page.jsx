@@ -21,13 +21,11 @@ import {
   Clock,
   Zap,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "Complete Digital Marketing Services | High-ROAS Growth — Aksh Digital",
-  description:
-    "Complete digital marketing services engineered for high ROI and market domination. SEO, Google & Meta Ads, Next.js web engineering, social media, and CRO by Aksh Digital.",
-};
+export function generateMetadata() {
+  return getPageMetadata("/services/digital-marketing/");
+}
 
 const verticals = [
   {

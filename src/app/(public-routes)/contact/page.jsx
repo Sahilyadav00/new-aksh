@@ -12,16 +12,11 @@ import ContactForm from "@/components/ContactForm";
 import ContactScrollAnimations from "@/components/ContactScrollAnimations";
 import Image from "next/image";
 import Link from "next/link";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "Contact Aksh Digital | Digital Marketing & Web Development Agency Jaipur",
-  description:
-    "Contact Aksh Digital for SEO, Google Ads, web development, and performance marketing. Serving businesses in Jaipur, Delhi, Mumbai, Bangalore, and global markets (USA, UK).",
-  alternates: {
-    canonical: "https://www.akshdigital.in/contact/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/contact/");
+}
 
 const processSteps = [
   {

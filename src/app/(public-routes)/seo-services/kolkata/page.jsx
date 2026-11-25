@@ -20,16 +20,11 @@ import {
   Sparkles,
   Factory,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Kolkata | Best Digital Marketing Company Kolkata – Aksh Digital",
-  description:
-    "Scale organic traffic and high-value commercial revenue with Aksh Digital, a top SEO agency Kolkata and trusted digital marketing company in Kolkata. Local SEO, IT enterprise search, Core Web Vitals, and authoritative link building.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/kolkata/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/kolkata/");
+}
 
 const kolkataHubs = [
   "Salt Lake (Sector V)",

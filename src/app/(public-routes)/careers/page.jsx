@@ -16,20 +16,15 @@ import {
   UserRound,
   Users,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-const SITE_URL = "https://www.akshdigital.in";
 const CAREERS_EMAIL = "akshdigital9@gmail.com";
 const EMAIL_SUBJECT = "Career Enquiry – [Your Name]";
 const MAILTO = `mailto:${CAREERS_EMAIL}?subject=${encodeURIComponent(EMAIL_SUBJECT)}`;
 
-export const metadata = {
-  title: "Careers at Aksh Digital | Join Our Team in Jaipur",
-  description:
-    "Explore careers at Aksh Digital. We welcome creative, curious people in digital marketing, design, and technology. Share your resume or portfolio with us.",
-  alternates: {
-    canonical: `${SITE_URL}/careers/`,
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/careers/");
+}
 
 const perks = [
   {

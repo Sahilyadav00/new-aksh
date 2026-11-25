@@ -1,64 +1,45 @@
-import { getBlogs } from "@/lib/db";
+import { getAllPageMeta, getBlogs } from "@/lib/db";
+import { SITE_PAGES } from "@/lib/site-pages";
 
+// Built from the page list in src/lib/site-pages.js plus every blog post in MongoDB.
+// Cached like the pages; refreshed whenever a blog post or a page's SEO is saved
+// (revalidateBlogPaths / revalidatePageSeo).
 export default async function sitemap() {
   const baseUrl =
     process.env.NEXT_PUBLIC_HOSTNAME ||
     process.env.NEXT_PUBLIC_SITE_URL ||
     "https://www.akshdigital.in";
-  const currentDate = new Date().toISOString();
 
-  // Static routes configuration with trailing slashes
-  const staticRoutes = [
-    { url: "/", priority: 1.0, changeFrequency: "daily" },
-    { url: "/about/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/services/", priority: 0.9, changeFrequency: "weekly" },
-    { url: "/services/seo/", priority: 0.9, changeFrequency: "monthly" },
-    { url: "/services/digital-marketing/", priority: 0.9, changeFrequency: "monthly" },
-    { url: "/services/social-media-marketing/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/services/graphic-design/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/services/web-development/", priority: 0.9, changeFrequency: "monthly" },
-    { url: "/services/app-development/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/services/performance-marketing/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/portfolio/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/blog/", priority: 0.8, changeFrequency: "daily" },
-    { url: "/contact/", priority: 0.7, changeFrequency: "monthly" },
-    { url: "/faq/", priority: 0.6, changeFrequency: "monthly" },
-    { url: "/careers/", priority: 0.5, changeFrequency: "monthly" },
-    { url: "/terms-and-conditions/", priority: 0.3, changeFrequency: "yearly" },
-    { url: "/privacy-policy/", priority: 0.3, changeFrequency: "yearly" },
-    // Dedicated Regional & Metropolitan SEO Landing Pages
-    { url: "/seo-services/jaipur/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/delhi/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/mumbai/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/bangalore/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/pune/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/indore/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/chandigarh/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/kolkata/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/hyderabad/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/chennai/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/lucknow/", priority: 0.8, changeFrequency: "monthly" },
-    { url: "/seo-services/bhiwadi-alwar/", priority: 0.8, changeFrequency: "monthly" },
-  ].map((route) => ({
-    url: `${baseUrl}${route.url === "/" ? "/" : route.url}`,
-    lastModified: currentDate,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-  }));
+  // Admin overrides: "Hide from Google" pages are left out, and the date of the last
+  // SEO edit is the page's lastModified. Pages never edited get no date: a made-up
+  // "now" on every page teaches Google to ignore lastmod.
+  const overrides = new Map((await getAllPageMeta()).map((meta) => [meta.path, meta]));
 
-  // Dynamic blog routes
-  let blogRoutes = [];
-  try {
-    const blogs = await getBlogs();
-    blogRoutes = (blogs || []).map((blog) => ({
+  const pageRoutes = SITE_PAGES.filter((page) => !overrides.get(page.path)?.noindex).map((page) => {
+    const updatedAt = overrides.get(page.path)?.updatedAt;
+    return {
+      url: `${baseUrl}${page.path}`,
+      ...(updatedAt && { lastModified: updatedAt }),
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    };
+  });
+
+  // getBlogs returns [] if the database is unreachable.
+  const blogs = await getBlogs();
+  const blogRoutes = blogs.map((blog) => {
+    const fromDate = blog.date ? new Date(blog.date) : null; // legacy posts: "June 15, 2026"
+    const lastModified =
+      blog.updatedAt ||
+      blog.createdAt ||
+      (fromDate && !Number.isNaN(fromDate.getTime()) ? fromDate.toISOString() : undefined);
+    return {
       url: `${baseUrl}/blog/${blog.slug}/`,
-      lastModified: blog.updatedAt || blog.createdAt || (blog.date ? new Date(blog.date).toISOString() : currentDate),
+      ...(lastModified && { lastModified }),
       changeFrequency: "weekly",
       priority: 0.7,
-    }));
-  } catch (error) {
-    console.error("Error building sitemap blog routes:", error);
-  }
+    };
+  });
 
-  return [...staticRoutes, ...blogRoutes];
+  return [...pageRoutes, ...blogRoutes];
 }

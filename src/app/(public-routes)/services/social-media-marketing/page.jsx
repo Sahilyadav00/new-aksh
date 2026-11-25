@@ -20,16 +20,11 @@ import {
   TrendingUp,
   Clock,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "Creative Social Media Marketing Services | Brand Growth — Aksh Digital",
-  description:
-    "Social media marketing services engineered to engage, convert, and scale. Instagram, LinkedIn, YouTube, Reels production, paid social ads, and community management by Aksh Digital.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/services/social-media-marketing/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/services/social-media-marketing/");
+}
 
 const services = [
   {

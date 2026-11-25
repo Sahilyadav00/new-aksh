@@ -54,15 +54,11 @@ import {
   MapPin,
   Sparkles,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title: "Digital Marketing Agency in Jaipur | SEO & Ads Company Aksh Digital",
-  description:
-    "Aksh Digital is a full-service software development and performance digital marketing agency headquartered in Jaipur, serving clients across India, USA, UK, and worldwide.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/");
+}
 
 const trustBadges = [
   "100% Data-Driven ROI",

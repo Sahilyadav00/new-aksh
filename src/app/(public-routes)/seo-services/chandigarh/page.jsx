@@ -20,16 +20,11 @@ import {
   Sparkles,
   Compass,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency in Chandigarh | Best Digital Marketing Company Chandigarh – Aksh Digital",
-  description:
-    "Scale organic traffic and commercial leads across the Tricity with Aksh Digital, a top SEO agency in Chandigarh and trusted digital marketing company in Chandigarh. Local SEO, GBP ranking & technical search optimization.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/chandigarh/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/chandigarh/");
+}
 
 const tricityHubs = [
   "Sector 17 (City Centre)",

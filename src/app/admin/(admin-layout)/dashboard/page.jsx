@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { getBlogImage } from "@/lib/blog-image";
+import PageSeoManager from "@/components/admin/PageSeoManager";
 import {
   FolderOpen,
   Mail,
@@ -28,6 +29,7 @@ import {
   Lock,
   Upload,
   Star,
+  Globe,
 } from "lucide-react";
 
 const META_TITLE_LIMIT = 60;
@@ -443,6 +445,17 @@ export default function AdminDashboardPage() {
           </button>
 
           <button
+            onClick={() => setActiveTab("seo")}
+            className={`w-full flex items-center gap-3.5 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${activeTab === "seo"
+                ? "bg-[#d25c41] text-white shadow-lg shadow-[#d25c41]/20"
+                : "text-slate-400 hover:text-white hover:bg-white/5"
+              }`}
+          >
+            <Globe className="w-4 h-4" />
+            Page SEO
+          </button>
+
+          <button
             onClick={() => setActiveTab("settings")}
             className={`w-full flex items-center gap-3.5 px-4 py-3 rounded-xl text-sm font-semibold transition-all ${activeTab === "settings"
                 ? "bg-[#d25c41] text-white shadow-lg shadow-[#d25c41]/20"
@@ -475,14 +488,18 @@ export default function AdminDashboardPage() {
                 ? "Customer Leads Inbox"
                 : activeTab === "blogs"
                   ? "Articles Database"
-                  : "Security Settings"}
+                  : activeTab === "seo"
+                    ? "Page SEO"
+                    : "Security Settings"}
             </h1>
             <p className="text-xs text-slate-400 mt-0.5">
               {activeTab === "leads"
                 ? "Overview of submitted website forms"
                 : activeTab === "blogs"
                   ? "Configure and update marketing content"
-                  : "Manage authentication and password credentials"}
+                  : activeTab === "seo"
+                    ? "Meta title, description and Google visibility for each page"
+                    : "Manage authentication and password credentials"}
             </p>
           </div>
 
@@ -501,6 +518,8 @@ export default function AdminDashboardPage() {
               <Loader2 className="w-8 h-8 animate-spin text-[#d25c41]" />
               <p className="text-slate-400 text-sm">Loading records from local files...</p>
             </div>
+          ) : activeTab === "seo" ? (
+            <PageSeoManager />
           ) : activeTab === "leads" ? (
             /* LEADS LIST COMPONENT */
             <div className="space-y-6">

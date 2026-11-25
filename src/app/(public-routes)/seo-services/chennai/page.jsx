@@ -21,16 +21,11 @@ import {
   Cpu,
   Car,
 } from "lucide-react";
+import { getPageMetadata } from "@/lib/page-meta";
 
-export const metadata = {
-  title:
-    "SEO Agency Chennai | Best Digital Marketing Company in Chennai – Aksh Digital",
-  description:
-    "Dominate Page 1 search rankings and scale organic revenue with Aksh Digital, a premier SEO company in Chennai and top digital marketing agency in Chennai offering enterprise SEO, local search optimization, and technical audits.",
-  alternates: {
-    canonical: "https://www.akshdigital.in/seo-services/chennai/",
-  },
-};
+export function generateMetadata() {
+  return getPageMetadata("/seo-services/chennai/");
+}
 
 const chennaiHubs = [
   "OMR (IT Corridor)",
